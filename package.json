@@ -1,5 +1,5 @@
 {
-  "name": "panambi-v2",
+  "name": "proyectobasewebs",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.13.4"
+    "@tailwindcss/vite": "^4.1.12",
+    "astro": "^5.13.3",
+    "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14"
   }
 }

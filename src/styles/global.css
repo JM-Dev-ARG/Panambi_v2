@@ -1,0 +1,256 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Tipografías (default) */
+  --font-sans:
+    ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+
+  /* =========================
+     🎨 PALETA DE COLORES
+  ========================== */
+
+  /* Negro */
+  --color-negro: #1a181b;
+
+  /* Neutral */
+  --color-neutral-100: #ffffff;
+  --color-neutral-200: #e8e8e8;
+  --color-neutral-300: #d2d2d2;
+  --color-neutral-400: #bbbbbb;
+  --color-neutral-500: #a4a4a4;
+  --color-neutral-600: #8e8e8e;
+  --color-neutral-700: #777777;
+  --color-neutral-800: #606060;
+  --color-neutral-900: #4a4a4a;
+  --color-neutral-1000: #333333;
+  --color-neutral-10: #333333;
+
+  /* Violeta 1 */
+  --color-violeta1-100: #d4c5df;
+  --color-violeta1-200: #aa8abf;
+  --color-violeta1-300: #8d63aa;
+  --color-violeta1-400: #6e4986;
+  --color-violeta1-500: #4e345f;
+  --color-violeta1-10: #aa8abf;
+
+  /* Violeta 2 */
+  --color-violeta2-100: #cebce0;
+  --color-violeta2-200: #9c79c1;
+  --color-violeta2-300: #6b4494;
+  --color-violeta2-400: #533573;
+  --color-violeta2-500: #3c2653;
+  --color-violeta2-10: #6b4494;
+  --color-violeta2-50: #6b4494;
+
+  /* Violeta 3 */
+  --color-violeta3-100: #d6d2db;
+  --color-violeta3-200: #aea6b7;
+  --color-violeta3-300: #857993;
+  --color-violeta3-400: #675d73;
+  --color-violeta3-500: #494151;
+  --color-violeta3-10: #857993;
+  --color-violeta3-50: #857993;
+
+  /* Verde 1 */
+  --color-verde1-100: #e9efc5;
+  --color-verde1-200: #d2df8a;
+  --color-verde1-300: #bed155;
+  --color-verde1-400: #9eb231;
+  --color-verde1-500: #6f7d22;
+  --color-verde1-10: #d2df8a;
+
+  /* Verde 2 */
+  --color-verde2-100: #96c6c1;
+  --color-verde2-200: #62a9a2;
+  --color-verde2-300: #427873;
+  --color-verde2-400: #254441;
+  --color-verde2-500: #172a28;
+  --color-verde2-10: #254441;
+  --color-verde2-50: #254441;
+
+  /* Verde 3 */
+  --color-verde3-100: #6affea;
+  --color-verde3-200: #1fffdf;
+  --color-verde3-300: #00d4b6;
+  --color-verde3-400: #008976;
+  --color-verde3-500: #003f36;
+  --color-verde3-10: #003f36;
+  --color-verde3-50: #003f36;
+
+  /* Verde 4 */
+  --color-verde4-100: #aec5bb;
+  --color-verde4-200: #86a799;
+  --color-verde4-300: #618677;
+  --color-verde4-400: #445e53;
+  --color-verde4-500: #273630;
+  --color-verde4-10: #445e53;
+  --color-verde4-50: #445e53;
+
+  /* Verde 5 */
+  --color-verde5-100: #daddc3;
+  --color-verde5-200: #c0c599;
+  --color-verde5-300: #a7ae70;
+  --color-verde5-400: #868d50;
+  --color-verde5-500: #5e6338;
+  --color-verde5-10: #daddc3;
+  --color-verde5-50: #daddc3;
+}
+
+/* Alexandria */
+@font-face {
+  font-family: 'Alexandria';
+  src: url('/fuentes/Alexandria-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Poppins */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-ThinItalic.woff2') format('woff2');
+  font-weight: 100;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-ExtraLightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-ExtraBoldItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fuentes/Poppins-BlackItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+  font-style: italic;
+}
