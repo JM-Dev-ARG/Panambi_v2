@@ -1,19 +1,19 @@
 ---
-import { ClientRouter } from 'astro:transitions';
+import { ClientRouter } from "astro:transitions";
 
 // Importación de estilos globales, incluyendo Tailwind CSS
-import '../styles/global.css';
+import "../styles/global.css";
 
 //importacion de imagenes
-import icono_metadata from '@/assets/astro.svg';
-import favicon from '@/assets/astro.svg';
+import icono_metadata from "@/assets/astro.svg";
+import favicon from "@/assets/astro.svg";
 
 //keywords
-const keywords = ['astro', 'framework', 'javascript'];
+const keywords = ["astro", "framework", "javascript"];
 
 //data para schema
-import dataSchema from '@/Data/seoSchema.json';
-import NavbarWeb from '@/components/base-components/navbar/NavbarWeb.astro';
+import dataSchema from "@/Data/seoSchema.json";
+import NavbarWeb from "@/components/base-components/navbar/NavbarWeb.astro";
 
 interface Props {
   title: string;
@@ -27,31 +27,31 @@ const canonicalURL = new URL(Astro.url.pathname, site);
 
 // Schema genérico para WebPage y Organization
 const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
+  "@context": "https://schema.org",
+  "@type": "WebPage",
   name: title,
   description: description,
   url: canonicalURL.href,
   logo: dataSchema.logo,
   contactPoint: {
-    '@type': 'ContactPoint',
+    "@type": "ContactPoint",
     telephone: dataSchema.contactPoint.telephone,
-    contactType: 'Atención al cliente',
+    contactType: "Atención al cliente",
     areaServed: dataSchema.contactPoint.areaServed,
     availableLanguage: dataSchema.contactPoint.availableLanguage,
   },
   publisher: {
-    '@type': 'Organization',
+    "@type": "Organization",
     name: dataSchema.publisher.name,
     url: dataSchema.publisher.url,
     logo: {
-      '@type': 'ImageObject',
+      "@type": "ImageObject",
       url: dataSchema.publisher.logo.url,
     },
   },
   sameAs: dataSchema.sameAs,
   address: {
-    '@type': 'PostalAddress',
+    "@type": "PostalAddress",
     streetAddress: dataSchema.address.streetAddress,
     addressLocality: dataSchema.address.addressLocality,
     addressRegion: dataSchema.address.addressRegion,
@@ -92,7 +92,7 @@ const schema = {
 
     <meta
       name="keywords"
-      content={keywords.join(', ')}
+      content={keywords.join(", ")}
     />
 
     <meta
@@ -137,7 +137,7 @@ const schema = {
     />
     <meta
       property="og:title"
-      content={title + ' - Inicio'}
+      content={title + " - Inicio"}
     />
     <meta
       property="og:description"
@@ -164,7 +164,7 @@ const schema = {
     />
     <meta
       name="twitter:title"
-      content={title + ' - Inicio'}
+      content={title + " - Inicio"}
     />
     <meta
       name="twitter:description"
@@ -197,5 +197,7 @@ const schema = {
     padding: 0;
     box-sizing: border-box;
     background-color: #f9f9f9;
+    font-family: var(--font-base);
+    transition-behavior: allow-discrete;
   }
 </style>

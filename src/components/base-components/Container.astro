@@ -1,5 +1,5 @@
 ---
-import Autoria from './Autoria.astro';
+import Autoria from "./Autoria.astro";
 
 interface Props {
   id: string;
@@ -18,5 +18,5 @@ const { id, classNameSeccion, classNameContainer } = Astro.props;
   >
     <slot />
   </div>
-  {id === 'footer' ? <Autoria /> : ''}
+  {id === "footer" ? <Autoria /> : ""}
 </section>
