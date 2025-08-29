@@ -5,6 +5,7 @@
 <!--?xml version="1.0" encoding="UTF-8"?-->
 <svg
   id="Capa_2"
+  class="logo-animado"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 212.37 205.25"
   ><defs
@@ -62,4 +63,82 @@
   </g>
 </svg>
 
-<style></style>
+<style>
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5 {
+  transform-style: preserve-3d;
+}
+
+
+.cls-4,
+.cls-5 {
+ transform: translateY(100%);
+}
+
+.logo-animado:hover .cls-2{
+  animation: logotipoAnimadoInicial 0.3s .1s cubic-bezier(0.98, 0, 1, 0.9) forwards;
+}
+.logo-animado:hover .cls-3{
+  animation: logotipoAnimadoInicial 0.3s .2s cubic-bezier(0.98, 0, 1, 0.9) forwards;
+}
+.logo-animado:hover .cls-4{
+  animation: logotipoAnimadoInicial2 0.3s .4s cubic-bezier(0.98, 0, 1, 0.9) forwards;
+}
+.logo-animado:hover .cls-5{
+  animation: logotipoAnimadoInicial2 0.3s .3s cubic-bezier(0.98, 0, 1, 0.9) forwards;
+}
+
+.logo-animado:not(:hover) .cls-2{
+  animation: logoAnimacionadoReversa 0.3s .4s cubic-bezier(0.98, 0, 1, 0.9) forwards;
+} 
+.logo-animado:not(:hover) .cls-3{
+  animation: logoAnimacionadoReversa 0.3s .3s cubic-bezier(0.98, 0, 1, 0.9) forwards;
+}
+.logo-animado:not(:hover) .cls-4{
+  animation: logoAnimacionadoReversa2 0.3s .1s cubic-bezier(0.98, 0, 1, 0.9) forwards;
+}   
+.logo-animado:not(:hover) .cls-5{
+  animation: logoAnimacionadoReversa2 0.3s .2s cubic-bezier(0.98, 0, 1, 0.9) forwards;
+}
+
+
+
+@keyframes logotipoAnimadoInicial {  
+  to {
+    transform:translateY(-100%);
+  }
+}
+@keyframes logotipoAnimadoInicial2 {  
+  to {
+    transform:translateY(0%);
+  }
+}
+
+@keyframes logoAnimacionadoReversa {  
+  to {
+    transform:translateY(0);
+  }
+}
+@keyframes logoAnimacionadoReversa2 {  
+  to {
+    transform:translateY(100%);
+  }
+  
+}
+
+
+</style>
+
+<!-- <script >
+   document.addEventListener("astro:page-load", () => {
+    const logo = document.querySelector('.logo-animado') as HTMLElement;
+    logo.addEventListener('mouseenter', () => {
+      console.log('hovering logo'); 
+    });
+    logo.addEventListener('mouseleave', () => {
+      console.log('not hovering logo'); 
+    });
+  });
+  </script> -->
