@@ -72,59 +72,67 @@
   }
 
   .cls-4,
-  .cls-5 {
-    transform: translateY(100%);
-  }
+.cls-5 {
+  transform: translateY(100%);
+}
 
-  .logo-animado:hover .cls-2 {
-    animation: logotipoAnimadoInicial 0.3s 0.1s cubic-bezier(0.98, 0, 1, 0.9)
-      forwards;
-  }
-  .logo-animado:hover .cls-3 {
-    animation: logotipoAnimadoInicial 0.3s 0.2s cubic-bezier(0.98, 0, 1, 0.9)
-      forwards;
-  }
-  .logo-animado:hover .cls-4 {
-    animation: logotipoAnimadoInicial2 0.5s 0.5s linear forwards;
-  }
-  .logo-animado:hover .cls-5 {
-    animation: logotipoAnimadoInicial2 0.5s 0.3s linear forwards;
-  }
+/* Animación al entrar */
+.logo-animado.hover-in .cls-2 {
+  animation: logotipoAnimadoInicial 0.3s 0.1s cubic-bezier(0.98, 0, 1, 0.9) forwards ;
+}
+.logo-animado.hover-in .cls-3 {
+  animation: logotipoAnimadoInicial 0.3s 0.2s cubic-bezier(0.98, 0, 1, 0.9) forwards;
+}
+.logo-animado.hover-in .cls-4 {
+  animation: logotipoAnimadoInicial2 0.5s 0.4s linear forwards;
+}
+.logo-animado.hover-in .cls-5 {
+  animation: logotipoAnimadoInicial2 0.5s 0.3s linear forwards;
+}
 
-  .logo-animado:not(:hover) .cls-2 {
-    animation: logoAnimacionadoReversa 0.3s 0.4s cubic-bezier(0.98, 0, 1, 0.9)
-      forwards;
-  }
-  .logo-animado:not(:hover) .cls-3 {
-    animation: logoAnimacionadoReversa 0.3s 0.3s cubic-bezier(0.98, 0, 1, 0.9)
-      forwards;
-  }
-  .logo-animado:not(:hover) .cls-4 {
-    animation: logoAnimacionadoReversa2 0.3s 0.1s cubic-bezier(0.98, 0, 1, 0.9)
-      forwards;
-  }
-  .logo-animado:not(:hover) .cls-5 {
-    animation: logoAnimacionadoReversa2 0.3s 0.2s cubic-bezier(0.98, 0, 1, 0.9)
-      forwards;
-  }
+/* Animación al salir */
+.logo-animado.hover-out .cls-2 {
+  animation: logoAnimacionadoReversa 0.3s 0.4s cubic-bezier(0.98, 0, 1, 0.9) backwards;
+}
+.logo-animado.hover-out .cls-3 {
+  animation: logoAnimacionadoReversa 0.3s 0.3s cubic-bezier(0.98, 0, 1, 0.9) backwards;
+}
+.logo-animado.hover-out .cls-4 {
+  animation: logoAnimacionadoReversa2 0.3s 0.1s cubic-bezier(0.98, 0, 1, 0.9) backwards;
+}
+.logo-animado.hover-out .cls-5 {
+  animation: logoAnimacionadoReversa2 0.3s 0.2s cubic-bezier(0.98, 0, 1, 0.9) backwards;
+}
 
   @keyframes logotipoAnimadoInicial {
+    from {
+      transform: translateY(0);
+    }
     to {
       transform: translateY(-100%);
     }
   }
   @keyframes logotipoAnimadoInicial2 {
+    from {
+      transform: translateY(100%);
+    }
     to {
       transform: translateY(0%);
     }
   }
 
   @keyframes logoAnimacionadoReversa {
+    from {
+      transform: translateY(-100%);
+    }
     to {
       transform: translateY(0);
     }
   }
   @keyframes logoAnimacionadoReversa2 {
+    from {
+      transform: translateY(0);
+    }
     to {
       transform: translateY(100%);
     }
@@ -133,12 +141,20 @@
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const logo = document.querySelector(".logo-animado") as HTMLElement;
-    logo.addEventListener("mouseenter", () => {
-      console.log("hovering logo");
-    });
-    logo.addEventListener("mouseleave", () => {
-      console.log("not hovering logo");
-    });
+  const logo = document.querySelector(".logo-animado") as HTMLElement;
+
+  const restartAnimation = (className: string) => {
+    logo.classList.remove("hover-in", "hover-out"); // quito todas
+    void logo.offsetWidth; // 👈 truco: forzar reflow
+    logo.classList.add(className); // vuelvo a aplicar
+  };
+
+  logo.addEventListener("mouseenter", () => {
+    restartAnimation("hover-in");
   });
+
+  logo.addEventListener("mouseleave", () => {
+    restartAnimation("hover-out");
+  });
+});
 </script>
