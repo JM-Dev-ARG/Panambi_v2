@@ -106,11 +106,11 @@ import Carrousel from "../Carrousel.astro";
     </div>
   </div>
   <div
-    class="bg-verde2-400/85 backdrop-blur-xs navbar__content flex h-[200px] w-[30%] min-w-[570px] scale-0 items-center justify-between overflow-hidden rounded-xl opacity-0 transition-all duration-500"
+    class="bg-verde2-500 backdrop-blur-xs navbar__content flex h-[200px] w-[30%] min-w-[570px] scale-0 items-center justify-between overflow-hidden rounded-xl opacity-0 transition-all duration-500"
   >
     <Carrousel
-      className="h-full"
-      classSlider="h-full gap-2"
+      className="h-full p-1"
+      classSlider="h-full gap-2 "
       id="nav-carrousel"
       duration="fast"
     >
@@ -147,7 +147,7 @@ import Carrousel from "../Carrousel.astro";
         const data = navData[target] || [];
         let div = "";
         data.forEach((item) => {
-          div += `<div class="h-full w-[180px] rounded-md flex flex-col justify-center items-center text-center p-1">
+          div += `<div class="h-full w-[180px] rounded-md flex flex-col justify-center items-center text-center">
             <img src="${item.img}" alt="${item.title}" class="h-full object-cover rounded-xl " />
            
           </div>`;
