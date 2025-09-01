@@ -1,9 +1,13 @@
 ---
 import logo from "@/assets/svg/logotipoPanambi.svg";
 import LogotipoAnimado from "../svg/LogotipoAnimado.astro";
+import { swapBodyElement } from "astro/virtual-modules/transitions-swap-functions.js";
+import Carrousel from "../Carrousel.astro";
 ---
 
-<nav class="sticky top-0 z-50 mx-auto grid w-full place-items-center pt-3">
+<nav
+  class="top-0 z-50 mx-auto hidden w-full place-items-center gap-3 pt-3 md:sticky lg:grid"
+>
   <div
     class="bg-verde2-400/85 backdrop-blur-xs tracking-panambi-nav flex h-[75px] w-[30%] min-w-[570px] items-center justify-between rounded-xl p-[6px] text-[14px] font-normal text-neutral-100"
   >
@@ -17,8 +21,9 @@ import LogotipoAnimado from "../svg/LogotipoAnimado.astro";
         class="flex h-full items-center justify-center transition-all duration-300"
       >
         <a
-          class="transform-3d group flex h-full cursor-pointer items-center justify-center pt-5"
+          class="transform-3d nav-link group flex h-full cursor-pointer items-center justify-center pt-5"
           href="/servicios"
+          data-target="servicios"
         >
           <div class="h-full overflow-hidden">
             <p
@@ -38,8 +43,9 @@ import LogotipoAnimado from "../svg/LogotipoAnimado.astro";
         class="flex h-full items-center justify-center transition-all duration-300"
       >
         <a
-          class="transform-3d group flex h-full cursor-pointer items-center justify-center pt-5"
+          class="transform-3d nav-link group flex h-full cursor-pointer items-center justify-center pt-5"
           href="/proyectos"
+          data-target="proyectos"
         >
           <div class="h-full overflow-hidden">
             <p
@@ -60,8 +66,9 @@ import LogotipoAnimado from "../svg/LogotipoAnimado.astro";
         class="flex h-full items-center justify-center transition-all duration-300"
       >
         <a
-          class="transform-3d group flex h-full cursor-pointer items-center justify-center pt-5"
+          class="transform-3d nav-link group flex h-full cursor-pointer items-center justify-center pt-5"
           href="/equipo"
+          data-target="equipo"
         >
           <div class="h-full overflow-hidden">
             <p
@@ -98,4 +105,80 @@ import LogotipoAnimado from "../svg/LogotipoAnimado.astro";
       </a>
     </div>
   </div>
+  <div
+    class="bg-verde2-400/85 backdrop-blur-xs navbar__content flex h-[200px] w-[30%] min-w-[570px] scale-0 items-center justify-between overflow-hidden rounded-xl opacity-0 transition-all duration-500"
+  >
+    <Carrousel
+      className="h-full"
+      classSlider="h-full gap-2"
+      id="nav-carrousel"
+      duration="fast"
+    >
+      <!-- Contenido dinámico -->
+    </Carrousel>
+  </div>
+
+  <script>
+    import dataEquipo from "../../../Data/navbar_equipo.json";
+    import dataProyectos from "../../../Data/navbar_proyectos.json";
+    import dataServicios from "../../../Data/navbar_servicios.json";
+
+    document.addEventListener("astro:page-load", () => {
+      const navLinks = document.querySelectorAll(
+        ".nav-link"
+      ) as NodeListOf<HTMLAnchorElement>;
+      const navContent = document.querySelector(
+        ".navbar__content"
+      ) as HTMLDivElement;
+      const carrousel = document.getElementById(
+        "nav-carrousel"
+      ) as HTMLDivElement;
+
+      const navData = {
+        servicios: dataServicios,
+        proyectos: dataProyectos,
+        equipo: dataEquipo,
+      };
+
+      let leaveTimeout: NodeJS.Timeout;
+
+      const showNavContent = (target: keyof typeof navData) => {
+        clearTimeout(leaveTimeout);
+        const data = navData[target] || [];
+        let div = "";
+        data.forEach((item) => {
+          div += `<div class="h-full w-[180px] rounded-md flex flex-col justify-center items-center text-center p-1">
+            <img src="${item.img}" alt="${item.title}" class="h-full object-cover rounded-xl " />
+           
+          </div>`;
+        });
+        if (carrousel) {
+          carrousel.innerHTML = div;
+        }
+        navContent?.classList.add("scale-100", "opacity-100");
+      };
+
+      const hideNavContent = () => {
+        leaveTimeout = setTimeout(() => {
+          navContent?.classList.remove("scale-100", "opacity-100");
+        }, 200);
+      };
+
+      navLinks.forEach((link) => {
+        link.addEventListener("mouseenter", () => {
+          const target = link.dataset.target;
+          if (target) {
+            showNavContent(target as keyof typeof navData);
+          }
+        });
+        link.addEventListener("mouseleave", hideNavContent);
+      });
+
+      navContent?.addEventListener("mouseenter", () => {
+        clearTimeout(leaveTimeout);
+      });
+
+      navContent?.addEventListener("mouseleave", hideNavContent);
+    });
+  </script>
 </nav>

@@ -11,7 +11,7 @@ const { id, classNameSeccion, classNameContainer } = Astro.props;
 
 <section
   id={id}
-  class={`w-full flex flex-col justify-between ${classNameSeccion}`}
+  class={`section w-full grid place-items-center mx-auto ${classNameSeccion}`}
 >
   <div
     class={`h-full w-full max-w-[1440px] mx-auto grid place-items-center px-4 ${classNameContainer}`}
@@ -20,3 +20,16 @@ const { id, classNameSeccion, classNameContainer } = Astro.props;
   </div>
   {id === "footer" ? <Autoria /> : ""}
 </section>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const section = document.querySelector("section") as HTMLElement;
+    const viewPort = window.innerWidth;
+    const isMobile = viewPort <= 768;
+    if (isMobile) {
+      section.classList.add("mt-[100px]");
+    } else {
+      section.classList.remove("mt-[100px]");
+    }
+  });
+</script>
