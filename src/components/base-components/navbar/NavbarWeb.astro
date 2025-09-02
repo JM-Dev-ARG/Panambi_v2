@@ -9,7 +9,7 @@ import Carrousel from "../Carrousel.astro";
   class="top-0 z-50 mx-auto hidden w-full place-items-center gap-3 pt-3 md:sticky lg:grid"
 >
   <div
-    class="bg-verde2-400/85 backdrop-blur-xs tracking-panambi-nav flex h-[75px] w-[30%] min-w-[570px] items-center justify-between rounded-xl p-[6px] text-[14px] font-normal text-neutral-100"
+    class="bg-negro/85 backdrop-blur-xs tracking-panambi-nav flex h-[75px] w-[30%] min-w-[570px] items-center justify-between rounded-xl p-[6px] text-[14px] font-normal text-neutral-100"
   >
     <a
       href="/"
@@ -106,16 +106,28 @@ import Carrousel from "../Carrousel.astro";
     </div>
   </div>
   <div
-    class="bg-verde2-500 backdrop-blur-xs navbar__content flex h-[200px] w-[30%] min-w-[570px] scale-0 items-center justify-between overflow-hidden rounded-xl opacity-0 transition-all duration-500"
+    class="bg-negro backdrop-blur-xs navbar__content flex h-[200px] w-[30%] min-w-[570px] scale-0 items-center justify-between overflow-hidden rounded-xl opacity-0 transition-all duration-500 p-1"
   >
-    <Carrousel
-      className="h-full p-1"
+    <!-- Contenido para servicios -->
+    <div
+      id="servicios-content"
+      class="hidden h-full w-full items-center justify-center"
+    >
+      <p class="text-2xl font-bold text-white">Nuestros Servicios</p>
+    </div>
+
+
+    <!-- Contenido con carrousel -->
+    <div id="carrousel_container" class="w-full h-full flex items-center justify-center rounded-lg overflow-hidden">
+      <Carrousel
+      className="h-full  "
       classSlider="h-full gap-2 "
       id="nav-carrousel"
       duration="fast"
-    >
-      <!-- Contenido dinámico -->
-    </Carrousel>
+      >
+      </Carrousel>
+    </div>
+    
   </div>
 
   <script>
@@ -130,8 +142,14 @@ import Carrousel from "../Carrousel.astro";
       const navContent = document.querySelector(
         ".navbar__content"
       ) as HTMLDivElement;
+      const carrouselContainer = document.getElementById(
+        "carrousel_container"
+      ) as HTMLDivElement;
       const carrousel = document.getElementById(
         "nav-carrousel"
+      ) as HTMLDivElement;
+      const serviciosContent = document.getElementById(
+        "servicios-content"
       ) as HTMLDivElement;
 
       const navData = {
@@ -144,16 +162,26 @@ import Carrousel from "../Carrousel.astro";
 
       const showNavContent = (target: keyof typeof navData) => {
         clearTimeout(leaveTimeout);
-        const data = navData[target] || [];
-        let div = "";
-        data.forEach((item) => {
-          div += `<div class="h-full w-[180px] rounded-md flex flex-col justify-center items-center text-center">
-            <img src="${item.img}" alt="${item.title}" class="h-full object-cover rounded-xl " />
-           
-          </div>`;
-        });
-        if (carrousel) {
-          carrousel.innerHTML = div;
+
+        if (target === "servicios") {
+          if (carrousel) carrouselContainer.style.display = "none";
+          if (serviciosContent) {
+            serviciosContent.style.display = "flex";
+            
+          }
+        } else  {
+          if (serviciosContent) serviciosContent.style.display = "none";
+          if (carrousel) {
+            carrouselContainer.style.display = "block";
+            const data = navData[target] || [];
+            let carouselItemsHTML = "";
+            data.forEach((item) => {
+              carouselItemsHTML += `<div class="flex h-full w-[180px] flex-col items-center justify-center rounded-md text-center">
+                <img src="${item.img}" alt="${item.title}" class="h-full rounded-xl object-cover" />
+              </div>`;
+            });
+            carrousel.innerHTML = carouselItemsHTML;
+          }
         }
         navContent?.classList.add("scale-100", "opacity-100");
       };
