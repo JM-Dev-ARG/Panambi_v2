@@ -105,108 +105,238 @@ import Carrousel from "../Carrousel.astro";
       </a>
     </div>
   </div>
+
+  <!-- Contenedor deslizante -->
   <div
-    class="bg-negro backdrop-blur-xs navbar__content flex h-[200px] w-[30%] min-w-[570px] scale-0 items-center justify-between overflow-hidden rounded-xl opacity-0 transition-all duration-500 p-1"
+    class="backdrop-blur-xs navbar__content bg-negro z-50 flex h-[200px] w-[30%] min-w-[570px] scale-0 items-center justify-center overflow-hidden rounded-xl p-1 opacity-0 transition-all duration-500"
   >
     <!-- Contenido para servicios -->
     <div
       id="servicios-content"
-      class="hidden h-full w-full items-center justify-center"
+      class="masacara_rodillo h-full w-full"
     >
-      <p class="text-2xl font-bold text-white">Nuestros Servicios</p>
+      <div
+        class="transform-3d bg-negro flex h-full w-full flex-col items-center justify-center"
+      >
+        <div class="box_rodillo_animado">
+          <p
+            class="texto__rodillo_animado"
+            style="--p:1"
+          >
+            Desarrollo Web
+          </p><p
+            class="texto__rodillo_animado"
+            style="--p:2"
+          >
+            Consultoría
+          </p><p
+            class="texto__rodillo_animado"
+            style="--p:3"
+          >
+            Diseño de Marca
+          </p><p
+            class="texto__rodillo_animado"
+            style="--p:4"
+          >
+            Marketing Digital
+          </p><p
+            class="texto__rodillo_animado"
+            style="--p:5"
+          >
+            Content Creation
+          </p><p
+            class="texto__rodillo_animado"
+            style="--p:6"
+          >
+            Social Media
+          </p><p
+            class="texto__rodillo_animado"
+            style="--p:7"
+          >
+            Estrategias
+          </p><p
+            class="texto__rodillo_animado"
+            style="--p:8"
+          >
+            Desarrollo Web
+          </p>
+          <p
+            class="texto__rodillo_animado"
+            style="--p:9"
+          >
+            Consultoría
+          </p><p
+            class="texto__rodillo_animado"
+            style="--p:10"
+          >
+            Diseño de Marca
+          </p><p
+            class="texto__rodillo_animado"
+            style="--p:11"
+          >
+            Marketing Digital
+          </p><p
+            class="texto__rodillo_animado"
+            style="--p:12"
+          >
+            Content Creation
+          </p><p
+            class="texto__rodillo_animado"
+            style="--p:13"
+          >
+            Social Media
+          </p><p
+            class="texto__rodillo_animado"
+            style="--p:14"
+          >
+            Estrategias
+          </p>
+        </div>
+      </div>
     </div>
-
 
     <!-- Contenido con carrousel -->
-    <div id="carrousel_container" class="w-full h-full flex items-center justify-center rounded-lg overflow-hidden">
+    <div
+      id="carrousel_container"
+      class="flex h-full w-full items-center justify-center overflow-hidden rounded-lg"
+    >
       <Carrousel
-      className="h-full  "
-      classSlider="h-full gap-2 "
-      id="nav-carrousel"
-      duration="fast"
-      >
-      </Carrousel>
+        className="h-full"
+        classSlider="h-full gap-2 "
+        id="nav-carrousel"
+        duration="fast"
+      />
     </div>
-    
   </div>
+</nav>
 
-  <script>
-    import dataEquipo from "../../../Data/navbar_equipo.json";
-    import dataProyectos from "../../../Data/navbar_proyectos.json";
-    import dataServicios from "../../../Data/navbar_servicios.json";
+<style>
+  .masacara_rodillo {
+    /* isolation: isolate; */
+    mask-image: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0.05) 0%,
+      rgba(0, 0, 0, 1) 40%,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(10, 10, 10, 0.05) 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0.05) 0%,
+      rgba(0, 0, 0, 1) 40%,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(10, 10, 10, 0.05) 100%
+    );
+  }
+  .box_rodillo_animado {
+    transform-style: preserve-3d;
+    background-color: #1a181b;
+    animation: animate 20s linear infinite;
+  }
 
-    document.addEventListener("astro:page-load", () => {
-      const navLinks = document.querySelectorAll(
-        ".nav-link"
-      ) as NodeListOf<HTMLAnchorElement>;
-      const navContent = document.querySelector(
-        ".navbar__content"
-      ) as HTMLDivElement;
-      const carrouselContainer = document.getElementById(
-        "carrousel_container"
-      ) as HTMLDivElement;
-      const carrousel = document.getElementById(
-        "nav-carrousel"
-      ) as HTMLDivElement;
-      const serviciosContent = document.getElementById(
-        "servicios-content"
-      ) as HTMLDivElement;
+  .box_rodillo_animado .texto__rodillo_animado {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-      const navData = {
-        servicios: dataServicios,
-        proyectos: dataProyectos,
-        equipo: dataEquipo,
-      };
+    font-size: 48px;
+    color: #e8e8e8;
+    transform: translate(-50%, -50%) rotateX(calc(var(--p) * 25.71deg))
+      translateZ(100px);
+    white-space: nowrap;
+    font-weight: 600;
+    transform-style: preserve-3d;
+  }
 
-      let leaveTimeout: NodeJS.Timeout;
+  @keyframes animate {
+    0% {
+      transform: perspective(1000px) rotateX(0deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateX(-360deg);
+    }
+  }
+</style>
 
-      const showNavContent = (target: keyof typeof navData) => {
-        clearTimeout(leaveTimeout);
+<script>
+  import dataEquipo from "../../../Data/navbar_equipo.json";
+  import dataProyectos from "../../../Data/navbar_proyectos.json";
+  import dataServicios from "../../../Data/navbar_servicios.json";
 
-        if (target === "servicios") {
-          if (carrousel) carrouselContainer.style.display = "none";
-          if (serviciosContent) {
-            serviciosContent.style.display = "flex";
-            
-          }
-        } else  {
-          if (serviciosContent) serviciosContent.style.display = "none";
-          if (carrousel) {
-            carrouselContainer.style.display = "block";
-            const data = navData[target] || [];
-            let carouselItemsHTML = "";
-            data.forEach((item) => {
-              carouselItemsHTML += `<div class="flex h-full w-[180px] flex-col items-center justify-center rounded-md text-center">
+  document.addEventListener("astro:page-load", () => {
+    const navLinks = document.querySelectorAll(
+      ".nav-link"
+    ) as NodeListOf<HTMLAnchorElement>;
+    const navContent = document.querySelector(
+      ".navbar__content"
+    ) as HTMLDivElement;
+    const carrouselContainer = document.getElementById(
+      "carrousel_container"
+    ) as HTMLDivElement;
+    const carrousel = document.getElementById(
+      "nav-carrousel"
+    ) as HTMLDivElement;
+    const serviciosContent = document.getElementById(
+      "servicios-content"
+    ) as HTMLDivElement;
+
+    const navData = {
+      servicios: dataServicios,
+      proyectos: dataProyectos,
+      equipo: dataEquipo,
+    };
+
+    let leaveTimeout: NodeJS.Timeout;
+
+    const showNavContent = (target: keyof typeof navData) => {
+      clearTimeout(leaveTimeout);
+
+      if (target === "servicios") {
+        if (carrousel) carrouselContainer.style.display = "none";
+        if (serviciosContent) {
+          serviciosContent.style.display = "flex";
+          navContent.classList.add("mascara");
+        }
+      } else {
+        if (serviciosContent) serviciosContent.style.display = "none";
+        if (carrousel) {
+          carrouselContainer.style.display = "block";
+          navContent.classList.remove("mascara");
+          const data = navData[target] || [];
+          let carouselItemsHTML = "";
+          data.forEach((item) => {
+            carouselItemsHTML += `<div class="flex h-full w-[180px] flex-col items-center justify-center rounded-md text-center">
                 <img src="${item.img}" alt="${item.title}" class="h-full rounded-xl object-cover" />
               </div>`;
-            });
-            carrousel.innerHTML = carouselItemsHTML;
-          }
+          });
+          carrousel.innerHTML = carouselItemsHTML;
         }
-        navContent?.classList.add("scale-100", "opacity-100");
-      };
+      }
+      navContent?.classList.add("scale-100", "opacity-100");
+    };
 
-      const hideNavContent = () => {
-        leaveTimeout = setTimeout(() => {
-          navContent?.classList.remove("scale-100", "opacity-100");
-        }, 200);
-      };
+    const hideNavContent = () => {
+      leaveTimeout = setTimeout(() => {
+        navContent?.classList.remove("scale-100", "opacity-100");
+      }, 200);
+    };
 
-      navLinks.forEach((link) => {
-        link.addEventListener("mouseenter", () => {
-          const target = link.dataset.target;
-          if (target) {
-            showNavContent(target as keyof typeof navData);
-          }
-        });
-        link.addEventListener("mouseleave", hideNavContent);
+    navLinks.forEach((link) => {
+      link.addEventListener("mouseenter", () => {
+        const target = link.dataset.target;
+        if (target) {
+          showNavContent(target as keyof typeof navData);
+        }
       });
-
-      navContent?.addEventListener("mouseenter", () => {
-        clearTimeout(leaveTimeout);
-      });
-
-      navContent?.addEventListener("mouseleave", hideNavContent);
+      link.addEventListener("mouseleave", hideNavContent);
     });
-  </script>
-</nav>
+
+    navContent?.addEventListener("mouseenter", () => {
+      clearTimeout(leaveTimeout);
+    });
+
+    navContent?.addEventListener("mouseleave", hideNavContent);
+  });
+</script>
