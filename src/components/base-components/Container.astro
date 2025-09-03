@@ -11,25 +11,14 @@ const { id, classNameSeccion, classNameContainer } = Astro.props;
 
 <section
   id={id}
-  class={`section w-full grid place-items-center mx-auto ${classNameSeccion}`}
+  class={`w-full grid place-items-center mx-auto ${classNameSeccion} ${id==="hero" ? "mt-[100px]": "mt-[100px]"}`}
 >
   <div
-    class={`h-full w-full max-w-[1440px] mx-auto grid place-items-center px-4 ${classNameContainer}`}
+    class={`h-full w-full max-w-[1280px] mx-auto grid place-items-center px-4 ${classNameContainer}`}
   >
     <slot />
   </div>
   {id === "footer" ? <Autoria /> : ""}
 </section>
 
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const section = document.querySelector("section") as HTMLElement;
-    const viewPort = window.innerWidth;
-    const isMobile = viewPort <= 768;
-    if (isMobile) {
-      section.classList.add("mt-[100px]");
-    } else {
-      section.classList.remove("mt-[100px]");
-    }
-  });
-</script>
+

@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  
   --font-base: "Poppins", sans-serif;
   --font-titulo: "Alexandria", serif;
 
@@ -11,6 +12,9 @@
   /* Espaciado */
   --tracking-panambi-nav: 0.15em;
 
+  /* Sombra Panambi */
+  --shadow-Panambi: 4px 4px 0px #1a181b;
+  
   /* Negro */
   --color-negro: #1a181b;
 
