@@ -1,7 +1,5 @@
 ---
-import logo from "@/assets/svg/logotipoPanambi.svg";
 import LogotipoAnimado from "../svg/LogotipoAnimado.astro";
-import { swapBodyElement } from "astro/virtual-modules/transitions-swap-functions.js";
 import Carrousel from "../Carrousel.astro";
 ---
 
@@ -9,7 +7,7 @@ import Carrousel from "../Carrousel.astro";
   class="top-0 z-50 mx-auto hidden w-full place-items-center gap-3 pt-2 md:fixed lg:grid"
 >
   <div
-    class="bg-negro/85 backdrop-blur-xs tracking-panambi-nav flex h-[55px] 2xl:h-[75px] w-[30%] min-w-[470px] items-center justify-between rounded-xl p-[6px] text-[12px] 2xl:text-[14px] font-normal text-neutral-100"
+    class="bg-negro/85 backdrop-blur-xs tracking-panambi-nav flex h-[55px] w-[30%] min-w-[470px] items-center justify-between rounded-xl p-[6px] text-[12px] font-normal text-neutral-100 2xl:h-[75px] 2xl:text-[14px]"
   >
     <a
       href="/"
@@ -18,77 +16,77 @@ import Carrousel from "../Carrousel.astro";
     </a>
     <div class="flex h-full flex-1 items-center justify-evenly">
       <a
-          class="transform-3d nav-link group flex flex-col cursor-pointer items-center justify-center overflow-hidden relative "
-          href="/servicios"
-          data-target="servicios"
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden"
+        href="/servicios"
+        data-target="servicios"
+      >
+        <p
+          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
         >
-          <p
-              class="abasolute -top-1/2 translate-y-1/2 left-0 transform-3d  transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
-            >
-              Servicios
-            </p>
-            <p
-              class="abasolute -top-full left-0 transform-3d opacity-0   transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
-            >
-              Servicios
-            </p>
-        </a>
-       <a
-          class="transform-3d nav-link group flex flex-col cursor-pointer items-center justify-center overflow-hidden relative "
-          href="/proyectos"
-          data-target="proyectos"
+          Servicios
+        </p>
+        <p
+          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
         >
-          <p
-              class="abasolute -top-1/2 translate-y-1/2 left-0 transform-3d  transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
-            >
-              Proyectos
-            </p>
-            <p
-              class="abasolute -top-full left-0 transform-3d opacity-0   transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
-            >
-              Proyectos
-            </p>
-        </a>
+          Servicios
+        </p>
+      </a>
+      <a
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden"
+        href="/proyectos"
+        data-target="proyectos"
+      >
+        <p
+          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+        >
+          Proyectos
+        </p>
+        <p
+          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+        >
+          Proyectos
+        </p>
+      </a>
 
-  <a
-          class="transform-3d nav-link group flex flex-col cursor-pointer items-center justify-center overflow-hidden relative "
-          href="/equipo"
-          data-target="equipo"
+      <a
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden"
+        href="/equipo"
+        data-target="equipo"
+      >
+        <p
+          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
         >
-          <p
-              class="abasolute -top-1/2 translate-y-1/2 left-0 transform-3d  transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
-            >
-              Equipo
-            </p>
-            <p
-              class="abasolute -top-full left-0 transform-3d opacity-0   transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
-            >
-              Equipo
-            </p>
-        </a>
+          Equipo
+        </p>
+        <p
+          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+        >
+          Equipo
+        </p>
+      </a>
     </div>
     <div class="flex h-full items-center justify-center">
       <a
-        class="transform-3d group flex h-full cursor-pointer items-center justify-center rounded-lg bg-neutral-50 px-5 2xl:px-7 pt-2.5 2xl:p-5 font-semibold text-neutral-900 transition-all duration-500 hover:scale-[98%] relative"
+        class="transform-3d group relative flex h-full cursor-pointer flex-col items-center justify-center rounded-lg bg-neutral-50 px-3 font-semibold text-neutral-900 transition-all duration-500 hover:scale-[98%] 2xl:px-4"
         href="/contacto"
       >
         <p
-              class="abasolute -top-1/2 translate-y-1/2 left-0 transform-3d  transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
-            >
-              Equipo
-            </p>
-            <p
-              class="abasolute -top-full left-0 transform-3d opacity-0   transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
-            >
-              Equipo
-            </p>
+          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+        >
+          Contacto
+        </p>
+        <p
+          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+        >
+          Contacto
+        </p>
       </a>
     </div>
   </div>
 
   <!-- Contenedor deslizante -->
   <div
-    class="backdrop-blur-xs navbar__content bg-negro z-50 flex h-[200px] w-[30%] min-w-[570px] scale-0 items-center justify-center overflow-hidden rounded-xl p-1 opacity-0 transition-all duration-500"
+    class="backdrop-blur-xs navbar__content bg-negro z-50 flex h-[200px] w-[30%] min-w-[470px] scale-0 items-center justify-center overflow-hidden rounded-xl p-1 opacity-0 transition-all duration-500"
   >
     <!-- Contenido para servicios -->
     <div
@@ -138,38 +136,50 @@ import Carrousel from "../Carrousel.astro";
             class="texto__rodillo_animado"
             style="--p:8"
           >
-            Desarrollo Web
+            Edición de Video
           </p>
           <p
             class="texto__rodillo_animado"
             style="--p:9"
           >
-            Consultoría
+            Desarrollo Web
           </p><p
             class="texto__rodillo_animado"
             style="--p:10"
           >
-            Diseño de Marca
+            Consultoría
           </p><p
             class="texto__rodillo_animado"
             style="--p:11"
           >
-            Marketing Digital
+            Diseño de Marca
           </p><p
             class="texto__rodillo_animado"
             style="--p:12"
           >
-            Content Creation
+            Marketing Digital
           </p><p
             class="texto__rodillo_animado"
             style="--p:13"
           >
-            Social Media
+            Content Creation
           </p><p
             class="texto__rodillo_animado"
             style="--p:14"
           >
+            Social Media
+          </p>
+          <p
+            class="texto__rodillo_animado"
+            style="--p:15"
+          >
             Estrategias
+          </p>
+          <p
+            class="texto__rodillo_animado"
+            style="--p:16"
+          >
+            Edición de Video
           </p>
         </div>
       </div>
@@ -211,7 +221,7 @@ import Carrousel from "../Carrousel.astro";
   .box_rodillo_animado {
     transform-style: preserve-3d;
     background-color: #1a181b;
-    animation: animate 20s linear infinite;
+    animation: animate 25s linear infinite;
   }
 
   .box_rodillo_animado .texto__rodillo_animado {
@@ -221,9 +231,9 @@ import Carrousel from "../Carrousel.astro";
     align-items: center;
     justify-content: center;
 
-    font-size: 48px;
+    font-size: 38px;
     color: #e8e8e8;
-    transform: translate(-50%, -50%) rotateX(calc(var(--p) * 25.71deg))
+    transform: translate(-50%, -50%) rotateX(calc(var(--p) * 22.5deg))
       translateZ(100px);
     white-space: nowrap;
     font-weight: 600;
