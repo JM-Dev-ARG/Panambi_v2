@@ -1,71 +1,71 @@
 [
     {
-        "img": "public/img/proyectos/araoz-web.avif",
+        "img": "/img/proyectos/araoz-web.avif",
         "title": "Jhon Doe",
         "description": "Director Creativo"
     },
     {
-        "img": "public/img/proyectos/belt-web.avif",
+        "img": "/img/proyectos/belt-web.avif",
         "title": "Jane Doe",
         "description": "Desarrolladora Full-Stack"
     },
     {
-        "img": "public/img/proyectos/islay-web.avif",
+        "img": "/img/proyectos/islay-web.avif",
         "title": "Peter Jones",
         "description": "Especialista en Marketing"
     },
     {
-        "img": "public/img/proyectos/lcs-web.avif",
+        "img": "/img/proyectos/lcs-web.avif",
         "title": "Jhon Doe",
         "description": "Director Creativo"
     },
     {
-        "img": "public/img/proyectos/lucas-web.avif",
+        "img": "/img/proyectos/lucas-web.avif",
         "title": "Jane Doe",
         "description": "Desarrolladora Full-Stack"
     },
     {
-        "img": "public/img/proyectos/pm-web.avif",
+        "img": "/img/proyectos/pm-web.avif",
         "title": "Peter Jones",
         "description": "Especialista en Marketing"
     },
     {
-        "img": "public/img/proyectos/rpp-web.avif",
+        "img": "/img/proyectos/rpp-web.avif",
         "title": "Peter Jones",
         "description": "Especialista en Marketing"
     },
     {
-        "img": "public/img/proyectos/araoz-web.avif",
+        "img": "/img/proyectos/araoz-web.avif",
         "title": "Jhon Doe",
         "description": "Director Creativo"
     },
     {
-        "img": "public/img/proyectos/belt-web.avif",
+        "img": "/img/proyectos/belt-web.avif",
         "title": "Jane Doe",
         "description": "Desarrolladora Full-Stack"
     },
     {
-        "img": "public/img/proyectos/islay-web.avif",
+        "img": "/img/proyectos/islay-web.avif",
         "title": "Peter Jones",
         "description": "Especialista en Marketing"
     },
     {
-        "img": "public/img/proyectos/lcs-web.avif",
+        "img": "/img/proyectos/lcs-web.avif",
         "title": "Jhon Doe",
         "description": "Director Creativo"
     },
     {
-        "img": "public/img/proyectos/lucas-web.avif",
+        "img": "/img/proyectos/lucas-web.avif",
         "title": "Jane Doe",
         "description": "Desarrolladora Full-Stack"
     },
     {
-        "img": "public/img/proyectos/pm-web.avif",
+        "img": "/img/proyectos/pm-web.avif",
         "title": "Peter Jones",
         "description": "Especialista en Marketing"
     },
     {
-        "img": "public/img/proyectos/rpp-web.avif",
+        "img": "/img/proyectos/rpp-web.avif",
         "title": "Peter Jones",
         "description": "Especialista en Marketing"
     }
