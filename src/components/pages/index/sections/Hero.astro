@@ -4,121 +4,163 @@ import celImg from "@/assets/img/hero/hero_cel_mano.avif";
 import resultadosImg from "@/assets/img/hero/hero_resultados.avif";
 import postImg from "@/assets/img/hero/hero_post_insta.avif";
 import btnImg from "@/assets/img/hero/hero_btn_compartir.avif";
-import celtest from "@/assets/img/hero/cel_test.png";
+import logo from "@/assets/svg/logotipoPanambi.svg";
+import flecha from "@/assets/svg/arrow-right.svg";
 ---
 
 <Container
-  id="hero"
-  classNameSeccion="h-[550px] xl:h-[650px] pb-4 pt-8 overflow-x-clip"
+  id="hero_index"
+  classNameSeccion="h-[550px] lg:h-[650px]  pb-4 pt-8 overflow-x-clip"
 >
-  <div class="hero-grid ">
-    <div class="a">1</div>
-    <div class="b"></div>
-    <div class="c">4</div>
-    <div class="d">
-      
-      <div class=" relative h-full w-full object-bottom ">
-<img
-        src={celImg.src}
+  <div class="hero-grid">
+    <div class="a relative overflow-hidden">
+      <img
+        src={logo.src}
         alt=""
-        class="absolute bottom-0 right-0 rounded-b-3xl h-auto  " 
+        height="auto"
+        width="auto"
+        class="absolute -bottom-[25%] -right-[20%] -z-10 h-[90%] opacity-50"
       />
+      <div class="flex h-full w-full flex-col items-start justify-between p-4">
+        <div class="flex w-[90%] flex-col gap-2 lg:w-full">
+          <h1
+            class="text-violeta2-200 text-base font-semibold lg:text-xl lg:tracking-wider"
+          >
+            Panambi - Marketing Digital y Desarrollo Web
+          </h1>
+          <h2
+            class="text-negro text-[clamp(2rem,8.5vw,3rem)] font-medium uppercase leading-[40px] md:text-[40px] lg:text-6xl lg:leading-[60px] xl:text-7xl"
+          >
+            Transoformamos el negocio de <strong
+              class="text-violeta1-400 font-extrabold italic">Seguros</strong
+            >
+          </h2>
+        </div>
+        <div class="w-[80%] md:w-[75%] lg:w-[45%]">
+          <p
+            class="text-pretty text-base font-medium leading-[17px] text-black/40"
+          >
+            Somos tu socio digital para el negocio de Seguros Te acompañamos en
+            el proceso de transformación y comercialización digital de seguros.
+          </p>
+        </div>
       </div>
-      
-
-      <div
-        class="absolute left-0  xl:left-[10%] bottom-0 xl:bottom-[10%]  aspect-auto h-full w-full bg-cover bg-center  xl:scale-125 "
-        style=`background-image: url(${resultadosImg.src});`
-      >
-      </div>
-      <div
-        class="absolute left-0 top-0 aspect-auto h-full w-full bg-cover bg-center px-2 opacity-90"
-        style=`background-image: url(${postImg.src});`
-      >
-      </div>
-      <div
-        class="absolute left-0 top-0 aspect-auto h-full w-full bg-cover bg-center px-2 scale-95"
-        style=`background-image: url(${btnImg.src});`
-      >
+    </div>
+    <div class="b"></div>
+    <div class="c flex w-full items-center justify-center p-3">
+      <img
+        src={flecha.src}
+        height="auto"
+        width="auto"
+        alt="Flecha"
+        class="h-full rotate-45 object-contain"
+      /><img
+        src={flecha.src}
+        height="auto"
+        width="auto"
+        alt="Flecha"
+        class="hidden h-full rotate-[135deg] object-contain md:block lg:hidden xl:block"
+      />
+    </div>
+    <div class="d group">
+      <div class="relative h-full w-full object-bottom">
+        <img
+          src={celImg.src}
+          alt=""
+          class="absolute bottom-0 right-0 h-auto rounded-b-3xl lg:right-[18px] lg:h-[110%] lg:scale-x-110 xl:right-0 xl:h-auto xl:scale-x-100"
+        />
+        <img
+          src={resultadosImg.src}
+          alt=""
+          class="drop-shadow-negro absolute -right-[10%] bottom-0 h-auto scale-125 drop-shadow-lg transition-all delay-200 duration-500 group-hover:scale-[140%]"
+        />
+        <img
+          src={postImg.src}
+          alt=""
+          class="drop-shadow-negro absolute -bottom-4 right-0 h-auto drop-shadow-lg transition-all delay-75 duration-500 group-hover:scale-150 lg:bottom-0 xl:-bottom-4"
+        />
+        <img
+          src={btnImg.src}
+          alt=""
+          class="drop-shadow-negro absolute -bottom-4 right-0 h-auto drop-shadow-lg transition-all delay-300 duration-500 group-hover:scale-[135%] lg:bottom-16 xl:-bottom-4"
+        />
       </div>
     </div>
   </div>
-</Container>
 
-<style>
-  .hero-grid {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    gap: 16px;
-    grid: 
-      "a a a a a " 1fr
-      "a a a a a " 1fr
-      "b b  b c c " 1fr
-      / 1fr 1fr 1fr 1fr 1fr ;
-  }
-
-  @media (width >= 600px) {
+  <style>
     .hero-grid {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      gap: 16px;
       grid:
-     "a a a a a d d d" 1fr
-      "a a a a a d d d" 1fr
-      "b b b b c c c c" 1fr
-      / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        "a a a a a " 1fr
+        "a a a a a " 1fr
+        "b b  b c c " 1fr
+        / 1fr 1fr 1fr 1fr 1fr;
     }
-  }
 
-  @media (width >= 1024px) {
-    .hero-grid {
-      grid:
-      "a a a a a d d d" 1fr
-      "a a a a a d d d" 1fr
-      "b b b c c d d d" 1fr
-      / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    @media (width >= 600px) {
+      .hero-grid {
+        grid:
+          "a a a a a d d d" 1fr
+          "a a a a a d d d" 1fr
+          "b b b b c c c c" 1fr
+          / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      }
     }
-  }
-  
-  .a,
-  .b,
-  .c,
-  .d {
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 24px;
-    box-shadow: 4px 4px 0px #1a181b;
-  }
 
-  .a {
-    grid-area: a;
-    background-color: color-mix(
-      in oklab,
-      var(--color-violeta1-100) 37%,
-      transparent
-    );
-  }
-  .d {
-    grid-area: d;
-    background-color: var(--color-verde2-300);
-    display: none;
-    position: relative;
-  }
+    @media (width >= 1024px) {
+      .hero-grid {
+        grid:
+          "a a a a a d d d" 1fr
+          "a a a a a d d d" 1fr
+          "b b b c c d d d" 1fr
+          / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      }
+    }
 
-  @media (width >= 600px) {
+    .a,
+    .b,
+    .c,
     .d {
-      display: flex;
+      color: white;
+      border-radius: 24px;
+      box-shadow: 4px 4px 0px #1a181b;
+      border: 2px solid #1a181b;
     }
-  }
-  .b {
-    grid-area: b;
-    background-image: url("/public/img/hero_img_card_1.avif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .c {
-    grid-area: c;
-    background-color: var(--color-violeta1-200);
-  }
-</style>
+
+    .a {
+      grid-area: a;
+      background-color: color-mix(
+        in oklab,
+        var(--color-violeta1-100) 37%,
+        transparent
+      );
+    }
+    .d {
+      grid-area: d;
+      background-color: var(--color-verde2-300);
+      display: none;
+      position: relative;
+    }
+
+    @media (width >= 600px) {
+      .d {
+        display: flex;
+      }
+    }
+    .b {
+      grid-area: b;
+      background-image: url("/public/img/hero_img_card_1.avif");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .c {
+      grid-area: c;
+      background-color: var(--color-violeta1-200);
+    }
+  </style>
+</Container>

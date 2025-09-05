@@ -1,0 +1,44 @@
+---
+interface Props {
+  titulo: string;
+  subtitulo: string;
+  descripcion: string;
+  imagen: string;
+  bgColor: string;
+}
+const { titulo, subtitulo, descripcion, imagen, bgColor } = Astro.props;
+---
+
+<div
+  class=`border-negro shadow-Panambi relative flex h-[500px] xl:h-[600px] flex-col items-center justify-start rounded-3xl border-2 pt-8 md:pt-12 xl:pt-16 ${bgColor}`
+>
+  <div
+    class="flex h-[75%] w-full flex-col items-center justify-between text-neutral-50 md:h-[50%] lg:h-[55%] xl:h-[40%]"
+  >
+    <div class="flex w-full flex-col items-center justify-center gap-2">
+      <h4
+        class="text-center text-lg font-normal uppercase md:text-xl lg:text-lg xl:text-xl"
+      >
+        {titulo}
+      </h4>
+      <h5
+        class="font-titulo text-balance text-center text-2xl font-black uppercase tracking-wide md:text-4xl lg:text-2xl xl:text-3xl"
+      >
+        {subtitulo}
+      </h5>
+    </div>
+
+    <div
+      class="font-titulo w-[80%] text-pretty text-center font-light leading-tight"
+    >
+      <p>
+        {descripcion}
+      </p>
+    </div>
+  </div>
+  <img
+    src={imagen}
+    alt=`imagen de ${titulo}`
+    class="absolute -bottom-[20%] left-1/2 h-auto w-[65%] -translate-x-1/2 object-cover md:-bottom-[25%] md:w-[50%] lg:-bottom-[20%] lg:w-[65%]"
+  />
+</div>
