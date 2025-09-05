@@ -9,36 +9,35 @@ import celtest from "@/assets/img/hero/cel_test.png";
 
 <Container
   id="hero"
-  classNameSeccion="h-[calc(100dvh-100px)] overflow-hidden pb-4"
+  classNameSeccion="h-[550px] xl:h-[650px] pb-4 pt-8 overflow-x-clip"
 >
-  <div class="hero-grid pt-16">
+  <div class="hero-grid ">
     <div class="a">1</div>
     <div class="b"></div>
     <div class="c">4</div>
-    <div class="d px-2">
-      <!--       <div
-        class="scale-115 absolute left-0 top-0 aspect-auto h-full w-full bg-cover bg-center"
-        style=`background-image: url(${celImg.src});`
-      >
-      </div> -->
-      <img
-        src={celtest.src}
+    <div class="d">
+      
+      <div class=" relative h-full w-full object-bottom ">
+<img
+        src={celImg.src}
         alt=""
-        class="absolute -top-10 left-0 h-full w-full"
+        class="absolute bottom-0 right-0 rounded-b-3xl h-auto  " 
       />
+      </div>
+      
 
       <div
-        class="absolute left-3 top-0 aspect-auto h-full w-[80%] bg-cover bg-center px-2"
+        class="absolute left-0  xl:left-[10%] bottom-0 xl:bottom-[10%]  aspect-auto h-full w-full bg-cover bg-center  xl:scale-125 "
         style=`background-image: url(${resultadosImg.src});`
       >
       </div>
       <div
-        class="absolute -left-3 top-0 aspect-auto h-full w-full bg-cover bg-center px-2"
+        class="absolute left-0 top-0 aspect-auto h-full w-full bg-cover bg-center px-2 opacity-90"
         style=`background-image: url(${postImg.src});`
       >
       </div>
       <div
-        class="absolute left-3 top-0 aspect-auto h-full w-full bg-cover bg-center px-2"
+        class="absolute left-0 top-0 aspect-auto h-full w-full bg-cover bg-center px-2 scale-95"
         style=`background-image: url(${btnImg.src});`
       >
       </div>
@@ -51,14 +50,34 @@ import celtest from "@/assets/img/hero/cel_test.png";
     width: 100%;
     height: 100%;
     display: grid;
-    grid:
+    gap: 16px;
+    grid: 
+      "a a a a a " 1fr
+      "a a a a a " 1fr
+      "b b  b c c " 1fr
+      / 1fr 1fr 1fr 1fr 1fr ;
+  }
+
+  @media (width >= 600px) {
+    .hero-grid {
+      grid:
+     "a a a a a d d d" 1fr
+      "a a a a a d d d" 1fr
+      "b b b b c c c c" 1fr
+      / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  @media (width >= 1024px) {
+    .hero-grid {
+      grid:
       "a a a a a d d d" 1fr
       "a a a a a d d d" 1fr
       "b b b c c d d d" 1fr
       / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 16px;
+    }
   }
-
+  
   .a,
   .b,
   .c,
@@ -81,8 +100,15 @@ import celtest from "@/assets/img/hero/cel_test.png";
   }
   .d {
     grid-area: d;
-    background-color: var(--color-verde2-500);
+    background-color: var(--color-verde2-300);
+    display: none;
     position: relative;
+  }
+
+  @media (width >= 600px) {
+    .d {
+      display: flex;
+    }
   }
   .b {
     grid-area: b;
