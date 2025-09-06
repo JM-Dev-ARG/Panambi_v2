@@ -1,0 +1,15 @@
+---
+import flecha from "@/assets/svg/arrow-right.svg";
+interface Props {
+texto: string;
+bgVerde?:boolean;
+href:string
+}
+
+const { texto, bgVerde, href } = Astro.props;
+---
+
+<a href={href} class=`flex gap-2 h-full cursor-pointer items-center justify-center rounded-xl ${bgVerde ? "bg-verde1-300":"bg-neutral-100"} py-4 px-3 font-semibold text-neutral-900 transition-all duration-500 hover:scale-105 2xl:px-6 border-2 border-negro shadow-Panambi `>
+    {texto}
+    <img src={flecha.src} height="auto" width="auto" alt="">
+</a>
