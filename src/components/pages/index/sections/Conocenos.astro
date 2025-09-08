@@ -1,30 +1,46 @@
 ---
 import Container from "@/components/base-components/Container.astro";
-import Titulo from "@/components/base-components/Titulo.astro";
 import logo from "@/assets/svg/logotipoPanambi.svg";
-
+import Boton from "@/components/base-components/Boton.astro";
+import TituloCards from "@/components/base-components/TituloCards.astro";
 ---
 
 <Container id="Conocenos_index">
-   <div class="border-2 border-negro rounded-3xl w-4/5 relative shadow-Panambi">
-    <img src={logo.src}
-    alt="Logo Panambi"
-    width="auto"
-    height="auto"
-    loading="lazy"
-    class="absolute -top-[40%] left-1/2 -translate-x-1/2 h-[150px] ">
-    <Titulo
-      title="Conócenos"
-      subtitle="Nosotros"
+  <div
+    class="border-negro shadow-Panambi bg-violeta1-100/30 relative w-4/5 rounded-3xl border-2 py-6"
+  >
+    <img
+      src={logo.src}
+      alt="Logo Panambi"
+      width="auto"
+      height="auto"
+      loading="lazy"
+      class="absolute -top-[85px] left-1/2 h-[180px] -translate-x-1/2"
     />
-   
-   </div>
+    <div
+      class="mt-14 flex h-full w-full flex-col items-center justify-center gap-4"
+    >
+      <TituloCards
+        textNegro={true}
+        title="Para Comercializar seguros hoy"
+        subtitle="necesitas planificación, tecnología y mentalidad de negocios"
+      />
+
+      <div
+        class="flex w-full flex-col items-center justify-center gap-4 md:flex-row"
+      >
+        <Boton
+          texto="Nuestros proyectos"
+          href="/proyectos"
+        />
+        <Boton
+          texto="Conocenos"
+          href="/equipo"
+          bgVerde={true}
+        />
+      </div>
+    </div>
+  </div>
 </Container>
 
-<!-- <style>
-    .sombra-logo {
-        /* `drop-shadow` aplica una sombra que sigue la forma del SVG.
-           No soporta 'inset', pero crea un buen efecto de profundidad. */
-        filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.25));
-    }
-</style> -->
+<style></style>

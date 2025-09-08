@@ -1,0 +1,24 @@
+---
+interface Props {
+  titulo: string;
+  descripcion: string;
+}
+const { titulo, descripcion } = Astro.props;
+import flecha from "@/assets/svg/flecha_logo_panambi.svg";
+---
+
+<article
+  class="flex flex-col items-start justify-center gap-2 text-neutral-100"
+>
+  <h3
+    class="flex items-center justify-start gap-4 text-xl font-bold uppercase md:text-2xl"
+  >
+    <img
+      src={flecha.src}
+      alt="Flecha logo Panambi"
+      class="h-6 w-6 md:h-8 md:w-8"
+    />
+    {titulo}
+  </h3>
+  <p class="ml-10 text-base md:ml-12 md:text-lg">{descripcion}</p>
+</article>

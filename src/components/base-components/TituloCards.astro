@@ -1,0 +1,23 @@
+---
+interface Props {
+  textNegro?: boolean;
+  title: string;
+  subtitle: string;
+}
+const { textNegro, title, subtitle } = Astro.props;
+---
+
+<div
+  class=`flex w-full flex-col items-center justify-center gap-2 ${textNegro ?'text-negro':'text-neutral-100'}`
+>
+  <h3
+    class="tracking-panambi-nav text-center text-xl font-normal uppercase md:text-2xl lg:text-3xl xl:text-4xl"
+  >
+    {title}
+  </h3>
+  <h2
+    class="font-titulo md:leading-12 lg:leading-14 w-full text-pretty text-center text-3xl font-black uppercase leading-10 tracking-wide md:text-4xl lg:text-5xl xl:text-6xl"
+  >
+    {subtitle}
+  </h2>
+</div>
