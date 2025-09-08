@@ -1,0 +1,30 @@
+---
+import Container from "@/components/base-components/Container.astro";
+import Titulo from "@/components/base-components/Titulo.astro";
+import logo from "@/assets/svg/logotipoPanambi.svg";
+
+---
+
+<Container id="Conocenos_index">
+   <div class="border-2 border-negro rounded-3xl w-4/5 relative shadow-Panambi">
+    <img src={logo.src}
+    alt="Logo Panambi"
+    width="auto"
+    height="auto"
+    loading="lazy"
+    class="absolute -top-[40%] left-1/2 -translate-x-1/2 h-[150px] ">
+    <Titulo
+      title="Conócenos"
+      subtitle="Nosotros"
+    />
+   
+   </div>
+</Container>
+
+<!-- <style>
+    .sombra-logo {
+        /* `drop-shadow` aplica una sombra que sigue la forma del SVG.
+           No soporta 'inset', pero crea un buen efecto de profundidad. */
+        filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.25));
+    }
+</style> -->
