@@ -86,7 +86,7 @@ import Carrousel from "../Carrousel.astro";
 
   <!-- Contenedor deslizante -->
   <div
-    class="backdrop-blur-xs navbar__content bg-negro z-50 flex h-[200px] w-[30%] min-w-[470px] scale-0 items-center justify-center overflow-hidden rounded-xl p-1 opacity-0 transition-all duration-500"
+    class="backdrop-blur-xs navbar__content bg-negro z-50 flex h-[0px] w-[30%] min-w-[470px] scale-0 items-center justify-center overflow-hidden rounded-xl p-1 opacity-0 transition-all duration-500"
   >
     <!-- Contenido para servicios -->
     <div
@@ -304,12 +304,16 @@ import Carrousel from "../Carrousel.astro";
           carrousel.innerHTML = carouselItemsHTML;
         }
       }
-      navContent?.classList.add("scale-100", "opacity-100");
+      navContent?.classList.add("scale-100", "opacity-100", "h-[200px]");
+      navContent?.classList.remove("h-[0px]");
+
     };
 
     const hideNavContent = () => {
       leaveTimeout = setTimeout(() => {
-        navContent?.classList.remove("scale-100", "opacity-100");
+        navContent?.classList.remove("scale-100", "opacity-100", "h-[200px]");
+        navContent?.classList.add("h-[0px]");
+
       }, 200);
     };
 

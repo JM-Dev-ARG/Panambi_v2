@@ -8,16 +8,19 @@
     {
         "cardLetra": "b",
         "bgImg": "/img/mock/mkt-digital.avif",
-        "titulo": "Lorem ipsum dolor, sit amet"
+        "titulo": "Lorem ipsum dolor, sit amet",
+        "bgColor": "bg-violeta1-300"
     },
     {
         "cardLetra": "c",
         "bgImg": "/img/mock/mkt-digital.avif",
-        "titulo": "Lorem ipsum dolor, sit amet"
+        "titulo": "Lorem ipsum dolor, sit amet",
+        "bgColor": "bg-verde1-200"
     },
     {
         "cardLetra": "d",
         "bgImg": "/img/mock/mkt-digital.avif",
-        "titulo": "Lorem ipsum dolor, sit amet"
+        "titulo": "Lorem ipsum dolor, sit amet",
+        "bgColor": "bg-[#1a181b]"
     }
 ]
