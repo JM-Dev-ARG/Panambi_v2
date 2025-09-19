@@ -30,20 +30,25 @@ import cardProyectosData from "@/data/proyectos_card_index.json";
   .proyectos__layout {
     width: 100%;
 
-    display: grid;
-    grid:
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  @media (width >= 600px) {
+    .proyectos__layout {
+      display: grid;
+      grid:
       "a a a b b" 1fr
       "c c d d d" 1fr
       / 1fr 1fr 1fr 1fr 1fr;
-    gap: 16px;
+    }
   }
 
   .a {
     grid-area: a;
-    /* background-image: url("/img/hero_img_card_1.avif");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat; */
   }
   .b {
     grid-area: b;
