@@ -21,24 +21,24 @@ import flecha from "@/assets/svg/arrow-right.svg";
         width="auto"
         class="absolute -bottom-[25%] -right-[20%] -z-10 h-[90%] opacity-50"
       />
-      <div class="flex h-full w-full flex-col items-start justify-between p-4">
-        <div class="flex w-[90%] flex-col gap-2 lg:w-full">
+      <div class="flex h-full w-full flex-col items-start justify-center sm:justify-around gap-6 p-4">
+        <div class="flex w-full flex-col gap-2 lg:w-full">
           <h1
-            class="text-violeta2-200 text-base font-semibold lg:text-xl lg:tracking-wider"
+            class="text-violeta2-200 text-xs font-semibold lg:text-xl lg:tracking-wider "
           >
             Panambi - Marketing Digital y Desarrollo Web
           </h1>
           <h2
-            class="text-negro text-[clamp(2rem,8.5vw,3rem)] font-medium uppercase leading-[40px] md:text-[40px] lg:text-6xl lg:leading-[60px] xl:text-7xl"
+            class="text-negro text-[clamp(1.8rem,9vw,3.5rem)] font-medium uppercase leading-[clamp(2rem,8.5vw,3.5rem)] sm:text-[40px] sm:leading-[40px] lg:text-6xl lg:leading-[60px] xl:text-[80px] xl:leading-[70px]"
           >
-            Transoformamos el negocio de <strong
+            Transformamos el negocio de <strong
               class="text-violeta1-400 font-extrabold italic">Seguros</strong
             >
           </h2>
         </div>
-        <div class="w-[80%] md:w-[75%] lg:w-[45%]">
+        <div class="w-full sm:w-[90%] ">
           <p
-            class="text-pretty text-base font-medium leading-[17px] text-black/40"
+            class="text-pretty text-sm lg:text-base font-medium leading-[17px] text-negro/60"
           >
             Somos tu socio digital para el negocio de Seguros Te acompañamos en
             el proceso de transformación y comercialización digital de seguros.
@@ -110,6 +110,7 @@ import flecha from "@/assets/svg/arrow-right.svg";
           / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       }
     }
+    
 
     @media (width >= 1024px) {
       .hero-grid {

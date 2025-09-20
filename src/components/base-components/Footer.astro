@@ -1,0 +1,154 @@
+---
+import Container from "./Container.astro";
+import logo from "@/assets/svg/logotipoPanambi.svg";
+import nmombre from "@/assets/svg/logo_full_lila.svg";
+
+
+---
+
+<Container id="footer">
+    <footer class="flex h-[300px] w-full items-center justify-between bg-negro rounded-tl-3xl rounded-tr-3xl overflow-hidden px-12">
+    <a href="/#hero_index" class="w-[30%] object-contain inline-block">
+        
+      <img
+        src={logo.src}
+        alt="Logo Panambi"
+        width="auto"
+        height="auto"
+        loading="lazy"
+        class="w-[300px] object-contain object-bottom "
+      >
+      <img src={nmombre.src} alt="Logo Panambi" width="auto" height="auto" loading="lazy" class="w-[250px] object-contain lg:-mt-14 xl:-mt-16">
+
+    </a>
+
+    <div class="w-[40%] flex items-start justify-center text-neutral-100">
+            <div class="flex flex-col h-full flex-1 items-start justify-center gap-4 text-left">
+
+        <p class="text-2xl font-light font-titulo tracking-panambi-nav">Secciones</p>
+      <a
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]   "
+        href="/servicios"
+        
+      >
+        <p
+          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+        >
+          Servicios
+        </p>
+        <p
+          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+        >
+          Servicios
+        </p>
+      </a>
+      <a
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]  "
+        href="/proyectos"
+        
+      >
+        <p
+          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+        >
+          Proyectos
+        </p>
+        <p
+          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+        >
+          Proyectos
+        </p>
+      </a>
+
+      <a
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]  "
+        href="/equipo"
+        
+      >
+        <p
+          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+        >
+          Equipo
+        </p>
+        <p
+          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+        >
+          Equipo
+        </p>
+      </a>
+        <a
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]  "
+        href="/contacto"
+        
+      >
+        <p
+          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+        >
+          Contacto
+        </p>
+        <p
+          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+        >
+          Contacto
+        </p>
+      </a>
+    </div>
+     <div class="flex flex-col h-full flex-1 items-start justify-center gap-4 text-left">
+
+        <p class="text-2xl font-light font-titulo tracking-panambi-nav">Redes</p>
+      <a
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]   "
+        href="https://www.instagram.com/panambi.mkt/?igsh=MWNtb3o3NXRyc2p6aw%3D%3D#"
+        target="_blank"
+        
+      >
+        <p
+          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+        >
+          Instagram
+        </p>
+        <p
+          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+        >
+          Instagram
+        </p>
+      </a>
+      <a
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]  "
+        href="https://www.linkedin.com/company/panambi-ag/?originalSubdomain=ar"
+        target="_blank"
+        
+      >
+        <p
+          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+        >
+          Linkedin
+        </p>
+        <p
+          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+        >
+          Linkedin
+        </p>
+      </a>
+
+      <a
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]  "
+        href="/equipo"
+        
+      >
+        <p
+          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+        >
+          Facebook
+        </p>
+        <p
+          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+        >
+          Facebook
+        </p>
+      </a>
+        
+    </div>
+    
+        </div>
+    </div>
+</Container>

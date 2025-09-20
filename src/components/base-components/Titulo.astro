@@ -1,9 +1,11 @@
 ---
 interface Props {
-  title: string;
+  title: string; 
   subtitle: string;
+  textNegro?: boolean;
+  marginBottom?: boolean;
 }
-const { title, subtitle } = Astro.props;
+const { title, subtitle, textNegro = true , marginBottom = true } = Astro.props;
 
 const tituloPalabras = title.split(" ");
 const subtitlePalabras = subtitle.split(" ");
@@ -11,15 +13,14 @@ const subtitlePalabras = subtitle.split(" ");
 ---
 
 <div
-  class="text-negro mb-16 flex w-full flex-col items-center justify-center gap-2"
->
+  class=`flex w-full flex-col items-center justify-center gap-2 ${textNegro ?'text-negro':'text-neutral-100'} ${marginBottom ? 'mb-8' : ''}`>
   <h3
  
     class="titulo1 text-center text-xl font-normal uppercase md:text-2xl lg:text-4xl "
     
   > {
     tituloPalabras.map((palabra, palabraIndex) =>
-      <span class="palabra tracking-panambi-nav inline-block pr-4">
+      <span class={`palabra tracking-panambi-nav inline-block ${tituloPalabras.length <= 1 || palabraIndex === tituloPalabras.length - 1 ? "" : "pr-4"}`}>
         {
           palabra.split("").map((char, charIndex) => {
             // calculamos el delay global
@@ -32,7 +33,7 @@ const subtitlePalabras = subtitle.split(" ");
             return (
               <span
                 class="titulo__caracter inline-block"
-                style={`animation-delay: ${globalIndex * 0.05}s`}
+                style={`animation-delay: ${globalIndex * 0.03}s`}
               >
                 {char}
               </span>
@@ -50,7 +51,7 @@ const subtitlePalabras = subtitle.split(" ");
   >
     {
     subtitlePalabras.map((palabra, palabraIndex) =>
-      <span class="palabra inline-block pr-4">
+      <span class={`palabra  inline-block ${subtitlePalabras.length <= 1 || palabraIndex === subtitlePalabras.length - 1 ? "" : "pr-4"}`}>
         {
           palabra.split("").map((char, charIndex) => {
             // calculamos el delay global
@@ -63,7 +64,7 @@ const subtitlePalabras = subtitle.split(" ");
             return (
               <span
                 class="subtitle__caracter inline-block"
-                style={`animation-delay: ${globalIndex * 0.05}s`}
+                style={`animation-delay: ${globalIndex * 0.03}s`}
               >
                 {char}
               </span>
@@ -84,7 +85,7 @@ const subtitlePalabras = subtitle.split(" ");
   display: inline-block;
   opacity: 0;
   transform: translateY(100%);
-  animation: slide-in 0.6s ease-out forwards;
+  animation: slide-in 0.3s ease-out forwards;
   animation-play-state: paused; /* 🔑 se pausa hasta que la activemos */
 }
 
@@ -106,40 +107,6 @@ const subtitlePalabras = subtitle.split(" ");
 
 
 <script>
-  /* document.addEventListener("astro:page-load", () => {
-    const palabra = document.querySelectorAll(".palabra") as NodeListOf<HTMLElement>;
-    const titulo = document.querySelectorAll(".titulo__caracter, .subtitle__caracter") as NodeListOf<HTMLElement>;
-
-      const observer = new IntersectionObserver((entries) => {
-        setTimeout(() => {
-
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("animate-title");
-              observer.unobserve(entry.target);
-            }
-          });
-        }, 200);
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-title");
-            observer.unobserve(entry.target);
-          }
-        })
-      }
-        
-      , { threshold: 0.1 });
-      titulo.forEach((char) => {
-        observer.observe(char);
-      }
-      );
-
-      
-
-  });
-  
-
-        */
 
         document.addEventListener("astro:page-load", () => {
   const caracteres = document.querySelectorAll(".titulo__caracter, .subtitle__caracter") as NodeListOf<HTMLElement>;

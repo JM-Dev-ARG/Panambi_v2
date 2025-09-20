@@ -11,12 +11,13 @@ const { id, classNameSeccion, classNameContainer } = Astro.props;
 
 <section
   id={id}
-  class={`w-full grid place-items-center mx-auto ${classNameSeccion} ${id === "hero_index" ? "mt-[80px] md:mt-[120px] lg:mt-[100px] xl:mt-[130px]  " : "mt-[80px]"}`}
+  class={`w-full grid place-items-center mx-auto ${classNameSeccion} mt-[80px]`}
 >
   <div
     class={`h-full w-full max-w-[1280px] mx-auto grid place-items-center px-4 ${classNameContainer}`}
   >
     <slot />
+     {id === "footer" ? <Autoria /> : ""}
   </div>
-  {id === "footer" ? <Autoria /> : ""}
+ 
 </section>

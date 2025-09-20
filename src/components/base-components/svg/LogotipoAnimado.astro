@@ -144,9 +144,9 @@
   const logo = document.querySelector(".logo-animado") as HTMLElement;
 
   const restartAnimation = (className: string) => {
-    logo.classList.remove("hover-in", "hover-out"); // quito todas
-    void logo.offsetWidth; // 👈 truco: forzar reflow
-    logo.classList.add(className); // vuelvo a aplicar
+    logo.classList.remove("hover-in", "hover-out"); 
+    void logo.offsetWidth; 
+    logo.classList.add(className); 
   };
 
   logo.addEventListener("mouseenter", () => {
