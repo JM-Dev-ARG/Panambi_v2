@@ -20,7 +20,7 @@ const subtitlePalabras = subtitle.split(" ");
     
   > {
     tituloPalabras.map((palabra, palabraIndex) =>
-      <span class={`palabra tracking-panambi-nav inline-block ${tituloPalabras.length <= 1 || palabraIndex === tituloPalabras.length - 1 ? "" : "pr-4"}`}>
+      <span class="palabra tracking-panambi-nav inline-block">
         {
           palabra.split("").map((char, charIndex) => {
             // calculamos el delay global
@@ -30,19 +30,24 @@ const subtitlePalabras = subtitle.split(" ");
               .length + palabraIndex  // sumamos espacios
               + charIndex;            // sumamos el índice de la letra actual
 
-            return (
-              <span
-                class="titulo__caracter inline-block"
-                style={`animation-delay: ${globalIndex * 0.03}s`}
-              >
-                {char}
-              </span>
-            )
-          })
-        }
+        return (
+          <span
+            class="titulo__caracter inline-block"
+            style={`animation-delay: ${globalIndex * 0.03}s`}
+          >
+            {char}
+          </span>
+        )
+      })
+    }
+    {palabraIndex !== tituloPalabras.length - 1 && (
+      <span class="titulo__caracter inline-block" style={`animation-delay: ${(palabra.length + palabraIndex) * 0.03}s`}>
+        {" "}
       </span>
-    )
-  }
+    )}
+  </span>
+)}
+
   </h3>
   <h2
     
@@ -51,7 +56,7 @@ const subtitlePalabras = subtitle.split(" ");
   >
     {
     subtitlePalabras.map((palabra, palabraIndex) =>
-      <span class={`palabra  inline-block ${subtitlePalabras.length <= 1 || palabraIndex === subtitlePalabras.length - 1 ? "" : "pr-4"}`}>
+      <span class="palabra  inline-block ">
         {
           palabra.split("").map((char, charIndex) => {
             // calculamos el delay global
@@ -60,20 +65,25 @@ const subtitlePalabras = subtitle.split(" ");
               .join("")               // las juntamos
               .length + palabraIndex  // sumamos espacios
               + charIndex;            // sumamos el índice de la letra actual
-
-            return (
-              <span
-                class="subtitle__caracter inline-block"
-                style={`animation-delay: ${globalIndex * 0.03}s`}
-              >
-                {char}
-              </span>
-            )
-          })
-        }
+        
+              return (
+          <span
+            class="titulo__caracter inline-block"
+            style={`animation-delay: ${globalIndex * 0.03}s`}
+          >
+            {char}
+          </span>
+        )
+      })
+    }
+    {palabraIndex !== subtitlePalabras.length - 1 && (
+      <span class="titulo__caracter inline-block" style={`animation-delay: ${(palabra.length + palabraIndex) * 0.03}s`}>
+        {" "}
       </span>
-    )
-  }
+    )}
+  </span>
+)}
+
   </h2>
 
 

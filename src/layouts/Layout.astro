@@ -15,6 +15,7 @@ const keywords = ["astro", "framework", "javascript"];
 import dataSchema from "@/Data/seoSchema.json";
 import NavbarWeb from "@/components/base-components/navbar/NavbarWeb.astro";
 import NavBarMovil from "@/components/base-components/navbar/NavBarMovil.astro";
+import Footer from "@/components/base-components/Footer.astro";
 
 interface Props {
   title: string;
@@ -190,6 +191,7 @@ const schema = {
     <NavbarWeb />
     <NavBarMovil />
     <slot />
+    <Footer />
   </body>
 </html>
 

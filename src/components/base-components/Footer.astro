@@ -7,8 +7,8 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
 ---
 
 <Container id="footer">
-    <footer class="flex h-[300px] w-full items-center justify-between bg-negro rounded-tl-3xl rounded-tr-3xl overflow-hidden px-12">
-    <a href="/#hero_index" class="w-[30%] object-contain inline-block">
+    <footer class="flex flex-col sm:flex-row sm:h-[250px] lg:h-[300px] w-full items-center justify-center sm:justify-between bg-negro rounded-tl-3xl rounded-tr-3xl overflow-hidden px-12 ">
+    <a href="/#hero_index" class="sm:w-[35%] lg:w-[30%] xl:w-[25%] object-contain inline-block">
         
       <img
         src={logo.src}
@@ -16,18 +16,19 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
         width="auto"
         height="auto"
         loading="lazy"
-        class="w-[300px] object-contain object-bottom "
+        class="w-full object-contain object-bottom "
       >
-      <img src={nmombre.src} alt="Logo Panambi" width="auto" height="auto" loading="lazy" class="w-[250px] object-contain lg:-mt-14 xl:-mt-16">
+      <img src={nmombre.src} alt="Logo Panambi" width="auto" height="auto" loading="lazy" class="w-[250px] object-contain -mt-11  lg:-mt-14 xl:-mt-16">
 
     </a>
 
-    <div class="w-[40%] flex items-start justify-center text-neutral-100">
-            <div class="flex flex-col h-full flex-1 items-start justify-center gap-4 text-left">
+    <div class="w-full sm:w-[30%] flex items-start justify-between text-neutral-100 py-4">
+            <div class="flex flex-col h-full  items-start justify-center gap-3 text-left">
 
-        <p class="text-2xl font-light font-titulo tracking-panambi-nav">Secciones</p>
-      <a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]   "
+        <p class="text-lg lg:text-2xl font-light font-titulo tracking-panambi-nav">Secciones</p>
+        <div class="flex flex-col gap-2 justify-center items-start">
+<a
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px] "
         href="/servicios"
         
       >
@@ -43,7 +44,7 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
         </p>
       </a>
       <a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]  "
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px] "
         href="/proyectos"
         
       >
@@ -58,9 +59,8 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
           Proyectos
         </p>
       </a>
-
       <a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]  "
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px] "
         href="/equipo"
         
       >
@@ -76,7 +76,7 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
         </p>
       </a>
         <a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]  "
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px] "
         href="/contacto"
         
       >
@@ -91,12 +91,17 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
           Contacto
         </p>
       </a>
-    </div>
-     <div class="flex flex-col h-full flex-1 items-start justify-center gap-4 text-left">
+        </div>
+      
 
-        <p class="text-2xl font-light font-titulo tracking-panambi-nav">Redes</p>
-      <a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]   "
+      
+    </div>
+     <div class="flex flex-col h-full items-start justify-center gap-3 text-left">
+
+        <p class="text-lg lg:text-2xl font-light font-titulo tracking-panambi-nav">Redes</p>
+        <div class="flex flex-col gap-2 justify-center items-start">
+          <a
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px] "
         href="https://www.instagram.com/panambi.mkt/?igsh=MWNtb3o3NXRyc2p6aw%3D%3D#"
         target="_blank"
         
@@ -113,7 +118,7 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
         </p>
       </a>
       <a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]  "
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px]  "
         href="https://www.linkedin.com/company/panambi-ag/?originalSubdomain=ar"
         target="_blank"
         
@@ -131,7 +136,7 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
       </a>
 
       <a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden h-[20px]  "
+        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px]  "
         href="/equipo"
         
       >
@@ -146,6 +151,8 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
           Facebook
         </p>
       </a>
+        </div>
+      
         
     </div>
     
