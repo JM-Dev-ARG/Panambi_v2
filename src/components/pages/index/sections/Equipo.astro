@@ -4,26 +4,22 @@ import Carrousel from "@/components/base-components/Carrousel.astro";
 import Container from "@/components/base-components/Container.astro";
 import TituloCards from "@/components/base-components/TituloCards.astro";
 import dataEquipo from "@/Data/navbar_equipo.json";
-
 ---
 
 <Container id="Equipo__index">
-    <div class="flex flex-col h-[400px] sm:h-[500px] lg:h-[600px] w-full items-center justify-start bg-negro pt-8 rounded-3xl overflow-hidden ">
-       <div class="flex flex-col items-center justify-center gap-4 ">
-         <TituloCards textNegro={false}  title="Nuestro" subtitle="Equipo"/>
-         <Boton texto="Conocenos"  href="/equipo"/>
-       </div>
+  <div
+    class="bg-negro flex h-[400px] w-full flex-col items-center justify-start overflow-hidden rounded-3xl pt-8 sm:h-[500px] lg:h-[600px]"
+  >
+    <div class="flex flex-col items-center justify-center gap-4">
+      <TituloCards textNegro={false} title="Nuestro" subtitle="Equipo" />
+      <Boton texto="Conocenos" href="/equipo" />
+    </div>
 
-       <div class="flex h-full w-full items-end justify-center ">
-        <Carrousel
-          className="h-full w-full"
-          classSlider="h-full gap-2 "
-          
-        >
+    <div class="flex h-full w-full items-end justify-center">
+      <Carrousel className="h-full w-full" classSlider="h-full gap-2 ">
         {
           dataEquipo.map((equipo) => (
-            <div class="flex h-full w-[150px] sm:w-[250px]  lg:w-[300px] items-center justify-center">
-              
+            <div class="flex h-full w-[150px] items-center justify-center sm:w-[250px] lg:w-[300px]">
               <img
                 src={equipo.img}
                 alt={equipo.title}
@@ -35,10 +31,7 @@ import dataEquipo from "@/Data/navbar_equipo.json";
             </div>
           ))
         }
-        </Carrousel>
-       </div>
-       
+      </Carrousel>
     </div>
   </div>
-    </div>
 </Container>

@@ -2,7 +2,7 @@
 import Container from "@/components/base-components/Container.astro";
 import Titulo from "@/components/base-components/Titulo.astro";
 import UltimosProyectosCard from "@/components/base-components/UltimosProyectosCard.astro";
-import cardProyectosData from "@/data/proyectos_card_index.json";  
+import cardProyectosData from "@/data/proyectos_card_index.json";
 ---
 
 <Container id="NuestrosProyectos">
@@ -11,8 +11,7 @@ import cardProyectosData from "@/data/proyectos_card_index.json";
       title="¿Queres ver mas?"
       subtitle="Te mostramos nuestros ultimos trabajos"
     />
-    <div class="proyectos__layout"
-    >
+    <div class="proyectos__layout">
       {
         cardProyectosData.map((card) => (
           <UltimosProyectosCard
@@ -21,7 +20,8 @@ import cardProyectosData from "@/data/proyectos_card_index.json";
             cardLetra={card.cardLetra}
             bgColor={card.bgColor}
           />
-      ))}
+        ))
+      }
     </div>
   </div>
 </Container>
@@ -41,9 +41,9 @@ import cardProyectosData from "@/data/proyectos_card_index.json";
     .proyectos__layout {
       display: grid;
       grid:
-      "a a a b b" 1fr
-      "c c d d d" 1fr
-      / 1fr 1fr 1fr 1fr 1fr;
+        "a a a b b" 1fr
+        "c c d d d" 1fr
+        / 1fr 1fr 1fr 1fr 1fr;
     }
   }
 

@@ -2,160 +2,167 @@
 import Container from "./Container.astro";
 import logo from "@/assets/svg/logotipo_footer.svg";
 import nmombre from "@/assets/svg/logo_full_lila.svg";
-
-
 ---
 
 <Container id="footer">
-    <footer class="flex flex-col sm:flex-row sm:h-[250px] lg:h-[300px] w-full items-center justify-center sm:justify-between bg-negro rounded-tl-3xl rounded-tr-3xl overflow-hidden px-12 ">
-    <a href="/#hero_index" class="sm:w-[35%] lg:w-[30%] xl:w-[25%] object-contain inline-block">
-        
+  <footer
+    class="bg-negro flex w-full flex-col items-center justify-center overflow-hidden rounded-tl-3xl rounded-tr-3xl px-12 sm:h-[250px] sm:flex-row sm:justify-between lg:h-[300px]"
+  >
+    <a
+      href="/#hero_index"
+      class="inline-block object-contain sm:w-[35%] lg:w-[30%] xl:w-[25%]"
+    >
       <img
         src={logo.src}
         alt="Logo Panambi"
         width="auto"
         height="auto"
         loading="lazy"
-        class="w-full object-contain object-bottom "
-      >
-      <img src={nmombre.src} alt="Logo Panambi" width="auto" height="auto" loading="lazy" class="w-[250px] object-contain -mt-11  lg:-mt-14 xl:-mt-16">
-
+        class="w-full object-contain object-bottom"
+      />
+      <img
+        src={nmombre.src}
+        alt="Logo Panambi"
+        width="auto"
+        height="auto"
+        loading="lazy"
+        class="-mt-11 w-[250px] object-contain lg:-mt-14 xl:-mt-16"
+      />
     </a>
 
-    <div class="w-full sm:w-[30%] flex items-start justify-between text-neutral-100 py-4">
-            <div class="flex flex-col h-full  items-start justify-center gap-3 text-left">
-
-        <p class="text-lg lg:text-2xl font-light font-titulo tracking-panambi-nav">Secciones</p>
-        <div class="flex flex-col gap-2 justify-center items-start">
-<a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px] "
-        href="/servicios"
-        
+    <div
+      class="flex w-full items-start justify-between py-4 text-neutral-100 sm:w-[30%]"
+    >
+      <div
+        class="flex h-full flex-col items-start justify-center gap-3 text-left"
       >
         <p
-          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+          class="font-titulo tracking-panambi-nav text-lg font-light lg:text-2xl"
         >
-          Servicios
+          Secciones
         </p>
-        <p
-          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
-        >
-          Servicios
-        </p>
-      </a>
-      <a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px] "
-        href="/proyectos"
-        
-      >
-        <p
-          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
-        >
-          Proyectos
-        </p>
-        <p
-          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
-        >
-          Proyectos
-        </p>
-      </a>
-      <a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px] "
-        href="/equipo"
-        
-      >
-        <p
-          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
-        >
-          Equipo
-        </p>
-        <p
-          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
-        >
-          Equipo
-        </p>
-      </a>
-        <a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px] "
-        href="/contacto"
-        
-      >
-        <p
-          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
-        >
-          Contacto
-        </p>
-        <p
-          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
-        >
-          Contacto
-        </p>
-      </a>
-        </div>
-      
-
-      
-    </div>
-     <div class="flex flex-col h-full items-start justify-center gap-3 text-left">
-
-        <p class="text-lg lg:text-2xl font-light font-titulo tracking-panambi-nav">Redes</p>
-        <div class="flex flex-col gap-2 justify-center items-start">
+        <div class="flex flex-col items-start justify-center gap-2">
           <a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px] "
-        href="https://www.instagram.com/panambi.mkt/?igsh=MWNtb3o3NXRyc2p6aw%3D%3D#"
-        target="_blank"
-        
+            class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
+            href="/servicios"
+          >
+            <p
+              class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+            >
+              Servicios
+            </p>
+            <p
+              class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+            >
+              Servicios
+            </p>
+          </a>
+          <a
+            class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
+            href="/proyectos"
+          >
+            <p
+              class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+            >
+              Proyectos
+            </p>
+            <p
+              class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+            >
+              Proyectos
+            </p>
+          </a>
+          <a
+            class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
+            href="/equipo"
+          >
+            <p
+              class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+            >
+              Equipo
+            </p>
+            <p
+              class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+            >
+              Equipo
+            </p>
+          </a>
+          <a
+            class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
+            href="/contacto"
+          >
+            <p
+              class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+            >
+              Contacto
+            </p>
+            <p
+              class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+            >
+              Contacto
+            </p>
+          </a>
+        </div>
+      </div>
+      <div
+        class="flex h-full flex-col items-start justify-center gap-3 text-left"
       >
         <p
-          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+          class="font-titulo tracking-panambi-nav text-lg font-light lg:text-2xl"
         >
-          Instagram
+          Redes
         </p>
-        <p
-          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
-        >
-          Instagram
-        </p>
-      </a>
-      <a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px]  "
-        href="https://www.linkedin.com/company/panambi-ag/?originalSubdomain=ar"
-        target="_blank"
-        
-      >
-        <p
-          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
-        >
-          Linkedin
-        </p>
-        <p
-          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
-        >
-          Linkedin
-        </p>
-      </a>
+        <div class="flex flex-col items-start justify-center gap-2">
+          <a
+            class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
+            href="https://www.instagram.com/panambi.mkt/?igsh=MWNtb3o3NXRyc2p6aw%3D%3D#"
+            target="_blank"
+          >
+            <p
+              class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+            >
+              Instagram
+            </p>
+            <p
+              class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+            >
+              Instagram
+            </p>
+          </a>
+          <a
+            class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
+            href="https://www.linkedin.com/company/panambi-ag/?originalSubdomain=ar"
+            target="_blank"
+          >
+            <p
+              class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+            >
+              Linkedin
+            </p>
+            <p
+              class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+            >
+              Linkedin
+            </p>
+          </a>
 
-      <a
-        class="transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden text-sm h-[18px] lg:text-lg lg:h-[20px]  "
-        href="/equipo"
-        
-      >
-        <p
-          class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
-        >
-          Facebook
-        </p>
-        <p
-          class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
-        >
-          Facebook
-        </p>
-      </a>
+          <a
+            class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
+            href="/equipo"
+          >
+            <p
+              class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+            >
+              Facebook
+            </p>
+            <p
+              class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+            >
+              Facebook
+            </p>
+          </a>
         </div>
-      
-        
+      </div>
     </div>
-    
-        </div>
-    </div>
+  </footer>
 </Container>

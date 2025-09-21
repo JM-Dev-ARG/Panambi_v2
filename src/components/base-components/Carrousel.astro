@@ -21,10 +21,7 @@ const { direction, duration, pause, className, classSlider, id } = Astro.props;
   data-aos-delay="300"
   data-aos-once="true"
 >
-  <div
-    class=`slider ${classSlider} `
-    id={id}
-  >
+  <div class=`slider ${classSlider} ` id={id}>
     <slot />
   </div>
 </div>
@@ -36,8 +33,6 @@ const { direction, duration, pause, className, classSlider, id } = Astro.props;
 
   .contenedor[data-animated="true"] {
     overflow-x: hidden;
-    
-    
 
     /*     mask: linear-gradient(90deg, transparent, white 3%, white 97%, transparent);
     -webkit-mask: linear-gradient(
@@ -84,7 +79,6 @@ const { direction, duration, pause, className, classSlider, id } = Astro.props;
     justify-content: end;
     align-items: center;
     flex-wrap: wrap;
-    
   }
 
   @keyframes scroll {

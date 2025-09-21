@@ -32,13 +32,7 @@
     </style>
   </defs>
   <g id="Capa_1-2">
-    <rect
-      class="cls-1"
-      width="212.37"
-      height="205.25"
-      rx="31.74"
-      ry="31.74"
-    >
+    <rect class="cls-1" width="212.37" height="205.25" rx="31.74" ry="31.74">
     </rect>
     <path
       class="cls-3"
@@ -72,37 +66,43 @@
   }
 
   .cls-4,
-.cls-5 {
-  transform: translateY(100%);
-}
+  .cls-5 {
+    transform: translateY(100%);
+  }
 
-/* Animación al entrar */
-.logo-animado.hover-in .cls-2 {
-  animation: logotipoAnimadoInicial 0.3s 0.1s cubic-bezier(0.98, 0, 1, 0.9) forwards ;
-}
-.logo-animado.hover-in .cls-3 {
-  animation: logotipoAnimadoInicial 0.3s 0.2s cubic-bezier(0.98, 0, 1, 0.9) forwards;
-}
-.logo-animado.hover-in .cls-4 {
-  animation: logotipoAnimadoInicial2 0.5s 0.4s linear forwards;
-}
-.logo-animado.hover-in .cls-5 {
-  animation: logotipoAnimadoInicial2 0.5s 0.3s linear forwards;
-}
+  /* Animación al entrar */
+  .logo-animado.hover-in .cls-2 {
+    animation: logotipoAnimadoInicial 0.3s 0.1s cubic-bezier(0.98, 0, 1, 0.9)
+      forwards;
+  }
+  .logo-animado.hover-in .cls-3 {
+    animation: logotipoAnimadoInicial 0.3s 0.2s cubic-bezier(0.98, 0, 1, 0.9)
+      forwards;
+  }
+  .logo-animado.hover-in .cls-4 {
+    animation: logotipoAnimadoInicial2 0.5s 0.4s linear forwards;
+  }
+  .logo-animado.hover-in .cls-5 {
+    animation: logotipoAnimadoInicial2 0.5s 0.3s linear forwards;
+  }
 
-/* Animación al salir */
-.logo-animado.hover-out .cls-2 {
-  animation: logoAnimacionadoReversa 0.3s 0.4s cubic-bezier(0.98, 0, 1, 0.9) backwards;
-}
-.logo-animado.hover-out .cls-3 {
-  animation: logoAnimacionadoReversa 0.3s 0.3s cubic-bezier(0.98, 0, 1, 0.9) backwards;
-}
-.logo-animado.hover-out .cls-4 {
-  animation: logoAnimacionadoReversa2 0.3s 0.1s cubic-bezier(0.98, 0, 1, 0.9) backwards;
-}
-.logo-animado.hover-out .cls-5 {
-  animation: logoAnimacionadoReversa2 0.3s 0.2s cubic-bezier(0.98, 0, 1, 0.9) backwards;
-}
+  /* Animación al salir */
+  .logo-animado.hover-out .cls-2 {
+    animation: logoAnimacionadoReversa 0.3s 0.4s cubic-bezier(0.98, 0, 1, 0.9)
+      backwards;
+  }
+  .logo-animado.hover-out .cls-3 {
+    animation: logoAnimacionadoReversa 0.3s 0.3s cubic-bezier(0.98, 0, 1, 0.9)
+      backwards;
+  }
+  .logo-animado.hover-out .cls-4 {
+    animation: logoAnimacionadoReversa2 0.3s 0.1s cubic-bezier(0.98, 0, 1, 0.9)
+      backwards;
+  }
+  .logo-animado.hover-out .cls-5 {
+    animation: logoAnimacionadoReversa2 0.3s 0.2s cubic-bezier(0.98, 0, 1, 0.9)
+      backwards;
+  }
 
   @keyframes logotipoAnimadoInicial {
     from {
@@ -141,20 +141,20 @@
 
 <script>
   document.addEventListener("astro:page-load", () => {
-  const logo = document.querySelector(".logo-animado") as HTMLElement;
+    const logo = document.querySelector(".logo-animado") as HTMLElement;
 
-  const restartAnimation = (className: string) => {
-    logo.classList.remove("hover-in", "hover-out"); 
-    void logo.offsetWidth; 
-    logo.classList.add(className); 
-  };
+    const restartAnimation = (className: string) => {
+      logo.classList.remove("hover-in", "hover-out");
+      void logo.offsetWidth;
+      logo.classList.add(className);
+    };
 
-  logo.addEventListener("mouseenter", () => {
-    restartAnimation("hover-in");
+    logo.addEventListener("mouseenter", () => {
+      restartAnimation("hover-in");
+    });
+
+    logo.addEventListener("mouseleave", () => {
+      restartAnimation("hover-out");
+    });
   });
-
-  logo.addEventListener("mouseleave", () => {
-    restartAnimation("hover-out");
-  });
-});
 </script>

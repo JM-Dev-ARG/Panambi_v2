@@ -17,7 +17,6 @@ const { id, classNameSeccion, classNameContainer } = Astro.props;
     class={`h-full w-full max-w-[1280px] mx-auto grid place-items-center px-4 ${classNameContainer}`}
   >
     <slot />
-     {id === "footer" ? <Autoria /> : ""}
+    {id === "footer" ? <Autoria /> : ""}
   </div>
- 
 </section>

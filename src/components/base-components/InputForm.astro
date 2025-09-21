@@ -1,0 +1,69 @@
+---
+type HTMLInputTypeAttribute =
+  | "text"
+  | "number"
+  | "checkbox"
+  | "radio"
+  | "date"
+  | "email"
+  | "password"
+  | "search"
+  | "tel"
+  | "time"
+  | "url"
+  | "submit"
+  | "reset"
+  | "button";
+
+interface Props {
+  type?: HTMLInputTypeAttribute | null | undefined; // Change the type to allow string values
+  name: string;
+  placeholder: string;
+  notrequired?: boolean;
+}
+
+const { type, name, notrequired, placeholder } = Astro.props;
+---
+
+<div class="relative w-full">
+  <input
+    type={type ?? "text"}
+    name={name}
+    id={name}
+    required={!notrequired}
+    placeholder=" "
+    class="focus:border-negro focus:shadow-Panambi-input lo peer w-full rounded-xl bg-neutral-200 p-3 text-lg uppercase placeholder-transparent transition-all duration-150 focus:border-2 focus:outline-none sm:text-xl lg:text-2xl"
+  />
+
+  <label
+    for={name}
+    class="peer-focus:leading-0.5 leading-0.5 pointer-events-none absolute -top-0 left-3 z-10 bg-[#f9f9f9] px-1 text-base uppercase text-neutral-400 transition-all duration-150 peer-placeholder-shown:top-6 peer-placeholder-shown:bg-transparent peer-placeholder-shown:px-1 peer-placeholder-shown:text-base peer-focus:-top-0 peer-focus:bg-[#f9f9f9] peer-focus:text-base peer-focus:text-neutral-400 sm:text-xl peer-placeholder-shown:sm:text-xl peer-focus:sm:text-xl lg:text-2xl peer-placeholder-shown:lg:text-2xl peer-focus:lg:text-2xl"
+  >
+    {placeholder}
+  </label>
+</div>
+
+<style>
+  .input-number::-webkit-outer-spin-button,
+  .input-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    margin: 0;
+  }
+</style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const input = document.querySelectorAll("input");
+
+    input.forEach((input) => {
+      if (input.getAttribute("type") === "number") {
+        input.classList.add("input-number");
+      } else if (input.getAttribute("type") === "email") {
+        input.classList.remove("uppercase");
+        input.classList.add("lowercase");
+      }
+    });
+  });
+</script>

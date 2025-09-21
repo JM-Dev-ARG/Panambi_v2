@@ -1,19 +1,18 @@
 [
-    {
-        "titulo": "hola!!",
-        "descripcion": "info@panambi.net"
-    },
-    {
-        "titulo": "consultoria o Mkt",
-        "descripcion": "micaela@panambi.net"
-    },
-    {
-        "titulo": "Desarrollo web",
-        "descripcion": "juanmanuel@panambi.net"
-    },
-    {
-        "titulo": "Estamos en",
-        "descripcion": "Chivilcoy - prov de  bs as - argentina"
-    }
-
+  {
+    "titulo": "hola!!",
+    "descripcion": "info@panambi.net"
+  },
+  {
+    "titulo": "consultoria o Mkt",
+    "descripcion": "micaela@panambi.net"
+  },
+  {
+    "titulo": "Desarrollo web",
+    "descripcion": "juanmanuel@panambi.net"
+  },
+  {
+    "titulo": "Estamos en",
+    "descripcion": "Chivilcoy - prov de  bs as - argentina"
+  }
 ]

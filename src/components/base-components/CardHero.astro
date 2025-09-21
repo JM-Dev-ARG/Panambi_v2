@@ -2,47 +2,56 @@
 import logo from "@/assets/svg/logotipo_footer.svg";
 
 interface Props {
-    img: string;
-    dataText: Array<{ titulo: string; descripcion: string; }>; 
-    bgColor: string   
+  img: string;
+  dataText: Array<{ titulo: string; descripcion: string }>;
+  bgColor: string;
 }
 
 const { img, dataText, bgColor } = Astro.props;
-
 ---
- 
-  <div class=`flex flex-col-reverse sm:flex-row h-[600px] sm:h-[450px] lg:h-[550px] w-full items-end justify-center sm:mt-4 lg:mt-6  border-2 border-negro shadow-Panambi rounded-3xl p-3 ${bgColor}`>
-      <div class="h-1/2 w-full sm:w-1/2 sm:h-full flex flex-col items-start justify-between p-3">
-        <img 
-          src={logo.src} 
-          alt="logo panambi" 
-          width="auto"
-          height="auto" 
-          loading="lazy" 
-          class="h-[100px] sm:h-[200px] lg:h-[250px] w-auto object-contain object-top opacity-70" 
-        />
-        
-          <div class="flex flex-col gap-2.5 h-full w-full items-start justify-end">
-            {
-                dataText.map((item) => {
-                    return (
-                        <div class="flex flex-col gap-1 text-neutral-200 uppercase  text-pretty ">
-                            <p class="font-titulo text-lg sm:text-2xl font-semibold tracking-wider leading-4 sm:leading-6">{item.titulo}</p>
-                            <p class="text-sm leading-3.5 sm:text-base sm:leading-4 ">{item.descripcion}</p>
-                        </div>
-                    )
-                })
-            }
-          </div>
-      </div>
-    <div class="h-1/2 w-full sm:w-1/2 sm:h-full rounded-xl border-2 border-negro bg-neutral-100 grid place-items-center mx-auto">
-      <img
-        src={img}
-        alt="Contactanos"
-        width="auto"
-        height="auto"
-        loading="lazy"
-        class="w-[70%] object-contain "
-      />
+
+<div
+  class=`flex flex-col-reverse sm:flex-row h-[600px] sm:h-[450px] lg:h-[550px] w-full items-end justify-center sm:mt-4 lg:mt-6  border-2 border-negro shadow-Panambi rounded-3xl p-3 ${bgColor}`
+>
+  <div
+    class="flex h-1/2 w-full flex-col items-start justify-between p-3 sm:h-full sm:w-1/2"
+  >
+    <img
+      src={logo.src}
+      alt="logo panambi"
+      width="auto"
+      height="auto"
+      loading="lazy"
+      class="h-[100px] w-auto object-contain object-top opacity-70 sm:h-[200px] lg:h-[250px]"
+    />
+
+    <div class="flex h-full w-full flex-col items-start justify-end gap-2.5">
+      {
+        dataText.map((item) => {
+          return (
+            <div class="flex flex-col gap-1 text-pretty uppercase text-neutral-200">
+              <p class="font-titulo text-lg font-semibold leading-4 tracking-wider sm:text-2xl sm:leading-6">
+                {item.titulo}
+              </p>
+              <p class="leading-3.5 text-sm sm:text-base sm:leading-4">
+                {item.descripcion}
+              </p>
+            </div>
+          );
+        })
+      }
     </div>
   </div>
+  <div
+    class="border-negro mx-auto grid h-1/2 w-full place-items-center rounded-xl border-2 bg-neutral-100 sm:h-full sm:w-1/2"
+  >
+    <img
+      src={img}
+      alt="Contactanos"
+      width="auto"
+      height="auto"
+      loading="lazy"
+      class="w-[70%] object-contain"
+    />
+  </div>
+</div>
