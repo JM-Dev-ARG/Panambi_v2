@@ -1,0 +1,22 @@
+---
+import Container from "@/components/base-components/Container.astro";
+import Titulo from "@/components/base-components/Titulo.astro";
+
+
+---
+
+<Container id="formulario_contacto">
+    <Titulo
+      title="queremos acompañarte"
+      subtitle="Comencemos con tu proyecto ahora!"
+    />
+    <div class="flex h-[400px] w-[70%] items-start justify-start mt-6">
+        <form action="" class="gap-6 flex flex-col w-full" method="">
+            <p class="text-3xl font-normal text-left tracking-panambi-nav">TUS DATOS</p>
+            <input type="text"
+            name="nombre"
+            placeholder="Nombre y Apellido"
+            class="placeholder:text-2xl  placeholder:text-neutral-400 w-full p-3  flex justify-center items-start bg-neutral-200 rounded-xl focus:outline-none focus:border-negro focus:border-2 focus:shadow-Panambi-input transition-all duration-100">
+        </form>
+    </div>
+</Container>

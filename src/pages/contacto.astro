@@ -1,8 +1,18 @@
 ---
-import Hero from "@/components/pages/contacto/sections/Hero.astro";
+import HeroConCard from "@/components/base-components/HeroConCard.astro";
 import Layout from "@/layouts/Layout.astro";
+import data from "@/Data/card_hero_contacto.json";
+import imgContacto from "@/assets/img/mock/mkt-digital.avif";
+import Formulario from "@/components/pages/contacto/sections/Formulario.astro";
 ---
 
 <Layout title="Panambi" description="La mejor plataforma para tus necesidades.">
-  <Hero />
+  <HeroConCard 
+    imgCard={imgContacto.src}
+    titulo="Contactanos"
+    subtitulo="Nos encanta saber de vos"
+    dataText={data}
+    bgColor="bg-violeta1-500"
+  />
+  <Formulario />
 </Layout>

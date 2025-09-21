@@ -1,8 +1,17 @@
 ---
-import Hero from "@/components/pages/equipo/sections/Hero.astro";
+
 import Layout from "@/layouts/Layout.astro";
+import data from "@/Data/card_hero_equipo.json";
+import imgContacto from "@/assets/img/mock/mkt-digital.avif";
+import HeroConCard from "@/components/base-components/HeroConCard.astro";
 ---
 
 <Layout title="Panambi" description="La mejor plataforma para tus necesidades.">
-  <Hero />
+<HeroConCard 
+    imgCard={imgContacto.src}
+    titulo="quienes somos"
+    subtitulo="Conoce Un poco más de nosotros"
+    dataText={data}
+    bgColor="bg-negro/90"
+  />
 </Layout>

@@ -1,0 +1,33 @@
+---
+import Container from "@/components/base-components/Container.astro";
+import Titulo from "@/components/base-components/Titulo.astro";
+import CardHero from "@/components/base-components/CardHero.astro";
+
+interface Props {
+  imgCard: string;
+  titulo: string;
+  subtitulo: string;
+  bgColor: string;
+  dataText: Array<{ titulo: string; descripcion: string; }>;
+}
+
+
+const { imgCard, titulo, subtitulo, dataText, bgColor } = Astro.props;
+
+
+
+---
+
+<Container id="hero_contacto">
+  <div class="flex h-full w-[70%] items-end justify-center mt-4 sm:mt-8">
+    <Titulo
+      title={titulo}
+      subtitle={subtitulo}
+    />
+  </div>
+  <CardHero
+    bgColor={bgColor}
+    img={imgCard}
+    dataText={dataText}
+  />
+</Container>

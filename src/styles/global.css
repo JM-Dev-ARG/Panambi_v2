@@ -14,6 +14,9 @@
   /* Sombra Panambi */
   --shadow-Panambi: 4px 4px 0px #1a181b;
 
+  /* sombra input */
+  --shadow-Panambi-input: 2px 2px 0px #1a181b;
+
   /* Drop Shadow Panambi */
   --drop-shadow-Panambi: 4px 4px 4px rgba(0, 0, 0, 0.25);
   --drop-shadow-Panambi-2: 4px 4px 0px #1a181b;
