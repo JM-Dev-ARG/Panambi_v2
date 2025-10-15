@@ -5,13 +5,14 @@ interface Props {
   id: string;
   classNameSeccion?: string;
   classNameContainer?: string;
+  marginTop?: string;
 }
-const { id, classNameSeccion, classNameContainer } = Astro.props;
+const { id, classNameSeccion, classNameContainer, marginTop } = Astro.props;
 ---
 
 <section
   id={id}
-  class={`w-full grid place-items-center mx-auto ${classNameSeccion} mt-[80px]`}
+  class={`w-full grid place-items-center mx-auto ${marginTop ? marginTop : "mt-[80px]"} ${classNameSeccion} `}
 >
   <div
     class={`h-full w-full max-w-[1280px] mx-auto grid place-items-center px-4 ${classNameContainer}`}

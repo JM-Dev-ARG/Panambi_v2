@@ -1,0 +1,24 @@
+---
+import CardServiciosProyectos from "@/components/base-components/CardServiciosProyectos.astro";
+import imgContacto from "@/assets/img/mock/mkt-digital.avif";
+import Container from "@/components/base-components/Container.astro";
+import data from "@/data/data_servicios.json";
+---
+
+<Container id="servicios_display" marginTop="mt-2 sm:mt-[40px] ">
+  <div
+    class="flex h-full w-full flex-col items-center justify-center gap-4 lg:gap-6"
+  >
+    {
+      data.map((item) => (
+        <CardServiciosProyectos
+          img={imgContacto.src}
+          titulo={item.titulo}
+          descripcion={item.descripcion}
+          tags={item.tags}
+          bgColor="bg-verde5-200/40"
+        />
+      ))
+    }
+  </div>
+</Container>

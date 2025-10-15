@@ -2,21 +2,17 @@
 import CardEquipo from "@/components/base-components/CardEquipo.astro";
 import Container from "@/components/base-components/Container.astro";
 import Titulo from "@/components/base-components/Titulo.astro";
-import dataEquipo from "@/data/navbar_equipo.json";
+import dataEquipo from "@/data/equipo.json";
 
-//quiero que solo aparezcan los 6 primeros
-
-const dataFiltrada = dataEquipo.slice(0, 6);
-console.log(dataFiltrada);
+//quiero que solo aparezcan los 5 primeros
+const dataFiltrada = dataEquipo.slice(0, 5);
 ---
 
 <Container id="equipo_grid_equipo">
   <div class="w-2/3">
     <Titulo title="No somos una ia" subtitle="la creatividad comienza aca" />
   </div>
-  <div
-    class="grid w-full grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-2 lg:gap-4 xl:gap-6"
-  >
+  <div class="flex w-full flex-wrap items-center justify-center gap-4 lg:gap-6">
     {
       dataFiltrada.map((item) => {
         return (

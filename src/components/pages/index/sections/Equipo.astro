@@ -3,7 +3,7 @@ import Boton from "@/components/base-components/Boton.astro";
 import Carrousel from "@/components/base-components/Carrousel.astro";
 import Container from "@/components/base-components/Container.astro";
 import TituloCards from "@/components/base-components/TituloCards.astro";
-import dataEquipo from "@/Data/navbar_equipo.json";
+import dataEquipo from "@/data/equipo.json";
 ---
 
 <Container id="Equipo__index">
@@ -16,7 +16,11 @@ import dataEquipo from "@/Data/navbar_equipo.json";
     </div>
 
     <div class="flex h-full w-full items-end justify-center">
-      <Carrousel className="h-full w-full" classSlider="h-full gap-2 ">
+      <Carrousel
+        className="h-full w-full"
+        classSlider="h-full gap-2 "
+        duration="slow"
+      >
         {
           dataEquipo.map((equipo) => (
             <div class="flex h-full w-[150px] items-center justify-center sm:w-[250px] lg:w-[300px]">
@@ -26,7 +30,7 @@ import dataEquipo from "@/Data/navbar_equipo.json";
                 width="auto"
                 height="auto"
                 loading="lazy"
-                class="h-full w-full object-cover object-bottom pr-2"
+                class="h-full w-full object-contain object-bottom pr-2 sm:object-cover"
               />
             </div>
           ))

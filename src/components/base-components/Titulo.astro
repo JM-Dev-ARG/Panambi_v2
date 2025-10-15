@@ -1,24 +1,24 @@
 ---
 interface Props {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   textNegro?: boolean;
   marginBottom?: boolean;
 }
 const { title, subtitle, textNegro = true, marginBottom = true } = Astro.props;
 
-const tituloPalabras = title.split(" ");
-const subtitlePalabras = subtitle.split(" ");
+const tituloPalabras = title?.split(" ");
+const subtitlePalabras = subtitle?.split(" ");
 ---
 
 <div
   class=`flex w-full flex-col items-center justify-center gap-2 ${textNegro ?'text-negro':'text-neutral-100'} ${marginBottom ? 'mb-8' : ''}`
 >
   <h3
-    class="titulo1 text-center text-xl font-normal uppercase md:text-2xl lg:text-4xl"
+    class="titulo1 text-center text-2xl font-normal uppercase sm:text-3xl lg:text-4xl"
   >
     {
-      tituloPalabras.map((palabra, palabraIndex) => (
+      tituloPalabras?.map((palabra, palabraIndex) => (
         <span class="palabra tracking-panambi-nav inline-block">
           {palabra.split("").map((char, charIndex) => {
             // calculamos el delay global
@@ -32,7 +32,7 @@ const subtitlePalabras = subtitle.split(" ");
             return (
               <span
                 class="titulo__caracter inline-block"
-                style={`animation-delay: ${globalIndex * 0.03}s`}
+                style={`animation-delay: ${globalIndex * 0.05}s`}
               >
                 {char}
               </span>
@@ -41,7 +41,7 @@ const subtitlePalabras = subtitle.split(" ");
           {palabraIndex !== tituloPalabras.length - 1 && (
             <span
               class="titulo__caracter inline-block"
-              style={`animation-delay: ${(palabra.length + palabraIndex) * 0.03}s`}
+              style={`animation-delay: ${(palabra.length + palabraIndex) * 0.05}s`}
             >
               {" "}
             </span>
@@ -51,16 +51,16 @@ const subtitlePalabras = subtitle.split(" ");
     }
   </h3>
   <h2
-    class="titulo2 font-titulo lg:leading-14 w-full text-balance text-center text-3xl font-black uppercase leading-8 tracking-wide md:text-4xl md:leading-9 lg:text-6xl"
+    class="titulo2 font-titulo lg:leading-14 w-full text-balance text-center text-4xl font-black uppercase leading-8 tracking-wide sm:text-5xl sm:leading-10 lg:text-6xl"
     data-texto={subtitle}
   >
     {
-      subtitlePalabras.map((palabra, palabraIndex) => (
+      subtitlePalabras?.map((palabra, palabraIndex) => (
         <span class="palabra inline-block">
           {palabra.split("").map((char, charIndex) => {
             // calculamos el delay global
             const globalIndex =
-              tituloPalabras
+              subtitlePalabras
                 .slice(0, palabraIndex) // todas las palabras anteriores
                 .join("").length + // las juntamos
               palabraIndex + // sumamos espacios
@@ -69,7 +69,7 @@ const subtitlePalabras = subtitle.split(" ");
             return (
               <span
                 class="titulo__caracter inline-block"
-                style={`animation-delay: ${globalIndex * 0.03}s`}
+                style={`animation-delay: ${globalIndex * 0.06}s`}
               >
                 {char}
               </span>
@@ -78,7 +78,7 @@ const subtitlePalabras = subtitle.split(" ");
           {palabraIndex !== subtitlePalabras.length - 1 && (
             <span
               class="titulo__caracter inline-block"
-              style={`animation-delay: ${(palabra.length + palabraIndex) * 0.03}s`}
+              style={`animation-delay: ${(palabra.length + palabraIndex) * 0.06}s`}
             >
               {" "}
             </span>

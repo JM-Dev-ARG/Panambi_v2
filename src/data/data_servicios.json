@@ -1,0 +1,46 @@
+[
+    {
+        "titulo": "Consultoria",
+        "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
+        "tags": [
+            "tag1",
+            "tag2",
+            "tag3",
+            "tag4",
+            "tag5"
+        ]
+    },
+    {
+        "titulo": "Marketing Digital",
+        "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
+        "tags": [
+            "tag1",
+            "tag2",
+            "tag3",
+            "tag4",
+            "tag5"
+        ]
+    },
+    {
+        "titulo": "desarrollo web",
+        "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
+        "tags": [
+            "tag1",
+            "tag2",
+            "tag3",
+            "tag4",
+            "tag5"
+        ]
+    },
+    {
+        "titulo": "diseño audiovisual",
+        "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
+        "tags": [
+            "tag1",
+            "tag2",
+            "tag3",
+            "tag4",
+            "tag5"
+        ]
+    }
+]

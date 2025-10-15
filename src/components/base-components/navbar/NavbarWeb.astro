@@ -193,7 +193,7 @@ import Carrousel from "../Carrousel.astro";
 </style>
 
 <script>
-  import dataEquipo from "../../../data/navbar_equipo.json";
+  import dataEquipo from "../../../data/equipo.json";
   import dataProyectos from "../../../data/navbar_proyectos.json";
   import dataServicios from "../../../data/navbar_servicios.json";
 
@@ -240,7 +240,7 @@ import Carrousel from "../Carrousel.astro";
           let carouselItemsHTML = "";
           data.forEach((item) => {
             carouselItemsHTML += `<div class="flex h-full w-[180px] flex-col items-center justify-center rounded-md text-center">
-                <img src="${item.img}" alt="${item.title}" class="h-full rounded-xl object-cover" />
+                <img src="${item.img}" alt="${item.title}" class="h-full  object-cover" />
               </div>`;
           });
           carrousel.innerHTML = carouselItemsHTML;
