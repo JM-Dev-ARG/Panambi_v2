@@ -1,0 +1,26 @@
+---
+interface Props {
+  imgEquipo: string;
+  title: string;
+  description: string;
+}
+const { imgEquipo, title, description } = Astro.props;
+---
+
+<div
+  class="flex h-[400px] w-full flex-col items-start justify-center gap-1 rounded-3xl sm:h-[450px] xl:h-[500px]"
+>
+  <img
+    src={imgEquipo}
+    alt=""
+    class="bg-negro h-[90%] w-full rounded-3xl object-contain"
+  />
+  <div class="h-[10%] px-4">
+    <h4 class="font-titulo text-2xl font-semibold leading-5">
+      {title}
+    </h4>
+    <p class="font-titulo text-base font-extralight">
+      {description}
+    </p>
+  </div>
+</div>
