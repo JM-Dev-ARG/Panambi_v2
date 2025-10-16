@@ -239,8 +239,8 @@ import Carrousel from "../Carrousel.astro";
           const data = navData[target] || [];
           let carouselItemsHTML = "";
           data.forEach((item) => {
-            carouselItemsHTML += `<div class="flex h-full w-[180px] flex-col items-center justify-center rounded-md text-center">
-                <img src="${item.img}" alt="${item.title}" class="h-full  object-cover" />
+            carouselItemsHTML += `<div class="flex h-full w-[180px] flex-col items-center justify-center text-center ">
+                <img src="${item.img}" alt="${item.title}" class="h-full  object-cover rounded-xl" />
               </div>`;
           });
           carrousel.innerHTML = carouselItemsHTML;

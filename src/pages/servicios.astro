@@ -1,4 +1,5 @@
 ---
+import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
 import Hero from "@/components/pages/servicios/sections/HeroServicios.astro";
 import ServiciosDisplay from "@/components/pages/servicios/sections/ServiciosDisplay.astro";
 import Layout from "@/layouts/Layout.astro";
@@ -7,4 +8,11 @@ import Layout from "@/layouts/Layout.astro";
 <Layout title="Panambi" description="La mejor plataforma para tus necesidades.">
   <Hero />
   <ServiciosDisplay />
+  <UltimoLLamado
+    idContainer="ultimo_llamado_index"
+    textoBoton="contactanos"
+    titulo="No esperes más"
+    subtitulo="comencemos!!"
+    hrefBoton="/contacto"
+  />
 </Layout>

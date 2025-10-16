@@ -4,7 +4,7 @@ import data from "@/Data/card_hero_equipo.json";
 import imgContacto from "@/assets/img/mock/mkt-digital.avif";
 import HeroConCard from "@/components/base-components/HeroConCard.astro";
 import EquipoGrid from "@/components/pages/equipo/sections/EquipoGrid.astro";
-import Unite from "@/components/pages/equipo/sections/Unite.astro";
+import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
 ---
 
 <Layout title="Panambi" description="La mejor plataforma para tus necesidades.">
@@ -16,5 +16,12 @@ import Unite from "@/components/pages/equipo/sections/Unite.astro";
     bgColor="bg-negro/90"
   />
   <EquipoGrid />
-  <Unite />
+  <UltimoLLamado
+    idContainer="unite_equipo"
+    textoBoton="Envianos tu CV"
+    titulo="somos panambi"
+    subtitulo="unite al equipo"
+    hrefBoton="mailto:administracion@panambi.net"
+    bgColor="bg-transparent"
+  />
 </Layout>
