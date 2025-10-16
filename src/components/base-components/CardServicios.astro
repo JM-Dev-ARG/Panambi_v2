@@ -10,14 +10,14 @@ const { titulo, subtitulo, descripcion, imagen, bgColor } = Astro.props;
 ---
 
 <div
-  class=`border-negro shadow-Panambi relative flex h-[450px] sm:h-[500px] xl:h-[550px] flex-col items-center justify-start rounded-3xl border-2 pt-8 md:pt-12 xl:pt-16 ${bgColor}`
+  class=`border-negro shadow-Panambi relative flex h-[450px] flex-col items-center justify-start rounded-3xl border-2 pt-8 md:pt-12 xl:pt-16 ${bgColor}`
 >
   <div
     class="flex h-auto w-full flex-col items-center justify-between text-neutral-100 md:h-auto xl:h-[40%]"
   >
     <div class="mb-6 flex w-full flex-col items-center justify-center gap-2">
       <h4
-        class="text-center text-lg font-normal uppercase md:text-lg xl:text-xl"
+        class="text-balance text-center text-lg font-normal uppercase md:text-lg xl:text-xl"
       >
         {titulo}
       </h4>
@@ -39,6 +39,6 @@ const { titulo, subtitulo, descripcion, imagen, bgColor } = Astro.props;
   <img
     src={imagen}
     alt=`imagen de ${titulo}`
-    class="absolute -bottom-[20%] left-1/2 h-auto w-[65%] -translate-x-1/2 object-cover md:-bottom-[20%] md:w-[65%]"
+    class="absolute -bottom-[20%] left-1/2 h-auto w-[70%] -translate-x-1/2 rounded-2xl object-cover shadow-2xl md:-bottom-[20%] xl:-bottom-[30%]"
   />
 </div>

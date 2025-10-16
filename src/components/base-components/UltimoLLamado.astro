@@ -9,10 +9,18 @@ interface Props {
   hrefBoton: string;
   bgColor?: string;
   idContainer: string;
+  textNegro?: boolean;
 }
 
-const { titulo, subtitulo, textoBoton, hrefBoton, bgColor, idContainer } =
-  Astro.props;
+const {
+  titulo,
+  subtitulo,
+  textoBoton,
+  hrefBoton,
+  bgColor,
+  idContainer,
+  textNegro,
+} = Astro.props;
 ---
 
 <Container id={idContainer}>
@@ -20,7 +28,11 @@ const { titulo, subtitulo, textoBoton, hrefBoton, bgColor, idContainer } =
     class=`${bgColor ? bgColor : "bg-violeta1-200"} border-negro shadow-Panambi flex w-full items-center justify-center rounded-3xl border-2 py-5 sm:w-[80%]`
   >
     <div class="flex flex-col items-center justify-center gap-4">
-      <TituloCards textNegro={true} title={titulo} subtitle={subtitulo} />
+      <TituloCards
+        textNegro={textNegro ? false : true}
+        title={titulo}
+        subtitle={subtitulo}
+      />
       <Boton texto={textoBoton} href={hrefBoton} />
     </div>
   </div>

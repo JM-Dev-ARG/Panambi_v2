@@ -41,7 +41,7 @@ const { img, titulo, descripcion, tags, bgColor } = Astro.props;
     </div>
     <div></div>
   </div><div
-    class="group mx-auto grid h-1/2 w-full place-items-center rounded-xl bg-neutral-100 lg:h-full lg:w-1/2"
+    class="group mx-auto grid h-1/2 w-full place-items-center overflow-hidden rounded-xl bg-neutral-100 lg:h-full lg:w-1/2"
   >
     <img
       src={img}
@@ -49,7 +49,7 @@ const { img, titulo, descripcion, tags, bgColor } = Astro.props;
       width="auto"
       height="auto"
       loading="lazy"
-      class="drop-shadow-Panambi h-full w-[40%] object-contain transition-all duration-500 ease-in-out group-hover:scale-105 lg:w-[70%]"
+      class="drop-shadow-Panambi h-full w-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105"
     />
   </div>
 </div>

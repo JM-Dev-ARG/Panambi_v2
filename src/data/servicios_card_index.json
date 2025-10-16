@@ -1,30 +1,30 @@
 [
   {
-    "titulo": "Consultoría estratégica de Negocios de Seguros",
-    "subtitulo": "  Consultoria personalizada",
+    "titulo": "Consultoría estratégica de Negocios",
+    "subtitulo": "Consultoria personalizada",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus quis minima consequatur praesentium, beatae recusandae culpa molestias officiis hic quibusdam possimus a facere delectus fugit fugiat tenetur eos numquam!",
-    "imagen": "/img/mock/mkt-digital.avif",
+    "imagen": "/img/consultoria.avif",
     "bgColor": "bg-verde2-300"
   },
   {
-    "titulo": "Consultoría estratégica de Negocios de Seguros",
-    "subtitulo": "  Consultoria personalizada",
+    "titulo": "Planes de marketing digital para tu negocio",
+    "subtitulo": "Marketing Digital",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus quis minima consequatur praesentium, beatae recusandae culpa molestias officiis hic quibusdam possimus a facere delectus fugit fugiat tenetur eos numquam!",
-    "imagen": "/img/mock/mkt-digital.avif",
+    "imagen": "/img/mktdigital.avif",
     "bgColor": "bg-verde5-300"
   },
   {
-    "titulo": "Consultoría estratégica de Negocios de Seguros",
-    "subtitulo": "  Consultoria personalizada",
+    "titulo": "Personalizado y a la medida de tu negocio",
+    "subtitulo": "Desarrollo Web",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus quis minima consequatur praesentium, beatae recusandae culpa molestias officiis hic quibusdam possimus a facere delectus fugit fugiat tenetur eos numquam!",
-    "imagen": "/img/mock/mkt-digital.avif",
+    "imagen": "/img/web2.avif",
     "bgColor": "bg-violeta2-300"
   },
   {
-    "titulo": "Consultoría estratégica de Negocios de Seguros",
-    "subtitulo": "  Consultoria personalizada",
+    "titulo": "Diseño de piezas digitales para tu marca",
+    "subtitulo": "Diseño Audiovisual",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus quis minima consequatur praesentium, beatae recusandae culpa molestias officiis hic quibusdam possimus a facere delectus fugit fugiat tenetur eos numquam!",
-    "imagen": "/img/mock/mkt-digital.avif",
+    "imagen": "/img/av.avif",
     "bgColor": "bg-neutral-800"
   }
 ]
