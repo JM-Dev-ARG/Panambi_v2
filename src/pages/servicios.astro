@@ -1,13 +1,14 @@
 ---
+import ContainerServiciosProyectos from "@/components/base-components/ContainerServiciosProyectos.astro";
 import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
 import Hero from "@/components/pages/servicios/sections/HeroServicios.astro";
-import ServiciosDisplay from "@/components/pages/servicios/sections/ServiciosDisplay.astro";
 import Layout from "@/layouts/Layout.astro";
+import data from "@/data/data_servicios.json";
 ---
 
 <Layout title="Panambi" description="La mejor plataforma para tus necesidades.">
   <Hero />
-  <ServiciosDisplay />
+  <ContainerServiciosProyectos data={data} bgColor="bg-verde1-200/50" />
   <UltimoLLamado
     idContainer="ultimo_llamado_index"
     textoBoton="contactanos"

@@ -1,8 +1,22 @@
 ---
-import Hero from "@/components/pages/proyectos/sections/Hero.astro";
+import ContainerServiciosProyectos from "@/components/base-components/ContainerServiciosProyectos.astro";
+import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
+import Hero from "@/components/pages/proyectos/sections/HeroProyectos.astro";
+import data from "@/data/data_proyectos.json";
 import Layout from "@/layouts/Layout.astro";
+
+const dataSliced = data.slice(0, 5);
 ---
 
 <Layout title="Panambi" description="La mejor plataforma para tus necesidades.">
   <Hero />
+  <ContainerServiciosProyectos data={dataSliced} bgColor="bg-violeta1-100/50" />
+  <UltimoLLamado
+    idContainer="ultimo_llamado_index"
+    textoBoton="contactanos"
+    titulo="No esperes más"
+    subtitulo="comencemos!!"
+    hrefBoton="/contacto"
+    bgColor="bg-violeta1-200"
+  />
 </Layout>

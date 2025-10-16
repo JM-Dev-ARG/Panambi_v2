@@ -1,8 +1,12 @@
 ---
 import CardServiciosProyectos from "@/components/base-components/CardServiciosProyectos.astro";
-import imgContacto from "@/assets/img/mock/mkt-digital.avif";
 import Container from "@/components/base-components/Container.astro";
-import data from "@/data/data_servicios.json";
+
+interface Props {
+  data: Array<any>;
+  bgColor: string;
+}
+const { data, bgColor } = Astro.props;
 ---
 
 <Container id="servicios_display" marginTop="mt-2 sm:mt-[40px] ">
@@ -12,11 +16,11 @@ import data from "@/data/data_servicios.json";
     {
       data.map((item) => (
         <CardServiciosProyectos
-          img={item.imagen}
-          titulo={item.titulo}
+          img={item.img}
+          titulo={item.title}
           descripcion={item.descripcion}
           tags={item.tags}
-          bgColor="bg-verde1-200/50"
+          bgColor={bgColor}
         />
       ))
     }
