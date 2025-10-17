@@ -57,7 +57,7 @@ const { img, dataText, bgColor } = Astro.props;
     </div>
   </div>
   <div
-    class="border-negro mx-auto grid h-1/2 w-full place-items-center rounded-xl border-2 bg-neutral-100 lg:h-full lg:w-1/2"
+    class="mx-auto grid h-1/2 w-full place-items-center overflow-hidden rounded-xl bg-neutral-100 lg:h-full lg:w-1/2"
   >
     <img
       src={img}
@@ -65,7 +65,7 @@ const { img, dataText, bgColor } = Astro.props;
       width="auto"
       height="auto"
       loading="lazy"
-      class="w-[70%] object-contain"
+      class="h-full w-full object-cover"
     />
   </div>
 </div>
