@@ -1,5 +1,7 @@
 ---
 import logo from "@/assets/svg/logotipo.svg";
+
+const currentPage = Astro.url.pathname.split("/")[1];
 ---
 
 <nav
@@ -29,9 +31,27 @@ import logo from "@/assets/svg/logotipo.svg";
       >
     </summary>
     <div class="flex h-full flex-col items-center justify-evenly gap-4 py-4">
-      <a class="cursor-pointer" href="/servicios">Servicios </a>
-      <a class="cursor-pointer" href="/proyectos">Proyectos </a>
-      <a class="cursor-pointer" href="/equipo">Equipo </a>
+      <a
+        class=`cursor-pointer ${
+        currentPage === "servicios" ? "text-violeta1-100" : ""
+      }`
+        href="/servicios"
+        >Servicios
+      </a>
+      <a
+        class=`cursor-pointer ${
+        currentPage === "proyectos" ? "text-violeta1-100" : ""
+      }`
+        href="/proyectos"
+        >Proyectos
+      </a>
+      <a
+        class=`cursor-pointer ${
+        currentPage === "equipo" ? "text-violeta1-100" : ""
+      }`
+        href="/equipo"
+        >Equipo
+      </a>
     </div>
   </details>
   <div class="flex h-[65px] items-center justify-center">

@@ -1,0 +1,28 @@
+---
+interface Props {
+  currentPage: string;
+  label: string;
+  href?: string;
+}
+
+const { currentPage, label, href } = Astro.props;
+---
+
+<a
+  class=`transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden ${
+          currentPage === href ? "text-violeta2-100" : ""
+        }`
+  href={`/${href}`}
+  data-target={href}
+>
+  <p
+    class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+  >
+    {label}
+  </p>
+  <p
+    class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
+  >
+    {label}
+  </p>
+</a>
