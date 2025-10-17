@@ -1,15 +1,23 @@
 [
   {
     "titulo": "hola!!",
-    "descripcion": "info@panambi.net"
+    "descripcion": "info@panambi.net",
+    "href": "mailto:info@panambi.net"
   },
   {
     "titulo": "consultoria o Mkt",
-    "descripcion": "micaela@panambi.net"
+    "descripcion": "micaela@panambi.net",
+    "href": "mailto:micaela@panambi.net"
   },
   {
     "titulo": "Desarrollo web",
-    "descripcion": "juanmanuel@panambi.net"
+    "descripcion": "juanmanuel@panambi.net",
+    "href": "mailto:juanmanuel@panambi.net"
+  },
+  {
+    "titulo": "Whatsapp",
+    "descripcion": "11-3166-4971",
+    "href": "https://wa.me/5491131664971?text=Hola, quiero hacer una consulta."
   },
   {
     "titulo": "Estamos en",

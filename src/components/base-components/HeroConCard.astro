@@ -15,7 +15,9 @@ const { imgCard, titulo, subtitulo, dataText, bgColor } = Astro.props;
 ---
 
 <Container id="hero_contacto">
-  <div class="mt-4 flex h-full w-[70%] items-end justify-center sm:mt-8">
+  <div
+    class="mt-4 flex h-full w-full items-end justify-center sm:mt-8 sm:w-[70%]"
+  >
     <Titulo title={titulo} subtitle={subtitulo} />
   </div>
   <CardHero bgColor={bgColor} img={imgCard} dataText={dataText} />
