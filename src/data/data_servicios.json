@@ -13,37 +13,37 @@
     },
     {
         "title": "Marketing Digital",
-        "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
+        "descripcion": "Impulsamos marcas a través de estrategias de marketing digital personalizadas, diseñadas para aumentar su visibilidad, atraer nuevos clientes y fortalecer su presencia online. Analizamos el comportamiento de la audiencia, optimizamos contenidos y gestionamos campañas multicanal para lograr resultados medibles y sostenibles. Desde la planificación estratégica hasta la ejecución creativa, acompañamos a las empresas en cada etapa de su crecimiento digital, combinando datos, diseño y comunicación para generar impacto real.",
         "tags": [
-            "tag1",
-            "tag2",
-            "tag3",
-            "tag4",
-            "tag5"
+            "Estrategia y posicionamiento digital",
+            "Gestión de redes sociales",
+            "Publicidad en Google y Meta Ads",
+            "Email marketing automatizado",
+            "Analítica y optimización SEO/SEM"
         ],
         "img": "/img/mktdigital.avif"
     },
     {
         "title": "desarrollo web",
-        "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
+        "descripcion": "Diseñamos y desarrollamos sitios web personalizados que combinan funcionalidad, estética y rendimiento. Cada proyecto se adapta a las necesidades y objetivos de la marca, priorizando la experiencia del usuario, la velocidad de carga y la optimización SEO desde la base. Creamos plataformas modernas, seguras y escalables que reflejan la identidad de cada empresa, integrando formularios dinámicos, automatizaciones y estrategias de posicionamiento que impulsan el crecimiento digital.",
         "tags": [
-            "tag1",
-            "tag2",
-            "tag3",
-            "tag4",
-            "tag5"
+            "Diseño web a medida",
+            "Optimización SEO y rendimiento",
+            "Experiencia de usuario (UX/UI)",
+            "Integraciónes",
+            "Desarrollo adaptable y responsive"
         ],
         "img": "/img/web2.avif"
     },
     {
         "title": "diseño audiovisual",
-        "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
+        "descripcion": "Creamos contenido audiovisual y piezas gráficas que potencian la comunicación visual de cada marca. Nos encargamos de la edición de audio y video, así como del diseño de materiales digitales para redes sociales, sitios web y campañas publicitarias. Cada producción busca transmitir identidad, emoción y propósito, combinando creatividad, narrativa y técnica para lograr piezas que conecten con la audiencia y refuercen la presencia digital de la marca.",
         "tags": [
-            "tag1",
-            "tag2",
-            "tag3",
-            "tag4",
-            "tag5"
+            "Edición de audio y video",
+            "Diseño de piezas para redes sociales",
+            "Contenido visual para sitios web",
+            "Animaciones y motion graphics",
+            "Producción audiovisual creativa"
         ],
         "img": "/img/av.avif"
     }

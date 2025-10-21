@@ -11,27 +11,31 @@ const { img, titulo, descripcion, tags, bgColor } = Astro.props;
 ---
 
 <div
-  class=`flex flex-col-reverse lg:flex-row h-auto sm:h-[500px]  lg:h-[700px] w-full items-start justify-center rounded-3xl p-3 ${bgColor}`
+  class=`flex flex-col-reverse lg:flex-row h-auto lg:h-[750px] w-full items-start justify-center rounded-3xl p-3 ${bgColor}`
 >
   <div
-    class="flex h-1/2 w-full items-center justify-start p-3 lg:h-full lg:w-1/2 lg:flex-col"
+    class="flex h-auto w-full items-center justify-start p-3 sm:h-1/2 lg:h-full lg:w-1/2 lg:flex-col"
   >
     <div
       class="text-negro flex h-full flex-col items-start justify-between gap-4 text-pretty uppercase"
     >
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-4">
         <p
-          class="font-titulo lg:leading-14 text-3xl font-black leading-8 tracking-wider sm:text-4xl lg:h-[130px] lg:text-5xl xl:text-6xl"
+          class="font-titulo lg:leading-14 place grid items-center text-center text-3xl font-black leading-8 tracking-wider sm:text-4xl lg:h-[110px] lg:text-left lg:text-5xl xl:text-6xl"
         >
           {titulo}
         </p>
-        <p class="w-full text-sm sm:text-lg lg:w-[80%]">{descripcion}</p>
+        <p
+          class="w-full text-center text-base sm:text-lg lg:text-left xl:w-[80%]"
+        >
+          {descripcion}
+        </p>
       </div>
-      <div class="flex w-full gap-4 text-pretty uppercase lg:flex-col lg:gap-2">
+      <div class="flex w-full flex-col gap-4 text-pretty uppercase lg:gap-2">
         {
           tags.map((item) => {
             return (
-              <p class="font-titulo text-violeta3-500 text-base font-bold leading-4 tracking-wider sm:text-lg sm:leading-6">
+              <p class="font-titulo text-violeta3-500 text-left text-base font-bold leading-4 tracking-wider sm:text-lg sm:leading-4">
                 {item}
               </p>
             );
@@ -39,7 +43,6 @@ const { img, titulo, descripcion, tags, bgColor } = Astro.props;
         }
       </div>
     </div>
-    <div></div>
   </div><div
     class="group mx-auto grid h-2/5 w-full place-items-center overflow-hidden rounded-xl bg-neutral-100 sm:h-1/2 lg:h-full lg:w-1/2"
   >
