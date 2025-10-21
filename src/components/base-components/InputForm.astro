@@ -19,10 +19,19 @@ interface Props {
   type?: HTMLInputTypeAttribute | null | undefined; // Change the type to allow string values
   name: string;
   placeholder: string;
+  inputType?:
+    | "search"
+    | "email"
+    | "text"
+    | "tel"
+    | "url"
+    | "none"
+    | "numeric"
+    | "decimal";
   notrequired?: boolean;
 }
 
-const { type, name, notrequired, placeholder } = Astro.props;
+const { type, name, notrequired, placeholder, inputType } = Astro.props;
 ---
 
 <div class="relative w-full">
@@ -32,6 +41,7 @@ const { type, name, notrequired, placeholder } = Astro.props;
     id={name}
     required={!notrequired}
     placeholder=" "
+    inputmode={inputType}
     class="focus:border-negro focus:shadow-Panambi-input lo peer w-full rounded-xl bg-neutral-200 p-3 text-lg uppercase placeholder-transparent transition-all duration-150 focus:border-2 focus:outline-none sm:text-xl lg:text-2xl"
   />
 

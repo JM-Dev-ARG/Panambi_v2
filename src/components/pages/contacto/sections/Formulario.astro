@@ -4,6 +4,7 @@ import InputForm from "@/components/base-components/InputForm.astro";
 import TextAreaForm from "@/components/base-components/TextAreaForm.astro";
 import Titulo from "@/components/base-components/Titulo.astro";
 import Flecha_svg from "@/components/base-components/svg/Flecha_svg.astro";
+import { actions } from "astro:actions";
 ---
 
 <Container id="formulario_contacto">
@@ -15,7 +16,8 @@ import Flecha_svg from "@/components/base-components/svg/Flecha_svg.astro";
     <form
       id="contacto-form"
       class="flex w-full flex-col items-start justify-start gap-4"
-      method="post"
+      method="POST"
+      action={actions.sendMail}
     >
       <p
         class="tracking-panambi-nav text-left font-normal uppercase sm:text-2xl lg:text-3xl"
@@ -24,16 +26,28 @@ import Flecha_svg from "@/components/base-components/svg/Flecha_svg.astro";
       </p>
       <InputForm
         type="text"
-        name="nombre-completo"
+        name="nombre_completo"
         placeholder="Nombre y Apellido"
+        inputType="text"
       />
-      <InputForm type="text" name="motivo-contacto" placeholder="Motivo" />
-      <InputForm type="email" name="email" placeholder="Email" />
+      <InputForm
+        type="text"
+        name="motivo"
+        placeholder="Motivo"
+        inputType="text"
+      />
+      <InputForm
+        type="email"
+        name="email"
+        placeholder="Email"
+        inputType="email"
+      />
       <InputForm
         type="number"
         name="telefono"
         placeholder="Teléfono (opcional)"
         notrequired={true}
+        inputType="tel"
       />
 
       <p
@@ -43,16 +57,18 @@ import Flecha_svg from "@/components/base-components/svg/Flecha_svg.astro";
       </p>
       <InputForm
         type="text"
-        name="nombre-negocio"
+        name="nombre_negocio"
         placeholder="Nombre del negocio"
         notrequired={true}
+        inputType="text"
       />
-      <TextAreaForm name="descripcion" placeholder="Como podemos ayudarte" />
+      <TextAreaForm name="mensaje" placeholder="Como podemos ayudarte" />
       <InputForm
         type="text"
         name="presupuesto"
         placeholder="¿tenes presupuesto desitnado?"
         notrequired={true}
+        inputType="text"
       />
       <div class="mx-auto mt-4 grid w-full place-items-center">
         <button
@@ -68,28 +84,48 @@ import Flecha_svg from "@/components/base-components/svg/Flecha_svg.astro";
 </Container>
 
 <script>
+  import { actions } from "astro:actions";
+  import Swal from "sweetalert2";
+
   const form = document.getElementById("contacto-form") as HTMLFormElement;
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     const formData = new FormData(form);
 
-    console.log("Datos del formulario a enviar:");
-    for (let [key, value] of formData.entries()) {
-      console.log(`${key}: ${value}`);
-    }
+    const nombre = formData.get("nombre_completo") as string;
+    const motivo = formData.get("motivo") as string;
+    const email = formData.get("email") as string;
+    const tel = formData.get("telefono") as string;
+    const negocio = formData.get("nombre_negocio") as string;
+    const presupuesto = formData.get("presupuesto") as string;
+    const msj = formData.get("mensaje") as string;
 
-    const res = await fetch("/api/contacto", {
-      method: "POST",
-      body: formData,
+    const { data, error } = await actions.sendMail({
+      nombre,
+      email,
+      telefono: tel,
+      mensaje: msj,
+      motivo,
+      presupuesto,
+      nombreNegocio: negocio,
     });
-
-    if (res.ok) {
-      alert("Formulario enviado correctamente ✅");
+    if (error) {
+      console.error(error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Algo salió mal, intentá de nuevo por favor",
+      });
       form.reset();
     } else {
-      alert("Hubo un error al enviar ❌");
+      Swal.fire({
+        title: "Gracias por contactarnos ✉️",
+        text: "En breve nos estaremos comunicando con vos",
+        showConfirmButton: false,
+        timer: 5000,
+      });
+      form.reset();
     }
   });
 </script>
