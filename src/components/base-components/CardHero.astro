@@ -31,6 +31,7 @@ const { img, dataText, bgColor } = Astro.props;
           return item.href ? (
             <a
               href={item.href}
+              aria-label={item.titulo}
               target="_blank"
               rel="noopener noreferrer"
               class="flex w-auto cursor-pointer flex-col gap-1 text-pretty uppercase text-neutral-200"

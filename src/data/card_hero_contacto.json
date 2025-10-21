@@ -2,17 +2,17 @@
   {
     "titulo": "hola!!",
     "descripcion": "info@panambi.net",
-    "href": "mailto:info@panambi.net"
+    "href": "mailto:info@panambi.net?subject=Consulta sobre servicios de Panambi"
   },
   {
     "titulo": "consultoria o Mkt",
     "descripcion": "micaela@panambi.net",
-    "href": "mailto:micaela@panambi.net"
+    "href": "mailto:micaela@panambi.net?subject=Consulta sobre consultoria o marketing digital"
   },
   {
     "titulo": "Desarrollo web",
     "descripcion": "juanmanuel@panambi.net",
-    "href": "mailto:juanmanuel@panambi.net"
+    "href": "mailto:juanmanuel@panambi.net?subject=Consulta sobre desarrollo web"
   },
   {
     "titulo": "Whatsapp",
