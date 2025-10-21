@@ -6,14 +6,17 @@ interface Props {
 }
 
 const { currentPage, label, href } = Astro.props;
+
+const isActive = currentPage === href;
 ---
 
 <a
   class=`transform-3d nav-link group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden ${
-          currentPage === href ? "text-violeta2-100" : ""
+         isActive ? "text-violeta2-100 pointer-events-none" : ""
         }`
   href={`/${href}`}
   data-target={href}
+  aria-current={isActive ? "page" : undefined}
 >
   <p
     class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
