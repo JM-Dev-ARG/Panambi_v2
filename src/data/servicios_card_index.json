@@ -2,28 +2,28 @@
   {
     "titulo": "Consultoría estratégica de Negocios",
     "subtitulo": "Consultoria personalizada",
-    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus quis minima consequatur praesentium, beatae recusandae culpa molestias officiis hic quibusdam possimus a facere delectus fugit fugiat tenetur eos numquam!",
+    "descripcion": "Acompañamos a profesionales y empresas en el análisis, desarrollo y crecimiento de su negocio, combinando estrategias empresariales y marketing digital para potenciar su posicionamiento en el mercado.",
     "imagen": "/img/consultoria.avif",
     "bgColor": "bg-verde2-300"
   },
   {
     "titulo": "Planes de marketing digital para tu negocio",
     "subtitulo": "Marketing Digital",
-    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus quis minima consequatur praesentium, beatae recusandae culpa molestias officiis hic quibusdam possimus a facere delectus fugit fugiat tenetur eos numquam!",
+    "descripcion": "Diseñamos estrategias digitales personalizadas para aumentar la visibilidad de las marcas, atraer nuevos clientes y fortalecer su presencia online mediante campañas efectivas y comunicación estratégica.",
     "imagen": "/img/mktdigital.avif",
     "bgColor": "bg-verde5-300"
   },
   {
     "titulo": "Personalizado y a la medida de tu negocio",
     "subtitulo": "Desarrollo Web",
-    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus quis minima consequatur praesentium, beatae recusandae culpa molestias officiis hic quibusdam possimus a facere delectus fugit fugiat tenetur eos numquam!",
+    "descripcion": "Creamos sitios web a medida que combinan diseño, funcionalidad y rendimiento, priorizando la experiencia del usuario y la optimización SEO para impulsar el crecimiento digital de cada empresa.",
     "imagen": "/img/web2.avif",
     "bgColor": "bg-violeta2-300"
   },
   {
     "titulo": "Diseño de piezas digitales para tu marca",
     "subtitulo": "Diseño Audiovisual",
-    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repellendus quis minima consequatur praesentium, beatae recusandae culpa molestias officiis hic quibusdam possimus a facere delectus fugit fugiat tenetur eos numquam!",
+    "descripcion": "Producimos piezas gráficas, videos y contenidos visuales que comunican la esencia de cada marca, reforzando su identidad y presencia digital con creatividad y coherencia estética.",
     "imagen": "/img/av.avif",
     "bgColor": "bg-neutral-800"
   }
