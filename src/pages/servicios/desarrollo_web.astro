@@ -1,24 +1,18 @@
 ---
 import Container from "@/components/base-components/Container.astro";
 import LayoutServicios from "@/layouts/LayoutServicios.astro";
-import HeroDW from "@/components/pages/servicios/paginas/desarrolloWeb/HeroDW.astro";
-import Hero from "@/components/pages/index/sections/Hero.astro";
-import HeroConCard from "@/components/base-components/HeroConCard.astro";
-import imgDesarrollo from "@/assets/img/hero/web2.avif";
+
+import Titulo from "@/components/base-components/Titulo.astro";
+import Imagen3D from "@/components/base-components/Imagen3d.astro";
 ---
 
 <LayoutServicios title="Desarrollo Web" description="Desarrollo Web">
-  <HeroConCard
-    imgCard={imgDesarrollo.src}
-    titulo="Convertimos tu idea"
-    subtitulo="en un magneto de oportunidades"
-    bgColor="bg-violeta3-500"
-    dataText={[
-      {
-        titulo: "Desarrollo Web",
-        descripcion:
-          "Tu sitio web es mucho más que una tarjeta de presentación: es el corazón de tu presencia digital. En un entorno cada vez más competitivo, contar con una web rápida, atractiva y optimizada marca la diferencia entre ser visto o pasar desapercibido.",
-      },
-    ]}
-  />
+  <Container id="hero-dw-titulo">
+    <Titulo
+      title="Convertimos tu web"
+      subtitle="en un magneto de oportunidades"
+    />
+
+    <Imagen3D />
+  </Container>
 </LayoutServicios>

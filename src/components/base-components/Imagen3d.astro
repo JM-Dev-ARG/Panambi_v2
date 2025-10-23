@@ -1,0 +1,90 @@
+---
+
+---
+
+<section class="mx-auto grid w-full place-items-center">
+  <div class="reflection-container">
+    <!-- Cuadrícula invisible -->
+    <div class="reflection-grid">
+      <!-- JS generará 100 celdas -->
+    </div>
+
+    <!-- Contenido que rota -->
+    <div class="reflection-content"></div>
+  </div>
+</section>
+
+<style>
+  .reflection-container {
+    position: relative;
+    display: inline-block;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+
+  .reflection-content {
+    height: 40vh;
+    width: 40vh;
+    background: #000 url(https://unsplash.it/800/800/?random);
+    background-size: cover;
+    background-position: center;
+    transform: rotateX(0) rotateY(0);
+    transition: transform 120ms linear;
+    pointer-events: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .reflection-content::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+  }
+
+  .reflection-grid {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+
+  .reflection-grid {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<script>
+  const grid = document.querySelector(".reflection-grid") as HTMLElement;
+  const reflectionContent = document.querySelector(
+    ".reflection-content",
+  ) as HTMLElement;
+
+  // Genera 100 celdas invisibles
+  for (let i = 0; i < 100; i++) {
+    const cell = document.createElement("div");
+    cell.classList.add("reflection-grid");
+    grid.appendChild(cell);
+  }
+
+  // Maneja el hover dinámico
+  document.querySelectorAll(".reflection-grid").forEach((cell, index) => {
+    const row = Math.floor(index / 10) + 1;
+    const col = (index % 10) + 1;
+
+    cell.addEventListener("mouseenter", () => {
+      const rotateX = row * -2 + 10; // antes -5 +25
+      const rotateY = -10 + col * 2; // antes -25 +5
+      reflectionContent.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    cell.addEventListener("mouseleave", () => {
+      reflectionContent.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    });
+  });
+</script>
