@@ -3,7 +3,11 @@
 ---
 
 <section class="mx-auto grid w-full place-items-center">
-  <div class="reflection-container">
+  <div
+    class="h-[200px] w-[90%] bg-[url(../public/img/bg_hero_dw2.avif)] bg-contain bg-center bg-no-repeat sm:h-[400px] lg:hidden"
+  >
+  </div>
+  <div class="reflection-container hidden lg:inline-block">
     <!-- Cuadrícula invisible -->
     <div class="reflection-grid">
       <!-- JS generará 100 celdas -->
@@ -17,21 +21,19 @@
 <style>
   .reflection-container {
     position: relative;
-    display: inline-block;
     place-items: center;
-    width: 100%;
+    width: 900px;
     height: 100%;
     overflow: hidden;
-
     perspective: 1000px;
     transform-style: preserve-3d;
   }
 
   .reflection-content {
-    height: 90vh;
-    width: 70vw;
-    background: url("../../../public/img/bg_hero_dw.avif");
-    background-size: contain;
+    height: 500px;
+    width: 100%;
+    background: url("../../../public/img/bg_hero_dw2.avif");
+    background-size: 80% auto;
     background-repeat: no-repeat;
     background-position: center;
     transform: rotateX(0) rotateY(0);

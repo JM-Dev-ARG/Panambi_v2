@@ -3,7 +3,7 @@ import Container from "@/components/base-components/Container.astro";
 import LayoutServicios from "@/layouts/LayoutServicios.astro";
 
 import Titulo from "@/components/base-components/Titulo.astro";
-import Imagen3D from "@/components/base-components/Imagen3d.astro";
+import Imagen3D from "@/components/pages/servicios/paginas/desarrolloWeb/Imagen3d.astro";
 ---
 
 <LayoutServicios title="Desarrollo Web" description="Desarrollo Web">
@@ -12,7 +12,17 @@ import Imagen3D from "@/components/base-components/Imagen3d.astro";
       title="Convertimos tu web"
       subtitle="en un magneto de oportunidades"
     />
-
+    <p
+      class="w-full text-balance text-center text-sm font-light leading-4 sm:text-base sm:leading-5 lg:w-[70%]"
+    >
+      <strong
+        class="font-titulo pb-2 text-base leading-5 sm:text-lg sm:leading-6"
+        >Tu sitio web es mucho más que una tarjeta de presentación</strong
+      >
+      <br /> Es el corazón de tu presencia digital. En un entorno cada vez más competitivo,
+      contar con una web rápida, atractiva y optimizada marca la diferencia entre
+      ser visto o pasar desapercibido.
+    </p>
     <Imagen3D />
   </Container>
 </LayoutServicios>
