@@ -7,6 +7,11 @@ interface Props {
   bgColor: string;
 }
 const { data, bgColor } = Astro.props;
+
+const actualPage = Astro.url.pathname.split("/")[1];
+function isReverse(index: number): boolean {
+  return actualPage === "servicios" ? false : index % 2 === 0 ? false : true;
+}
 ---
 
 <Container id="servicios_display" marginTop="mt-2 sm:mt-[40px] ">
@@ -22,7 +27,8 @@ const { data, bgColor } = Astro.props;
           tags={item.tags}
           bgColor={bgColor}
           href={item.href}
-          reverse={index % 2 === 0 ? false : true}
+          hrefWeb={item.hrefWeb}
+          reverse={isReverse(index)}
         />
       ))
     }

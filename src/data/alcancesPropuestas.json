@@ -1,0 +1,26 @@
+[
+    {
+        "titulo": "Diseño UX/UI Profesional",
+        "descripcion": "Creamos interfaces sobrias, elegantes y fáciles de navegar, reflejando la seriedad y confianza que su profesión requiere. Cada diseño está optimizado para ofrecer una experiencia fluida en dispositivos móviles (responsive)."
+    },
+    {
+        "titulo": "Arquitectura de Contenido (SEO Base)",
+        "descripcion": "Desarrollamos una estructura optimizada para motores de búsqueda como Google, centrada en las áreas de práctica o servicios clave. Ideal para posicionar términos como 'Abogado de familia en [Ciudad]', 'Contador para Pymes' o 'Seguros de Vida'."
+    },
+    {
+        "titulo": "Módulos de Confianza y Autoridad",
+        "descripcion": "Incorporamos secciones de Testimonios, Casos de Éxito, Experiencia, Certificaciones y Colegiaturas, reforzando la credibilidad y profesionalismo de su marca ante potenciales clientes."
+    },
+    {
+        "titulo": "Integración de Contacto Estratégico",
+        "descripcion": "Incluimos formularios segmentados ('Solicitar Consulta', 'Cotizar Servicio'), botón flotante de WhatsApp y conexión con agendas online como Calendly o Doctoralia, optimizando la conversión de contactos."
+    },
+    {
+        "titulo": "Página de Servicios / Especialidades",
+        "descripcion": "Redactamos descripciones orientadas a los beneficios del cliente, destacando cómo cada servicio resuelve una necesidad o aporta valor, más allá de la mera enumeración de tareas."
+    },
+    {
+        "titulo": "Cumplimiento y Legalidad",
+        "descripcion": "Integramos avisos legales, políticas de privacidad y uso de datos, garantizando la transparencia y el cumplimiento normativo indispensable en entornos profesionales."
+    }
+]

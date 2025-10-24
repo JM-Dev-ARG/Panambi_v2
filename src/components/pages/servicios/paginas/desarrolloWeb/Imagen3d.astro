@@ -4,7 +4,7 @@
 
 <section class="mx-auto grid w-full place-items-center">
   <div
-    class="h-[200px] w-[90%] bg-[url(../public/img/bg_hero_dw2.avif)] bg-contain bg-center bg-no-repeat sm:h-[400px] lg:hidden"
+    class="h-[200px] w-[90%] bg-[url(../img/bg_hero_dw2.avif)] bg-contain bg-center bg-no-repeat sm:h-[400px] lg:hidden"
   >
   </div>
   <div class="reflection-container hidden lg:inline-block">
@@ -23,7 +23,7 @@
     position: relative;
     place-items: center;
     width: 900px;
-    height: 100%;
+    /* height: 100%; */
     overflow: hidden;
     perspective: 1000px;
     transform-style: preserve-3d;
@@ -32,8 +32,8 @@
   .reflection-content {
     height: 500px;
     width: 100%;
-    background: url("../../../public/img/bg_hero_dw2.avif");
-    background-size: 80% auto;
+    background: url("../img/bg_hero_dw2.avif");
+    background-size: 90% auto;
     background-repeat: no-repeat;
     background-position: center;
     transform: rotateX(0) rotateY(0);
@@ -41,7 +41,7 @@
     pointer-events: none;
     position: relative;
     overflow: hidden;
-    filter: drop-shadow(6px 6px 20px #1a181b36);
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
   .reflection-content::before {

@@ -4,25 +4,46 @@ import LayoutServicios from "@/layouts/LayoutServicios.astro";
 
 import Titulo from "@/components/base-components/Titulo.astro";
 import Imagen3D from "@/components/pages/servicios/paginas/desarrolloWeb/Imagen3d.astro";
+import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
+import TextoLibre from "@/components/base-components/TextoLibre.astro";
+import AlcancesPropuestas from "@/components/pages/servicios/paginas/desarrolloWeb/AlcancesPropuestas.astro";
 ---
 
 <LayoutServicios title="Desarrollo Web" description="Desarrollo Web">
   <Container id="hero-dw-titulo">
-    <Titulo
-      title="Convertimos tu web"
-      subtitle="en un magneto de oportunidades"
-    />
-    <p
-      class="w-full text-balance text-center text-sm font-light leading-4 sm:text-base sm:leading-5 lg:w-[70%]"
+    <div
+      class="mt-4 flex h-full w-full items-end justify-center sm:mt-8 sm:w-[80%] lg:w-[70%]"
     >
-      <strong
-        class="font-titulo pb-2 text-base leading-5 sm:text-lg sm:leading-6"
-        >Tu sitio web es mucho más que una tarjeta de presentación</strong
-      >
-      <br /> Es el corazón de tu presencia digital. En un entorno cada vez más competitivo,
-      contar con una web rápida, atractiva y optimizada marca la diferencia entre
-      ser visto o pasar desapercibido.
-    </p>
+      <Titulo
+        title="Convertimos tu idea"
+        subtitle="en un magneto de oportunidades"
+      />
+    </div>
+
+    <TextoLibre
+      textNegro={true}
+      titulo="Tu sitio web es mucho más que una tarjeta de presentación"
+      subtitulo="Es el corazón de tu presencia digital. En un entorno cada vez más competitivo, contar con una web rápida, atractiva y optimizada marca la diferencia entre ser visto o pasar desapercibido."
+    />
     <Imagen3D />
+    <UltimoLLamado
+      idContainer="call_to_action_dw_1"
+      hrefBoton="/contacto"
+      textoBoton="contactanos"
+      titulo="Tu negocio merece un sitio web"
+      subtitulo="a medida, con propósito, rendimiento y diseño moderno"
+      bgColor="transparent"
+    />
+
+    <AlcancesPropuestas />
+
+    <div
+      class="mt-4 flex h-full w-full items-end justify-center sm:mt-8 sm:w-[80%] lg:w-[70%]"
+    >
+      <Titulo
+        title="tenes preguntas?"
+        subtitle="respondemos las mas frecuentes"
+      />
+    </div>
   </Container>
 </LayoutServicios>
