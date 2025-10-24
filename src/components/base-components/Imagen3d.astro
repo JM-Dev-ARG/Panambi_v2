@@ -66,31 +66,33 @@
 </style>
 
 <script>
-  const grid = document.querySelector(".reflection-grid") as HTMLElement;
-  const reflectionContent = document.querySelector(
-    ".reflection-content",
-  ) as HTMLElement;
+  document.addEventListener("astro:page-load", () => {
+    const grid = document.querySelector(".reflection-grid") as HTMLElement;
+    const reflectionContent = document.querySelector(
+      ".reflection-content",
+    ) as HTMLElement;
 
-  // Genera 100 celdas invisibles
-  for (let i = 0; i < 100; i++) {
-    const cell = document.createElement("div");
-    cell.classList.add("reflection-grid");
-    grid.appendChild(cell);
-  }
+    // Genera 100 celdas invisibles
+    for (let i = 0; i < 100; i++) {
+      const cell = document.createElement("div");
+      cell.classList.add("reflection-grid");
+      grid.appendChild(cell);
+    }
 
-  // Maneja el hover dinámico
-  document.querySelectorAll(".reflection-grid").forEach((cell, index) => {
-    const row = Math.floor(index / 10) + 1;
-    const col = (index % 10) + 1;
+    // Maneja el hover dinámico
+    document.querySelectorAll(".reflection-grid").forEach((cell, index) => {
+      const row = Math.floor(index / 10) + 1;
+      const col = (index % 10) + 1;
 
-    cell.addEventListener("mouseenter", () => {
-      const rotateX = row * -2 + 10; // antes -5 +25
-      const rotateY = -10 + col * 2; // antes -25 +5
-      reflectionContent.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
+      cell.addEventListener("mouseenter", () => {
+        const rotateX = row * -2 + 10; // antes -5 +25
+        const rotateY = -10 + col * 2; // antes -25 +5
+        reflectionContent.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
 
-    cell.addEventListener("mouseleave", () => {
-      reflectionContent.style.transform = `rotateX(0deg) rotateY(0deg)`;
+      cell.addEventListener("mouseleave", () => {
+        reflectionContent.style.transform = `rotateX(0deg) rotateY(0deg)`;
+      });
     });
   });
 </script>
