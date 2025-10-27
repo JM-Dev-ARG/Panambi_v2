@@ -1,0 +1,89 @@
+---
+import Container from "@/components/base-components/Container.astro";
+import Titulo from "@/components/base-components/Titulo.astro";
+import dataCards from "@/data/planesDW.json";
+import PreciosItems from "./PreciosItems.astro";
+import CardPlanesDW from "./CardPlanesDW.astro";
+---
+
+<Container id="planes_desarrollo_web">
+  <div
+    class="flex h-full w-full flex-col items-center justify-center sm:w-[90%] lg:w-[80%]"
+  >
+    <Titulo
+      title="Planes y precios"
+      subtitle="Tenemos el plan perfecto para tu negocio"
+    />
+  </div>
+
+  <div
+    class="card__container flex flex-col items-center justify-center gap-8 lg:grid"
+  >
+    {
+      dataCards
+        .slice(0, 3)
+        .map((card) => (
+          <CardPlanesDW
+            clase={card.clase}
+            titulo={card.titulo}
+            dataItems={card.items}
+            descripcion={card.descripcion}
+            precio={card.precio}
+          />
+        ))
+    }
+
+    <div
+      class="border-negro shadow-Panambi medida flex h-auto w-full flex-col items-start justify-center gap-8 rounded-3xl border-2 p-4"
+    >
+      <div class="flex w-full flex-col items-center gap-8 sm:flex-row">
+        <p class="font-titulo text-nowrap text-5xl font-black uppercase">
+          {dataCards[3].titulo}
+        </p>
+        <p class="">
+          {dataCards[3].descripcion}
+        </p>
+      </div>
+      <div class="grid w-full grid-cols-2 place-items-start gap-2">
+        {
+          dataCards[3].items.map((card) => (
+            <PreciosItems titulo={card} textNegro={true} />
+          ))
+        }
+      </div>
+      <p class="font-titulo mt-8 text-2xl font-black uppercase sm:text-3xl">
+        desde u$s {dataCards[3].precio}.-
+      </p>
+    </div>
+  </div>
+  <p class="mt-2 w-full text-center text-xs sm:text-sm">
+    Todos nuestros planes incluyen dominio y hosting por un año.
+  </p>
+</Container>
+
+<style>
+  .card__container {
+    width: 100%;
+    height: auto;
+
+    grid:
+      "a b c" auto
+      "a b c" auto
+      "d d d" auto
+      / 1fr 1fr 1fr;
+    gap: 16px;
+  }
+
+  .basico {
+    grid-area: a;
+  }
+  .basicoplus {
+    grid-area: b;
+  }
+  .pro {
+    grid-area: c;
+  }
+  .medida {
+    grid-area: d;
+  }
+</style>

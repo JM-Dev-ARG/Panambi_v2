@@ -5,14 +5,16 @@ type Props = {
   pause?: string;
   className?: string;
   classSlider?: string;
+  mascara?: boolean;
   id?: string;
 };
 
-const { direction, duration, pause, className, classSlider, id } = Astro.props;
+const { direction, duration, pause, className, classSlider, id, mascara } =
+  Astro.props;
 ---
 
 <div
-  class=`contenedor ${className} `
+  class=`contenedor ${className} ${mascara ? "mascara" : ""}`
   data-paused={pause}
   data-duration={duration}
   data-direction={direction}
@@ -34,14 +36,17 @@ const { direction, duration, pause, className, classSlider, id } = Astro.props;
   .contenedor[data-animated="true"] {
     overflow-x: hidden;
 
-    /*     mask: linear-gradient(90deg, transparent, white 3%, white 97%, transparent);
+    /*     */
+  }
+  .mascara {
+    mask: linear-gradient(90deg, transparent, white 3%, white 97%, transparent);
     -webkit-mask: linear-gradient(
       90deg,
       transparent,
       white 3%,
       white 97%,
       transparent
-    ); */
+    );
   }
   .contenedor[data-paused="true"]:hover .slider {
     cursor: pointer;

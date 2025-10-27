@@ -1,0 +1,76 @@
+[
+    {
+        "titulo": "basico",
+        "clase": "basico",
+        "descripcion": "Una solución ideal para quienes desean iniciar su presencia online con un sitio web profesional y funcional. Está diseñado para cubrir las necesidades esenciales de comunicación y presentación de servicios, ofreciendo una base sólida para crecer y fortalecer la imagen digital de tu proyecto o negocio.",
+        "precio": "800",
+        "items": [
+            "Landing page de hasta 4 secciones",
+            "Animaciones de entrada de componentes",
+            "Formulario de contacto simple",
+            "hasta 3 modificaciones al año",
+            "Boton de whatsapp",
+            "Botones de redes sociales",
+            "SEO basico",
+            "Soporte tecnico"
+        ]
+    },
+    {
+        "titulo": "Básico Plus",
+        "clase": "basicoplus",
+        "descripcion": "Ofrece una experiencia web más completa y profesional, ideal para quienes buscan destacar su marca y optimizar su presencia online. Incluye mejoras en diseño, interacción y posicionamiento, brindando mayor flexibilidad y herramientas avanzadas para potenciar tu sitio.",
+        "precio": "1500",
+        "items": [
+            "Landing page de hasta 6 secciones",
+            "Hasta 3 páginas adicionales",
+            "Animaciones personalizadas",
+            "Formularios dinámicos",
+            "Botón de WhatsApp",
+            "Botones de redes sociales",
+            "Hasta 5 casillas de correo corporativas",
+            "SEO personalizado",
+            "Hasta 3 páginas adicionales",
+            "Soporte técnico"
+        ]
+    },
+    {
+        "titulo": "Pro",
+        "clase": "pro",
+        "descripcion": "Pensado para proyectos que requieren un sitio web potente, flexible y completamente personalizado. Ofrece una experiencia avanzada con mayor capacidad de expansión, herramientas de recopilación de datos y un blog autogestionable que facilita la actualización constante de contenidos.",
+        "precio": "2500",
+        "items": [
+            "Landing page de hasta 6 secciones",
+            "Animaciones personalizadas",
+            "Formularios dinámicos y de descarga",
+            "Botón de WhatsApp",
+            "Botones de redes sociales",
+            "Hasta 5 páginas adicionales",
+            "3 casillas de correo corporativas",
+            "SEO personalizado",
+            "Recopilación de datos en base de datos",
+            "Personalización completa de cada componente",
+            "Blog autogestionable (costo mensual adicianal)",
+            "Soporte técnico prioritario"
+        ]
+    },
+    {
+        "titulo": "A Medida",
+        "clase": "medida",
+        "descripcion": "Orientado a empresas y profesionales que buscan un desarrollo totalmente personalizado. Cada detalle del sitio se adapta a las necesidades del proyecto, integrando funcionalidades avanzadas y soluciones específicas para optimizar la gestión y la experiencia del usuario.",
+        "precio": "A convenir",
+        "items": [
+            "Diseño y desarrollo 100% personalizado",
+            "Arquitectura web adaptada al proyecto",
+            "Portal de clientes",
+            "Intranet corporativa",
+            "Agenda avanzada",
+            "Integración con software de gestión",
+            "Formularios y flujos personalizados",
+            "Animaciones y componentes a medida",
+            "SEO técnico y estratégico",
+            "Recopilación y análisis de datos",
+            "Soporte y mantenimiento integral",
+            "Asesoramiento continuo"
+        ]
+    }
+]
