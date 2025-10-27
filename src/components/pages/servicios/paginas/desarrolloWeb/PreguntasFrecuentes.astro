@@ -1,0 +1,25 @@
+---
+import Container from "@/components/base-components/Container.astro";
+import Detalle from "@/components/base-components/Detalle.astro";
+import Titulo from "@/components/base-components/Titulo.astro";
+import dataFaqs from "@/data/faqs.json";
+---
+
+<Container id="preguntas_frecuentes_desarrollo_web">
+  <div
+    class="flex h-full w-full items-end justify-center sm:w-[80%] lg:w-[70%]"
+  >
+    <Titulo
+      title="tenes preguntas?"
+      subtitle="respondemos las mas frecuentes"
+    />
+  </div>
+
+  <div class="mx-auto grid w-full place-items-center gap-4 xl:w-[80%]">
+    {
+      dataFaqs.map((item) => (
+        <Detalle pregunta={item.pregunta} respuesta={item.respuesta} />
+      ))
+    }
+  </div>
+</Container>

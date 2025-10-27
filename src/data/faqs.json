@@ -1,0 +1,22 @@
+[
+  {
+    "pregunta": "¿Incluyen los textos del sitio e imagenes o tengo que enviarlos yo?",
+    "respuesta": "Podés enviarnos vos los textos y la información principal sobre tu negocio o servicio. Pero si preferís que nos encarguemos de todo, también ofrecemos un servicio de copywriting profesional, pensado para transmitir tu mensaje con claridad y conectar con tu público. Este servicio se cotiza aparte del diseño base."
+  },
+  {
+    "pregunta": "¿Puedo usar mi propio servidor web?",
+    "respuesta": "Sí, sin problema. Podés usar tu propio servidor si ya tenés uno contratado. Solo tené en cuenta que nosotros no nos encargamos de la gestión ni del mantenimiento del servidor. De todos modos, podemos ayudarte a configurarlo y adaptar el desarrollo para que todo funcione correctamente en tu entorno."
+  },
+  {
+    "pregunta": "¿El precio incluye hosting y dominio?",
+    "respuesta": "Si, lo incluye en el primer año. El hosting (alojamiento web) y el dominio se abonan por separado y de forma anual una vez cumplido el primer año. Nosotros nos encargamos de gestionarlos o incluirlos en la factura."
+  },
+  {
+    "pregunta": "¿Puedo integrar mi sitio con un CRM o sistemas más complejos?",
+    "respuesta": "Sí, es posible, pero esas integraciones avanzadas —como CRM, pasarelas de pago o sistemas de gestión de documentos— requieren desarrollo a medida. Si necesitás algo así, lo charlamos y te pasamos una propuesta personalizada."
+  },
+  {
+    "pregunta": "¿También hacen campañas publicitarias?",
+    "respuesta": "¡Claro! Ofrecemos campañas en Google Ads y Meta Ads para que tu sitio empiece a generar resultados desde el día uno. Este servicio es mensual y opcional, ideal para quienes buscan impulsar su presencia digital."
+  }
+]

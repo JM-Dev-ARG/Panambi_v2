@@ -1,15 +1,24 @@
 ---
 import Container from "@/components/base-components/Container.astro";
+import TextoLibre from "@/components/base-components/TextoLibre.astro";
 import Titulo from "@/components/base-components/Titulo.astro";
+import Imagen3D from "./Imagen3d.astro";
 ---
 
 <Container id="hero_servicios">
   <div
-    class="mt-4 flex h-full w-full items-end justify-center sm:mt-8 sm:w-[80%] lg:w-[70%] xl:w-[50%]"
+    class="mt-4 flex h-full w-full items-end justify-center sm:mt-8 sm:w-[80%] lg:w-[70%]"
   >
     <Titulo
       title="Convertimos tu idea"
       subtitle="en un magneto de oportunidades"
     />
   </div>
+
+  <TextoLibre
+    textNegro={true}
+    titulo="Tu sitio web es mucho más que una tarjeta de presentación"
+    subtitulo="Es el corazón de tu presencia digital. En un entorno cada vez más competitivo, contar con una web rápida, atractiva y optimizada marca la diferencia entre ser visto o pasar desapercibido."
+  />
+  <Imagen3D />
 </Container>
