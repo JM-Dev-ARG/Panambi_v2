@@ -1,19 +1,37 @@
 ---
-import Container from "@/components/base-components/Container.astro";
 import LayoutServicios from "@/layouts/LayoutServicios.astro";
-import Detalle from "@/components/base-components/Detalle.astro";
-import Titulo from "@/components/base-components/Titulo.astro";
-import Imagen3D from "@/components/pages/servicios/paginas/desarrolloWeb/Imagen3d.astro";
 import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
-import TextoLibre from "@/components/base-components/TextoLibre.astro";
 import AlcancesPropuestas from "@/components/pages/servicios/paginas/desarrolloWeb/AlcancesPropuestas.astro";
 import HeroDW from "@/components/pages/servicios/paginas/desarrolloWeb/HeroDW.astro";
 import PreguntasFrecuentes from "@/components/pages/servicios/paginas/desarrolloWeb/PreguntasFrecuentes.astro";
 import PlanesPrecios from "@/components/pages/servicios/paginas/desarrolloWeb/PlanesPrecios.astro";
 import Comentarios from "@/components/pages/servicios/paginas/desarrolloWeb/Comentarios.astro";
+
+const dataLinks = [
+  {
+    href: "./servicios/desarrollo_web/#alcances_propuestas",
+    label: "Alcances",
+  },
+  {
+    href: "./servicios/desarrollo_web/#planes_desarrollo_web",
+    label: "Precios",
+  },
+  {
+    href: "./servicios/desarrollo_web/#preguntas_frecuentes_desarrollo_web",
+    label: "Preguntas",
+  },
+  {
+    href: "./servicios",
+    label: "Volver",
+  },
+];
 ---
 
-<LayoutServicios title="Desarrollo Web" description="Desarrollo Web">
+<LayoutServicios
+  dataLinks={dataLinks}
+  title="Desarrollo Web"
+  description="Desarrollo Web"
+>
   <HeroDW />
   <UltimoLLamado
     idContainer="call_to_action_dw_1"
@@ -26,6 +44,14 @@ import Comentarios from "@/components/pages/servicios/paginas/desarrolloWeb/Come
 
   <AlcancesPropuestas />
   <PlanesPrecios />
+  <UltimoLLamado
+    idContainer="call_to_action_dw_1"
+    hrefBoton="/contacto"
+    textoBoton="contactanos"
+    titulo="Ya viste nuestros planes?"
+    subtitulo="¿que estas esperando para tener tu sitio web?"
+    bgColor="bg-violeta3-100"
+  />
   <PreguntasFrecuentes />
   <Comentarios />
 </LayoutServicios>

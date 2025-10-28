@@ -73,13 +73,7 @@
     "title": "Lucas Marks",
     "hrefWeb": "https://lucasmarks.com.ar/",
     "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": [
-      "tag1",
-      "tag2",
-      "tag3",
-      "tag4",
-      "tag5"
-    ]
+    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
   },
   {
     "img": "/img/proyectos/lcs-web.avif",
@@ -87,26 +81,20 @@
     "title": "La Chica del Seguro",
     "hrefWeb": "https://lachicadelseguro.com/",
     "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": [
-      "tag1",
-      "tag2",
-      "tag3",
-      "tag4",
-      "tag5"
-    ]
+    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
   },
   {
-    "img": "/img/proyectos/pm-web.avif",
+    "img": "/img/proyectos/pm-web2.avif",
     "alt": "Sitio web Planifica Mejor",
     "title": "Planifica Mejor",
     "hrefWeb": "https://planificamejor.com.ar/",
-    "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
+    "descripcion": "En Planifica Mejor desarrollamos una plataforma digital clara y profesional que refleja la esencia de la marca y su compromiso con la educación financiera. El sitio fue diseñado a medida, priorizando la usabilidad, la organización del contenido y una estética moderna que transmite confianza y cercanía. El trabajo incluyó la creación de recursos visuales originales, material audiovisual y una estrategia SEO enfocada en mejorar la visibilidad y el posicionamiento orgánico. El resultado es un espacio digital funcional y atractivo que fortalece la comunicación con su audiencia y consolida la presencia online de la marca.",
     "tags": [
-      "tag1",
-      "tag2",
-      "tag3",
-      "tag4",
-      "tag5"
+      "Identidad de marca",
+      "Diseño de piezas digitales",
+      "Edición de videos",
+      "Diseño web a medida",
+      "SEO completo"
     ]
   },
   {
@@ -115,13 +103,7 @@
     "title": "RPP seguros generales",
     "hrefWeb": "https://rppseguros.com/",
     "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": [
-      "tag1",
-      "tag2",
-      "tag3",
-      "tag4",
-      "tag5"
-    ]
+    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
   },
   {
     "img": "/img/proyectos/islay-web.avif",
@@ -129,13 +111,7 @@
     "title": "Islay Seguros",
     "hrefWeb": "https://islayseguros.com/",
     "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": [
-      "tag1",
-      "tag2",
-      "tag3",
-      "tag4",
-      "tag5"
-    ]
+    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
   },
   {
     "img": "/img/proyectos/dalotto-web.avif",
@@ -143,13 +119,7 @@
     "title": "D'alotto asesores ",
     "hrefWeb": "https://dalottoasesores.com/",
     "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": [
-      "tag1",
-      "tag2",
-      "tag3",
-      "tag4",
-      "tag5"
-    ]
+    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
   },
   {
     "img": "/img/proyectos/lucas-web.avif",
@@ -157,13 +127,7 @@
     "title": "Lucas Marks",
     "hrefWeb": "https://lucasmarks.com.ar/",
     "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": [
-      "tag1",
-      "tag2",
-      "tag3",
-      "tag4",
-      "tag5"
-    ]
+    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
   },
   {
     "img": "/img/proyectos/lcs-web.avif",
@@ -171,27 +135,15 @@
     "title": "La Chica del Seguro",
     "hrefWeb": "https://lachicadelseguro.com/",
     "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": [
-      "tag1",
-      "tag2",
-      "tag3",
-      "tag4",
-      "tag5"
-    ]
+    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
   },
   {
-    "img": "/img/proyectos/pm-web.avif",
+    "img": "/img/proyectos/pm-web2.avif",
     "alt": "Sitio web Planifica Mejor",
     "title": "Planifica Mejor",
     "hrefWeb": "https://planificamejor.com.ar/",
     "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": [
-      "tag1",
-      "tag2",
-      "tag3",
-      "tag4",
-      "tag5"
-    ]
+    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
   },
   {
     "img": "/img/proyectos/rpp-web.avif",
@@ -199,13 +151,7 @@
     "title": "RPP seguros generales",
     "hrefWeb": "https://rppseguros.com/",
     "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": [
-      "tag1",
-      "tag2",
-      "tag3",
-      "tag4",
-      "tag5"
-    ]
+    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
   },
   {
     "img": "/img/proyectos/islay-web.avif",
@@ -213,13 +159,7 @@
     "title": "Islay Seguros",
     "hrefWeb": "https://islayseguros.com/",
     "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": [
-      "tag1",
-      "tag2",
-      "tag3",
-      "tag4",
-      "tag5"
-    ]
+    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
   },
   {
     "img": "/img/proyectos/dalotto-web.avif",
@@ -227,13 +167,7 @@
     "title": "D'alotto asesores ",
     "hrefWeb": "https://dalottoasesores.com/",
     "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": [
-      "tag1",
-      "tag2",
-      "tag3",
-      "tag4",
-      "tag5"
-    ]
+    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
   },
   {
     "img": "/img/proyectos/lucas-web.avif",
@@ -241,12 +175,6 @@
     "title": "Lucas Marks",
     "hrefWeb": "https://lucasmarks.com.ar/",
     "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": [
-      "tag1",
-      "tag2",
-      "tag3",
-      "tag4",
-      "tag5"
-    ]
+    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
   }
 ]

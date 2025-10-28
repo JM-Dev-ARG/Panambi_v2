@@ -19,8 +19,9 @@ import NavbarServicios from "@/components/base-components/navbar/NavbarServicios
 interface Props {
   title: string;
   description: string;
+  dataLinks: { href: string; label: string }[];
 }
-const { title, description } = Astro.props;
+const { title, description, dataLinks } = Astro.props;
 
 // Obtenemos la URL base del sitio desde la configuración de Astro.
 const site = Astro.site;
@@ -116,7 +117,7 @@ const schema = {
     <!-- End Metricool tracker -->
   </head>
   <body>
-    <NavbarServicios />
+    <NavbarServicios dataLinks={dataLinks} />
 
     <slot />
     <Footer />

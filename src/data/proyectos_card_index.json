@@ -3,24 +3,24 @@
     "cardLetra": "a",
     "bgImg": "/logos/lcs_logo.svg",
     "titulo": "Logo La Chica del Seguro",
-    "bgColor": "bg-verde2-300"
+    "bgColor": "bg-verde2-300/30"
   },
   {
     "cardLetra": "b",
     "bgImg": "/logos/dalotto_logo.avif",
     "titulo": "Logo Dalotto asesores de seguros",
-    "bgColor": "bg-violeta1-300"
+    "bgColor": "bg-violeta1-300/30"
   },
   {
     "cardLetra": "c",
     "bgImg": "/logos/rpp_logo.avif",
     "titulo": "Logo RPP seguros generales",
-    "bgColor": "bg-verde1-200"
+    "bgColor": "bg-verde1-200/50"
   },
   {
     "cardLetra": "d",
     "bgImg": "/logos/islay_logo.svg",
     "titulo": "Logo Islay Seguros",
-    "bgColor": "bg-negro"
+    "bgColor": "bg-negro/90"
   }
 ]
