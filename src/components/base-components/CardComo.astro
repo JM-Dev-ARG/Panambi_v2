@@ -1,17 +1,21 @@
 ---
+import flecha from "@/assets/svg/flecha_logo_panambi.svg";
 interface Props {
   titulo: string;
   descripcion?: string;
   textNegro?: boolean;
+  delay?: string;
 }
-const { titulo, descripcion, textNegro } = Astro.props;
-import flecha from "@/assets/svg/flecha_logo_panambi.svg";
+const { titulo, descripcion, textNegro, delay } = Astro.props;
+
+console.log(delay);
 ---
 
 <article
   class={`flex flex-col items-start justify-center gap-2 ${
     textNegro ? "text-negro" : "text-neutral-100"
   }`}
+  data-aos="fade-up"
 >
   <h3
     class="flex items-center justify-start gap-4 text-lg font-bold uppercase sm:text-2xl"

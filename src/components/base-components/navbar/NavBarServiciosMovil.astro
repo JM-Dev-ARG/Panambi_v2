@@ -1,7 +1,11 @@
 ---
 import logo from "@/assets/svg/logotipo.svg";
 
-const currentPage = Astro.url.pathname.split("/")[1];
+interface Props {
+  dataLinks: { href: string; label: string }[];
+}
+
+const { dataLinks } = Astro.props;
 ---
 
 <nav
@@ -31,35 +35,15 @@ const currentPage = Astro.url.pathname.split("/")[1];
       >
     </summary>
     <div class="flex h-full flex-col items-center justify-evenly gap-4 py-4">
-      <a
-        class=` ${
-        currentPage === "servicios" ? "text-violeta1-100" : ""
-      }`
-        href="/servicios"
-        >Servicios
-      </a>
-      <a
-        class=` ${
-        currentPage === "proyectos" ? "text-violeta1-100" : ""
-      }`
-        href="/proyectos"
-        >Proyectos
-      </a>
-      <a
-        class=` ${
-        currentPage === "equipo" ? "text-violeta1-100" : ""
-      }`
-        href="/equipo"
-        >Equipo
-      </a>
+      {dataLinks.map((link) => <a href={link.href}>{link.label}</a>)}
     </div>
   </details>
   <div class="flex h-[65px] items-center justify-center">
     <a
-      class="transform-3d group flex h-full items-center justify-center rounded-lg bg-neutral-50 px-7 py-5 font-semibold text-neutral-900 shadow-md"
-      href="/contacto"
+      class="transform-3d bg-negro group flex h-full cursor-pointer items-center justify-center rounded-lg px-7 py-5 font-semibold text-neutral-50 shadow-md"
+      href="/servicios"
     >
-      <p class="transform-3d">Contacto</p>
+      <p class="transform-3d">Volver</p>
     </a>
   </div>
 </nav>
@@ -101,5 +85,3 @@ const currentPage = Astro.url.pathname.split("/")[1];
     opacity: 1;
   }
 </style>
-
-<script></script>

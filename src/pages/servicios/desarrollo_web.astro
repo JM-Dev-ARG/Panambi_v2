@@ -9,19 +9,19 @@ import Comentarios from "@/components/pages/servicios/paginas/desarrolloWeb/Come
 
 const dataLinks = [
   {
-    href: "./servicios/desarrollo_web/#alcances_propuestas",
+    href: "/servicios/desarrollo_web/#alcances_propuestas",
     label: "Alcances",
   },
   {
-    href: "./servicios/desarrollo_web/#planes_desarrollo_web",
+    href: "/servicios/desarrollo_web/#planes_desarrollo_web",
     label: "Precios",
   },
   {
-    href: "./servicios/desarrollo_web/#preguntas_frecuentes_desarrollo_web",
+    href: "/servicios/desarrollo_web/#preguntas_frecuentes_desarrollo_web",
     label: "Preguntas",
   },
   {
-    href: "./servicios",
+    href: "/servicios",
     label: "Volver",
   },
 ];
@@ -55,3 +55,12 @@ const dataLinks = [
   <PreguntasFrecuentes />
   <Comentarios />
 </LayoutServicios>
+
+<script>
+  import AOS from "aos";
+  import "aos/dist/aos.css";
+  AOS.init({
+    once: true,
+    duration: 800,
+  });
+</script>

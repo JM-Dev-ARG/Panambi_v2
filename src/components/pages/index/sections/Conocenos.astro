@@ -8,8 +8,11 @@ import TituloCards from "@/components/base-components/TituloCards.astro";
 <Container id="Conocenos_index">
   <div
     class="border-negro shadow-Panambi bg-violeta3-100 relative w-full rounded-3xl border-2 px-3 py-6 sm:w-4/5"
+    data-aos="zoom-out"
   >
     <img
+      data-aos="zoom-in"
+      data-aos-delay="200"
       src={logo.src}
       alt="Logo Panambi"
       width="auto"
@@ -27,7 +30,9 @@ import TituloCards from "@/components/base-components/TituloCards.astro";
       />
 
       <div
-        class="flex w-full flex-col items-center justify-center gap-4 sm:flex-row"
+        class="flex w-full flex-col-reverse items-center justify-center gap-4 sm:flex-row"
+        data-aos="fade-down"
+        data-aos-delay="400"
       >
         <Boton texto="Nuestros servicios" href="/servicios" />
         <Boton texto="Conocenos" href="/equipo" bgVerde={true} />

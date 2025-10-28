@@ -1,9 +1,6 @@
 ---
 import Container from "@/components/base-components/Container.astro";
-import celImg from "@/assets/img/hero/hero_cel_mano.avif";
-import resultadosImg from "@/assets/img/hero/hero_resultados.avif";
-import postImg from "@/assets/img/hero/hero_post_insta.avif";
-import btnImg from "@/assets/img/hero/hero_btn_compartir.avif";
+import celImg from "@/assets/img/hero/movil_hero.avif";
 import logo from "@/assets/svg/logotipo.svg";
 import flecha from "@/assets/svg/arrow-right.svg";
 ---
@@ -14,7 +11,7 @@ import flecha from "@/assets/svg/arrow-right.svg";
   classNameSeccion="h-[550px] lg:h-[650px]  pb-4 pt-8 overflow-x-clip"
 >
   <div class="hero-grid">
-    <div class="a relative overflow-hidden">
+    <div class="a relative overflow-hidden" data-aos="fade-right">
       <img
         src={logo.src}
         alt=""
@@ -53,8 +50,11 @@ import flecha from "@/assets/svg/arrow-right.svg";
         </div>
       </div>
     </div>
-    <div class="b"></div>
-    <div class="c flex w-full items-center justify-center p-3">
+    <div class="b" data-aos="fade-up"></div>
+    <div
+      class="c flex w-full items-center justify-center p-3"
+      data-aos="fade-down"
+    >
       <img
         src={flecha.src}
         height="auto"
@@ -69,30 +69,20 @@ import flecha from "@/assets/svg/arrow-right.svg";
         class="hidden h-full rotate-[135deg] object-contain md:block lg:hidden xl:block"
       />
     </div>
-    <div class="d group">
-      <div class="relative h-full w-full object-bottom">
+    <div class="d group" data-aos="fade-left">
+      <div
+        class="relative h-full w-full object-bottom"
+        data-aos="zoom-out-down"
+        data-aos-delay="400"
+      >
         <img
           src={celImg.src}
           alt="imagen de celular con web"
           loading="lazy"
-          class="absolute bottom-0 right-0 h-auto rounded-b-3xl transition-all duration-300 lg:right-[18px] lg:h-[110%] lg:scale-x-110 lg:group-hover:-translate-x-[2%] lg:group-hover:-translate-y-[2%] lg:group-hover:scale-[104%] xl:right-0 xl:h-auto xl:scale-x-100"
+          class="absolute bottom-0 right-0 h-[120%] rounded-b-3xl transition-all duration-300 lg:right-[18px] lg:h-[110%] lg:scale-x-110 lg:group-hover:-translate-x-[2%] lg:group-hover:-translate-y-[2%] lg:group-hover:scale-[104%] xl:right-0 xl:h-[115%] xl:scale-x-100 2xl:h-[120%]"
         />
-        <!--   <img
-          src={resultadosImg.src}
-          alt=""
-          class="drop-shadow-negro absolute -right-[10%] bottom-0 h-auto scale-125 drop-shadow-lg transition-all delay-200 duration-500 group-hover:scale-[140%]"
-        />
-        <img
-          src={postImg.src}
-          alt=""
-          class="drop-shadow-negro absolute -bottom-4 right-0 h-auto drop-shadow-lg transition-all delay-75 duration-500 group-hover:scale-[120%] lg:bottom-0 xl:-bottom-4"
-        />
-        <img
-          src={btnImg.src}
-          alt=""
-          class="drop-shadow-negro absolute -bottom-4 right-0 h-auto drop-shadow-lg transition-all delay-300 duration-500 group-hover:scale-[135%] lg:bottom-16 xl:-bottom-4"
-        /> -->
       </div>
+      <div class="shadow-Panambi absolute h-full w-full rounded-3xl"></div>
     </div>
   </div>
 
