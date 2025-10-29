@@ -8,11 +8,13 @@ interface Props {
   marginTop?: string;
 }
 const { id, classNameSeccion, classNameContainer, marginTop } = Astro.props;
+
+console.log(marginTop);
 ---
 
 <section
   id={id}
-  class={`w-full grid place-items-center mx-auto ${marginTop ? marginTop : "mt-[80px]"} ${classNameSeccion} `}
+  class={`w-full grid place-items-center mx-auto ${marginTop ? `mt-[80px] ${marginTop}` : "mt-[80px]"} ${classNameSeccion} `}
 >
   <div
     class={`h-full w-full max-w-[1280px] mx-auto grid place-items-center px-4 ${classNameContainer}`}
