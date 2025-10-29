@@ -4,11 +4,8 @@ interface Props {
   titulo: string;
   descripcion?: string;
   textNegro?: boolean;
-  delay?: string;
 }
-const { titulo, descripcion, textNegro, delay } = Astro.props;
-
-console.log(delay);
+const { titulo, descripcion, textNegro } = Astro.props;
 ---
 
 <article
