@@ -22,8 +22,7 @@ interface Props {
 const { title, description, keywords } = Astro.props;
 
 // Obtenemos la URL base del sitio desde la configuración de Astro.
-const site = Astro.site;
-const canonicalURL = new URL(Astro.url.pathname, site);
+const canonicalURL = "https://panambi.net/";
 
 // Schema genérico para WebPage y Organization
 const schema = {
@@ -31,7 +30,7 @@ const schema = {
   "@type": "WebPage",
   name: title,
   description: description,
-  url: canonicalURL.href,
+  url: canonicalURL,
   logo: dataSchema.logo,
   contactPoint: {
     "@type": "ContactPoint",
@@ -65,14 +64,13 @@ const schema = {
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href={favicon.src} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
     <meta name="description" content={description} />
 
-    <link rel="canonical" href={canonicalURL.href} />
+    <link rel="canonical" href={canonicalURL} />
 
     <meta name="keywords" content={keywords ? keywords.join(", ") : ""} />
 
@@ -89,7 +87,7 @@ const schema = {
     <!-- End Schema.org markup for Google -->
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -98,8 +96,8 @@ const schema = {
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content={canonicalURL.hostname} />
-    <meta property="twitter:url" content={canonicalURL.href} />
+    <meta property="twitter:domain" content={canonicalURL} />
+    <meta property="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={icono_metadata.src} />
