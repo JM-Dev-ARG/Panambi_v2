@@ -6,6 +6,9 @@ interface Props {
 }
 
 const { dataLinks } = Astro.props;
+
+/* todos los links menos el ultimo */
+const dataLinksFiltradpo = dataLinks.slice(0, dataLinks.length - 1);
 ---
 
 <nav
@@ -35,7 +38,7 @@ const { dataLinks } = Astro.props;
       >
     </summary>
     <div class="flex h-full flex-col items-center justify-evenly gap-4 py-4">
-      {dataLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+      {dataLinksFiltradpo.map((link) => <a href={link.href}>{link.label}</a>)}
     </div>
   </details>
   <div class="flex h-[65px] items-center justify-center">

@@ -17,8 +17,12 @@ import dataFaqs from "@/data/faqs.json";
 
   <div class="mx-auto grid w-full place-items-center gap-4 xl:w-[80%]">
     {
-      dataFaqs.map((item) => (
-        <Detalle pregunta={item.pregunta} respuesta={item.respuesta} />
+      dataFaqs.map((item, index) => (
+        <Detalle
+          pregunta={item.pregunta}
+          respuesta={item.respuesta}
+          origenAnimacion={index % 2 === 0 ? "left" : "right"}
+        />
       ))
     }
   </div>

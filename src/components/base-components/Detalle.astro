@@ -2,12 +2,16 @@
 interface Props {
   pregunta?: string;
   respuesta?: string;
+  origenAnimacion?: string;
 }
 
-const { pregunta, respuesta } = Astro.props;
+const { pregunta, respuesta, origenAnimacion } = Astro.props;
 ---
 
-<details class="custom-details border-negro shadow-Panambi-input border-2">
+<details
+  class="custom-details border-negro shadow-Panambi-input border-2"
+  data-aos=`fade-${origenAnimacion}`
+>
   <summary>
     {pregunta ? pregunta : "¿Por elegir D’Aloto como organizador?"}
     <span class="custom-marker">▶</span>
