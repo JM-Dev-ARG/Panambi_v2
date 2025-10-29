@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+# Sitemap
+Sitemap: https://panambi-2025.netlify.app/sitemap.xml
