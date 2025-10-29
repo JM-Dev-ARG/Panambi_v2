@@ -6,9 +6,29 @@ import data from "@/data/data_proyectos.json";
 import Layout from "@/layouts/Layout.astro";
 
 const dataSliced = data.slice(0, 5);
+
+const keywords = [
+  "proyectos web personalizados",
+  "sitios web a medida para profesionales",
+  "estrategias SEO integral",
+  "identidad de marca y diseño visual",
+  "plataforma digital funcional y atractiva",
+  "edición de contenido audiovisual",
+  "transformación digital de marcas",
+  "casos de éxito marketing digital",
+  "desarrollo web responsive",
+  "formulario dinámico para captación",
+  "posicionamiento online empresas de servicios",
+  "diseño UX/UI profesional",
+  "branding corporativo para empresas familiares",
+];
 ---
 
-<Layout title="Panambi" description="La mejor plataforma para tus necesidades.">
+<Layout
+  title="Panambi - Proyectos"
+  description="Estrategia, diseño y tecnología para profesionales que quieren destacar. En Panambí convertimos tus proyectos digitales en experiencias que inspiran y generan impacto."
+  keywords={keywords}
+>
   <Hero />
   <ContainerServiciosProyectos data={dataSliced} bgColor="bg-violeta1-100/50" />
   <UltimoLLamado

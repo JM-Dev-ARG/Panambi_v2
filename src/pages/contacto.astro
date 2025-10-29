@@ -4,9 +4,25 @@ import Layout from "@/layouts/Layout.astro";
 import data from "@/data/card_hero_contacto.json";
 import imgContacto from "@/assets/img/hero/img_contacto2.avif";
 import Formulario from "@/components/pages/contacto/sections/Formulario.astro";
+const keywords = [
+  "contacto Panambí",
+  "consultoría digital contacto",
+  "soluciones web marketing contacto",
+  "agencia marketing digital Argentina contacto",
+  "hablá con Panambí",
+  "asesoría en desarrollo web contacto",
+  "servicios digitales profesionales contacto",
+  "equipo Panambí contacto",
+  "pedí presupuesto marketing digital",
+  "agencia de diseño y estrategia contacto",
+];
 ---
 
-<Layout title="Panambi" description="La mejor plataforma para tus necesidades.">
+<Layout
+  title="Panambi - Contacto"
+  keywords={keywords}
+  description="Estrategia, diseño y tecnología para profesionales que quieren destacar. Contactate con Panambí y comenzá a construir tu presencia digital de alto impacto."
+>
   <HeroConCard
     imgCard={imgContacto.src}
     titulo="Contactanos"

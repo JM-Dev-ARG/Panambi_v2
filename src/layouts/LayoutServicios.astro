@@ -8,9 +8,6 @@ import "../styles/global.css";
 import icono_metadata from "@/assets/svg/logotipo.svg";
 import favicon from "@/assets/svg/logotipo.svg";
 
-//keywords
-const keywords = ["astro", "framework", "javascript"];
-
 //data para schema
 import dataSchema from "@/data/seoSchema.json";
 import Footer from "@/components/base-components/Footer.astro";
@@ -21,8 +18,9 @@ interface Props {
   title: string;
   description: string;
   dataLinks: { href: string; label: string }[];
+  keywords?: string[];
 }
-const { title, description, dataLinks } = Astro.props;
+const { title, description, dataLinks, keywords } = Astro.props;
 
 // Obtenemos la URL base del sitio desde la configuración de Astro.
 const site = Astro.site;

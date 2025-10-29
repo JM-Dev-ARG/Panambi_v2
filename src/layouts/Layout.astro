@@ -8,9 +8,6 @@ import "../styles/global.css";
 import icono_metadata from "@/assets/svg/logotipo.svg";
 import favicon from "@/assets/svg/logotipo.svg";
 
-//keywords
-const keywords = ["astro", "framework", "javascript"];
-
 //data para schema
 import dataSchema from "@/data/seoSchema.json";
 import NavbarWeb from "@/components/base-components/navbar/NavbarWeb.astro";
@@ -20,8 +17,9 @@ import Footer from "@/components/base-components/Footer.astro";
 interface Props {
   title: string;
   description: string;
+  keywords?: string[];
 }
-const { title, description } = Astro.props;
+const { title, description, keywords } = Astro.props;
 
 // Obtenemos la URL base del sitio desde la configuración de Astro.
 const site = Astro.site;
@@ -76,7 +74,7 @@ const schema = {
 
     <link rel="canonical" href={canonicalURL.href} />
 
-    <meta name="keywords" content={keywords.join(", ")} />
+    <meta name="keywords" content={keywords ? keywords.join(", ") : ""} />
 
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Ice-Dev para Panambi" />

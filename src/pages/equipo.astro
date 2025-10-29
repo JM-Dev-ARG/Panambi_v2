@@ -5,9 +5,28 @@ import imgContacto from "@/assets/img/hero/img_equipo_hero.avif";
 import HeroConCard from "@/components/base-components/HeroConCard.astro";
 import EquipoGrid from "@/components/pages/equipo/sections/EquipoGrid.astro";
 import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
+const keywords = [
+  "equipo Panambí",
+  "nuestro equipo profesional",
+  "equipo de consultoría estratégica",
+  "diseñadores y desarrolladores web",
+  "equipo de marketing digital",
+  "especialistas en estrategia digital",
+  "trabajo en equipo Panambí",
+  "liderazgo Panambí",
+  "equipo creativo de marca",
+  "profesionales desarrollo web Panambí",
+  "equipo experto en posicionamiento online",
+  "equipo de branding y diseño digital",
+  "equipo de consultoría para profesionales",
+];
 ---
 
-<Layout title="Panambi" description="La mejor plataforma para tus necesidades.">
+<Layout
+  title="Panambi - Equipo"
+  keywords={keywords}
+  description="Estrategia, diseño y tecnología para profesionales que quieren destacar. Conocé al equipo de Panambí: los especialistas que transforman tu marca y servicio digital."
+>
   <HeroConCard
     imgCard={imgContacto.src}
     titulo="quienes somos"

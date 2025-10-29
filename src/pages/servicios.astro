@@ -4,9 +4,30 @@ import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
 import Hero from "@/components/pages/servicios/sections/HeroServicios.astro";
 import Layout from "@/layouts/Layout.astro";
 import data from "@/data/data_servicios.json";
+const keywords = [
+  "consultoría estratégica de negocios",
+  "desarrollo web personalizado",
+  "marketing digital para profesionales",
+  "sitios web a medida",
+  "estrategia de marketing online",
+  "transformación digital para empresas",
+  "branding y comunicación digital",
+  "identidad visual corporativa",
+  "contenidos digitales y vídeo para marcas",
+  "social media para servicios profesionales",
+  "posicionamiento SEO para negocios",
+  "diseño UX/UI profesional",
+  "empresa de desarrollo web y marketing digital",
+  "plan de marketing multiplataforma",
+  "servicio digital para profesionales y empresas",
+];
 ---
 
-<Layout title="Panambi" description="La mejor plataforma para tus necesidades.">
+<Layout
+  title="Panambi - Servicios"
+  description="Estrategia, diseño y tecnología para profesionales que quieren destacar. En Panambí transformamos tus servicios en una presencia digital de alto impacto."
+  keywords={keywords}
+>
   <Hero />
   <ContainerServiciosProyectos data={data} bgColor="bg-verde1-200/50" />
   <UltimoLLamado
