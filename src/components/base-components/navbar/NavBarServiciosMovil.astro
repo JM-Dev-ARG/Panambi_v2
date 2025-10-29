@@ -18,8 +18,16 @@ const dataLinksFiltradpo = dataLinks.slice(0, dataLinks.length - 1);
     class="custom-details bg-negro w-[160px] flex-col items-center justify-between rounded-xl p-[6px] text-[14px] font-normal text-neutral-100 shadow-md"
   >
     <summary class="flex h-[53px] w-full items-center justify-center gap-3">
-      <a href="/" class="w-1/2"
-        ><img class="size-[60px]" src={logo.src} alt="Logo Panambi" />
+      <a href="/" title="Link a pagina Index" class="w-1/2"
+        ><img
+          class="size-[60px]"
+          src={logo.src}
+          loading="lazy"
+          width="auto"
+          height="auto"
+          alt="Logo Panambi"
+          title="Logo Panambi"
+        />
       </a>
       <span class="bg-negro mx-[1px] h-3/4 w-[1px]"></span>
       <span class="custom-marker w-1/2"
@@ -38,13 +46,20 @@ const dataLinksFiltradpo = dataLinks.slice(0, dataLinks.length - 1);
       >
     </summary>
     <div class="flex h-full flex-col items-center justify-evenly gap-4 py-4">
-      {dataLinksFiltradpo.map((link) => <a href={link.href}>{link.label}</a>)}
+      {
+        dataLinksFiltradpo.map((link) => (
+          <a href={link.href} title={link.label}>
+            {link.label}
+          </a>
+        ))
+      }
     </div>
   </details>
   <div class="flex h-[65px] items-center justify-center">
     <a
       class="transform-3d bg-negro group flex h-full cursor-pointer items-center justify-center rounded-lg px-7 py-5 font-semibold text-neutral-50 shadow-md"
       href="/servicios"
+      title="Link a sección Servicios"
     >
       <p class="transform-3d">Volver</p>
     </a>

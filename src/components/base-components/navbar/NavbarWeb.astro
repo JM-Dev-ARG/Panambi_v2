@@ -13,7 +13,9 @@ const currentPage = Astro.url.pathname.split("/")[1];
   <div
     class="bg-negro/85 backdrop-blur-xs tracking-panambi-nav flex h-[55px] w-[30%] min-w-[470px] items-center justify-between rounded-xl p-[6px] text-[12px] font-normal text-neutral-100 2xl:h-[75px] 2xl:text-[14px]"
   >
-    <a href="/" class="size-[48px] 2xl:size-[67px]"><LogotipoAnimado /> </a>
+    <a href="/" title="Link a pagina Index" class="size-[48px] 2xl:size-[67px]"
+      ><LogotipoAnimado />
+    </a>
     <div class="flex h-full flex-1 items-center justify-evenly">
       {
         dataLinks.map((link) => (
@@ -29,6 +31,7 @@ const currentPage = Astro.url.pathname.split("/")[1];
       <a
         class="transform-3d group relative flex h-full cursor-pointer flex-col items-center justify-center rounded-lg bg-neutral-50 px-3 font-semibold text-neutral-900 transition-all duration-500 hover:scale-[98%] 2xl:px-4"
         href="/contacto"
+        title="Link a sección Contacto"
       >
         <p
           class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"

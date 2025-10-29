@@ -12,7 +12,15 @@ const currentPage = Astro.url.pathname.split("/")[1];
   >
     <summary class="flex h-[53px] w-full items-center justify-center gap-3">
       <a href="/" class="w-1/2"
-        ><img class="size-[60px]" src={logo.src} alt="Logo Panambi" />
+        ><img
+          class="size-[60px]"
+          src={logo.src}
+          loading="lazy"
+          width="auto"
+          height="auto"
+          alt="Logo Panambi"
+          title="Logo Panambi"
+        />
       </a>
       <span class="bg-negro mx-[1px] h-3/4 w-[1px]"></span>
       <span class="custom-marker w-1/2"
@@ -36,6 +44,7 @@ const currentPage = Astro.url.pathname.split("/")[1];
         currentPage === "servicios" ? "text-violeta1-100" : ""
       }`
         href="/servicios"
+        title="Link a sección Servicios"
         >Servicios
       </a>
       <a
@@ -43,6 +52,7 @@ const currentPage = Astro.url.pathname.split("/")[1];
         currentPage === "proyectos" ? "text-violeta1-100" : ""
       }`
         href="/proyectos"
+        title="Link a sección Proyectos"
         >Proyectos
       </a>
       <a
@@ -50,6 +60,7 @@ const currentPage = Astro.url.pathname.split("/")[1];
         currentPage === "equipo" ? "text-violeta1-100" : ""
       }`
         href="/equipo"
+        title="Link a sección Equipo"
         >Equipo
       </a>
     </div>
@@ -58,6 +69,7 @@ const currentPage = Astro.url.pathname.split("/")[1];
     <a
       class="transform-3d group flex h-full items-center justify-center rounded-lg bg-neutral-50 px-7 py-5 font-semibold text-neutral-900 shadow-md"
       href="/contacto"
+      title="Link a sección Contacto"
     >
       <p class="transform-3d">Contacto</p>
     </a>

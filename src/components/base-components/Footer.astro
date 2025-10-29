@@ -1,7 +1,7 @@
 ---
 import Container from "./Container.astro";
 import logo from "@/assets/svg/logotipo_footer.svg";
-import nmombre from "@/assets/svg/logo_full_lila.svg";
+import nombre from "@/assets/svg/logo_full_lila.svg";
 ---
 
 <Container id="footer">
@@ -16,14 +16,16 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
       <img
         src={logo.src}
         alt="Logo Panambi"
+        title="Logo Panambi"
         width="auto"
         height="auto"
         loading="lazy"
         class="w-full object-contain object-bottom"
       />
       <img
-        src={nmombre.src}
-        alt="Logo Panambi"
+        src={nombre.src}
+        alt="Logo Panambi escrito"
+        title="Logo Panambi escrito"
         width="auto"
         height="auto"
         loading="lazy"
@@ -46,6 +48,7 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
           <a
             class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
             href="/servicios"
+            title="Link a sección Servicios"
           >
             <p
               class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
@@ -61,6 +64,7 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
           <a
             class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
             href="/proyectos"
+            title="Link a sección Proyectos"
           >
             <p
               class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
@@ -76,6 +80,7 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
           <a
             class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
             href="/equipo"
+            title="Link a sección Equipo"
           >
             <p
               class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
@@ -91,6 +96,7 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
           <a
             class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
             href="/contacto"
+            title="Link a sección Contacto"
           >
             <p
               class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
@@ -118,6 +124,7 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
             class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
             href="https://www.instagram.com/panambi.mkt/?igsh=MWNtb3o3NXRyc2p6aw%3D%3D#"
             target="_blank"
+            title="Link a Instagram"
           >
             <p
               class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
@@ -134,6 +141,7 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
             class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
             href="https://www.linkedin.com/company/panambi-ag/?originalSubdomain=ar"
             target="_blank"
+            title="Link a Linkedin"
           >
             <p
               class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
@@ -149,17 +157,19 @@ import nmombre from "@/assets/svg/logo_full_lila.svg";
 
           <a
             class="transform-3d nav-link group relative flex h-[18px] cursor-pointer flex-col items-center justify-center overflow-hidden text-sm lg:h-[20px] lg:text-lg"
-            href="/equipo"
+            href="https://wa.me/5491131664971?text=Hola, quiero hacer una consulta."
+            target="_blank"
+            title="Link a Whatsapp"
           >
             <p
               class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
             >
-              Facebook
+              Whatsapp
             </p>
             <p
               class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100"
             >
-              Facebook
+              Whatsapp
             </p>
           </a>
         </div>

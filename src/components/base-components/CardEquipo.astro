@@ -12,7 +12,11 @@ const { imgEquipo, title, description } = Astro.props;
 >
   <img
     src={imgEquipo}
-    alt=""
+    loading="lazy"
+    width="auto"
+    height="auto"
+    alt="Imagen de sección Equipo Panambi"
+    title="Imagen de sección Equipo Panambi"
     class="bg-negro h-[90%] w-full rounded-3xl object-contain"
   />
   <div class="h-[10%] px-4">

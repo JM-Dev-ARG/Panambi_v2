@@ -13,15 +13,11 @@ const { pregunta, respuesta, origenAnimacion } = Astro.props;
   data-aos=`fade-${origenAnimacion}`
 >
   <summary>
-    {pregunta ? pregunta : "¿Por elegir D’Aloto como organizador?"}
+    {pregunta ? pregunta : ""}
     <span class="custom-marker">▶</span>
   </summary>
   <p class="text-left text-[clamp(1rem,1.5vw,1.5rem)]">
-    {
-      respuesta
-        ? respuesta
-        : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae modi nesciunt minus corrupti voluptates error, ea Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae modi nesciunt minus corrupti voluptates error, ea."
-    }
+    {respuesta ? respuesta : ""}
   </p>
 </details>
 

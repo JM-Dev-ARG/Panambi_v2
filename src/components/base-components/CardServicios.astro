@@ -37,6 +37,10 @@ const { titulo, subtitulo, descripcion, imagen, bgColor } = Astro.props;
   </div>
   <img
     src={imagen}
+    loading="lazy"
+    width="auto"
+    height="auto"
+    title=`imagen de ${titulo}`
     alt=`imagen de ${titulo}`
     class="absolute -bottom-[20%] left-1/2 h-auto w-[70%] -translate-x-1/2 rounded-2xl object-cover shadow-2xl md:-bottom-[20%] xl:-bottom-[30%]"
   />
