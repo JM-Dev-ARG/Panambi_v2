@@ -8,15 +8,15 @@
     "respuesta": "Sí, sin problema. Podés usar tu propio servidor si ya tenés uno contratado. Solo tené en cuenta que nosotros no nos encargamos de la gestión ni del mantenimiento del servidor. De todos modos, podemos ayudarte a configurarlo y adaptar el desarrollo para que todo funcione correctamente en tu entorno."
   },
   {
-    "pregunta": "¿El precio incluye hosting y dominio?",
-    "respuesta": "Si, lo incluye en el primer año. El hosting (alojamiento web) y el dominio se abonan por separado y de forma anual una vez cumplido el primer año. Nosotros nos encargamos de gestionarlos o incluirlos en la factura."
+    "pregunta": "¿El precio incluye el dominio?",
+    "respuesta": "El dominio no está incluido en el precio base. Podés registrarlo por tu cuenta o dejar que nosotros nos encarguemos de gestionarlo por vos. En ese caso, su costo y renovación se abonan de forma anual, y te enviamos el detalle junto con la factura correspondiente."
   },
   {
     "pregunta": "¿Puedo integrar mi sitio con un CRM o sistemas más complejos?",
     "respuesta": "Sí, es posible, pero esas integraciones avanzadas —como CRM, pasarelas de pago o sistemas de gestión de documentos— requieren desarrollo a medida. Si necesitás algo así, lo charlamos y te pasamos una propuesta personalizada."
   },
   {
-    "pregunta": "¿También hacen campañas publicitarias?",
-    "respuesta": "¡Claro! Ofrecemos campañas en Google Ads y Meta Ads para que tu sitio empiece a generar resultados desde el día uno. Este servicio es mensual y opcional, ideal para quienes buscan impulsar su presencia digital."
+    "pregunta": "¿El sitio va a aparecer en Google y verse bien en celulares?",
+    "respuesta": "Sí, todos nuestros sitios están optimizados para buscadores (SEO base) y son completamente responsive, es decir, se adaptan a cualquier dispositivo. También cuidamos la velocidad de carga y la estructura del contenido para favorecer el posicionamiento desde el primer día."
   }
 ]

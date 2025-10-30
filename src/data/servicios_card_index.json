@@ -1,15 +1,15 @@
 [
   {
-    "titulo": "Consultoría estratégica de Negocios",
+    "titulo": "Estratégica de negocios",
     "subtitulo": "Consultoria personalizada",
     "descripcion": "Acompañamos a profesionales y empresas en el análisis, desarrollo y crecimiento de su negocio, combinando estrategias empresariales y marketing digital para potenciar su posicionamiento en el mercado.",
     "imagen": "/img/consultoria.avif",
     "bgColor": "bg-verde2-300"
   },
   {
-    "titulo": "Transformamos profesionales en influencers de su mercado",
-    "subtitulo": "Marketing Digital",
-    "descripcion": "Diseñamos estrategias digitales personalizadas para aumentar la visibilidad de las marcas, atraer nuevos clientes y fortalecer su presencia online mediante campañas efectivas y comunicación estratégica.",
+    "titulo": "Transformamos profesionales en referentes de su mercado",
+    "subtitulo": "Asesoría 1 a 1",
+    "descripcion": "Un encuentro personalizado de una hora donde analizamos tu presencia digital, definimos estrategias de marketing y trazamos un plan de acción para atraer y convertir más clientes de forma efectiva.",
     "imagen": "/img/mktdigital.avif",
     "bgColor": "bg-verde5-300"
   },
