@@ -7,20 +7,20 @@
   },
   {
     "cardLetra": "b",
-    "bgImg": "/logos/dalotto_logo.avif",
-    "titulo": "Logo Dalotto asesores de seguros",
-    "bgColor": "bg-violeta1-300/30"
+    "bgImg": "/logos/fg_logo.svg",
+    "titulo": "Logo Finanzas con Gabriel",
+    "bgColor": "bg-negro/90"
   },
   {
     "cardLetra": "c",
-    "bgImg": "/logos/rpp_logo.avif",
-    "titulo": "Logo RPP seguros generales",
+    "bgImg": "/logos/pasap_logo.avif",
+    "titulo": "Logo Pasap",
     "bgColor": "bg-verde1-200/50"
   },
   {
     "cardLetra": "d",
-    "bgImg": "/logos/islay_logo.svg",
-    "titulo": "Logo Islay Seguros",
-    "bgColor": "bg-negro/90"
+    "bgImg": "/logos/pm_logo.svg",
+    "titulo": "Logo Planifica Mejor",
+    "bgColor": "bg-violeta1-300/20"
   }
 ]

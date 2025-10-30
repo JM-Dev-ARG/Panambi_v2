@@ -14,6 +14,20 @@
     ]
   },
   {
+    "img": "/img/proyectos/fg-web.avif",
+    "alt": "Sitio web Finanzas con Gabriel",
+    "title": "Finanzas con Gabriel",
+    "hrefWeb": "https://finanzascongabriel.com.ar/",
+    "descripcion": "En Planifica Mejor desarrollamos una plataforma digital clara y profesional que refleja la esencia de la marca y su compromiso con la educación financiera. El sitio fue diseñado a medida, priorizando la usabilidad, la organización del contenido y una estética moderna que transmite confianza y cercanía. El trabajo incluyó la creación de recursos visuales originales, material audiovisual y una estrategia SEO enfocada en mejorar la visibilidad y el posicionamiento orgánico. El resultado es un espacio digital funcional y atractivo que fortalece la comunicación con su audiencia y consolida la presencia online de la marca.",
+    "tags": [
+      "Identidad de marca",
+      "Diseño de piezas digitales",
+      "Edición de videos",
+      "Diseño web a medida",
+      "SEO completo"
+    ]
+  },
+  {
     "img": "/img/proyectos/pm-web2.avif",
     "alt": "Sitio web Planifica Mejor",
     "title": "Planifica Mejor",
@@ -24,6 +38,33 @@
       "Diseño de piezas digitales",
       "Edición de videos",
       "Diseño web a medida",
+      "SEO completo"
+    ]
+  },
+  {
+    "img": "/img/proyectos/pasap-web.avif",
+    "alt": "Sitio web Pasap",
+    "title": "Pasap",
+    "hrefWeb": "https://pasap.com.ar/",
+    "descripcion": "En Planifica Mejor desarrollamos una plataforma digital clara y profesional que refleja la esencia de la marca y su compromiso con la educación financiera. El sitio fue diseñado a medida, priorizando la usabilidad, la organización del contenido y una estética moderna que transmite confianza y cercanía. El trabajo incluyó la creación de recursos visuales originales, material audiovisual y una estrategia SEO enfocada en mejorar la visibilidad y el posicionamiento orgánico. El resultado es un espacio digital funcional y atractivo que fortalece la comunicación con su audiencia y consolida la presencia online de la marca.",
+    "tags": [
+      "Identidad de marca",
+      "Diseño de piezas digitales",
+      "Edición de videos",
+      "Diseño web a medida",
+      "SEO completo"
+    ]
+  },
+  {
+    "img": "/img/proyectos/dalotto-web.avif",
+    "alt": "Sitio web Dalotto asesores de seguros",
+    "title": "D'alotto asesores ",
+    "hrefWeb": "https://dalottoasesores.com/",
+    "descripcion": "Para D’alotto Asesores desarrollamos un sitio web a medida que refleja su liderazgo en el mercado y su compromiso con el crecimiento del sector asegurador. El proyecto tuvo como objetivo fortalecer su presencia digital en la zona oeste y, al mismo tiempo, crear un espacio que invite a nuevos productores a sumarse y desarrollarse bajo su acompañamiento y capacitación. Diseñamos una plataforma moderna, adaptable y funcional, con formularios dinámicos orientados a la captación de nuevos talentos y una estrategia SEO completa para consolidar su posicionamiento online. El resultado es una herramienta digital que combina profesionalismo, cercanía y visión de futuro.",
+    "tags": [
+      "Diseño web a medida",
+      "Web responsive",
+      "Fomularios dinamicos",
       "SEO completo"
     ]
   },
@@ -55,33 +96,47 @@
     ]
   },
   {
-    "img": "/img/proyectos/dalotto-web.avif",
-    "alt": "Sitio web Dalotto asesores de seguros",
-    "title": "D'alotto asesores ",
-    "hrefWeb": "https://dalottoasesores.com/",
-    "descripcion": "Para D’alotto Asesores desarrollamos un sitio web a medida que refleja su liderazgo en el mercado y su compromiso con el crecimiento del sector asegurador. El proyecto tuvo como objetivo fortalecer su presencia digital en la zona oeste y, al mismo tiempo, crear un espacio que invite a nuevos productores a sumarse y desarrollarse bajo su acompañamiento y capacitación. Diseñamos una plataforma moderna, adaptable y funcional, con formularios dinámicos orientados a la captación de nuevos talentos y una estrategia SEO completa para consolidar su posicionamiento online. El resultado es una herramienta digital que combina profesionalismo, cercanía y visión de futuro.",
+    "img": "/img/proyectos/belt-web.avif",
+    "alt": "Sitio web Belt Seguros",
+    "title": "Belt Seguros",
+    "hrefWeb": "https://beltseguros.com/",
+    "descripcion": "En Planifica Mejor desarrollamos una plataforma digital clara y profesional que refleja la esencia de la marca y su compromiso con la educación financiera. El sitio fue diseñado a medida, priorizando la usabilidad, la organización del contenido y una estética moderna que transmite confianza y cercanía. El trabajo incluyó la creación de recursos visuales originales, material audiovisual y una estrategia SEO enfocada en mejorar la visibilidad y el posicionamiento orgánico. El resultado es un espacio digital funcional y atractivo que fortalece la comunicación con su audiencia y consolida la presencia online de la marca.",
     "tags": [
+      "Identidad de marca",
+      "Diseño de piezas digitales",
+      "Edición de videos",
       "Diseño web a medida",
-      "Web responsive",
-      "Fomularios dinamicos",
       "SEO completo"
     ]
   },
-  {
-    "img": "/img/proyectos/lucas-web.avif",
-    "alt": "Sitio web Lucas Marks",
-    "title": "Lucas Marks",
-    "hrefWeb": "https://lucasmarks.com.ar/",
-    "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
-  },
+
   {
     "img": "/img/proyectos/lcs-web.avif",
     "alt": "Sitio web La Chica del Seguro",
     "title": "La Chica del Seguro",
     "hrefWeb": "https://lachicadelseguro.com/",
-    "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
+    "descripcion": "Para La Chica del Seguro desarrollamos un sitio web personalizado en AstroJS con componentes React, priorizando el rendimiento, la accesibilidad y una experiencia de navegación fluida. Diseñamos una identidad visual coherente y moderna, acompañada de piezas gráficas y contenido audiovisual que fortalecen la presencia digital de la marca. Además, integramos formularios inteligentes, servicios de email marketing y una estrategia SEO integral, logrando una plataforma sólida que comunica con claridad el propósito de la marca y potencia su crecimiento online.",
+    "tags": [
+      "Identidad de marca",
+      "Diseño de piezas digitales",
+      "Edición de videos",
+      "Diseño web a medida",
+      "SEO completo"
+    ]
+  },
+  {
+    "img": "/img/proyectos/fg-web.avif",
+    "alt": "Sitio web Finanzas con Gabriel",
+    "title": "Finanzas con Gabriel",
+    "hrefWeb": "https://finanzascongabriel.com.ar/",
+    "descripcion": "En Planifica Mejor desarrollamos una plataforma digital clara y profesional que refleja la esencia de la marca y su compromiso con la educación financiera. El sitio fue diseñado a medida, priorizando la usabilidad, la organización del contenido y una estética moderna que transmite confianza y cercanía. El trabajo incluyó la creación de recursos visuales originales, material audiovisual y una estrategia SEO enfocada en mejorar la visibilidad y el posicionamiento orgánico. El resultado es un espacio digital funcional y atractivo que fortalece la comunicación con su audiencia y consolida la presencia online de la marca.",
+    "tags": [
+      "Identidad de marca",
+      "Diseño de piezas digitales",
+      "Edición de videos",
+      "Diseño web a medida",
+      "SEO completo"
+    ]
   },
   {
     "img": "/img/proyectos/pm-web2.avif",
@@ -98,83 +153,71 @@
     ]
   },
   {
-    "img": "/img/proyectos/rpp-web.avif",
-    "alt": "Sitio web RPP seguros generales",
-    "title": "RPP seguros generales",
-    "hrefWeb": "https://rppseguros.com/",
-    "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
-  },
-  {
-    "img": "/img/proyectos/islay-web.avif",
-    "alt": "Sitio web Islay Seguros",
-    "title": "Islay Seguros",
-    "hrefWeb": "https://islayseguros.com/",
-    "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
-  },
-  {
-    "img": "/img/proyectos/dalotto-web.avif",
-    "alt": "Sitio web Dalotto asesores de seguros",
-    "title": "D'alotto asesores ",
-    "hrefWeb": "https://dalottoasesores.com/",
-    "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
-  },
-  {
-    "img": "/img/proyectos/lucas-web.avif",
-    "alt": "Sitio web Lucas Marks",
-    "title": "Lucas Marks",
-    "hrefWeb": "https://lucasmarks.com.ar/",
-    "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
-  },
-  {
-    "img": "/img/proyectos/lcs-web.avif",
-    "alt": "Sitio web La Chica del Seguro",
-    "title": "La Chica del Seguro",
-    "hrefWeb": "https://lachicadelseguro.com/",
-    "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
-  },
-  {
-    "img": "/img/proyectos/pm-web2.avif",
-    "alt": "Sitio web Planifica Mejor",
-    "title": "Planifica Mejor",
-    "hrefWeb": "https://planificamejor.com.ar/",
-    "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
-  },
-  {
-    "img": "/img/proyectos/rpp-web.avif",
-    "alt": "Sitio web RPP seguros generales",
-    "title": "RPP seguros generales",
-    "hrefWeb": "https://rppseguros.com/",
-    "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
-  },
-  {
-    "img": "/img/proyectos/islay-web.avif",
-    "alt": "Sitio web Islay Seguros",
-    "title": "Islay Seguros",
-    "hrefWeb": "https://islayseguros.com/",
-    "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
+    "img": "/img/proyectos/pasap-web.avif",
+    "alt": "Sitio web Pasap",
+    "title": "Pasap",
+    "hrefWeb": "https://pasap.com.ar/",
+    "descripcion": "En Planifica Mejor desarrollamos una plataforma digital clara y profesional que refleja la esencia de la marca y su compromiso con la educación financiera. El sitio fue diseñado a medida, priorizando la usabilidad, la organización del contenido y una estética moderna que transmite confianza y cercanía. El trabajo incluyó la creación de recursos visuales originales, material audiovisual y una estrategia SEO enfocada en mejorar la visibilidad y el posicionamiento orgánico. El resultado es un espacio digital funcional y atractivo que fortalece la comunicación con su audiencia y consolida la presencia online de la marca.",
+    "tags": [
+      "Identidad de marca",
+      "Diseño de piezas digitales",
+      "Edición de videos",
+      "Diseño web a medida",
+      "SEO completo"
+    ]
   },
   {
     "img": "/img/proyectos/dalotto-web.avif",
     "alt": "Sitio web Dalotto asesores de seguros",
     "title": "D'alotto asesores ",
     "hrefWeb": "https://dalottoasesores.com/",
-    "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
+    "descripcion": "Para D’alotto Asesores desarrollamos un sitio web a medida que refleja su liderazgo en el mercado y su compromiso con el crecimiento del sector asegurador. El proyecto tuvo como objetivo fortalecer su presencia digital en la zona oeste y, al mismo tiempo, crear un espacio que invite a nuevos productores a sumarse y desarrollarse bajo su acompañamiento y capacitación. Diseñamos una plataforma moderna, adaptable y funcional, con formularios dinámicos orientados a la captación de nuevos talentos y una estrategia SEO completa para consolidar su posicionamiento online. El resultado es una herramienta digital que combina profesionalismo, cercanía y visión de futuro.",
+    "tags": [
+      "Diseño web a medida",
+      "Web responsive",
+      "Fomularios dinamicos",
+      "SEO completo"
+    ]
   },
   {
-    "img": "/img/proyectos/lucas-web.avif",
-    "alt": "Sitio web Lucas Marks",
-    "title": "Lucas Marks",
-    "hrefWeb": "https://lucasmarks.com.ar/",
-    "descripcion": "Con un enfoque basado en el conocimiento y un énfasis en la experiencias digitales, colaboramos con las marcas y les ofrecemos soluciones y servicios personalizados integrales. Diseñamosla comunicación,la identidad, las estrategias y el comercio fusionando continuamente la estética con el propósito.",
-    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
+    "img": "/img/proyectos/rpp-web.avif",
+    "alt": "Sitio web RPP seguros generales",
+    "title": "RPP seguros generales",
+    "hrefWeb": "https://rppseguros.com/",
+    "descripcion": "Para RPP Seguros Generales desarrollamos un sitio web a medida que refleja su historia, trayectoria y compromiso como empresa familiar dentro del sector asegurador. El objetivo fue modernizar su presencia digital sin perder la esencia de confianza y cercanía que los caracteriza. Diseñamos una plataforma clara, responsive y funcional, con formularios dinámicos que facilitan la atención al cliente y una estrategia SEO completa para fortalecer su visibilidad online. El resultado es un espacio digital que transmite solidez, experiencia y la identidad de una marca con raíces profundas y visión de futuro.",
+    "tags": [
+      "Diseño web a medida",
+      "Web responsive",
+      "Fomularios dinamicos",
+      "SEO completo"
+    ]
+  },
+  {
+    "img": "/img/proyectos/islay-web.avif",
+    "alt": "Sitio web Islay Seguros",
+    "title": "Islay Seguros",
+    "hrefWeb": "https://islayseguros.com/",
+    "descripcion": "En Islay Seguros acompañamos a una empresa familiar uruguaya en el proceso de consolidar su identidad digital y proyectar su marca más allá de su entorno local. Desarrollamos un sitio web a medida que combina diseño, funcionalidad y una comunicación clara, transmitiendo los valores de confianza y cercanía que distinguen a la empresa. El proyecto incluyó el diseño de identidad visual, piezas gráficas, edición de contenido audiovisual y una estrategia SEO integral enfocada en su posicionamiento dentro del mercado uruguayo. Este trabajo marcó un paso importante en nuestra expansión regional, reflejando el espíritu de colaboración y crecimiento compartido.",
+    "tags": [
+      "Identidad de marca",
+      "Diseño de piezas digitales",
+      "Edición de videos",
+      "Diseño web a medida",
+      "SEO completo"
+    ]
+  },
+  {
+    "img": "/img/proyectos/belt-web.avif",
+    "alt": "Sitio web Belt Seguros",
+    "title": "Belt Seguros",
+    "hrefWeb": "https://beltseguros.com/",
+    "descripcion": "En Planifica Mejor desarrollamos una plataforma digital clara y profesional que refleja la esencia de la marca y su compromiso con la educación financiera. El sitio fue diseñado a medida, priorizando la usabilidad, la organización del contenido y una estética moderna que transmite confianza y cercanía. El trabajo incluyó la creación de recursos visuales originales, material audiovisual y una estrategia SEO enfocada en mejorar la visibilidad y el posicionamiento orgánico. El resultado es un espacio digital funcional y atractivo que fortalece la comunicación con su audiencia y consolida la presencia online de la marca.",
+    "tags": [
+      "Identidad de marca",
+      "Diseño de piezas digitales",
+      "Edición de videos",
+      "Diseño web a medida",
+      "SEO completo"
+    ]
   }
 ]
