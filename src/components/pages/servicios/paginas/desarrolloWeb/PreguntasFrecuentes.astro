@@ -7,12 +7,14 @@ import dataFaqs from "@/data/faqs.json";
 
 <Container id="preguntas_frecuentes_desarrollo_web">
   <div
-    class="flex h-full w-full items-end justify-center overflow-hidden sm:w-[80%] lg:w-[70%]"
+    class="flex h-full w-full items-end justify-center sm:w-[80%] lg:w-[70%]"
   >
     <Titulo title="preguntas frecuentes" />
   </div>
 
-  <div class="mx-auto grid w-full place-items-center gap-4 xl:w-[80%]">
+  <div
+    class="preguntas-frecuentes mx-auto grid w-full place-items-center gap-4 overflow-hidden p-4 xl:w-[80%]"
+  >
     {
       dataFaqs.map((item, index) => (
         <Detalle
@@ -24,3 +26,23 @@ import dataFaqs from "@/data/faqs.json";
     }
   </div>
 </Container>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const detalles = document.querySelectorAll(
+      ".custom-details",
+    ) as NodeListOf<HTMLDetailsElement>;
+
+    detalles.forEach((detalle) => {
+      detalle.addEventListener("toggle", () => {
+        if (detalle.open) {
+          detalles.forEach((d) => {
+            if (d !== detalle) {
+              d.open = false;
+            }
+          });
+        }
+      });
+    });
+  });
+</script>

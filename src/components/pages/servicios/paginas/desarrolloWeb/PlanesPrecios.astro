@@ -17,7 +17,7 @@ import CardPlanesDW from "./CardPlanesDW.astro";
   </div>
 
   <div
-    class="card__container flex flex-col items-center justify-center gap-8 lg:grid"
+    class="card__container mt-5 flex flex-col items-center justify-center gap-8 lg:grid"
   >
     {
       dataCards
@@ -29,12 +29,13 @@ import CardPlanesDW from "./CardPlanesDW.astro";
             dataItems={card.items}
             descripcion={card.descripcion}
             precio={card.precio}
+            masElegido={card.masElegido}
           />
         ))
     }
 
     <div
-      class="border-negro shadow-Panambi medida flex h-auto w-full flex-col items-start justify-center gap-8 rounded-3xl border-2 p-4"
+      class="border-negro text-negro shadow-Panambi medida flex h-auto w-full flex-col items-start justify-center gap-8 rounded-3xl border-2 p-4"
     >
       <div class="flex w-full flex-col items-center gap-8 sm:flex-row">
         <p class="font-titulo text-nowrap text-5xl font-black uppercase">
@@ -52,12 +53,12 @@ import CardPlanesDW from "./CardPlanesDW.astro";
         }
       </div>
       <p class="font-titulo mt-8 text-2xl font-black uppercase sm:text-3xl">
-        desde u$s {dataCards[3].precio}.-
+        Solicita tu cotización
       </p>
     </div>
   </div>
   <p class="mt-2 w-full text-center text-xs sm:text-sm">
-    Todos nuestros planes incluyen dominio y hosting por un año.
+    Todos nuestros planes hosting por un año.
   </p>
 </Container>
 
