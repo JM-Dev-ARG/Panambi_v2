@@ -2,7 +2,14 @@
 import Container from "@/components/base-components/Container.astro";
 import Detalle from "@/components/base-components/Detalle.astro";
 import Titulo from "@/components/base-components/Titulo.astro";
-import dataFaqs from "@/data/faqs.json";
+interface Props {
+  dataFaqs: {
+    pregunta: string;
+    respuesta: string;
+  }[];
+}
+
+const { dataFaqs } = Astro.props;
 ---
 
 <Container id="preguntas_frecuentes_desarrollo_web">

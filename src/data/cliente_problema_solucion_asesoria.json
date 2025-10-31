@@ -1,0 +1,59 @@
+[
+    {
+        "titulo": "Básico",
+        "clase": "basico",
+        "descripcion": "Ideal para quienes desean iniciar su presencia online con un sitio profesional y funcional. Cubre las necesidades esenciales de comunicación y presentación de servicios, ofreciendo una base sólida para crecer digitalmente.",
+        "items": [
+            "Landing page de hasta 4 secciones",
+            "Animaciones de entrada de componentes",
+            "Formulario de contacto simple",
+            "Integración con WhatsApp y redes sociales",
+            "SEO básico"
+        ]
+    },
+    {
+        "titulo": "Básico Plus",
+        "clase": "basicoplus",
+        "descripcion": "Para quienes buscan una experiencia web más completa y profesional. Mejora el diseño, la interacción y el posicionamiento, ofreciendo mayor flexibilidad y herramientas avanzadas para potenciar tu sitio.",
+        "items": [
+            "Landing page de hasta 4 secciones",
+            "Animaciones de entrada de componentes",
+            "Formulario de contacto simple",
+            "Integración con WhatsApp y redes sociales",
+            "SEO básico"
+        ]
+    },
+    {
+        "titulo": "Pro",
+        "clase": "pro",
+        "descripcion": "Pensado para proyectos que requieren un sitio potente, flexible y completamente personalizado. Incluye herramientas avanzadas, recopilación de datos y un blog autogestionable para mantener el contenido actualizado.",
+        "items": [
+            "Landing page de hasta 4 secciones",
+            "Animaciones de entrada de componentes",
+            "Formulario de contacto simple",
+            "Integración con WhatsApp y redes sociales",
+            "SEO básico"
+        ]
+    },
+    {
+        "titulo": "A Medida",
+        "clase": "medida",
+        "descripcion": "Para empresas y profesionales que necesitan un desarrollo totalmente personalizado. Cada detalle se adapta al proyecto, integrando funcionalidades avanzadas y soluciones específicas para optimizar la gestión y la experiencia del usuario.",
+        "precio": "A convenir",
+        "items": [
+            "Diseño y desarrollo 100% personalizado",
+            "Arquitectura web adaptada al proyecto",
+            "Portal de clientes",
+            "Intranet corporativa",
+            "Agenda avanzada",
+            "Integración con software de gestión",
+            "Formularios y flujos personalizados",
+            "Animaciones y componentes a medida",
+            "SEO técnico y estratégico",
+            "Recopilación y análisis de datos",
+            "Soporte y mantenimiento integral",
+            "Hosting por un año",
+            "Asesoramiento continuo"
+        ]
+    }
+]

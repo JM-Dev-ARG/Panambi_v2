@@ -8,6 +8,7 @@ import Layout from "@/layouts/Layout.astro";
 import Equipo from "@/components/pages/index/sections/Equipo.astro";
 import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
 import Comentarios from "@/components/base-components/Comentarios.astro";
+import cardComoData from "@/data/como.json";
 
 const keywords = [
   "desarrollo web",
@@ -58,6 +59,8 @@ const keywords = [
   "diseño web moderno y funcional",
   "consultoría integral de marketing",
   "marketing estratégico y posicionamiento",
+  "marketing estratégico y posicionamiento en buenos aires",
+  "marketing estratégico y posicionamiento en Chivilcoy - Bs As",
   "estrategias personalizadas de marketing",
   "creación de contenido de valor para marcas",
   "consultoría en branding y posicionamiento",
@@ -65,14 +68,21 @@ const keywords = [
 ---
 
 <Layout
-  title="Panambi - Mkt y Desarrollo web"
+  title="Panambi - Estrategia digita y Desarrollo web"
   description="Estrategia, diseño y tecnología para profesionales que quieren destacar. En Panambí hacemos que tu marca transmita lo que realmente representa."
   keywords={keywords}
 >
   <Hero />
   <Servicios />
   <Conocenos />
-  <Como />
+  <Como
+    title="Como hacemos para"
+    subtitle="LLevar tu negocio al siguiente nivel"
+    textNegro={true}
+    dataText={cardComoData}
+    idContainer="como_lo_hacemos"
+    bgColor="bg-verde2-300"
+  />
   <NuestrosProyectos />
   <Equipo />
   <UltimoLLamado
@@ -84,11 +94,3 @@ const keywords = [
   />
   <Comentarios />
 </Layout>
-<script>
-  import AOS from "aos";
-  import "aos/dist/aos.css";
-  AOS.init({
-    once: true,
-    duration: 800,
-  });
-</script>

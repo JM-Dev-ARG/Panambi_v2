@@ -137,3 +137,14 @@ const schema = {
     font-family: var(--font-base);
   }
 </style>
+
+<script>
+  import AOS from "aos";
+  import "aos/dist/aos.css";
+  document.addEventListener("astro:page-load", () => {
+    AOS.init({
+      once: true,
+      duration: 800,
+    });
+  });
+</script>

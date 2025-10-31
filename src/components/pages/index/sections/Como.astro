@@ -1,29 +1,37 @@
 ---
 import Container from "@/components/base-components/Container.astro";
 import CardComo from "@/components/base-components/CardComo.astro";
-import cardComoData from "@/data/como.json";
+/* import cardComoData from "@/data/como.json"; */
 import TituloCards from "@/components/base-components/TituloCards.astro";
+interface Props {
+  idContainer: string;
+  title: string;
+  subtitle: string;
+  textNegro: boolean;
+  bgColor: string;
+  dataText: Array<{ titulo: string; descripcion: string }>;
+}
+
+const { idContainer, title, subtitle, textNegro, bgColor, dataText } =
+  Astro.props;
 ---
 
-<Container id="Como_lo_hacemos">
+<Container id={idContainer}>
   <div
-    class="border-negro shadow-Panambi bg-verde2-300 grid h-full w-full place-items-center rounded-3xl border-2 p-6"
+    class={`border-negro shadow-Panambi ${bgColor ? bgColor : "bg-violeta2-400"} ${textNegro ? "text-negro" : "text-neutral-100"} grid h-full w-full place-items-center rounded-3xl border-2 p-6`}
     data-aos="fade-up"
   >
     <div
       class="flex h-full w-full flex-col items-center justify-center gap-4 md:w-[80%]"
     >
-      <TituloCards
-        title="Como hacemos para"
-        subtitle="LLevar tu negocio al siguiente nivel"
-      />
+      <TituloCards title={title} subtitle={subtitle} />
     </div>
 
     <div
       class="grid w-full gap-10 px-3 pb-6 pt-12 sm:grid-cols-2 sm:grid-rows-2"
     >
       {
-        cardComoData.map((card) => (
+        dataText.map((card) => (
           <CardComo titulo={card.titulo} descripcion={card.descripcion} />
         ))
       }

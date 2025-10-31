@@ -1,11 +1,11 @@
 ---
-import PreciosItems from "./PreciosItems.astro";
+import PreciosItems from "../pages/servicios/paginas/desarrolloWeb/PreciosItems.astro";
 
 interface Props {
   titulo: string;
   descripcion: string;
   dataItems: string[];
-  precio: string;
+  precio?: string;
   clase: string;
   masElegido?: boolean;
 }
@@ -41,7 +41,9 @@ const { titulo, descripcion, dataItems, precio, clase, masElegido } =
     </div>
   </div>
 
-  <p class="font-titulo mt-8 text-3xl font-black uppercase">
+  <p
+    class={`font-titulo mt-8 text-3xl font-black uppercase ${precio ? "" : "hidden"}`}
+  >
     desde u$s {precio}.-
   </p>
 </div>

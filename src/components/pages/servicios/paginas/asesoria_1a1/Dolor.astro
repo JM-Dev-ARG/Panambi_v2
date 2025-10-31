@@ -1,0 +1,59 @@
+---
+import CardPlanesDW from "@/components/base-components/CardPlanesDW.astro";
+import Container from "@/components/base-components/Container.astro";
+import Titulo from "@/components/base-components/Titulo.astro";
+import dataCards from "@/data/cliente_problema_solucion_asesoria.json";
+---
+
+<Container id="problemas_destinatario_soluciones_asesoria">
+  <div
+    class="flex h-full w-full flex-col items-center justify-center sm:w-[90%] lg:w-[80%]"
+  >
+    <Titulo
+      title="Planes y precios"
+      subtitle="Tenemos el plan perfecto para tu negocio"
+    />
+  </div>
+
+  <div
+    class="card__container mt-5 flex flex-col items-center justify-center gap-8 lg:grid"
+  >
+    {
+      dataCards
+        .slice(0, 3)
+        .map((card) => (
+          <CardPlanesDW
+            clase={card.clase}
+            titulo={card.titulo}
+            dataItems={card.items}
+            descripcion={card.descripcion}
+            precio={card.precio}
+          />
+        ))
+    }
+  </div>
+
+  <style>
+    .card__container {
+      width: 100%;
+      height: auto;
+
+      grid:
+        "a b c" auto
+        "a b c" auto
+        "a b c" auto
+        / 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    .basico {
+      grid-area: a;
+    }
+    .basicoplus {
+      grid-area: b;
+    }
+    .pro {
+      grid-area: c;
+    }
+  </style>
+</Container>
