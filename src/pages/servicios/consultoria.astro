@@ -1,0 +1,88 @@
+---
+import LayoutServicios from "@/layouts/LayoutServicios.astro";
+import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
+import dataComo from "@/data/alcancesPropuestas.json";
+import PreguntasFrecuentes from "@/components/pages/servicios/paginas/desarrolloWeb/PreguntasFrecuentes.astro";
+
+import HeroAsesoria from "@/components/pages/servicios/paginas/asesoria_1a1/HeroAsesoria.astro";
+import Dolor from "@/components/pages/servicios/paginas/asesoria_1a1/Dolor.astro";
+import Oferta from "@/components/pages/servicios/paginas/asesoria_1a1/Oferta.astro";
+import dataFaqs from "@/data/faqs.json";
+import Como from "@/components/pages/index/sections/Como.astro";
+
+const dataLinks = [
+  {
+    href: "/servicios/desarrollo_web/#alcances_propuestas",
+    label: "Alcances",
+  },
+  {
+    href: "/servicios/desarrollo_web/#planes_desarrollo_web",
+    label: "Precios",
+  },
+  {
+    href: "/servicios/desarrollo_web/#preguntas_frecuentes_desarrollo_web",
+    label: "Preguntas",
+  },
+  {
+    href: "/servicios",
+    label: "Volver",
+  },
+];
+
+const keywords = [
+  "desarrollo web personalizado",
+  "sitios web a medida para profesionales",
+  "desarrollo web responsive",
+  "diseño UX/UI profesional",
+  "plataforma web segura y optimizada",
+  "sitio web para servicios profesionales",
+  "soluciones web para empresas",
+  "desarrollo web Argentina",
+  "sitio web corporativo para profesionales",
+  "web con optimización SEO integrada",
+  "sitio web con alojamiento incluido",
+  "desarrollo web y tecnología para marcas",
+  "creación de web moderna y funcional",
+  "servicio de desarrollo web para consultores",
+  "sitios web hechos a medida para negocios",
+];
+---
+
+<LayoutServicios
+  dataLinks={dataLinks}
+  title="Panambi - Consultoria Personalizada"
+  description="Estrategia, diseño y tecnología para profesionales que quieren destacar. En Panambí desarrollamos sitios web a medida que impulsan tu marca y acompañan tu crecimiento."
+  keywords={keywords}
+>
+  <HeroAsesoria />
+  <UltimoLLamado
+    idContainer="call_to_consultoria_1"
+    hrefBoton="/contacto"
+    textoBoton="contactanos"
+    titulo="Tu negocio merece un sitio web"
+    subtitulo="a medida, con propósito, rendimiento y diseño moderno"
+    bgColor="bg-verde2-300"
+    textNegro={true}
+  />
+  <Dolor />
+  <Como
+    idContainer="alcances_propuestas_consultoria"
+    title="que te ofrecemos para que"
+    subtitle="tu web tenga el impacto que tu marca necesita"
+    dataText={dataComo}
+    textNegro={true}
+    bgColor="bg-violeta2-400"
+  />
+
+  <Oferta idContainer="oferta_consultoria" />
+  <UltimoLLamado
+    idContainer="call_to_action_consultoria_2"
+    hrefBoton="/contacto"
+    textoBoton="contactanos"
+    titulo="Ya viste nuestros planes"
+    subtitulo="¿que estas esperando para tener tu sitio web?"
+    bgColor="bg-verde2-300"
+    textNegro={true}
+  />
+  <PreguntasFrecuentes dataFaqs={dataFaqs} />
+</LayoutServicios>
