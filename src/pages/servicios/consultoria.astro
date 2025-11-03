@@ -4,11 +4,12 @@ import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
 import dataComo from "@/data/alcancesPropuestas.json";
 import PreguntasFrecuentes from "@/components/pages/servicios/paginas/desarrolloWeb/PreguntasFrecuentes.astro";
 
-import HeroAsesoria from "@/components/pages/servicios/paginas/asesoria_1a1/HeroAsesoria.astro";
-import Dolor from "@/components/pages/servicios/paginas/asesoria_1a1/Dolor.astro";
-import Oferta from "@/components/pages/servicios/paginas/asesoria_1a1/Oferta.astro";
 import dataFaqs from "@/data/faqs.json";
 import Como from "@/components/pages/index/sections/Como.astro";
+import imgHero from "@/assets/img/hero/consultoria.avif";
+import Dolor from "@/components/pages/servicios/paginas/seccionesGrales/Dolor.astro";
+import Oferta from "@/components/pages/servicios/paginas/seccionesGrales/Oferta.astro";
+import HeroGralServicios from "@/components/pages/servicios/paginas/seccionesGrales/HeroGralServicios.astro";
 
 const dataLinks = [
   {
@@ -54,7 +55,14 @@ const keywords = [
   description="Estrategia, diseño y tecnología para profesionales que quieren destacar. En Panambí desarrollamos sitios web a medida que impulsan tu marca y acompañan tu crecimiento."
   keywords={keywords}
 >
-  <HeroAsesoria />
+  <HeroGralServicios
+    idContainer="hero_consultoria_personalizada"
+    titulo="Convertimos tu idea"
+    subtitulo="en un magneto de oportunidades"
+    img=`${imgHero.src}`
+    textoTitulo="Lorem, ipsum dolor sit amet consectetur adipisicing elit"
+    textoDescripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perspiciatis fugit consectetur. Reprehenderit unde ab sapiente, debitis, odio fugiat at a laudantium nihil ipsam totam dignissimos rerum, facere corrupti culpa?"
+  />
   <UltimoLLamado
     idContainer="call_to_consultoria_1"
     hrefBoton="/contacto"

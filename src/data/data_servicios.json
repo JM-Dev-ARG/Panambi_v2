@@ -1,18 +1,5 @@
 [
   {
-    "title": "Consultoria personalizada",
-    "descripcion": "Brindamos consultoría personalizada orientada a profesionales y empresas del sector de servicios —como estudios jurídicos, contables, asesores y brockers de seguros y asesores financieros— que buscan optimizar su crecimiento y fortalecer su presencia en el mercado. Nuestro trabajo abarca desde el análisis integral del negocio hasta la implementación de estrategias de marketing digital, identificando oportunidades, mejorando procesos y proponiendo soluciones concretas que impulsan el desarrollo y la expansión de cada marca.",
-    "tags": [
-      "Análisis y diagnóstico del negocio",
-      "Estrategia de crecimiento empresarial",
-      "Consultoría para profesionales",
-      "Desarrollo y posicionamiento de marca",
-      "Marketing digital estratégico"
-    ],
-    "img": "/img/consultoria.avif",
-    "href": "/servicios/consultoria"
-  },
-  {
     "title": "Aesoria 1 a 1",
     "descripcion": "Un programa de asesoramiento 100% personalizado que combina estrategia de marketing digital, optimización del modelo de negocio y desarrollo de marca profesional. Durante un encuentro sincrónico de una hora, trabajamos juntos en el diagnóstico y la planificación de acciones concretas para construir un sistema de atracción y conversión de clientes estable y automatizado, con implementación guiada paso a paso.",
     "tags": [
@@ -24,6 +11,19 @@
     ],
     "img": "/img/mktdigital.avif",
     "href": "/servicios/asesoria_1a1"
+  },
+  {
+    "title": "Consultoria personalizada",
+    "descripcion": "Brindamos consultoría personalizada orientada a profesionales y empresas del sector de servicios —como estudios jurídicos, contables, asesores y brockers de seguros y asesores financieros— que buscan optimizar su crecimiento y fortalecer su presencia en el mercado. Nuestro trabajo abarca desde el análisis integral del negocio hasta la implementación de estrategias de marketing digital, identificando oportunidades, mejorando procesos y proponiendo soluciones concretas que impulsan el desarrollo y la expansión de cada marca.",
+    "tags": [
+      "Análisis y diagnóstico del negocio",
+      "Estrategia de crecimiento empresarial",
+      "Consultoría para profesionales",
+      "Desarrollo y posicionamiento de marca",
+      "Marketing digital estratégico"
+    ],
+    "img": "/img/consultoria.avif",
+    "href": "/servicios/consultoria"
   },
   {
     "title": "desarrollo web",

@@ -1,18 +1,25 @@
 ---
 import Container from "@/components/base-components/Container.astro";
-import TextoLibre from "@/components/base-components/TextoLibre.astro";
 import Titulo from "@/components/base-components/Titulo.astro";
 import imgHero from "@/assets/img/hero/mktdigital.avif";
+interface Props {
+  idContainer: string;
+  titulo: string;
+  subtitulo: string;
+  img: string;
+  textoTitulo: string;
+  textoDescripcion: string;
+}
+
+const { idContainer, titulo, subtitulo, img, textoTitulo, textoDescripcion } =
+  Astro.props;
 ---
 
-<Container id="hero_servicios_asesoria_1a1">
+<Container id={idContainer}>
   <div
     class="mt-4 flex h-full w-full items-end justify-center sm:mt-8 sm:w-[80%] lg:w-[70%]"
   >
-    <Titulo
-      title="Convertimos tu idea"
-      subtitle="en un magneto de oportunidades"
-    />
+    <Titulo title={titulo} subtitle={subtitulo} />
   </div>
 
   <div
@@ -22,7 +29,7 @@ import imgHero from "@/assets/img/hero/mktdigital.avif";
       class="shadow-Panambi border-negro w-full overflow-hidden rounded-3xl border-2 bg-amber-800 object-cover object-center sm:w-[80%] lg:w-1/2"
     >
       <img
-        src={imgHero.src}
+        src={img}
         alt="Imagen de asesoria"
         title="Imagen de asesoria"
         class="w-full"
@@ -39,13 +46,10 @@ import imgHero from "@/assets/img/hero/mktdigital.avif";
         <p
           class="font-titulo text-pretty pb-2 text-2xl font-semibold leading-7 sm:text-4xl sm:leading-8 lg:pb-8"
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit
+          {textoTitulo}
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-          perspiciatis fugit consectetur. Reprehenderit unde ab sapiente,
-          debitis, odio fugiat at a laudantium nihil ipsam totam dignissimos
-          rerum, facere corrupti culpa?
+          {textoDescripcion}
         </p>
       </div>
     </div>

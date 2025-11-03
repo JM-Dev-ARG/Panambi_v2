@@ -3,12 +3,12 @@ import LayoutServicios from "@/layouts/LayoutServicios.astro";
 import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
 import dataComo from "@/data/alcancesPropuestas.json";
 import PreguntasFrecuentes from "@/components/pages/servicios/paginas/desarrolloWeb/PreguntasFrecuentes.astro";
-
-import HeroAsesoria from "@/components/pages/servicios/paginas/asesoria_1a1/HeroAsesoria.astro";
-import Dolor from "@/components/pages/servicios/paginas/asesoria_1a1/Dolor.astro";
-import Oferta from "@/components/pages/servicios/paginas/asesoria_1a1/Oferta.astro";
 import dataFaqs from "@/data/faqs.json";
 import Como from "@/components/pages/index/sections/Como.astro";
+import imgHero from "@/assets/img/hero/mktdigital.avif";
+import Dolor from "@/components/pages/servicios/paginas/seccionesGrales/Dolor.astro";
+import Oferta from "@/components/pages/servicios/paginas/seccionesGrales/Oferta.astro";
+import HeroGralServicios from "@/components/pages/servicios/paginas/seccionesGrales/HeroGralServicios.astro";
 
 const dataLinks = [
   {
@@ -54,13 +54,20 @@ const keywords = [
   description="Estrategia, diseño y tecnología para profesionales que quieren destacar. En Panambí desarrollamos sitios web a medida que impulsan tu marca y acompañan tu crecimiento."
   keywords={keywords}
 >
-  <HeroAsesoria />
+  <HeroGralServicios
+    idContainer="hero_asesoria_1a1"
+    titulo="Asesoría 1:1"
+    subtitulo=" Digitaliza tu negocio de servicios"
+    img=`${imgHero.src}`
+    textoTitulo="Claridad Digital en 60 Minutos"
+    textoDescripcion="Descubrí exactamente qué te falta para captar más clientes online. Una sesión estratégica que analiza tu presencia digital, identifica tus puntos ciegos y te entrega un plan de acción concreto para empezar a crecer hoy mismo."
+  />
   <UltimoLLamado
     idContainer="call_to_action_asesoria_1"
     hrefBoton="/contacto"
-    textoBoton="contactanos"
-    titulo="Tu negocio merece un sitio web"
-    subtitulo="a medida, con propósito, rendimiento y diseño moderno"
+    textoBoton="Reserva tu asesoria"
+    titulo="¿Tu presencia digital está generando clientes?"
+    subtitulo="60 minutos de claridad estratégica con plan de acción inmediato"
     bgColor="bg-verde2-300"
     textNegro={true}
   />
@@ -78,7 +85,7 @@ const keywords = [
   <UltimoLLamado
     idContainer="call_to_action_asesoria_2"
     hrefBoton="/contacto"
-    textoBoton="contactanos"
+    textoBoton="Reserva tu asesoria"
     titulo="Ya viste nuestros planes"
     subtitulo="¿que estas esperando para tener tu sitio web?"
     bgColor="bg-verde2-300"
