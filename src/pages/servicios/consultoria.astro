@@ -1,12 +1,13 @@
 ---
 import LayoutServicios from "@/layouts/LayoutServicios.astro";
 import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
-import dataComo from "@/data/alcancesPropuestas.json";
+import dataComo from "@/data/alcancesPropuestas_asesoria.json";
 import PreguntasFrecuentes from "@/components/pages/servicios/paginas/desarrolloWeb/PreguntasFrecuentes.astro";
+import dataFaqs from "@/data/faqs_asesoria.json";
+import dataPlan from "@/data/planAsesoria_1a1.json";
 
-import dataFaqs from "@/data/faqs.json";
 import Como from "@/components/pages/index/sections/Como.astro";
-import imgHero from "@/assets/img/hero/consultoria.avif";
+import imgHero from "@/assets/img/hero/mktdigital.avif";
 import Dolor from "@/components/pages/servicios/paginas/seccionesGrales/Dolor.astro";
 import Oferta from "@/components/pages/servicios/paginas/seccionesGrales/Oferta.astro";
 import HeroGralServicios from "@/components/pages/servicios/paginas/seccionesGrales/HeroGralServicios.astro";
@@ -51,44 +52,49 @@ const keywords = [
 
 <LayoutServicios
   dataLinks={dataLinks}
-  title="Panambi - Consultoria Personalizada"
+  title="Panambi - Consultoria Estratégica de Negocios"
   description="Estrategia, diseño y tecnología para profesionales que quieren destacar. En Panambí desarrollamos sitios web a medida que impulsan tu marca y acompañan tu crecimiento."
   keywords={keywords}
 >
   <HeroGralServicios
-    idContainer="hero_consultoria_personalizada"
-    titulo="Convertimos tu idea"
-    subtitulo="en un magneto de oportunidades"
+    idContainer="hero_asesoria_1a1"
+    titulo="Asesoría One Shot"
+    subtitulo=" Digitaliza tu negocio de servicios"
     img=`${imgHero.src}`
-    textoTitulo="Lorem, ipsum dolor sit amet consectetur adipisicing elit"
-    textoDescripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perspiciatis fugit consectetur. Reprehenderit unde ab sapiente, debitis, odio fugiat at a laudantium nihil ipsam totam dignissimos rerum, facere corrupti culpa?"
+    textoTitulo="Transformación digital en 60 minutos"
+    textoDescripcion=" Una sesión estratégica que analiza tu presencia digital, identifica tus puntos ciegos y te entrega un plan de acción concreto para empezar a crecer hoy mismo."
   />
   <UltimoLLamado
-    idContainer="call_to_consultoria_1"
+    idContainer="call_to_action_asesoria_1"
     hrefBoton="/contacto"
-    textoBoton="contactanos"
-    titulo="Tu negocio merece un sitio web"
-    subtitulo="a medida, con propósito, rendimiento y diseño moderno"
+    textoBoton="Reserva tu asesoria"
+    titulo="¿Qué estás esperando?"
+    subtitulo="Una hora puede cambiar todo tu enfoque"
     bgColor="bg-verde2-300"
     textNegro={true}
   />
   <Dolor />
   <Como
-    idContainer="alcances_propuestas_consultoria"
-    title="que te ofrecemos para que"
-    subtitle="tu web tenga el impacto que tu marca necesita"
+    idContainer="alcances_propuestas_asesoria_1a1"
+    title="Lo que llevás buscando hace meses"
+    subtitle="respuestas claras, estrategia sólida y pasos concretos"
     dataText={dataComo}
     textNegro={true}
     bgColor="bg-violeta2-400"
   />
 
-  <Oferta idContainer="oferta_consultoria" />
+  <Oferta
+    idContainer="oferta_asesoria_1a1"
+    titulo="En solo 60 minutos"
+    subtitle="Podes cambiarlo todo"
+    dataText={dataPlan}
+  />
   <UltimoLLamado
-    idContainer="call_to_action_consultoria_2"
+    idContainer="call_to_action_asesoria_2"
     hrefBoton="/contacto"
-    textoBoton="contactanos"
-    titulo="Ya viste nuestros planes"
-    subtitulo="¿que estas esperando para tener tu sitio web?"
+    textoBoton="Reserva tu asesoria"
+    titulo="Empezá hoy a crecer con claridad"
+    subtitulo="reservá tu sesión estratégica y transformá tu negocio digital en 7 días"
     bgColor="bg-verde2-300"
     textNegro={true}
   />
