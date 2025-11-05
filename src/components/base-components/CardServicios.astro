@@ -1,12 +1,16 @@
 ---
 interface Props {
-  titulo: string;
-  subtitulo: string;
+  titulo?: string;
+  subtitulo?: string;
   descripcion: string;
-  imagen: string;
-  bgColor: string;
+  imagen?: string;
+  bgColor?: string;
+  textoNegro?: boolean;
 }
-const { titulo, subtitulo, descripcion, imagen, bgColor } = Astro.props;
+const { titulo, subtitulo, descripcion, imagen, bgColor, textoNegro } =
+  Astro.props;
+
+console.log(textoNegro);
 ---
 
 <div
@@ -14,7 +18,7 @@ const { titulo, subtitulo, descripcion, imagen, bgColor } = Astro.props;
   data-aos="fade-up"
 >
   <div
-    class="flex h-auto w-full flex-col items-center justify-between text-neutral-100 md:h-auto xl:h-[40%]"
+    class=`flex h-auto w-full flex-col items-center justify-between md:h-auto xl:h-[40%] ${textoNegro ? "text-negro" : "text-neutral-100"} `
   >
     <div class="mb-6 flex w-full flex-col items-center justify-center gap-2">
       <h3 class="text-balance text-center text-base font-normal uppercase">
@@ -42,6 +46,6 @@ const { titulo, subtitulo, descripcion, imagen, bgColor } = Astro.props;
     height="auto"
     title=`imagen de ${titulo}`
     alt=`imagen de ${titulo}`
-    class="absolute -bottom-[20%] left-1/2 h-auto w-[70%] -translate-x-1/2 rounded-2xl object-cover shadow-2xl md:-bottom-[20%] xl:-bottom-[30%]"
+    class={`absolute -bottom-[20%] left-1/2 h-auto w-[70%] -translate-x-1/2 rounded-2xl object-cover shadow-2xl md:-bottom-[20%] xl:-bottom-[30%] ${imagen ? "" : "hidden"}`}
   />
 </div>

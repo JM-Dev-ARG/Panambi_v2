@@ -1,24 +1,28 @@
 ---
 import Container from "@/components/base-components/Container.astro";
 import Titulo from "@/components/base-components/Titulo.astro";
-import dataCards from "@/data/planesDW.json";
 import PreciosItems from "../desarrolloWeb/PreciosItems.astro";
 
 interface Props {
   idContainer: string;
+  titulo: string;
+  subtitle: string;
+  dataText: {
+    titulo: string;
+    descripcion: string;
+    items: string[];
+    precio: string;
+  };
 }
 
-const { idContainer } = Astro.props;
+const { idContainer, titulo, subtitle, dataText } = Astro.props;
 ---
 
 <Container id={idContainer}>
   <div
     class="flex h-full w-full flex-col items-center justify-center sm:w-[90%] lg:w-[80%]"
   >
-    <Titulo
-      title="Planes y precios"
-      subtitle="Tenemos el plan perfecto para tu negocio"
-    />
+    <Titulo title={titulo} subtitle={subtitle} />
   </div>
 
   <div
@@ -29,27 +33,24 @@ const { idContainer } = Astro.props;
     >
       <div class="flex w-full flex-col items-center gap-8 sm:flex-row">
         <p class="font-titulo text-nowrap text-5xl font-black uppercase">
-          {dataCards[3].titulo}
+          {dataText.titulo}
         </p>
         <p class="">
-          {dataCards[3].descripcion}
+          {dataText.descripcion}
         </p>
       </div>
       <div class="grid w-full grid-cols-2 place-items-start gap-2">
         {
-          dataCards[3].items.map((card) => (
+          dataText.items.map((card) => (
             <PreciosItems titulo={card} textNegro={true} />
           ))
         }
       </div>
       <p class="font-titulo mt-8 text-2xl font-black uppercase sm:text-3xl">
-        Solicita tu cotización
+        Precio $ {dataText.precio}
       </p>
     </div>
   </div>
-  <p class="mt-2 w-full text-center text-xs sm:text-sm">
-    Todos nuestros planes hosting por un año.
-  </p>
 </Container>
 
 <style>

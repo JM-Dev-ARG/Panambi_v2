@@ -1,35 +1,46 @@
 ---
 import CardPlanesDW from "@/components/base-components/CardPlanesDW.astro";
+import CardServicios from "@/components/base-components/CardServicios.astro";
 import Container from "@/components/base-components/Container.astro";
 import Titulo from "@/components/base-components/Titulo.astro";
-import dataCards from "@/data/cliente_problema_solucion_asesoria.json";
+import dataCards from "@/data/dolorAsesoria_1a1.json";
+import dataSoluciones from "@/data/solucionesAsesoria_1a1.json";
 ---
 
 <Container id="problemas_destinatario_soluciones_asesoria">
   <div
-    class="flex h-full w-full flex-col items-center justify-center sm:w-[90%] lg:w-[80%]"
+    class="card__container mt-5 flex flex-col items-center justify-center gap-8 lg:grid"
+  >
+    {
+      dataCards.map((card) => (
+        <CardServicios
+          subtitulo={card.titulo}
+          descripcion={card.descripcion}
+          textoNegro={true}
+          bgColor="bg-verde1-100"
+        />
+      ))
+    }
+  </div>
+  <div
+    class="mt-[40px] flex h-full w-full flex-col items-center justify-center sm:w-[90%] lg:w-[80%]"
   >
     <Titulo
       title="Si algo de esto te pasa, tenemos que hablar"
       subtitle="problemas comunes, soluciones concretas"
     />
   </div>
-
   <div
     class="card__container mt-5 flex flex-col items-center justify-center gap-8 lg:grid"
   >
     {
-      dataCards
-        .slice(0, 3)
-        .map((card) => (
-          <CardPlanesDW
-            clase={card.clase}
-            titulo={card.titulo}
-            dataItems={card.items}
-            descripcion={card.descripcion}
-            precio={card.precio}
-          />
-        ))
+      dataSoluciones.map((card) => (
+        <CardPlanesDW
+          titulo={card.titulo}
+          dataItems={card.items}
+          descripcion={card.descripcion}
+        />
+      ))
     }
   </div>
 

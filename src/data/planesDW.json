@@ -3,7 +3,7 @@
     "titulo": "Básico",
     "clase": "basico",
     "descripcion": "Ideal para quienes desean iniciar su presencia online con un sitio profesional y funcional. Cubre las necesidades esenciales de comunicación y presentación de servicios, ofreciendo una base sólida para crecer digitalmente.",
-    "precio": "550",
+    "precio": "desde u$s 550",
     "items": [
       "Landing page de hasta 4 secciones",
       "Animaciones de entrada de componentes",
@@ -18,7 +18,7 @@
     "titulo": "Básico Plus",
     "clase": "basicoplus",
     "descripcion": "Para quienes buscan una experiencia web más completa y profesional. Mejora el diseño, la interacción y el posicionamiento, ofreciendo mayor flexibilidad y herramientas avanzadas para potenciar tu sitio.",
-    "precio": "800",
+    "precio": "desde u$s 800",
     "masElegido": true,
     "items": [
       "Diseño personalizado",
@@ -37,7 +37,7 @@
     "titulo": "Pro",
     "clase": "pro",
     "descripcion": "Pensado para proyectos que requieren un sitio potente, flexible y completamente personalizado. Incluye herramientas avanzadas, recopilación de datos y un blog autogestionable para mantener el contenido actualizado.",
-    "precio": "1500",
+    "precio": "desde u$s 1500",
     "items": [
       "Diseño a medida",
       "Landing page de hasta 6 secciones",

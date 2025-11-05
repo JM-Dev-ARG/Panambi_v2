@@ -4,9 +4,9 @@ import PreciosItems from "../pages/servicios/paginas/desarrolloWeb/PreciosItems.
 interface Props {
   titulo: string;
   descripcion: string;
-  dataItems: string[];
+  dataItems?: string[];
   precio?: string;
-  clase: string;
+  clase?: string;
   masElegido?: boolean;
 }
 const { titulo, descripcion, dataItems, precio, clase, masElegido } =
@@ -35,15 +35,19 @@ const { titulo, descripcion, dataItems, precio, clase, masElegido } =
       </p>
     </div>
     <div
-      class="mt-4 grid w-full grid-cols-2 place-items-start gap-2 lg:grid-cols-1"
+      class={`mt-4 grid w-full grid-cols-2 place-items-start gap-2 lg:grid-cols-1 ${dataItems ? "" : "hidden"}`}
     >
-      {dataItems.map((card) => <PreciosItems titulo={card} textNegro={true} />)}
+      {
+        dataItems?.map((card) => (
+          <PreciosItems titulo={card} textNegro={true} />
+        ))
+      }
     </div>
   </div>
 
   <p
     class={`font-titulo mt-8 text-3xl font-black uppercase ${precio ? "" : "hidden"}`}
   >
-    desde u$s {precio}.-
+    {precio}.-
   </p>
 </div>
