@@ -1,7 +1,7 @@
 {
   "logo": "https://panambi.net/logos/logo_panambi.svg",
   "contactPoint": {
-    "telephone": "+....",
+    "telephone": "+54-11-3166-4971",
     "areaServed": "AR",
     "availableLanguage": "Spanish"
   },
@@ -23,6 +23,6 @@
     "addressLocality": "Chivilcoy",
     "addressRegion": "Buenos Aires",
     "postalCode": "6620",
-    "addressCountry": "Argentina"
+    "addressCountry": "AR"
   }
 }
