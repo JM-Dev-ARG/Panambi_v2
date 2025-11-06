@@ -8,6 +8,7 @@ import dataFaqs from "@/data/faqs_dw.json";
 import Como from "@/components/pages/index/sections/Como.astro";
 import dataComo from "@/data/alcancesPropuestas_dw.json";
 import imgOG from "@/assets/img/hero/web2.avif";
+import imgHero from "@/assets/img/hero/bg_hero_dw2.avif";
 
 const dataLinks = [
   {
@@ -86,7 +87,15 @@ const keywords = [
   serviceType="ProfessionalService"
   ogImage={imgOG.src}
 >
-  <HeroDW />
+  <HeroDW
+    idContainer="hero_servicios_desarrollo_web"
+    titulo="Convertimos tu idea"
+    subtitulo="en un magneto de oportunidades"
+    textoLibreTitulo="Tu sitio web es mucho más que una tarjeta de presentación"
+    textoLibreSubtitulo="Es el corazón de tu presencia digital. En un entorno cada vez más competitivo, contar con una web rápida, atractiva y optimizada marca la diferencia entre ser visto o pasar desapercibido."
+    img={imgHero.src}
+    origen="dw"
+  />
   <UltimoLLamado
     idContainer="call_to_action_dw_1"
     hrefBoton="/contacto"
@@ -108,7 +117,7 @@ const keywords = [
   <UltimoLLamado
     idContainer="call_to_action_dw_2"
     hrefBoton="/contacto"
-    textoBoton="contactanos"
+    textoBoton="Hagamoslo realidad"
     titulo="Ya viste nuestros planes"
     subtitulo="¿que estas esperando para tener tu sitio web?"
     bgColor="bg-violeta1-300"

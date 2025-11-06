@@ -1,6 +1,7 @@
 [
   {
-    "titulo": "De la dispersión al enfoque",
+    "titulo": "Cambiar el enfoque",
+    "clase": "a",
     "descripcion": "Si sentís que hacés de todo pero sin rumbo claro, esta sesión te da la estructura que necesitás. Analizamos tu situación actual y construimos juntos una estrategia coherente.",
     "items": [
       "Identificamos tu propuesta de valor y mensaje central",
@@ -11,6 +12,7 @@
   },
   {
     "titulo": "Medí lo que importa",
+    "clase": "b",
     "descripcion": "Invertís tiempo y dinero en redes, web o anuncios pero no sabés si funcionan. Te mostramos exactamente qué está pasando con tus activos digitales y cómo optimizarlos.",
     "items": [
       "Auditamos tu presencia en cada canal activo",
@@ -20,7 +22,8 @@
     ]
   },
   {
-    "titulo": "Tu primer paso estratégico",
+    "titulo": "Tu primer paso",
+    "clase": "c",
     "descripcion": "Querés más clientes pero no sabés por dónde arrancar. En 60 minutos definimos el camino más efectivo según tu negocio, tu audiencia y tus recursos actuales.",
     "items": [
       "Priorizamos acciones de alto impacto y bajo costo",

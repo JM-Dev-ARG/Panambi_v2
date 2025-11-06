@@ -1,10 +1,21 @@
 ---
+interface Props {
+  img?: string;
+  origen?: string;
+}
 
+const { img, origen } = Astro.props;
+console.log(img);
 ---
 
-<section class="mx-auto grid w-full place-items-center">
+<div
+  class="mx-auto grid w-full place-items-center"
+  data-aos="fade-up"
+  data-aos-delay="300"
+>
   <div
-    class="h-[200px] w-[90%] bg-[url(/img/bg_hero_dw2.avif)] bg-contain bg-center bg-no-repeat sm:h-[400px] lg:hidden"
+    class={`h-[200px] w-[90%] bg-contain bg-center bg-no-repeat sm:h-[400px] lg:hidden`}
+    style=`background-image: url('${img}'); ${origen === "dw" ? "background-size: 90% auto;" : " background-size: 80% auto;"}`
   >
   </div>
   <div class="reflection-container hidden lg:inline-block">
@@ -14,16 +25,19 @@
     </div>
 
     <!-- Contenido que rota -->
-    <div class="reflection-content"></div>
+    <div
+      class="reflection-content"
+      style=`background-image: url('${img}'); ${origen === "dw" ? "background-size: 90% auto;" : " background-size: 80% auto;"}`
+    >
+    </div>
   </div>
-</section>
+</div>
 
 <style>
   .reflection-container {
     position: relative;
     place-items: center;
     width: 900px;
-    /* height: 100%; */
     overflow: hidden;
     perspective: 1000px;
     transform-style: preserve-3d;
@@ -32,8 +46,6 @@
   .reflection-content {
     height: 500px;
     width: 100%;
-    background: url("/img/bg_hero_dw2.avif");
-    background-size: 90% auto;
     background-repeat: no-repeat;
     background-position: center;
     transform: rotateX(0) rotateY(0);

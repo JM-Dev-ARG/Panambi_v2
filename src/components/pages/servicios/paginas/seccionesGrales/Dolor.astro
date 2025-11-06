@@ -5,6 +5,7 @@ import Container from "@/components/base-components/Container.astro";
 import Titulo from "@/components/base-components/Titulo.astro";
 import dataCards from "@/data/dolorAsesoria_1a1.json";
 import dataSoluciones from "@/data/solucionesAsesoria_1a1.json";
+import CardDolor from "./CardDolor.astro";
 ---
 
 <Container id="problemas_destinatario_soluciones_asesoria">
@@ -13,7 +14,7 @@ import dataSoluciones from "@/data/solucionesAsesoria_1a1.json";
   >
     {
       dataCards.map((card) => (
-        <CardServicios
+        <CardDolor
           subtitulo={card.titulo}
           descripcion={card.descripcion}
           textoNegro={true}
@@ -39,6 +40,7 @@ import dataSoluciones from "@/data/solucionesAsesoria_1a1.json";
           titulo={card.titulo}
           dataItems={card.items}
           descripcion={card.descripcion}
+          clase={card.clase}
         />
       ))
     }
@@ -57,13 +59,13 @@ import dataSoluciones from "@/data/solucionesAsesoria_1a1.json";
       gap: 16px;
     }
 
-    .basico {
+    .a {
       grid-area: a;
     }
-    .basicoplus {
+    .b {
       grid-area: b;
     }
-    .pro {
+    .c {
       grid-area: c;
     }
   </style>

@@ -1,0 +1,33 @@
+---
+interface Props {
+  subtitulo?: string;
+  descripcion: string;
+  imagen?: string;
+  bgColor?: string;
+  textoNegro?: boolean;
+}
+const { subtitulo, descripcion, bgColor, textoNegro } = Astro.props;
+---
+
+<div
+  class={`border-negro shadow-Panambi relative flex h-auto flex-col items-center justify-start rounded-3xl border-2 py-8 sm:py-12 lg:h-[420px] xl:py-16 ${bgColor}`}
+  data-aos="fade-up"
+>
+  <div
+    class={`flex h-auto w-full flex-col items-center justify-between md:h-auto xl:h-[40%] ${textoNegro ? "text-negro" : "text-neutral-100"} `}
+  >
+    <div class="mb-6 flex w-full flex-col items-center justify-center gap-2">
+      <h4
+        class="font-titulo text-balance text-center text-2xl font-black uppercase tracking-wide md:text-2xl xl:text-3xl"
+      >
+        {subtitulo}
+      </h4>
+    </div>
+
+    <div
+      class="font-titulo w-[80%] text-pretty text-center font-light leading-tight"
+    >
+      <p>{descripcion}</p>
+    </div>
+  </div>
+</div>

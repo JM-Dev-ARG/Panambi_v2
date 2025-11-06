@@ -1,6 +1,6 @@
 ---
 interface Props {
-  titulo: string;
+  titulo?: string;
   subtitulo?: string;
   marginTop?: string;
   textNegro?: boolean;
@@ -14,10 +14,11 @@ const { titulo, subtitulo, marginTop, textNegro } = Astro.props;
 >
   <p
     class="font-titulo pb-2 text-xl font-semibold leading-6 sm:text-2xl sm:leading-7"
+    data-aos="fade-up"
   >
     {titulo}
   </p>
-  <p>
+  <p data-aos="fade-up" data-aos-delay="200">
     {subtitulo}
   </p>
 </div>
