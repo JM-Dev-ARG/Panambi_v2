@@ -1,7 +1,6 @@
 ---
 import LayoutServicios from "@/layouts/LayoutServicios.astro";
 import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
-import HeroDW from "@/components/pages/servicios/paginas/desarrolloWeb/HeroDW.astro";
 import PreguntasFrecuentes from "@/components/pages/servicios/paginas/desarrolloWeb/PreguntasFrecuentes.astro";
 import PlanesPrecios from "@/components/pages/servicios/paginas/desarrolloWeb/PlanesPrecios.astro";
 import dataFaqs from "@/data/faqs_dw.json";
@@ -9,6 +8,7 @@ import Como from "@/components/pages/index/sections/Como.astro";
 import dataComo from "@/data/alcancesPropuestas_dw.json";
 import imgOG from "@/assets/img/hero/web2.avif";
 import imgHero from "@/assets/img/hero/bg_hero_dw2.avif";
+import HeroPaginaServicios from "@/components/pages/servicios/paginas/seccionesGrales/HeroPaginaServicios.astro";
 
 const dataLinks = [
   {
@@ -87,7 +87,7 @@ const keywords = [
   serviceType="ProfessionalService"
   ogImage={imgOG.src}
 >
-  <HeroDW
+  <HeroPaginaServicios
     idContainer="hero_servicios_desarrollo_web"
     titulo="Convertimos tu idea"
     subtitulo="en un magneto de oportunidades"
