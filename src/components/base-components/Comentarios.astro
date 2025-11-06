@@ -4,6 +4,11 @@ import Container from "@/components/base-components/Container.astro";
 
 import Titulo from "@/components/base-components/Titulo.astro";
 import CardComentarios from "./CardComentarios.astro";
+interface Props {
+  data: Array<{ nombre: string; empresa: string; comentario: string }>;
+}
+
+const { data } = Astro.props;
 ---
 
 <Container id="comentarios_desarrollo_web">
@@ -14,12 +19,14 @@ import CardComentarios from "./CardComentarios.astro";
   </div>
 
   <Carrousel duration="slow" classSlider="gap-4 h-full py-4" mascara={true}>
-    <CardComentarios />
-    <CardComentarios />
-    <CardComentarios />
-    <CardComentarios />
-    <CardComentarios />
-    <CardComentarios />
-    <CardComentarios />
+    {
+      data.map((item) => (
+        <CardComentarios
+          nombre={item.nombre}
+          empresa={item.empresa}
+          comentario={item.comentario}
+        />
+      ))
+    }
   </Carrousel>
 </Container>

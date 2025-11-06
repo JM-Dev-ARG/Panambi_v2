@@ -9,6 +9,7 @@ import Equipo from "@/components/pages/index/sections/Equipo.astro";
 import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
 import Comentarios from "@/components/base-components/Comentarios.astro";
 import cardComoData from "@/data/como.json";
+import dataComentarios from "@/data/comentarios.json";
 
 const keywords = [
   // Keywords primarias (alto volumen)
@@ -98,5 +99,5 @@ const keywords = [
     subtitulo="comencemos!!"
     hrefBoton="/contacto"
   />
-  <Comentarios />
+  <Comentarios data={dataComentarios} />
 </Layout>
