@@ -3,7 +3,7 @@ import Boton from "@/components/base-components/Boton.astro";
 import CardServicios from "@/components/base-components/CardServicios.astro";
 import Container from "@/components/base-components/Container.astro";
 import Titulo from "@/components/base-components/Titulo.astro";
-import dataCardServicios from "@/data/servicios_card_index.json";
+import dataCardServicios from "@/data/data_servicios.json";
 ---
 
 <Container id="Servicios_index">
@@ -17,10 +17,10 @@ import dataCardServicios from "@/data/servicios_card_index.json";
     {
       dataCardServicios.map((card) => (
         <CardServicios
-          titulo={card.titulo}
-          subtitulo={card.subtitulo}
-          descripcion={card.descripcion}
-          imagen={card.imagen}
+          titulo={card.tituloCardIndex}
+          subtitulo={card.titulo}
+          descripcion={card.descripcionIndex}
+          imagen={card.img}
           bgColor={card.bgColor}
           textoNegro={false}
         />

@@ -7,6 +7,7 @@ import PlanesPrecios from "@/components/pages/servicios/paginas/desarrolloWeb/Pl
 import dataFaqs from "@/data/faqs_dw.json";
 import Como from "@/components/pages/index/sections/Como.astro";
 import dataComo from "@/data/alcancesPropuestas_dw.json";
+import imgOG from "@/assets/img/hero/web2.avif";
 
 const dataLinks = [
   {
@@ -28,29 +29,62 @@ const dataLinks = [
 ];
 
 const keywords = [
-  "desarrollo web personalizado",
-  "sitios web a medida para profesionales",
+  // Servicios core
+  "desarrollo web",
+  "desarrollo web a medida",
+  "diseño web profesional",
+  "sitios web personalizados",
+
+  // Técnicas y características
   "desarrollo web responsive",
-  "diseño UX/UI profesional",
-  "plataforma web segura y optimizada",
-  "sitio web para servicios profesionales",
-  "soluciones web para empresas",
+  "diseño UX UI",
+  "optimización SEO",
+  "desarrollo web optimizado",
+  "sitio web rápido",
+  "web segura",
+  "diseño web moderno",
+
+  // Enfoque profesional
+  "desarrollo web para profesionales",
+  "sitios web empresas",
+  "web corporativa",
+  "desarrollo web consultores",
+  "sitio web estudios profesionales",
+  "web servicios profesionales",
+
+  // Beneficios específicos
+  "experiencia usuario web",
+  "diseño web conversión",
+  "sitio web escalable",
+  "plataforma web funcional",
+  "web con SEO integrado",
+
+  // Procesos y soluciones
+  "desarrollo web personalizado",
+  "soluciones web empresas",
+  "creación sitios web",
+  "diseño web a medida",
+
+  // Geolocalización
   "desarrollo web Argentina",
-  "sitio web corporativo para profesionales",
-  "web con optimización SEO integrada",
-  "sitio web con alojamiento incluido",
-  "desarrollo web y tecnología para marcas",
-  "creación de web moderna y funcional",
-  "servicio de desarrollo web para consultores",
-  "sitios web hechos a medida para negocios",
+  "diseño web Buenos Aires",
+
+  // Long-tail estratégicas
+  "desarrollo web optimizado SEO",
+  "sitio web responsive profesional",
+  "diseño web experiencia usuario",
+  "desarrollo web para negocios",
+  "web a medida con hosting",
 ];
 ---
 
 <LayoutServicios
   dataLinks={dataLinks}
-  title="Panambi - Desarrollo Web"
-  description="Estrategia, diseño y tecnología para profesionales que quieren destacar. En Panambí desarrollamos sitios web a medida que impulsan tu marca y acompañan tu crecimiento."
+  title="Desarrollo Web Profesional a Medida | Diseño UX/UI y SEO | Panambi"
+  description="Desarrollamos sitios web a medida con diseño UX/UI profesional, optimización SEO y hosting incluido. Webs rápidas, seguras y responsive para tu negocio."
   keywords={keywords}
+  serviceType="ProfessionalService"
+  ogImage={imgOG.src}
 >
   <HeroDW />
   <UltimoLLamado

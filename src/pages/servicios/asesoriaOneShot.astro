@@ -7,23 +7,23 @@ import dataFaqs from "@/data/faqs_asesoria.json";
 import dataPlan from "@/data/planAsesoria_1a1.json";
 
 import Como from "@/components/pages/index/sections/Como.astro";
-import imgHero from "@/assets/img/hero/mktdigital.avif";
+import imgHero from "@/assets/img/hero/asesoria.avif";
 import Dolor from "@/components/pages/servicios/paginas/seccionesGrales/Dolor.astro";
 import Oferta from "@/components/pages/servicios/paginas/seccionesGrales/Oferta.astro";
 import HeroGralServicios from "@/components/pages/servicios/paginas/seccionesGrales/HeroGralServicios.astro";
 
 const dataLinks = [
   {
-    href: "/servicios/desarrollo_web/#alcances_propuestas",
-    label: "Alcances",
+    href: "/servicios/asesoriaOneShot/#problemas_destinatario_soluciones_asesoria",
+    label: "Problemas",
   },
   {
-    href: "/servicios/desarrollo_web/#planes_desarrollo_web",
-    label: "Precios",
+    href: "/servicios/asesoriaOneShot/#alcances_propuestas_asesoria_1a1",
+    label: "Propuestas",
   },
   {
-    href: "/servicios/desarrollo_web/#preguntas_frecuentes_desarrollo_web",
-    label: "Preguntas",
+    href: "/servicios/asesoriaOneShot/#oferta_asesoria_1a1",
+    label: "Precio",
   },
   {
     href: "/servicios",
@@ -32,28 +32,60 @@ const dataLinks = [
 ];
 
 const keywords = [
-  "desarrollo web personalizado",
-  "sitios web a medida para profesionales",
-  "desarrollo web responsive",
-  "diseño UX/UI profesional",
-  "plataforma web segura y optimizada",
-  "sitio web para servicios profesionales",
-  "soluciones web para empresas",
-  "desarrollo web Argentina",
-  "sitio web corporativo para profesionales",
-  "web con optimización SEO integrada",
-  "sitio web con alojamiento incluido",
-  "desarrollo web y tecnología para marcas",
-  "creación de web moderna y funcional",
-  "servicio de desarrollo web para consultores",
-  "sitios web hechos a medida para negocios",
+  // Keywords primarias
+  "asesoría digital",
+  "consultoría digital one shot",
+  "estrategia digital 60 minutos",
+  "diagnóstico presencia digital",
+  "plan de acción digital",
+
+  // Keywords secundarias
+  "auditoría digital",
+  "optimización activos digitales",
+  "estrategia redes sociales",
+  "análisis sitio web",
+  "consultoría marketing digital",
+  "sesión estratégica digital",
+  "roadmap digital 90 días",
+  "asesoría marketing online",
+  "plan marketing digital",
+  "consultor transformación digital",
+
+  // Keywords long-tail
+  "cómo mejorar mi presencia digital",
+  "asesoría digital para emprendedores",
+  "análisis competencia digital",
+  "estrategia digital para profesionales independientes",
+  "consultoría digital una sesión",
+  "plan acción marketing digital personalizado",
+  "auditoría web y redes sociales",
+  "estrategia digital desde cero",
+
+  // Keywords locales
+  "asesoría digital Argentina",
+  "consultor digital Buenos Aires",
+  "estrategia digital LATAM",
+
+  // Keywords complementarias
+  "transformación digital",
+  "diagnóstico digital",
+  "sesión estratégica",
+  "plan 90 días",
+  "consultoría express",
+  "auditoría web",
+  "optimización redes sociales",
+  "estrategia marketing",
+  "análisis digital",
+  "asesoría one shot",
 ];
 ---
 
 <LayoutServicios
   dataLinks={dataLinks}
-  title="Panambi - Asesoría One Shot"
-  description="Estrategia, diseño y tecnología para profesionales que quieren destacar. En Panambí desarrollamos sitios web a medida que impulsan tu marca y acompañan tu crecimiento."
+  title="Asesoría Digital One Shot | Estrategia + Plan de Acción en 60 Min | Panambi"
+  description="Asesoría Digital One Shot: sesión estratégica de 60 min + diagnóstico completo + plan de acción de 90 días. Desde u$s 100. Empezá a crecer hoy."
+  serviceType="ProfessionalService"
+  ogImage={imgHero.src}
   keywords={keywords}
 >
   <HeroGralServicios

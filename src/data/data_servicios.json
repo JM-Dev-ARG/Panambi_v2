@@ -1,7 +1,10 @@
 [
   {
-    "title": "Aesoria 1 a 1",
+    "titulo": "Aesoria One Shot",
+    "tituloCardIndex": "Transformamos profesionales en referentes de su mercado",
     "descripcion": "Un programa de asesoramiento 100% personalizado que combina estrategia de marketing digital, optimización del modelo de negocio y desarrollo de marca profesional. Durante un encuentro sincrónico de una hora, trabajamos juntos en el diagnóstico y la planificación de acciones concretas para construir un sistema de atracción y conversión de clientes estable y automatizado, con implementación guiada paso a paso.",
+    "descripcionIndex": "Un encuentro personalizado de una hora donde analizamos tu presencia digital, definimos estrategias de marketing y trazamos un plan de acción para atraer y convertir más clientes de forma efectiva.",
+    "bgColor": "bg-verde5-300",
     "tags": [
       "Estrategia y marketing digital",
       "Auditoría de presencia online",
@@ -9,12 +12,15 @@
       "Desarrollo y posicionamiento de marca",
       "Plan de acción y conversión de clientes"
     ],
-    "img": "/img/mktdigital.avif",
+    "img": "/img/asesoria.avif",
     "href": "/servicios/asesoriaOneShot"
   },
   {
-    "title": "Consultoria personalizada",
+    "titulo": "Consultoria personalizada",
+    "tituloCardIndex": "Estratégica de negocios",
     "descripcion": "Brindamos consultoría personalizada orientada a profesionales y empresas del sector de servicios —como estudios jurídicos, contables, asesores y brockers de seguros y asesores financieros— que buscan optimizar su crecimiento y fortalecer su presencia en el mercado. Nuestro trabajo abarca desde el análisis integral del negocio hasta la implementación de estrategias de marketing digital, identificando oportunidades, mejorando procesos y proponiendo soluciones concretas que impulsan el desarrollo y la expansión de cada marca.",
+    "descripcionIndex": "Acompañamos a profesionales y empresas en el análisis, desarrollo y crecimiento de su negocio, combinando estrategias empresariales y marketing digital para potenciar su posicionamiento en el mercado.",
+    "bgColor": "bg-verde2-300",
     "tags": [
       "Análisis y diagnóstico del negocio",
       "Estrategia de crecimiento empresarial",
@@ -26,8 +32,11 @@
     "href": "/servicios/consultoria"
   },
   {
-    "title": "desarrollo web",
+    "titulo": "desarrollo web",
+    "tituloCardIndex": "Personalizado y a la medida de tu negocio",
     "descripcion": "Diseñamos y desarrollamos sitios web personalizados que combinan funcionalidad, estética y rendimiento. Cada proyecto se adapta a las necesidades y objetivos de la marca, priorizando la experiencia del usuario, la velocidad de carga y la optimización SEO desde la base. Creamos plataformas modernas, seguras y escalables que reflejan la identidad de cada empresa, integrando formularios dinámicos, automatizaciones y estrategias de posicionamiento que impulsan el crecimiento digital.",
+    "descripcionIndex": "Creamos sitios web a medida que combinan diseño, funcionalidad y rendimiento, priorizando la experiencia del usuario y la optimización SEO para impulsar el crecimiento digital de cada empresa.",
+    "bgColor": "bg-violeta2-300",
     "tags": [
       "Diseño web a medida",
       "Optimización SEO y rendimiento",
@@ -39,8 +48,11 @@
     "href": "/servicios/desarrollo_web"
   },
   {
-    "title": "diseño audiovisual",
+    "titulo": "diseño audiovisual",
+    "tituloCardIndex": "Diseño de piezas digitales para tu marca",
     "descripcion": "Creamos contenido audiovisual y piezas gráficas que potencian la comunicación visual de cada marca. Nos encargamos de la edición de audio y video, así como del diseño de materiales digitales para redes sociales, sitios web y campañas publicitarias. Cada producción busca transmitir identidad, emoción y propósito, combinando creatividad, narrativa y técnica para lograr piezas que conecten con la audiencia y refuercen la presencia digital de la marca.",
+    "descripcionIndex": "Producimos piezas gráficas, videos y contenidos visuales que comunican la esencia de cada marca, reforzando su identidad y presencia digital con creatividad y coherencia estética.",
+    "bgColor": "bg-neutral-800",
     "tags": [
       "Edición de audio y video",
       "Diseño de piezas para redes sociales",
