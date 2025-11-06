@@ -1,7 +1,5 @@
 ---
 import { ClientRouter } from "astro:transitions";
-
-// Importación de estilos globales, incluyendo Tailwind CSS
 import "../styles/global.css";
 
 //importacion de imagenes
@@ -18,46 +16,65 @@ interface Props {
   title: string;
   description: string;
   keywords?: string[];
+  ogImage?: string; // Opcional: imagen específica por página
 }
-const { title, description, keywords } = Astro.props;
+const { title, description, keywords, ogImage } = Astro.props;
 
-// Obtenemos la URL base del sitio desde la configuración de Astro.
-const canonicalURL = "https://panambi.net/";
+// URL canónica dinámica por página
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+// Imagen OG dinámica o por defecto
+const ogImageURL =
+  ogImage || new URL(icono_metadata.src, Astro.site).toString();
 
 // Schema genérico para WebPage y Organization
 const schema = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: title,
-  description: description,
-  email: "info@panambi.net",
-  url: canonicalURL,
-  logo: dataSchema.logo,
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: dataSchema.contactPoint.telephone,
-    contactType: "Atención al cliente",
-    areaServed: dataSchema.contactPoint.areaServed,
-    availableLanguage: dataSchema.contactPoint.availableLanguage,
-  },
-  publisher: {
-    "@type": "Organization",
-    name: dataSchema.publisher.name,
-    url: dataSchema.publisher.url,
-    logo: {
-      "@type": "ImageObject",
-      url: dataSchema.publisher.logo.url,
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": `${Astro.site}#organization`,
+      name: "Panambi",
+      description:
+        "Estrategia digital, desarrollo web y contenido visual para profesionales y empresas",
+      email: "info@panambi.net",
+      url: Astro.site?.toString(),
+      logo: {
+        "@type": "ImageObject",
+        url: dataSchema.logo,
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: dataSchema.contactPoint.telephone,
+        contactType: "Atención al cliente",
+        areaServed: dataSchema.contactPoint.areaServed,
+        availableLanguage: dataSchema.contactPoint.availableLanguage,
+      },
+      sameAs: dataSchema.sameAs,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: dataSchema.address.streetAddress,
+        addressLocality: dataSchema.address.addressLocality,
+        addressRegion: dataSchema.address.addressRegion,
+        postalCode: dataSchema.address.postalCode,
+        addressCountry: dataSchema.address.addressCountry,
+      },
     },
-  },
-  sameAs: dataSchema.sameAs,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: dataSchema.address.streetAddress,
-    addressLocality: dataSchema.address.addressLocality,
-    addressRegion: dataSchema.address.addressRegion,
-    postalCode: dataSchema.address.postalCode,
-    addressCountry: dataSchema.address.addressCountry,
-  },
+    {
+      "@type": "WebPage",
+      "@id": canonicalURL,
+      url: canonicalURL,
+      name: title,
+      description: description,
+      isPartOf: {
+        "@id": `${Astro.site}#website`,
+      },
+      about: {
+        "@id": `${Astro.site}#organization`,
+      },
+      inLanguage: "es-AR",
+    },
+  ],
 };
 ---
 
@@ -65,47 +82,55 @@ const schema = {
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href={favicon.src} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
 
+    <!-- Title y Description -->
+    <title>{title}</title>
     <meta name="description" content={description} />
 
+    <!-- Canonical URL dinámica -->
     <link rel="canonical" href={canonicalURL} />
 
-    <meta name="keywords" content={keywords ? keywords.join(", ") : ""} />
+    <!-- Keywords -->
+    {
+      keywords && keywords.length > 0 && (
+        <meta name="keywords" content={keywords.join(", ")} />
+      )
+    }
 
+    <!-- Robots y Author -->
     <meta name="robots" content="index, follow" />
-    <meta name="author" content="Ice-Dev para Panambi" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Panambi" />
+
+    <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href={favicon.src} />
     <link rel="apple-touch-icon" href={favicon.src} />
 
+    <!-- Client Router -->
     <ClientRouter />
 
-    <!-- Schema.org markup for Google -->
+    <!-- Schema.org markup -->
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
-    <!-- End Schema.org markup for Google -->
 
-    <!-- Facebook Meta Tags -->
+    <!-- Facebook Open Graph -->
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={icono_metadata.src} />
-    <!-- End Facebook Meta Tags -->
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Panambi" />
 
-    <!-- Twitter Meta Tags -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content={canonicalURL} />
-    <meta property="twitter:url" content={canonicalURL} />
+    <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={icono_metadata.src} />
-    <!-- End Twitter Meta Tags -->
+    <meta name="twitter:image" content={ogImageURL} />
 
     <!-- Meta Pixel Code -->
-    <!-- End Meta Pixel Code -->
+    <!-- End Meta Pixel Code -->
 
     <!-- Google tag (gtag.js) -->
     <!-- End Google tag (gtag.js) -->

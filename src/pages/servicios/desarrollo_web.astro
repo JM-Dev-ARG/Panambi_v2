@@ -7,6 +7,7 @@ import PlanesPrecios from "@/components/pages/servicios/paginas/desarrolloWeb/Pl
 import dataFaqs from "@/data/faqs_dw.json";
 import Como from "@/components/pages/index/sections/Como.astro";
 import dataComo from "@/data/alcancesPropuestas_dw.json";
+import imgOG from "@/assets/img/hero/web2.avif";
 
 const dataLinks = [
   {
@@ -82,6 +83,8 @@ const keywords = [
   title="Desarrollo Web Profesional a Medida | Diseño UX/UI y SEO | Panambi"
   description="Desarrollamos sitios web a medida con diseño UX/UI profesional, optimización SEO y hosting incluido. Webs rápidas, seguras y responsive para tu negocio."
   keywords={keywords}
+  serviceType="ProfessionalService"
+  ogImage={imgOG.src}
 >
   <HeroDW />
   <UltimoLLamado

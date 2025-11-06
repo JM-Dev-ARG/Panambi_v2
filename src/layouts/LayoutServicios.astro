@@ -1,14 +1,9 @@
 ---
 import { ClientRouter } from "astro:transitions";
-
-// Importación de estilos globales, incluyendo Tailwind CSS
 import "../styles/global.css";
 
-//importacion de imagenes
 import icono_metadata from "@/assets/svg/logotipo.svg";
 import favicon from "@/assets/svg/logotipo.svg";
-
-//data para schema
 import dataSchema from "@/data/seoSchema.json";
 import Footer from "@/components/base-components/Footer.astro";
 import NavbarServicios from "@/components/base-components/navbar/NavbarServicios.astro";
@@ -17,48 +12,114 @@ import NavBarServiciosMovil from "@/components/base-components/navbar/NavBarServ
 interface Props {
   title: string;
   description: string;
-  dataLinks: { href: string; label: string }[];
+  dataLinks: { href: string; label: string }[]; // Links internos de navegación de la página
   keywords?: string[];
+  ogImage?: string;
+  serviceType?: string;
 }
-const { title, description, dataLinks, keywords } = Astro.props;
+const { title, description, dataLinks, keywords, ogImage, serviceType } =
+  Astro.props;
 
-// Obtenemos la URL base del sitio desde la configuración de Astro.
-const site = Astro.site;
-const canonicalURL = new URL(Astro.url.pathname, site);
+// URL canónica dinámica
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-// Schema genérico para WebPage y Organization
+// Imagen OG dinámica o por defecto
+const ogImageURL = ogImage
+  ? new URL(ogImage, Astro.site).toString()
+  : new URL(icono_metadata.src, Astro.site).toString();
+
+// Catálogo de servicios (fijo para el schema)
+const serviceCatalog = [
+  { href: "/servicios/asesoriaOneShot", label: "Asesoría One Shot" },
+  { href: "/servicios/desarrollo_web", label: "Desarrollo Web" },
+  { href: "/servicios/diseno_audiovisual", label: "Diseño Audiovisual" },
+  { href: "/servicios/consultoria", label: "Consultoría Personalizada" },
+];
+
+// Schema optimizado para servicios
 const schema = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: title,
-  description: description,
-  url: canonicalURL.href,
-  logo: dataSchema.logo,
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: dataSchema.contactPoint.telephone,
-    contactType: "Atención al cliente",
-    areaServed: dataSchema.contactPoint.areaServed,
-    availableLanguage: dataSchema.contactPoint.availableLanguage,
-  },
-  publisher: {
-    "@type": "Organization",
-    name: dataSchema.publisher.name,
-    url: dataSchema.publisher.url,
-    logo: {
-      "@type": "ImageObject",
-      url: dataSchema.publisher.logo.url,
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": `${Astro.site}#organization`,
+      name: "Panambi",
+      description:
+        "Estrategia digital, desarrollo web y contenido visual para profesionales y empresas",
+      email: "info@panambi.net",
+      url: Astro.site?.toString(),
+      logo: {
+        "@type": "ImageObject",
+        url: dataSchema.logo,
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: dataSchema.contactPoint.telephone,
+        contactType: "Atención al cliente",
+        areaServed: dataSchema.contactPoint.areaServed,
+        availableLanguage: dataSchema.contactPoint.availableLanguage,
+      },
+      sameAs: dataSchema.sameAs,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: dataSchema.address.streetAddress,
+        addressLocality: dataSchema.address.addressLocality,
+        addressRegion: dataSchema.address.addressRegion,
+        postalCode: dataSchema.address.postalCode,
+        addressCountry: dataSchema.address.addressCountry,
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Servicios Panambi",
+        itemListElement: serviceCatalog.map((service, index) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: service.label,
+            url: new URL(service.href, Astro.site).toString(),
+          },
+          position: index + 1,
+        })),
+      },
     },
-  },
-  sameAs: dataSchema.sameAs,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: dataSchema.address.streetAddress,
-    addressLocality: dataSchema.address.addressLocality,
-    addressRegion: dataSchema.address.addressRegion,
-    postalCode: dataSchema.address.postalCode,
-    addressCountry: dataSchema.address.addressCountry,
-  },
+    {
+      "@type": serviceType || "WebPage",
+      "@id": canonicalURL,
+      url: canonicalURL,
+      name: title,
+      description: description,
+      isPartOf: {
+        "@id": `${Astro.site}#website`,
+      },
+      about: {
+        "@id": `${Astro.site}#organization`,
+      },
+      inLanguage: "es-AR",
+      breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Inicio",
+            item: Astro.site?.toString(),
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Servicios",
+            item: `${Astro.site}servicios`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: title.split("|")[0].trim(),
+            item: canonicalURL,
+          },
+        ],
+      },
+    },
+  ],
 };
 ---
 
@@ -66,53 +127,43 @@ const schema = {
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href={favicon.src} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    <link rel="canonical" href={canonicalURL.href} />
+    <link rel="canonical" href={canonicalURL} />
 
-    <meta name="keywords" content={keywords ? keywords.join(", ") : ""} />
+    {
+      keywords && keywords.length > 0 && (
+        <meta name="keywords" content={keywords.join(", ")} />
+      )
+    }
 
     <meta name="robots" content="index, follow" />
-    <meta name="author" content="Ice-Dev para Panambi" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Panambi" />
+
     <link rel="icon" type="image/svg+xml" href={favicon.src} />
     <link rel="apple-touch-icon" href={favicon.src} />
 
     <ClientRouter />
 
-    <!-- Schema.org markup for Google -->
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
-    <!-- End Schema.org markup for Google -->
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={icono_metadata.src} />
-    <!-- End Facebook Meta Tags -->
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Panambi" />
 
-    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content={canonicalURL.hostname} />
-    <meta property="twitter:url" content={canonicalURL.href} />
+    <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={icono_metadata.src} />
-    <!-- End Twitter Meta Tags -->
-
-    <!-- Meta Pixel Code -->
-    <!-- End Meta Pixel Code -->
-
-    <!-- Google tag (gtag.js) -->
-    <!-- End Google tag (gtag.js) -->
-
-    <!-- Metricool tracker -->
-    <!-- End Metricool tracker -->
+    <meta name="twitter:image" content={ogImageURL} />
   </head>
   <body>
     <NavbarServicios dataLinks={dataLinks} />
