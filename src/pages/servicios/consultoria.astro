@@ -10,7 +10,8 @@ import Como from "@/components/pages/index/sections/Como.astro";
 import imgHero from "@/assets/img/hero/mktdigital.avif";
 import Dolor from "@/components/pages/servicios/paginas/seccionesGrales/Dolor.astro";
 import Oferta from "@/components/pages/servicios/paginas/seccionesGrales/Oferta.astro";
-import HeroGralServicios from "@/components/pages/servicios/paginas/seccionesGrales/HeroGralServicios.astro";
+
+import HeroPaginaServicios from "@/components/pages/servicios/paginas/seccionesGrales/HeroPaginaServicios.astro";
 
 const dataLinks = [
   {
@@ -56,13 +57,13 @@ const keywords = [
   description="Estrategia, diseño y tecnología para profesionales que quieren destacar. En Panambí desarrollamos sitios web a medida que impulsan tu marca y acompañan tu crecimiento."
   keywords={keywords}
 >
-  <HeroGralServicios
+  <HeroPaginaServicios
     idContainer="hero_asesoria_1a1"
     titulo="Asesoría One Shot"
     subtitulo=" Digitaliza tu negocio de servicios"
-    img=`${imgHero.src}`
-    textoTitulo="Transformación digital en 60 minutos"
-    textoDescripcion=" Una sesión estratégica que analiza tu presencia digital, identifica tus puntos ciegos y te entrega un plan de acción concreto para empezar a crecer hoy mismo."
+    textoLibreTitulo="Transformación digital en 60 minutos"
+    textoLibreSubtitulo="Una sesión estratégica diseñada para profesionales independientes que analiza tu presencia digital actual, identifica las oportunidades que estás dejando pasar y te entrega un plan de acción claro para captar más clientes y facturar más."
+    img={imgHero.src}
   />
   <UltimoLLamado
     idContainer="call_to_action_asesoria_1"

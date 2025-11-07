@@ -5,8 +5,8 @@ import CardComo from "@/components/base-components/CardComo.astro";
 import TituloCards from "@/components/base-components/TituloCards.astro";
 interface Props {
   idContainer: string;
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   textNegro: boolean;
   bgColor: string;
   dataText: Array<{ titulo: string; descripcion: string }>;

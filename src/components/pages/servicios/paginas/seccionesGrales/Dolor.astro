@@ -6,6 +6,7 @@ import Titulo from "@/components/base-components/Titulo.astro";
 import dataCards from "@/data/dolorAsesoria_1a1.json";
 import dataSoluciones from "@/data/solucionesAsesoria_1a1.json";
 import CardDolor from "./CardDolor.astro";
+import Boton from "@/components/base-components/Boton.astro";
 ---
 
 <Container id="problemas_destinatario_soluciones_asesoria">
@@ -27,8 +28,8 @@ import CardDolor from "./CardDolor.astro";
     class="mt-[40px] flex h-full w-full flex-col items-center justify-center sm:w-[90%] lg:w-[80%]"
   >
     <Titulo
-      title="Si algo de esto te pasa, tenemos que hablar"
-      subtitle="problemas comunes, soluciones concretas"
+      title="Sabemos exactamente qué frena tu negocio"
+      subtitle="Y cómo acelerarlo"
     />
   </div>
   <div
@@ -44,6 +45,9 @@ import CardDolor from "./CardDolor.astro";
         />
       ))
     }
+  </div>
+  <div class="mx-auto mt-4 grid w-full place-items-center">
+    <Boton texto="Reserva tu asesoria" href="/" />
   </div>
 
   <style>
