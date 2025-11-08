@@ -1,7 +1,7 @@
 [
   {
     "pregunta": "¿Para quién es esta asesoría?",
-    "respuesta": "Para profesionales independientes, estudios de servicios o emprendedores que ya tienen presencia digital (web, redes, anuncios) pero sienten que no están obteniendo los resultados esperados. Si invertís tiempo y recursos pero no sabés si vas en la dirección correcta, esta sesión es para vos."
+    "respuesta": "Para profesionales independientes o emprendedores de servicios, que tengan o no presencia digital (web, redes, anuncios) y que buscan mejorarla o crearla. Si invertís tiempo y recursos pero no sabés si vas en la dirección correcta, esta sesión es para vos."
   },
   {
     "pregunta": "¿Qué pasa si no tengo web o redes activas todavía?",
@@ -17,6 +17,6 @@
   },
   {
     "pregunta": "¿Puedo implementar las recomendaciones por mi cuenta o necesito contratar más servicios?",
-    "respuesta": "El objetivo es que puedas ejecutar todo vos mismo con el plan que te entregamos. Te damos las herramientas, prioridades y pasos claros para que avances con autonomía. Si luego querés apoyo técnico o delegar implementación, podemos hablarlo, pero no es obligatorio ni parte del servicio de asesoría."
+    "respuesta": "La asesoría te entrega un plan claro y accionable para que puedas implementar por tu cuenta. Sin embargo, si preferís acelerar resultados, delegar la ejecución técnica o contar con acompañamiento continuo, ofrecemos servicios complementarios de implementación y gestión digital que no están incluidos en la sesión de asesoría."
   }
 ]

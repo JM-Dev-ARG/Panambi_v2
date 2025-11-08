@@ -2,6 +2,7 @@
 import LogotipoAnimado from "../svg/LogotipoAnimado.astro";
 import Carrousel from "../Carrousel.astro";
 import dataLinks from "@/data/link_navbar_web.json";
+import linksServicios from "@/data/link_servicios_navbar.json";
 import LinkNavBarWeb from "./LinkNavBarWeb.astro";
 
 const currentPage = Astro.url.pathname.split("/")[1];
@@ -53,45 +54,26 @@ const currentPage = Astro.url.pathname.split("/")[1];
     class="backdrop-blur-xs navbar__content bg-negro z-50 flex h-[0px] w-[30%] min-w-[470px] scale-0 items-center justify-center overflow-hidden rounded-xl p-1 opacity-0 transition-all duration-500"
   >
     <!-- Contenido para servicios -->
-    <div id="servicios-content" class="masacara_rodillo h-full w-full">
+    <div id="servicios-content" class="h-full w-full">
       <div
-        class="transform-3d bg-negro flex h-full w-full flex-col items-center justify-center"
+        class="transform-3d font-titulo flex h-full w-full flex-col items-center justify-center text-2xl font-semibold text-neutral-100"
       >
-        <div class="box_rodillo_animado">
-          <p class="texto__rodillo_animado" style="--p:1">Desarrollo Web</p><p
-            class="texto__rodillo_animado"
-            style="--p:2"
-          >
-            Consultoría
-          </p><p class="texto__rodillo_animado" style="--p:3">
-            Diseño de Marca
-          </p><p class="texto__rodillo_animado" style="--p:4">
-            Marketing Digital
-          </p><p class="texto__rodillo_animado" style="--p:5">
-            Content Creation
-          </p><p class="texto__rodillo_animado" style="--p:6">Social Media</p><p
-            class="texto__rodillo_animado"
-            style="--p:7"
-          >
-            Estrategias
-          </p><p class="texto__rodillo_animado" style="--p:8">
-            Edición de Video
-          </p>
-          <p class="texto__rodillo_animado" style="--p:9">Desarrollo Web</p><p
-            class="texto__rodillo_animado"
-            style="--p:10"
-          >
-            Consultoría
-          </p><p class="texto__rodillo_animado" style="--p:11">
-            Diseño de Marca
-          </p><p class="texto__rodillo_animado" style="--p:12">
-            Marketing Digital
-          </p><p class="texto__rodillo_animado" style="--p:13">
-            Content Creation
-          </p><p class="texto__rodillo_animado" style="--p:14">Social Media</p>
-          <p class="texto__rodillo_animado" style="--p:15">Estrategias</p>
-          <p class="texto__rodillo_animado" style="--p:16">Edición de Video</p>
-        </div>
+        {
+          linksServicios.map((link) => (
+            <a
+              class="transform-3d group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden"
+              href={`/${link.href}`}
+              title={`Link a sección ${link.label}`}
+            >
+              <p class="abasolute transform-3d -top-1/2 left-0 translate-y-1/2 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0">
+                {link.label}
+              </p>
+              <p class="abasolute transform-3d -top-full left-0 opacity-0 transition-all duration-500 group-hover:-translate-y-1/2 group-hover:opacity-100">
+                {link.label}
+              </p>
+            </a>
+          ))
+        }
       </div>
     </div>
 
@@ -109,56 +91,6 @@ const currentPage = Astro.url.pathname.split("/")[1];
     </div>
   </div>
 </nav>
-
-<style>
-  .masacara_rodillo {
-    /* isolation: isolate; */
-    mask-image: linear-gradient(
-      180deg,
-      rgba(10, 10, 10, 0.05) 0%,
-      rgba(0, 0, 0, 1) 40%,
-      rgba(0, 0, 0, 1) 60%,
-      rgba(10, 10, 10, 0.05) 100%
-    );
-    -webkit-mask-image: linear-gradient(
-      180deg,
-      rgba(10, 10, 10, 0.05) 0%,
-      rgba(0, 0, 0, 1) 40%,
-      rgba(0, 0, 0, 1) 60%,
-      rgba(10, 10, 10, 0.05) 100%
-    );
-  }
-  .box_rodillo_animado {
-    transform-style: preserve-3d;
-    background-color: #1a181b;
-    animation: animate 25s linear infinite;
-  }
-
-  .box_rodillo_animado .texto__rodillo_animado {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 38px;
-    color: #e8e8e8;
-    transform: translate(-50%, -50%) rotateX(calc(var(--p) * 22.5deg))
-      translateZ(100px);
-    white-space: nowrap;
-    font-weight: 600;
-    transform-style: preserve-3d;
-  }
-
-  @keyframes animate {
-    0% {
-      transform: perspective(1000px) rotateX(0deg);
-    }
-    100% {
-      transform: perspective(1000px) rotateX(-360deg);
-    }
-  }
-</style>
 
 <script>
   import dataEquipo from "../../../data/equipo.json";
@@ -201,7 +133,11 @@ const currentPage = Astro.url.pathname.split("/")[1];
       }
 
       if (target === "servicios") {
-        if (carrousel) carrouselContainer.style.display = "none";
+        if (carrousel) {
+          navContent.classList.remove("bg-negro");
+          navContent.classList.add("bg-negro/85");
+        }
+        carrouselContainer.style.display = "none";
         if (serviciosContent) {
           serviciosContent.style.display = "flex";
           navContent.classList.add("mascara");
@@ -209,13 +145,15 @@ const currentPage = Astro.url.pathname.split("/")[1];
       } else {
         if (serviciosContent) serviciosContent.style.display = "none";
         if (carrousel) {
+          navContent.classList.remove("bg-negro/85");
+          navContent.classList.add("bg-negro");
           carrouselContainer.style.display = "block";
           navContent.classList.remove("mascara");
           const data = navData[target] || [];
           let carouselItemsHTML = "";
           data.forEach((item) => {
             carouselItemsHTML += `<div class="flex h-full w-[180px] flex-col items-center justify-center text-center ">
-                <img src="${item.img}" alt="${item.title}" title="${item.title}" loading="lazy" height="auto" width="auto" class="h-full  object-cover rounded-xl" />
+                <img src="${item.img}" alt="${item.titulo}" title="${item.titulo}" loading="lazy" height="auto" width="auto" class="h-full  object-cover rounded-xl" />
               </div>`;
           });
           carrousel.innerHTML = carouselItemsHTML;
