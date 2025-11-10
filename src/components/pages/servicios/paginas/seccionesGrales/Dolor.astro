@@ -1,20 +1,45 @@
 ---
 import CardPlanesDW from "@/components/base-components/CardPlanesDW.astro";
-import CardServicios from "@/components/base-components/CardServicios.astro";
 import Container from "@/components/base-components/Container.astro";
 import Titulo from "@/components/base-components/Titulo.astro";
-import dataCards from "@/data/dolorAsesoria_1a1.json";
-import dataSoluciones from "@/data/solucionesAsesoria_1a1.json";
 import CardDolor from "./CardDolor.astro";
 import Boton from "@/components/base-components/Boton.astro";
+
+interface Props {
+  idContainer?: string;
+  titulo?: string;
+  subtitle?: string;
+  textoBoton?: string;
+  hrefBoton?: string;
+  dataDolor: Array<{
+    titulo: string;
+    descripcion: string;
+  }>;
+  dataSoluciones: Array<{
+    titulo: string;
+    items: Array<string>;
+    descripcion: string;
+    clase?: string;
+  }>;
+}
+
+const {
+  idContainer,
+  titulo,
+  subtitle,
+  dataDolor,
+  dataSoluciones,
+  hrefBoton,
+  textoBoton,
+} = Astro.props;
 ---
 
-<Container id="problemas_destinatario_soluciones_asesoria">
+<Container id={idContainer}>
   <div
     class="card__container mt-5 flex flex-col items-center justify-center gap-8 lg:grid"
   >
     {
-      dataCards.map((card) => (
+      dataDolor.map((card) => (
         <CardDolor
           subtitulo={card.titulo}
           descripcion={card.descripcion}
@@ -27,10 +52,7 @@ import Boton from "@/components/base-components/Boton.astro";
   <div
     class="mt-[40px] flex h-full w-full flex-col items-center justify-center sm:w-[90%] lg:w-[80%]"
   >
-    <Titulo
-      title="Sabemos exactamente qué frena tu negocio"
-      subtitle="Y cómo acelerarlo"
-    />
+    <Titulo title={titulo} subtitle={subtitle} />
   </div>
   <div
     class="card__container mt-5 flex flex-col items-center justify-center gap-8 lg:grid"
@@ -47,7 +69,7 @@ import Boton from "@/components/base-components/Boton.astro";
     }
   </div>
   <div class="mx-auto mt-4 grid w-full place-items-center">
-    <Boton texto="Reserva tu asesoria" href="https://mpago.li/22AvAt7" />
+    <Boton texto={`${textoBoton}`} href={`${hrefBoton}`} />
   </div>
 
   <style>

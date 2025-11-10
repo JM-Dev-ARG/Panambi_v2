@@ -1,0 +1,35 @@
+[
+    {
+        "titulo": "Digitalizá tu negocio",
+        "clase": "a",
+        "descripcion": "Si tu presencia digital es débil o inexistente, construimos juntos la infraestructura completa: desde tu posicionamiento online hasta tus canales de comunicación. Pasás de ser invisible a tener presencia profesional y estratégica en el entorno digital.",
+        "items": [
+            "Definimos tu identidad y posicionamiento digital",
+            "Diseñamos tu ecosistema de canales (web, redes, email)",
+            "Establecemos tu mensaje y propuesta de valor clara",
+            "Armamos tu plan de lanzamiento o relanzamiento digital"
+        ]
+    },
+    {
+        "titulo": "Optimizá tu captación",
+        "clase": "b",
+        "descripcion": "Dejás de depender del azar o el boca en boca. Diseñamos tu sistema de marketing digital: embudo de conversión, contenido estratégico y canales optimizados que trabajan para vos las 24 horas generando oportunidades de negocio.",
+        "items": [
+            "Construimos tu embudo de conversión completo",
+            "Definimos tu estrategia de contenido y comunicación",
+            "Automatizamos procesos de captación de leads",
+            "Configuramos métricas para medir rendimiento real"
+        ]
+    },
+    {
+        "titulo": "Maximizá tus resultados",
+        "clase": "c",
+        "descripcion": "Transformamos tu modelo operativo para que cada peso invertido y cada hora trabajada genere mayor retorno. Optimizamos tu oferta, tus precios, tu comunicación y tus procesos para aumentar tu rentabilidad sin trabajar más horas.",
+        "items": [
+            "Revisamos y optimizamos tu estructura de precios",
+            "Refinamos tu oferta para mayor conversión",
+            "Identificamos cuellos de botella operativos",
+            "Diseñamos estrategias de upselling y fidelización"
+        ]
+    }
+]

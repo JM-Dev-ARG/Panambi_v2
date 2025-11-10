@@ -1,17 +1,20 @@
 ---
 import LayoutServicios from "@/layouts/LayoutServicios.astro";
 import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
-import dataComo from "@/data/alcancesPropuestas_asesoria.json";
 import PreguntasFrecuentes from "@/components/pages/servicios/paginas/desarrolloWeb/PreguntasFrecuentes.astro";
-import dataFaqs from "@/data/faqs_asesoria.json";
-import dataPlan from "@/data/planAsesoria_1a1.json";
-
 import Como from "@/components/pages/index/sections/Como.astro";
-import imgHero from "@/assets/img/hero/mktdigital.avif";
+import imgHero from "@/assets/img/hero/consultoria.avif";
 import Dolor from "@/components/pages/servicios/paginas/seccionesGrales/Dolor.astro";
 import Oferta from "@/components/pages/servicios/paginas/seccionesGrales/Oferta.astro";
 
 import HeroPaginaServicios from "@/components/pages/servicios/paginas/seccionesGrales/HeroPaginaServicios.astro";
+
+//datos para componentes
+import dataSoluciones from "@/data/solucionesConsultoria.json";
+import dataDolor from "@/data/dolorConsultoria.json";
+import dataFaqs from "@/data/faqs_consultoria.json";
+import dataPlan from "@/data/planConsultoria.json";
+import dataComo from "@/data/alcancesPropuestas_consultoria.json";
 
 const dataLinks = [
   {
@@ -58,27 +61,35 @@ const keywords = [
   keywords={keywords}
 >
   <HeroPaginaServicios
-    idContainer="hero_asesoria_1a1"
-    titulo="Asesoría One Shot"
-    subtitulo=" Digitaliza tu negocio de servicios"
-    textoLibreTitulo="Transformación digital en 60 minutos"
-    textoLibreSubtitulo="Una sesión estratégica diseñada para profesionales independientes que analiza tu presencia digital actual, identifica las oportunidades que estás dejando pasar y te entrega un plan de acción claro para captar más clientes y facturar más."
+    idContainer="hero_consultoria_estrategica"
+    titulo="CONSULTORÍA ESTRATÉGICA DE MARKETING Y NEGOCIO"
+    subtitulo="Llevá tu negocio de servicios al siguiente nivel"
+    textoLibreTitulo="Digitalizá, optimizá y maximizá el rendimiento de tu negocio de servicios"
+    textoLibreSubtitulo="Un programa de consultoría estratégica de 4 semanas diseñado para profesionales de servicios que quieren llevar su negocio al entorno digital, optimizar sus procesos de captación y maximizar su rentabilidad. Trabajamos juntos para transformar tu presencia digital, construir sistemas de marketing efectivos y crear un modelo de negocio escalable que genera oportunidades de forma predecible."
     img={imgHero.src}
   />
   <UltimoLLamado
     idContainer="call_to_action_asesoria_1"
     hrefBoton="/contacto"
-    textoBoton="Reserva tu asesoria"
-    titulo="¿Qué estás esperando?"
-    subtitulo="Una hora puede cambiar todo tu enfoque"
+    textoBoton="Reserva tu consultoría"
+    titulo="Pasar a la acción cambia los resultados"
+    subtitulo="Tomá la decisión que te acerca al negocio que querés liderar"
     bgColor="bg-verde2-300"
     textNegro={true}
   />
-  <Dolor />
+  <Dolor
+    idContainer="dolor_consultoria"
+    titulo="Sabemos exactamente qué frena tu negocio"
+    subtitle="Y cómo acelerarlo"
+    dataDolor={dataDolor}
+    dataSoluciones={dataSoluciones}
+    hrefBoton="/contacto"
+    textoBoton="Reserva tu consultoría"
+  />
   <Como
     idContainer="alcances_propuestas_asesoria_1a1"
-    title="Lo que llevás buscando hace meses"
-    subtitle="respuestas claras, estrategia sólida y pasos concretos"
+    title="Tu hoja de ruta hacia el éxito digital"
+    subtitle="convertí tu visión en una estrategia clara y accionable"
     dataText={dataComo}
     textNegro={true}
     bgColor="bg-violeta2-400"

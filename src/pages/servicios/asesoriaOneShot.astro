@@ -12,6 +12,10 @@ import Dolor from "@/components/pages/servicios/paginas/seccionesGrales/Dolor.as
 import Oferta from "@/components/pages/servicios/paginas/seccionesGrales/Oferta.astro";
 import HeroPaginaServicios from "@/components/pages/servicios/paginas/seccionesGrales/HeroPaginaServicios.astro";
 
+//datos para componentes
+import dataSoluciones from "@/data/solucionesAsesoria_1a1.json";
+import dataDolor from "@/data/dolorAsesoria_1a1.json";
+
 const dataLinks = [
   {
     href: "/servicios/asesoriaOneShot/#problemas_destinatario_soluciones_asesoria",
@@ -105,7 +109,15 @@ const keywords = [
     bgColor="bg-verde2-300"
     textNegro={true}
   />
-  <Dolor />
+  <Dolor
+    idContainer="problemas_destinatario_soluciones_asesoria"
+    titulo="Sabemos exactamente qué frena tu negocio"
+    subtitle="Y cómo acelerarlo"
+    dataDolor={dataDolor}
+    dataSoluciones={dataSoluciones}
+    hrefBoton="https://mpago.li/22AvAt7"
+    textoBoton="Reserva tu asesoria"
+  />
   <Como
     idContainer="alcances_propuestas_asesoria_1a1"
     title="Cómo funciona"
