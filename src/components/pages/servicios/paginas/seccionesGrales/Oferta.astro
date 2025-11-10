@@ -6,7 +6,7 @@ import PreciosItems from "../desarrolloWeb/PreciosItems.astro";
 interface Props {
   idContainer: string;
   titulo: string;
-  subtitle: string;
+  subtitulo: string;
   dataText: {
     titulo: string;
     descripcion: string;
@@ -15,14 +15,14 @@ interface Props {
   };
 }
 
-const { idContainer, titulo, subtitle, dataText } = Astro.props;
+const { idContainer, titulo, subtitulo, dataText } = Astro.props;
 ---
 
 <Container id={idContainer}>
   <div
     class="flex h-full w-full flex-col items-center justify-center sm:w-[90%] lg:w-[80%]"
   >
-    <Titulo title={titulo} subtitle={subtitle} />
+    <Titulo title={titulo} subtitle={subtitulo} />
   </div>
 
   <div
@@ -33,7 +33,7 @@ const { idContainer, titulo, subtitle, dataText } = Astro.props;
     >
       <div class="flex w-full flex-col items-center gap-8 sm:flex-row">
         <p
-          class="font-titulo text-center text-5xl font-black uppercase sm:text-left"
+          class="font-titulo text-center text-4xl font-black uppercase sm:text-left sm:text-5xl"
         >
           {dataText.titulo}
         </p>

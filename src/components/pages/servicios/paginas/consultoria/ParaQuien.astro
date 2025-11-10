@@ -1,0 +1,105 @@
+---
+import Container from "@/components/base-components/Container.astro";
+import TextoLibre from "@/components/base-components/TextoLibre.astro";
+import Titulo from "@/components/base-components/Titulo.astro";
+
+interface Props {
+  idContainer?: string;
+  titulo?: string;
+  subtitulo?: string;
+  img?: string;
+  textoLibreTitulo?: string;
+  textoLibreSubtitulo?: string;
+  origen?: string;
+  marginTop?: string;
+  textNegro?: boolean;
+  dataText?:
+    | Array<{
+        titulo: string;
+        items: string[];
+      }>
+    | undefined;
+}
+
+const {
+  idContainer,
+  titulo,
+  subtitulo,
+  textoLibreTitulo,
+  textoLibreSubtitulo,
+  dataText,
+  textNegro,
+  marginTop,
+} = Astro.props;
+---
+
+<Container id={idContainer}>
+  <div
+    class="flex h-full w-full items-end justify-center sm:w-[80%] lg:w-[70%]"
+  >
+    <Titulo title={titulo} subtitle={subtitulo} />
+  </div>
+
+  <TextoLibre
+    marginTop={marginTop}
+    textNegro={true}
+    titulo={textoLibreTitulo}
+    subtitulo={textoLibreSubtitulo}
+  />
+
+  <div
+    class="mt-8 flex w-full flex-col items-center justify-around gap-8 sm:h-[500px] sm:flex-row lg:h-[400px]"
+  >
+    <div
+      class="border-negro text-negro shadow-Panambi flex h-full flex-1 flex-col items-start justify-start gap-8 rounded-3xl border-2 p-4"
+    >
+      <p
+        class="font-titulo text-center text-5xl font-black uppercase sm:text-left"
+      >
+        {dataText?.[0].titulo}
+      </p>
+      <div class="flex w-full flex-col items-start gap-2">
+        {
+          dataText?.[0].items.map((card) => (
+            <article
+              class={`flex items-start justify-center ${
+                textNegro ? "text-negro" : "text-neutral-100"
+              }`}
+            >
+              <h3 class="flex items-center justify-start gap-2 text-sm font-semibold uppercase sm:gap-4 sm:text-base">
+                <p>✅</p>
+                {card}
+              </h3>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+
+    <div
+      class="border-negro text-negro shadow-Panambi flex h-full flex-1 flex-col items-start justify-start gap-8 rounded-3xl border-2 p-4"
+    >
+      <p
+        class="font-titulo text-center text-5xl font-black uppercase sm:text-left"
+      >
+        {dataText?.[1].titulo}
+      </p>
+      <div class="flex w-full flex-col items-start gap-2">
+        {
+          dataText?.[1].items.map((card) => (
+            <article
+              class={`flex items-start justify-center ${
+                textNegro ? "text-negro" : "text-neutral-100"
+              }`}
+            >
+              <h3 class="flex items-center justify-start gap-2 text-sm font-semibold uppercase sm:gap-4 sm:text-base">
+                <p>❌</p>
+                {card}
+              </h3>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Container>

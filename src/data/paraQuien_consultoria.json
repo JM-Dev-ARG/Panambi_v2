@@ -1,0 +1,20 @@
+[
+    {
+        "titulo": "Es para mi",
+        "items": [
+            "Tenés experiencia y clientes, pero tu presencia digital es débil o inexistente",
+            "Invertís en marketing digital pero no obtenés resultados claros",
+            "Dependés del boca en boca y querés un sistema de captación escalable",
+            "Buscás maximizar tu rentabilidad sin aumentar tus horas de trabajo",
+            "Estás comprometido a implementar cambios estratégicos en tu negocio"
+        ]
+    },
+    {
+        "titulo": "No es para mi",
+        "items": [
+            "Estás empezando desde cero sin clientes ni experiencia (mejor empezar con la Asesoría One Shot)",
+            "Buscás resultados mágicos sin involucrarte en el proceso estratégico",
+            "No estás dispuesto a adaptar tu comunicación y procesos al entorno digital"
+        ]
+    }
+]

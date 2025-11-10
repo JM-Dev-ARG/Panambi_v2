@@ -6,7 +6,7 @@ import Como from "@/components/pages/index/sections/Como.astro";
 import imgHero from "@/assets/img/hero/consultoria.avif";
 import Dolor from "@/components/pages/servicios/paginas/seccionesGrales/Dolor.astro";
 import Oferta from "@/components/pages/servicios/paginas/seccionesGrales/Oferta.astro";
-
+import ParaQuien from "@/components/pages/servicios/paginas/consultoria/ParaQuien.astro";
 import HeroPaginaServicios from "@/components/pages/servicios/paginas/seccionesGrales/HeroPaginaServicios.astro";
 
 //datos para componentes
@@ -15,19 +15,20 @@ import dataDolor from "@/data/dolorConsultoria.json";
 import dataFaqs from "@/data/faqs_consultoria.json";
 import dataPlan from "@/data/planConsultoria.json";
 import dataComo from "@/data/alcancesPropuestas_consultoria.json";
+import dataParaQuien from "@/data/paraQuien_consultoria.json";
 
 const dataLinks = [
   {
-    href: "/servicios/desarrollo_web/#alcances_propuestas",
-    label: "Alcances",
+    href: "/servicios/consultoria/#problemas_destinatario_soluciones_consultoria",
+    label: "Solución",
   },
   {
-    href: "/servicios/desarrollo_web/#planes_desarrollo_web",
-    label: "Precios",
+    href: "/servicios/consultoria/#alcances_propuestas_consultoria",
+    label: "Propuesta",
   },
   {
-    href: "/servicios/desarrollo_web/#preguntas_frecuentes_desarrollo_web",
-    label: "Preguntas",
+    href: "/servicios/consultoria/#oferta_consultoria",
+    label: "Precio",
   },
   {
     href: "/servicios",
@@ -69,46 +70,57 @@ const keywords = [
     img={imgHero.src}
   />
   <UltimoLLamado
-    idContainer="call_to_action_asesoria_1"
+    idContainer="call_to_consultoria"
     hrefBoton="/contacto"
-    textoBoton="Reserva tu consultoría"
-    titulo="Pasar a la acción cambia los resultados"
-    subtitulo="Tomá la decisión que te acerca al negocio que querés liderar"
+    textoBoton="Quiero transformar mi negocio"
+    titulo="¿Listo para transformar tu negocio?"
+    subtitulo="4 semanas que cambian tu forma de captar clientes y crecer"
     bgColor="bg-verde2-300"
     textNegro={true}
   />
   <Dolor
-    idContainer="dolor_consultoria"
-    titulo="Sabemos exactamente qué frena tu negocio"
-    subtitle="Y cómo acelerarlo"
+    idContainer="problemas_destinatario_soluciones_consultoria"
+    titulo="Cómo transformamos tu negocio en 4 semanas"
+    subtitle="tres pilares que sostienen tu crecimiento digital"
     dataDolor={dataDolor}
     dataSoluciones={dataSoluciones}
     hrefBoton="/contacto"
     textoBoton="Reserva tu consultoría"
   />
   <Como
-    idContainer="alcances_propuestas_asesoria_1a1"
-    title="Tu hoja de ruta hacia el éxito digital"
-    subtitle="convertí tu visión en una estrategia clara y accionable"
+    idContainer="alcances_propuestas_consultoria"
+    title="Qué recibís en las 4 semanas"
+    subtitle="entregables concretos que podés implementar desde el día uno"
     dataText={dataComo}
     textNegro={true}
     bgColor="bg-violeta2-400"
   />
 
   <Oferta
-    idContainer="oferta_asesoria_1a1"
-    titulo="En solo 60 minutos"
-    subtitle="Podes cambiarlo todo"
+    idContainer="oferta_consultoria"
+    titulo="Un mes que lo cambia todo"
+    subtitulo="de modelo tradicional a negocio digital predecible y rentable"
     dataText={dataPlan}
   />
+  <ParaQuien
+    idContainer="para_quien_consultoria"
+    titulo="¿Este programa es para vos?"
+    subtitulo="Si sos profesional de servicios y querés escalar, seguí leyendo"
+    textoLibreSubtitulo="Esta consultoría está diseñada específicamente para profesionales y emprendedores de servicios que ya tienen experiencia y clientes, pero necesitan digitalizar y escalar su negocio: abogados que buscan captar clientes más allá de referencias presenciales, contadores que quieren diferenciarse y atraer mejores clientes, corredores inmobiliarios que necesitan presencia digital profesional, asesores de seguros que buscan generar oportunidades de forma predecible, y consultores, coaches o arquitectos que quieren transformar su modelo tradicional en un sistema escalable y rentable."
+    marginTop="mt-0"
+    dataText={dataParaQuien}
+    textNegro={true}
+  />
+
   <UltimoLLamado
-    idContainer="call_to_action_asesoria_2"
+    idContainer="call_to_action_consultoria_2"
     hrefBoton="/contacto"
-    textoBoton="Reserva tu asesoria"
-    titulo="Empezá hoy a crecer con claridad"
-    subtitulo="reservá tu sesión estratégica y transformá tu negocio digital en 7 días"
+    textoBoton="Hablemos"
+    titulo="Tu negocio no puede esperar más"
+    subtitulo="conversemos sobre tu proyecto"
     bgColor="bg-verde2-300"
     textNegro={true}
   />
+
   <PreguntasFrecuentes dataFaqs={dataFaqs} />
 </LayoutServicios>
