@@ -2,7 +2,7 @@
 
 Este es el repositorio del sitio web institucional de **Panambi**, una agencia de marketing digital especializada en desarrollo web, diseño audiovisual y consultoría. El proyecto fue construido con [Astro](https://astro.build) y desplegado en [Netlify](https://www.netlify.com/), enfocado en ofrecer una experiencia de usuario veloz, accesible y con un diseño moderno.
 
-![Captura del sitio](https://panambi.net/public/img/panambiCaptura.png)
+![Captura del sitio](https://panambi.net/img/panambiCaptura.png)
 
 ---
 
