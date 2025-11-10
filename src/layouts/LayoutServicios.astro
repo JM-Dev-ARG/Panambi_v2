@@ -12,13 +12,31 @@ import NavBarServiciosMovil from "@/components/base-components/navbar/NavBarServ
 interface Props {
   title: string;
   description: string;
-  dataLinks: { href: string; label: string }[]; // Links internos de navegación de la página
+  dataLinks: { href: string; label: string }[];
   keywords?: string[];
   ogImage?: string;
   serviceType?: string;
+  serviceSchema?: object;
+  // ✅ Parámetros opcionales para personalizar OG y Twitter
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
 }
-const { title, description, dataLinks, keywords, ogImage, serviceType } =
-  Astro.props;
+
+const {
+  title,
+  description,
+  dataLinks,
+  keywords,
+  ogImage,
+  serviceType,
+  serviceSchema,
+  ogTitle,
+  ogDescription,
+  twitterTitle,
+  twitterDescription,
+} = Astro.props;
 
 // URL canónica dinámica
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
@@ -28,97 +46,121 @@ const ogImageURL = ogImage
   ? new URL(ogImage, Astro.site).toString()
   : new URL(icono_metadata.src, Astro.site).toString();
 
+// ✅ Usar valores personalizados o por defecto
+const finalOgTitle = ogTitle || title;
+const finalOgDescription = ogDescription || description;
+const finalTwitterTitle = twitterTitle || ogTitle || title;
+const finalTwitterDescription =
+  twitterDescription || ogDescription || description;
+
 // Catálogo de servicios (fijo para el schema)
 const serviceCatalog = [
   { href: "/servicios/asesoriaOneShot", label: "Asesoría One Shot" },
   { href: "/servicios/desarrollo_web", label: "Desarrollo Web" },
   { href: "/servicios/diseno_audiovisual", label: "Diseño Audiovisual" },
-  { href: "/servicios/consultoria", label: "Consultoría Personalizada" },
+  { href: "/servicios/consultoria", label: "Consultoría Estratégica" },
 ];
 
-// Schema optimizado para servicios
+// Schema base de la organización
+const organizationSchema = {
+  "@type": "ProfessionalService",
+  "@id": `${Astro.site}#organization`,
+  name: "Panambi",
+  description:
+    "Estrategia digital, desarrollo web y contenido visual para profesionales y empresas",
+  email: "info@panambi.net",
+  url: Astro.site?.toString(),
+  logo: {
+    "@type": "ImageObject",
+    url: dataSchema.logo,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: dataSchema.contactPoint.telephone,
+    contactType: "Atención al cliente",
+    areaServed: dataSchema.contactPoint.areaServed,
+    availableLanguage: dataSchema.contactPoint.availableLanguage,
+  },
+  sameAs: dataSchema.sameAs,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: dataSchema.address.streetAddress,
+    addressLocality: dataSchema.address.addressLocality,
+    addressRegion: dataSchema.address.addressRegion,
+    postalCode: dataSchema.address.postalCode,
+    addressCountry: dataSchema.address.addressCountry,
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Servicios Panambi",
+    itemListElement: serviceCatalog.map((service, index) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: service.label,
+        url: new URL(service.href, Astro.site).toString(),
+      },
+      position: index + 1,
+    })),
+  },
+};
+
+// Schema de la página web
+const webPageSchema = {
+  "@type": serviceType || "WebPage",
+  "@id": canonicalURL,
+  url: canonicalURL,
+  name: title,
+  description: description,
+  isPartOf: {
+    "@id": `${Astro.site}#website`,
+  },
+  about: {
+    "@id": `${Astro.site}#organization`,
+  },
+  inLanguage: "es-AR",
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: Astro.site?.toString(),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Servicios",
+        item: `${Astro.site}servicios`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: title.split("|")[0].trim(),
+        item: canonicalURL,
+      },
+    ],
+  },
+};
+
+// ✅ Si hay schema personalizado, crear copia con provider
+const enrichedServiceSchema = serviceSchema
+  ? {
+      ...serviceSchema,
+      provider: {
+        "@id": `${Astro.site}#organization`,
+      },
+    }
+  : null;
+
+// Schema final combinado
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "ProfessionalService",
-      "@id": `${Astro.site}#organization`,
-      name: "Panambi",
-      description:
-        "Estrategia digital, desarrollo web y contenido visual para profesionales y empresas",
-      email: "info@panambi.net",
-      url: Astro.site?.toString(),
-      logo: {
-        "@type": "ImageObject",
-        url: dataSchema.logo,
-      },
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: dataSchema.contactPoint.telephone,
-        contactType: "Atención al cliente",
-        areaServed: dataSchema.contactPoint.areaServed,
-        availableLanguage: dataSchema.contactPoint.availableLanguage,
-      },
-      sameAs: dataSchema.sameAs,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: dataSchema.address.streetAddress,
-        addressLocality: dataSchema.address.addressLocality,
-        addressRegion: dataSchema.address.addressRegion,
-        postalCode: dataSchema.address.postalCode,
-        addressCountry: dataSchema.address.addressCountry,
-      },
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Servicios Panambi",
-        itemListElement: serviceCatalog.map((service, index) => ({
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: service.label,
-            url: new URL(service.href, Astro.site).toString(),
-          },
-          position: index + 1,
-        })),
-      },
-    },
-    {
-      "@type": serviceType || "WebPage",
-      "@id": canonicalURL,
-      url: canonicalURL,
-      name: title,
-      description: description,
-      isPartOf: {
-        "@id": `${Astro.site}#website`,
-      },
-      about: {
-        "@id": `${Astro.site}#organization`,
-      },
-      inLanguage: "es-AR",
-      breadcrumb: {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Inicio",
-            item: Astro.site?.toString(),
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Servicios",
-            item: `${Astro.site}servicios`,
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: title.split("|")[0].trim(),
-            item: canonicalURL,
-          },
-        ],
-      },
-    },
+    organizationSchema,
+    webPageSchema,
+    ...(enrichedServiceSchema ? [enrichedServiceSchema] : []),
   ],
 };
 ---
@@ -130,46 +172,70 @@ const schema = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
 
+    <!-- Title y Description -->
     <title>{title}</title>
     <meta name="description" content={description} />
 
+    <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
 
+    <!-- Keywords (si existen) -->
     {
       keywords && keywords.length > 0 && (
         <meta name="keywords" content={keywords.join(", ")} />
       )
     }
 
-    <meta name="robots" content="index, follow" />
+    <!-- SEO General -->
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
     <meta name="author" content="Panambi" />
+    <meta name="language" content="Spanish" />
 
+    <!-- SEO Local -->
+    <meta name="geo.region" content="AR" />
+    <meta name="geo.placename" content="Buenos Aires" />
+
+    <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href={favicon.src} />
     <link rel="apple-touch-icon" href={favicon.src} />
 
+    <!-- Client Router -->
     <ClientRouter />
 
+    <!-- Schema JSON-LD Combinado -->
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 
-    <meta property="og:url" content={canonicalURL} />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={finalOgTitle} />
+    <meta property="og:description" content={finalOgDescription} />
     <meta property="og:image" content={ogImageURL} />
     <meta property="og:locale" content="es_AR" />
     <meta property="og:site_name" content="Panambi" />
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={canonicalURL} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title" content={finalTwitterTitle} />
+    <meta name="twitter:description" content={finalTwitterDescription} />
     <meta name="twitter:image" content={ogImageURL} />
+
+    <!-- Slot para meta tags o schemas adicionales -->
+    <slot name="additional-head" />
   </head>
+
   <body>
     <NavbarServicios dataLinks={dataLinks} />
     <NavBarServiciosMovil dataLinks={dataLinks} />
 
-    <slot />
+    <main>
+      <slot />
+    </main>
+
     <Footer />
   </body>
 </html>

@@ -12,7 +12,7 @@ import HeroPaginaServicios from "@/components/pages/servicios/paginas/seccionesG
 
 const dataLinks = [
   {
-    href: "/servicios/desarrollo_web/#alcances_propuestas",
+    href: "/servicios/desarrollo_web/#alcances_propuestas_desarrollo_web",
     label: "Alcances",
   },
   {
@@ -29,64 +29,269 @@ const dataLinks = [
   },
 ];
 
+// ✅ SEO OPTIMIZADO
+const title =
+  "Desarrollo Web Profesional a Medida | Diseño UX/UI, SEO y Hosting | Panambi Argentina";
+
+const description =
+  "Desarrollamos sitios web a medida con diseño UX/UI profesional, optimización SEO integrada y hosting incluido por un año. Webs rápidas, seguras y responsive para profesionales y empresas. Desde $550.000. Transformá tu presencia digital.";
+
 const keywords = [
-  // Servicios core
-  "desarrollo web",
-  "desarrollo web a medida",
+  // Servicios core (alta intención comercial)
+  "desarrollo web profesional Argentina",
+  "desarrollo web a medida Buenos Aires",
   "diseño web profesional",
   "sitios web personalizados",
+  "creación de sitios web empresariales",
 
-  // Técnicas y características
+  // Técnicas y características específicas
   "desarrollo web responsive",
-  "diseño UX UI",
-  "optimización SEO",
-  "desarrollo web optimizado",
-  "sitio web rápido",
-  "web segura",
-  "diseño web moderno",
+  "diseño UX UI profesional",
+  "optimización SEO integrada",
+  "desarrollo web optimizado velocidad",
+  "sitio web rápido y seguro",
+  "web moderna y funcional",
+  "arquitectura web escalable",
+  "diseño web accesible",
 
-  // Enfoque profesional
+  // Enfoque por tipo de cliente
   "desarrollo web para profesionales",
-  "sitios web empresas",
-  "web corporativa",
+  "sitios web para abogados",
+  "web corporativa para contadores",
   "desarrollo web consultores",
   "sitio web estudios profesionales",
-  "web servicios profesionales",
+  "web servicios profesionales B2B",
+  "desarrollo web para pymes Argentina",
+  "sitio web emprendedores",
 
-  // Beneficios específicos
-  "experiencia usuario web",
-  "diseño web conversión",
-  "sitio web escalable",
-  "plataforma web funcional",
-  "web con SEO integrado",
+  // Tecnologías y stack
+  "desarrollo web Astro",
+  "desarrollo web con SEO técnico",
+  "web con hosting incluido",
+  "sitio web con dominio",
+  "desarrollo web JAMstack",
 
-  // Procesos y soluciones
+  // Beneficios y resultados
+  "experiencia usuario web optimizada",
+  "diseño web orientado conversión",
+  "sitio web escalable y mantenible",
+  "plataforma web de alto rendimiento",
+  "web con SEO desde cero",
+  "sitio web con soporte técnico",
+
+  // Procesos y metodología
   "desarrollo web personalizado",
-  "soluciones web empresas",
-  "creación sitios web",
+  "soluciones web empresas Argentina",
+  "creación sitios web profesionales",
   "diseño web a medida",
+  "desarrollo web ágil",
+
+  // Long-tail estratégicas (búsquedas específicas)
+  "cuánto cuesta desarrollar un sitio web profesional",
+  "desarrollo web optimizado para Google",
+  "sitio web responsive profesional Argentina",
+  "diseño web con experiencia usuario",
+  "desarrollo web para negocios de servicios",
+  "web a medida con hosting y dominio",
+  "crear sitio web profesional Buenos Aires",
 
   // Geolocalización
   "desarrollo web Argentina",
   "diseño web Buenos Aires",
+  "desarrollador web Buenos Aires",
+  "agencia desarrollo web Argentina",
+  "desarrollo web CABA",
 
-  // Long-tail estratégicas
-  "desarrollo web optimizado SEO",
-  "sitio web responsive profesional",
-  "diseño web experiencia usuario",
-  "desarrollo web para negocios",
-  "web a medida con hosting",
+  // Comparativos y alternativas
+  "desarrollo web vs WordPress",
+  "sitio web personalizado vs plantilla",
+  "desarrollo web profesional precio Argentina",
 ];
+
+// ✅ META TAGS PERSONALIZADOS PARA REDES SOCIALES
+const ogTitle =
+  "Desarrollo Web Profesional | Diseño a Medida con SEO y Hosting";
+const ogDescription =
+  "Sitios web rápidos, seguros y optimizados para profesionales y empresas. Diseño UX/UI + SEO integrado + Hosting incluido. Transformá tu presencia digital con tecnología de punta.";
+
+const twitterTitle = "Desarrollo Web Profesional | Panambi";
+const twitterDescription =
+  "Webs a medida con diseño UX/UI, SEO optimizado y hosting incluido. Desde $550.000. Convertí tu idea en realidad digital.";
+
+const ogImage = imgOG.src;
+
+// ✅ SCHEMA ESPECÍFICO COMPLETO Y OPTIMIZADO
+const desarrolloWebSchema = {
+  "@type": "Service",
+  name: "Desarrollo Web Profesional a Medida",
+  alternateName: "Diseño y Desarrollo de Sitios Web Personalizados",
+  description:
+    "Servicio completo de desarrollo web profesional que incluye diseño UX/UI, arquitectura optimizada, SEO técnico integrado, hosting por un año y soporte continuo. Creamos sitios web rápidos, seguros y escalables para profesionales y empresas que quieren destacar en el entorno digital.",
+  url: "https://panambi.net/servicios/desarrollo_web",
+  serviceType: "Desarrollo y Diseño Web",
+  category: "Web Development",
+  audience: {
+    "@type": "Audience",
+    audienceType:
+      "Profesionales independientes, estudios de servicios, pymes y empresas que necesitan presencia digital profesional para captar clientes y fortalecer su marca online",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Argentina",
+  },
+  availableChannel: {
+    "@type": "ServiceChannel",
+    serviceUrl: "https://panambi.net/contacto",
+    servicePhone: "+54-11-3166-4971",
+    serviceType: "Online y Presencial",
+    availableLanguage: "Spanish",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Planes de Desarrollo Web",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        name: "Plan Básico",
+        description:
+          "Landing page de hasta 4 secciones con animaciones, formulario de contacto, integración redes sociales, SEO básico, hosting por un año y soporte técnico",
+        price: "550000",
+        priceCurrency: "ARS",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "Plan Profesional",
+        description:
+          "Sitio multipágina hasta 6 páginas, blog integrado, formularios avanzados, galería de proyectos/servicios, optimización avanzada, SEO completo, hosting y soporte prioritario",
+        price: "950000",
+        priceCurrency: "ARS",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "Plan Premium",
+        description:
+          "Plataforma web completa con área privada, panel de administración, sistema de reservas/citas, integración con herramientas externas, analítica avanzada y seguimiento personalizado",
+        price: "1500000",
+        priceCurrency: "ARS",
+        availability: "https://schema.org/InStock",
+      },
+    ],
+  },
+  serviceOutput: [
+    {
+      "@type": "WebSite",
+      name: "Sitio Web Profesional",
+      description:
+        "Sitio web completamente funcional, optimizado, responsive y listo para captar clientes",
+    },
+  ],
+  provider: {
+    "@type": "Organization",
+    name: "Panambi",
+    telephone: "+54-11-3166-4971",
+    email: "info@panambi.net",
+  },
+  additionalType: "https://schema.org/WebDesign",
+  termsOfService: "https://panambi.net/terminos",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    ratingCount: "1",
+  },
+  potentialAction: {
+    "@type": "OrderAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://panambi.net/contacto",
+      actionPlatform: [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform",
+      ],
+    },
+    result: {
+      "@type": "Order",
+      name: "Solicitud de Desarrollo Web",
+    },
+  },
+};
+
+// ✅ SCHEMA FAQ (basado en tus preguntas frecuentes comunes)
+const faqSchema = {
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Cuánto cuesta desarrollar un sitio web profesional?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nuestros planes de desarrollo web arrancan desde $550.000 para una landing page profesional con todas las funcionalidades básicas incluidas (diseño UX/UI, SEO, hosting por un año y soporte). Para sitios más complejos tenemos el plan Profesional ($950.000) y Premium ($1.500.000) con funcionalidades avanzadas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué incluye el servicio de desarrollo web?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Todos nuestros planes incluyen: diseño UX/UI profesional, desarrollo responsive, optimización SEO técnica, integración con redes sociales y WhatsApp, hosting por un año, certificado SSL de seguridad y soporte técnico. Según el plan, también agregamos blog, formularios avanzados, panel de administración y más.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto tiempo tarda el desarrollo de un sitio web?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El tiempo de desarrollo varía según la complejidad: el plan Básico tarda entre 2-3 semanas, el Profesional entre 4-6 semanas, y el Premium entre 6-8 semanas. Estos tiempos incluyen diseño, desarrollo, revisiones y ajustes finales.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿El sitio web es responsive y funciona en móviles?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, absolutamente. Todos nuestros sitios web son 100% responsive y están optimizados para funcionar perfectamente en computadoras, tablets y celulares. Priorizamos la experiencia móvil porque más del 60% del tráfico web viene de dispositivos móviles.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Puedo actualizar el contenido del sitio yo mismo?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Depende del plan. En los planes Profesional y Premium incluimos un panel de administración intuitivo para que puedas actualizar contenido sin conocimientos técnicos. En el plan Básico, podemos agregar esta funcionalidad como extra o brindamos soporte para actualizaciones puntuales.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué pasa después del primer año de hosting?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El primer año de hosting está incluido en todos los planes. A partir del segundo año, podés renovar el hosting con nosotros a un costo accesible, o migrar tu sitio a otro proveedor si lo preferís. Te damos acceso completo a tu web y te ayudamos con la migración si lo necesitás.",
+      },
+    },
+  ],
+};
 ---
 
 <LayoutServicios
   dataLinks={dataLinks}
-  title="Desarrollo Web Profesional a Medida | Diseño UX/UI y SEO | Panambi"
-  description="Desarrollamos sitios web a medida con diseño UX/UI profesional, optimización SEO y hosting incluido. Webs rápidas, seguras y responsive para tu negocio."
+  title={title}
+  description={description}
   keywords={keywords}
-  serviceType="ProfessionalService"
-  ogImage={imgOG.src}
+  ogImage={ogImage}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  twitterTitle={twitterTitle}
+  twitterDescription={twitterDescription}
+  serviceType="Service"
+  serviceSchema={desarrolloWebSchema}
 >
+  <!-- Slot para schema FAQ adicional -->
+  <Fragment slot="additional-head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
   <HeroPaginaServicios
     idContainer="hero_servicios_desarrollo_web"
     titulo="Convertimos tu idea"
@@ -96,6 +301,7 @@ const keywords = [
     img={imgHero.src}
     origen="dw"
   />
+
   <UltimoLLamado
     idContainer="call_to_action_dw_1"
     hrefBoton="https://wa.me/5491131664971?text=Hola, quiero hacer una consultar sobre desarrollo web."
@@ -104,6 +310,7 @@ const keywords = [
     subtitulo="a medida, con propósito, rendimiento y diseño moderno"
     bgColor="transparent"
   />
+
   <Como
     idContainer="alcances_propuestas_desarrollo_web"
     title="que te ofrecemos para que"
@@ -114,6 +321,7 @@ const keywords = [
   />
 
   <PlanesPrecios idContainer="planes_desarrollo_web" />
+
   <UltimoLLamado
     idContainer="call_to_action_dw_2"
     hrefBoton="https://wa.me/5491131664971?text=Hola, quiero hacer una consultar sobre desarrollo web."
@@ -123,5 +331,6 @@ const keywords = [
     bgColor="bg-violeta1-300"
     textNegro={true}
   />
+
   <PreguntasFrecuentes dataFaqs={dataFaqs} />
 </LayoutServicios>

@@ -35,63 +35,264 @@ const dataLinks = [
   },
 ];
 
+// ✅ SEO OPTIMIZADO
+const title =
+  "Asesoría Digital One Shot | Claridad en 60 Minutos + Plan de Acción | Panambi Argentina";
+
+const description =
+  "Asesoría estratégica digital de 60 minutos para profesionales de servicios: auditoría completa de activos digitales + diagnóstico personalizado + plan de acción inmediato. Inversión: $157.000 (USD 100). Descubrí qué ajustar para captar más clientes online en una semana.";
+
 const keywords = [
-  // Keywords primarias
-  "asesoría digital",
-  "consultoría digital one shot",
-  "estrategia digital 60 minutos",
-  "diagnóstico presencia digital",
-  "plan de acción digital",
-
-  // Keywords secundarias
-  "auditoría digital",
-  "optimización activos digitales",
-  "estrategia redes sociales",
-  "análisis sitio web",
-  "consultoría marketing digital",
-  "sesión estratégica digital",
-  "roadmap digital 90 días",
-  "asesoría marketing online",
-  "plan marketing digital",
-  "consultor transformación digital",
-
-  // Keywords long-tail
-  "cómo mejorar mi presencia digital",
-  "asesoría digital para emprendedores",
-  "análisis competencia digital",
-  "estrategia digital para profesionales independientes",
-  "consultoría digital una sesión",
-  "plan acción marketing digital personalizado",
-  "auditoría web y redes sociales",
-  "estrategia digital desde cero",
-
-  // Keywords locales
+  // Términos principales (alta intención de búsqueda)
   "asesoría digital Argentina",
-  "consultor digital Buenos Aires",
-  "estrategia digital LATAM",
+  "consultoría digital one shot",
+  "diagnóstico digital 60 minutos",
+  "asesoría estratégica express",
+  "sesión estratégica digital una hora",
 
-  // Keywords complementarias
-  "transformación digital",
-  "diagnóstico digital",
-  "sesión estratégica",
-  "plan 90 días",
-  "consultoría express",
-  "auditoría web",
-  "optimización redes sociales",
-  "estrategia marketing",
-  "análisis digital",
-  "asesoría one shot",
+  // Por tipo de profesional (long-tail específico)
+  "asesoría digital para profesionales independientes",
+  "consultoría digital abogados Argentina",
+  "diagnóstico marketing contadores",
+  "asesoría digital corredores inmobiliarios",
+  "consultoría express asesores de seguros",
+  "asesoría digital coaches Argentina",
+  "diagnóstico presencia online consultores",
+
+  // Servicios y entregables específicos
+  "auditoría activos digitales",
+  "diagnóstico presencia online",
+  "plan de acción digital inmediato",
+  "roadmap digital 90 días",
+  "sesión estratégica 1 a 1",
+  "análisis web y redes sociales",
+  "auditoría completa marketing digital",
+
+  // Búsquedas conversacionales (long-tail)
+  "cómo mejorar mi presencia digital",
+  "no sé por dónde empezar marketing digital",
+  "qué hacer para captar clientes online",
+  "marketing digital sin resultados claros",
+  "diagnóstico rápido estrategia digital",
+  "necesito claridad sobre mi marketing",
+
+  // Problemas específicos que resuelve
+  "marketing sin dirección clara",
+  "redes sociales no generan clientes",
+  "inversión digital sin retorno",
+  "web no genera consultas",
+  "presencia digital sin resultados",
+  "no sé qué ajustar en mi marketing",
+
+  // Términos locales y geográficos
+  "consultor digital Buenos Aires",
+  "asesoría marketing digital Argentina",
+  "diagnóstico digital CABA",
+  "sesión estratégica Buenos Aires",
+
+  // Términos relacionados y complementarios
+  "transformación digital profesionales",
+  "optimización presencia digital",
+  "consultoría marketing online express",
+  "estrategia digital desde cero",
+  "sesión estratégica marketing",
+  "plan acción marketing personalizado",
+  "asesoría one shot Buenos Aires",
+  "consultoría digital una hora",
+  "auditoría digital profesionales servicios",
 ];
+
+// ✅ META TAGS PERSONALIZADOS PARA REDES SOCIALES
+const ogTitle = "Asesoría Digital One Shot | Claridad en 60 Minutos";
+const ogDescription =
+  "Sesión estratégica de 60 minutos: auditoría completa + diagnóstico personalizado + plan de acción inmediato. Salís sabiendo exactamente qué hacer para crecer. USD 100.";
+
+const twitterTitle = "Asesoría One Shot | Panambi";
+const twitterDescription =
+  "60 minutos que transforman la confusión en estrategia. Auditoría + diagnóstico + plan de acción en una semana.";
+
+const ogImage = imgHero.src; // tu imagen hero
+
+// ✅ SCHEMA ESPECÍFICO COMPLETO Y OPTIMIZADO
+const asesoriaOneShotSchema = {
+  "@type": "Service",
+  name: "Asesoría Digital One Shot",
+  alternateName: "Consultoría Estratégica Express de 60 Minutos",
+  description:
+    "Sesión estratégica de 60 minutos que combina auditoría de activos digitales, diagnóstico de marketing y negocio, y plan de acción inmediato. Claridad absoluta sobre qué estás haciendo bien, qué ajustar y qué pasos seguir para potenciar tus resultados digitales en una semana.",
+  url: "https://panambi.net/servicios/asesoriaOneShot",
+  serviceType: "Asesoría Digital Estratégica Express",
+  category: "Digital Marketing Consulting",
+  audience: {
+    "@type": "Audience",
+    audienceType:
+      "Profesionales independientes y estudios de servicios que necesitan claridad inmediata sobre su presencia digital, estrategia de marketing y captación de clientes online",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Argentina",
+  },
+  availableChannel: {
+    "@type": "ServiceChannel",
+    serviceUrl: "https://panambi.net/contacto",
+    serviceType: "Videollamada Online",
+    availableLanguage: "Spanish",
+  },
+  offers: {
+    "@type": "Offer",
+    name: "Asesoría One Shot - Paquete Completo",
+    price: "157000",
+    priceCurrency: "ARS",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      price: "100",
+      priceCurrency: "USD",
+    },
+    availability: "https://schema.org/InStock",
+    validFrom: "2024-01-01",
+    priceValidUntil: "2025-12-31",
+    url: "https://panambi.net/servicios/asesoriaOneShot",
+  },
+  serviceOutput: [
+    {
+      "@type": "CreativeWork",
+      name: "Documento ejecutivo personalizado",
+      description:
+        "Resumen completo del diagnóstico, análisis de situación actual, puntos fuertes y débiles detectados, plan de acción priorizado con pasos concretos, roadmap de 90 días y recomendaciones de herramientas específicas para implementar",
+    },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Componentes de la Asesoría One Shot",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Auditoría previa de activos digitales",
+          description:
+            "Análisis profundo de tu marca, redes sociales, sitio web y comunicación actual. Evaluación completa de presencia y posicionamiento online antes de la sesión.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Sesión estratégica 1:1 de 60 minutos",
+          description:
+            "Diagnóstico en vivo con recomendaciones personalizadas. Trabajamos juntos en tiempo real, resolvemos dudas y definimos prioridades estratégicas con impacto inmediato.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Documento personalizado con plan de acción",
+          description:
+            "Resumen ejecutivo del diagnóstico completo, plan de acción con prioridades definidas, roadmap detallado de 90 días y recomendaciones de herramientas y recursos específicos para tu negocio.",
+        },
+      },
+    ],
+  },
+  duration: "P1W",
+  termsOfService: "https://panambi.net/terminos",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    ratingCount: "1",
+  },
+  potentialAction: {
+    "@type": "OrderAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://panambi.net/contacto",
+      actionPlatform: [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform",
+      ],
+    },
+    result: {
+      "@type": "Order",
+      name: "Reserva de Asesoría One Shot",
+      orderStatus: "https://schema.org/OrderProcessing",
+    },
+  },
+};
+
+// ✅ SCHEMA FAQ
+const faqSchema = {
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Para quién es esta asesoría?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Para profesionales independientes, estudios de servicios o emprendedores que ya tienen presencia digital (web, redes, anuncios) pero sienten que no están obteniendo los resultados esperados. Si invertís tiempo y recursos pero no sabés si vas en la dirección correcta, esta sesión es para vos.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué pasa si no tengo web o redes activas todavía?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No hay problema. La asesoría también es ideal para quienes están empezando y quieren construir desde cero con una estrategia clara. Analizamos tu idea de negocio, tu competencia y tu audiencia para diseñar un plan de acción realista que te evite errores costosos desde el inicio.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cómo funciona el proceso y cuánto dura?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El proceso completo dura 1 semana. Primero hacemos una auditoría previa de tus activos digitales. Luego coordinamos la sesión estratégica 1:1 de 60 minutos en vivo (por videollamada). Finalmente, te entregamos el documento con diagnóstico, plan de acción y roadmap de 90 días. Todo en 7 días.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué recibo exactamente al finalizar la asesoría?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Recibís un documento ejecutivo personalizado que incluye: resumen del diagnóstico de tu situación actual, puntos fuertes y débiles detectados, plan de acción priorizado con pasos concretos, roadmap de 90 días y recomendaciones de herramientas específicas. Todo listo para que puedas implementar de forma autónoma.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Puedo implementar las recomendaciones por mi cuenta o necesito contratar más servicios?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El objetivo es que puedas ejecutar todo vos mismo con el plan que te entregamos. Te damos las herramientas, prioridades y pasos claros para que avances con autonomía. Si luego querés apoyo técnico o delegar implementación, podemos hablarlo, pero no es obligatorio ni parte del servicio de asesoría.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuál es la diferencia con la Consultoría Estratégica de 4 semanas?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La Asesoría One Shot es una sesión diagnóstica de 60 minutos ideal si necesitás claridad rápida sobre qué hacer y por dónde empezar. La Consultoría Estratégica es un programa de 4 semanas donde trabajamos juntos para digitalizar tu negocio completo, construir tu sistema de marketing y optimizar tu modelo de servicios. Es para profesionales que buscan transformación profunda, no solo ajustes tácticos.",
+      },
+    },
+  ],
+};
 ---
 
 <LayoutServicios
   dataLinks={dataLinks}
-  title="Asesoría Digital One Shot | Estrategia + Plan de Acción en 60 Min | Panambi"
-  description="Asesoría Digital One Shot: sesión estratégica de 60 min + diagnóstico completo + plan de acción de 90 días. Desde u$s 100. Empezá a crecer hoy."
-  serviceType="ProfessionalService"
-  ogImage={imgHero.src}
+  title={title}
+  description={description}
   keywords={keywords}
+  ogImage={ogImage}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  twitterTitle={twitterTitle}
+  twitterDescription={twitterDescription}
+  serviceType="Service"
+  serviceSchema={asesoriaOneShotSchema}
 >
+  <!-- Slot para schema FAQ adicional -->
+  <Fragment slot="additional-head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
   <HeroPaginaServicios
     idContainer="hero_asesoria_1a1"
     titulo="Asesoría One Shot"
