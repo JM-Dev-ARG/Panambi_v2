@@ -28,7 +28,8 @@
       "Desarrollo y posicionamiento de marca",
       "Marketing digital estratégico"
     ],
-    "img": "/img/consultoria.avif"
+    "img": "/img/consultoria.avif",
+    "href": "/servicios/consultoria"
   },
   {
     "titulo": "desarrollo web",
