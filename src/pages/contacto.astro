@@ -4,48 +4,254 @@ import Layout from "@/layouts/Layout.astro";
 import data from "@/data/card_hero_contacto.json";
 import imgContacto from "@/assets/img/hero/img_contacto2.avif";
 import Formulario from "@/components/pages/contacto/sections/Formulario.astro";
+
+// ✅ SEO OPTIMIZADO PARA CONTACTO
+const title =
+  "Contacto | Pedí tu Presupuesto de Marketing Digital y Desarrollo Web | Panambi Argentina";
+
+const description =
+  "Contactá a Panambi para asesoría digital, consultoría estratégica, desarrollo web o diseño audiovisual. Pedí tu presupuesto sin compromiso. Chivilcoy, Buenos Aires, Argentina. ¡Hablemos de tu proyecto!";
+
 const keywords = [
-  // Términos de contacto principales
-  "contacto agencia digital",
-  "contacto marketing digital",
-  "contacto desarrollo web",
-  "presupuesto desarrollo web",
+  // Términos de contacto principales (alta intención)
+  "contacto agencia digital Argentina",
+  "contacto marketing digital Buenos Aires",
+  "contacto desarrollo web profesional",
+  "formulario contacto agencia digital",
+
+  // Presupuestos y cotizaciones
+  "presupuesto desarrollo web Argentina",
   "presupuesto marketing digital",
-  "consultoría digital",
+  "cotización sitio web profesional",
+  "presupuesto diseño web a medida",
+  "presupuesto branding corporativo",
+  "cotización consultoría digital",
+  "presupuesto sin cargo desarrollo web",
 
-  // Servicios específicos
+  // Servicios específicos de contacto
   "solicitar asesoría digital",
-  "presupuesto diseño web",
-  "consultoría estrategia digital",
-  "presupuesto branding",
-  "cotización desarrollo web",
+  "pedir consultoría estratégica",
+  "contratar desarrollo web",
+  "solicitar presupuesto web personalizado",
+  "consultar servicios marketing digital",
 
-  // Localización (importante para contacto)
-  "agencia digital Argentina",
-  "marketing digital Buenos Aires",
-  "desarrollo web Argentina",
-  "agencia digital Chivilcoy",
+  // Localización (crítico para contacto local)
+  "agencia digital Chivilcoy Buenos Aires",
+  "contacto marketing digital Buenos Aires",
+  "desarrollo web Argentina contacto",
+  "agencia digital Buenos Aires teléfono",
+  "consultoría digital Argentina contacto",
 
-  // Acciones específicas
-  "pedir presupuesto web",
-  "solicitar consultoría marketing",
-  "contactar agencia digital",
+  // Acciones específicas (búsquedas transaccionales)
+  "pedir presupuesto web Argentina",
+  "solicitar consultoría marketing digital",
+  "contactar agencia digital profesional",
   "contratar servicios digitales",
+  "agendar reunión consultoría digital",
+  "consulta gratis marketing digital",
 
   // Long-tail estratégicas
-  "cómo contactar agencia digital",
-  "presupuesto sitio web Argentina",
-  "consultoría marketing digital personalizada",
+  "cómo contactar agencia digital Argentina",
+  "presupuesto sitio web profesional Buenos Aires",
+  "consultoría marketing digital personalizada contacto",
   "solicitar asesoría estrategia digital",
-  "contacto desarrollo web profesional",
+  "contacto desarrollo web a medida",
+  "pedir presupuesto servicios digitales completos",
+
+  // Medios de contacto
+  "email agencia digital Panambi",
+  "teléfono agencia marketing digital",
+  "WhatsApp consultoría digital",
+  "formulario contacto desarrollo web",
+
+  // Tipos de consulta
+  "consulta proyecto web",
+  "consulta asesoría digital",
+  "información servicios digitales",
+  "presupuesto transformación digital",
+
+  // Urgencia y respuesta
+  "contacto rápido agencia digital",
+  "respuesta inmediata presupuesto web",
+  "asesoría digital sin cargo",
+
+  // Geolocalización detallada
+  "agencia digital Chivilcoy",
+  "marketing digital Buenos Aires contacto",
+  "desarrollo web CABA",
+  "consultoría digital Argentina teléfono",
+
+  // Complementarias
+  "hablar con agencia digital",
+  "reunión consultoría estratégica",
+  "contacto servicios digitales profesionales",
+  "información completa servicios Panambi",
 ];
+
+// ✅ META TAGS PERSONALIZADOS PARA REDES SOCIALES
+const ogTitle = "Contacto Panambi | Hablemos de tu Proyecto Digital";
+const ogDescription =
+  "¿Necesitás asesoría digital, desarrollo web o consultoría estratégica? Contactanos para un presupuesto personalizado sin compromiso. Te respondemos en 24hs.";
+
+const twitterTitle = "Contacto | Panambi Argentina";
+const twitterDescription =
+  "Hablemos de tu proyecto: asesoría, consultoría, desarrollo web o diseño. Presupuesto sin cargo. Contactanos ahora.";
+
+// Imagen OG de contacto
+const ogImage = imgContacto.src;
+
+// ✅ SCHEMA ESPECÍFICO PARA CONTACTO (ContactPage + ContactPoint)
+const contactPageSchema = {
+  "@type": "ContactPage",
+  name: "Contacto - Panambi",
+  description:
+    "Página de contacto de Panambi para solicitar presupuestos de marketing digital, desarrollo web, consultoría estratégica y diseño audiovisual",
+  url: "https://panambi.net/contacto",
+  mainEntity: {
+    "@type": "Organization",
+    "@id": "https://panambi.net/#organization",
+    name: "Panambi",
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+54-11-3166-4971",
+        contactType: "Atención al cliente",
+        email: "info@panambi.net",
+        availableLanguage: ["Spanish"],
+        areaServed: "AR",
+        hoursAvailable: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "09:00",
+          closes: "18:00",
+        },
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: "+54-11-3166-4971",
+        contactType: "Ventas",
+        contactOption: "TollFree",
+        availableLanguage: ["Spanish"],
+        areaServed: "AR",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "Soporte técnico",
+        email: "soporte@panambi.net",
+        availableLanguage: ["Spanish"],
+        areaServed: "AR",
+      },
+    ],
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: "https://panambi.net",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Contacto",
+        item: "https://panambi.net/contacto",
+      },
+    ],
+  },
+};
+
+// ✅ SCHEMA FAQ SOBRE CONTACTO Y PRESUPUESTOS
+const faqSchema = {
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Cómo puedo solicitar un presupuesto?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Podés solicitar un presupuesto completando el formulario de contacto en esta página, enviándonos un email a info@panambi.net, o contactándonos por WhatsApp al +54 11 3166-4971. Te respondemos en menos de 24 horas con una propuesta personalizada según tus necesidades.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿El presupuesto tiene algún costo?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No, todos nuestros presupuestos son completamente gratuitos y sin compromiso. Analizamos tu proyecto, te enviamos una propuesta detallada con alcances y precios, y vos decidís si avanzar. No hay ningún cargo por la cotización.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿En cuánto tiempo responden una consulta?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Respondemos todas las consultas en un máximo de 24 horas hábiles. Para consultas urgentes, recomendamos contactarnos directamente por WhatsApp al +54 11 3166-4971 donde solemos responder en minutos durante horario de atención (Lunes a Viernes de 9 a 18hs).",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Dónde están ubicados y trabajan de forma presencial?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Estamos ubicados en Chivilcoy, Buenos Aires, Argentina. Trabajamos principalmente de forma remota con clientes de toda Argentina y Latinoamérica mediante videollamadas y herramientas colaborativas. Para clientes en Buenos Aires, también podemos coordinar reuniones presenciales cuando sea necesario.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué información necesito para pedir un presupuesto?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Para darte un presupuesto preciso, necesitamos saber: qué servicio te interesa (asesoría, consultoría, desarrollo web, diseño), objetivos de tu proyecto, público objetivo, plazos estimados y presupuesto aproximado. Si no tenés todos estos datos, no hay problema: con una descripción general podemos empezar y luego ajustamos en una llamada.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Ofrecen consultas iniciales gratuitas?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, ofrecemos una llamada inicial de 15-20 minutos sin cargo para conocer tu proyecto, entender tus necesidades y evaluar si nuestros servicios son adecuados para vos. Esta consulta te ayuda a tener claridad antes de solicitar un presupuesto formal. Agendala escribiéndonos por WhatsApp o email.",
+      },
+    },
+  ],
+};
+
+// ✅ SCHEMA POSTALADDRESS (para aparecer en Google Maps)
+const addressSchema = {
+  "@type": "PostalAddress",
+  streetAddress: "Zapiola 300",
+  addressLocality: "Chivilcoy",
+  addressRegion: "Buenos Aires",
+  postalCode: "6620",
+  addressCountry: "AR",
+};
 ---
 
 <Layout
-  title="Contacto | Pedí tu Presupuesto de Marketing y Desarrollo Web | Panambi"
-  description="Contactá a Panambi para consultoría digital, desarrollo web o marketing. Pedí tu presupuesto sin cargo. Chivilcoy, Buenos Aires, Argentina. ¡Hablemos!"
+  title={title}
+  description={description}
   keywords={keywords}
+  ogImage={ogImage}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  twitterTitle={twitterTitle}
+  twitterDescription={twitterDescription}
+  pageType="ContactPage"
+  pageSchema={contactPageSchema}
 >
+  <!-- Schemas adicionales -->
+  <Fragment slot="additional-head">
+    <!-- Schema FAQ -->
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Schema de Dirección -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(addressSchema)}
+    />
+  </Fragment>
+
   <HeroConCard
     imgCard={imgContacto.src}
     titulo="Contactanos"

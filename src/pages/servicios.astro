@@ -4,73 +4,309 @@ import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
 import Hero from "@/components/pages/servicios/sections/HeroServicios.astro";
 import Layout from "@/layouts/Layout.astro";
 import data from "@/data/data_servicios.json";
+
+// ✅ SEO OPTIMIZADO PARA SERVICIOS
+const title =
+  "Servicios de Marketing Digital | Asesoría, Desarrollo Web, Consultoría y Diseño | Panambi Argentina";
+
+const description =
+  "Servicios digitales completos para profesionales y empresas: Asesoría One Shot (60 min), Consultoría Estratégica (4 semanas), Desarrollo Web profesional y Diseño Audiovisual. Transformamos tu presencia digital con estrategia, tecnología y resultados medibles en Argentina.";
+
 const keywords = [
-  // Servicios principales
-  "asesoría digital",
-  "consultoría estratégica",
-  "desarrollo web",
-  "diseño audiovisual",
-  "marketing digital",
+  // Servicios principales (alta intención comercial)
+  "servicios marketing digital Argentina",
+  "agencia servicios digitales Buenos Aires",
+  "servicios desarrollo web profesional",
+  "servicios consultoría digital",
+  "servicios diseño audiovisual empresarial",
 
   // Asesoría One Shot
-  "asesoría one shot",
-  "asesoría marketing digital",
+  "asesoría digital one shot",
+  "asesoría marketing digital 60 minutos",
   "diagnóstico presencia online",
-  "plan conversión clientes",
+  "auditoría digital express",
+  "plan conversión clientes inmediato",
   "estrategia digital personalizada",
-  "auditoría digital",
+  "sesión estratégica digital",
 
-  // Consultoría
-  "consultoría para profesionales",
+  // Consultoría Estratégica
+  "consultoría estratégica digital",
+  "consultoría para profesionales independientes",
   "consultoría empresas servicios",
   "consultoría estudios jurídicos",
   "consultoría estudios contables",
   "estrategia crecimiento empresarial",
   "análisis negocio digital",
+  "consultoría transformación digital",
+  "programa digitalización 4 semanas",
 
-  // Desarrollo web
-  "desarrollo web personalizado",
-  "sitios web a medida",
+  // Desarrollo Web
+  "desarrollo web personalizado Argentina",
+  "sitios web a medida profesionales",
   "diseño web profesional",
-  "optimización SEO",
+  "desarrollo web con SEO integrado",
   "experiencia usuario UX UI",
   "desarrollo web responsive",
-  "diseño web optimizado",
+  "diseño web optimizado conversión",
+  "sitios web para profesionales servicios",
 
-  // Diseño audiovisual
-  "edición video",
-  "diseño gráfico digital",
+  // Diseño Audiovisual
+  "edición video profesional",
+  "diseño gráfico digital corporativo",
   "contenido visual redes sociales",
-  "producción audiovisual",
+  "producción audiovisual empresarial",
   "animaciones motion graphics",
-  "diseño piezas digitales",
+  "diseño piezas digitales marketing",
+  "contenido audiovisual para marcas",
 
   // Beneficios y resultados
-  "posicionamiento marca",
-  "presencia digital",
-  "conversión clientes",
-  "crecimiento digital",
-  "branding profesional",
+  "posicionamiento marca digital",
+  "mejora presencia digital",
+  "aumento conversión clientes online",
+  "crecimiento digital negocios",
+  "branding profesional empresas",
+  "optimización captación clientes",
 
-  // Sectores específicos
-  "marketing digital profesionales",
-  "servicios digitales empresas",
-  "transformación digital negocios",
+  // Por tipo de cliente
+  "servicios marketing digital profesionales",
+  "servicios digitales para abogados",
+  "marketing digital para contadores",
+  "servicios web corredores inmobiliarios",
+  "servicios digitales consultores",
+  "transformación digital pymes",
 
   // Long-tail estratégicas
-  "asesoría digital una hora",
-  "desarrollo web con SEO",
-  "consultoría marketing digital personalizada",
-  "diseño web experiencia usuario",
-  "contenido audiovisual para marcas",
+  "asesoría digital una hora resultados",
+  "desarrollo web profesional con SEO incluido",
+  "consultoría marketing digital personalizada 4 semanas",
+  "diseño web optimizado experiencia usuario",
+  "paquetes servicios digitales completos",
+  "servicios integrados marketing desarrollo web",
+
+  // Comparativas y alternativas
+  "mejor agencia servicios digitales Argentina",
+  "servicios digitales profesionales vs agencias tradicionales",
+  "paquetes servicios marketing digital precios",
+
+  // Geolocalización
+  "servicios marketing digital Buenos Aires",
+  "agencia servicios digitales CABA",
+  "desarrollo web profesional Argentina",
+  "servicios consultoría digital Buenos Aires",
+
+  // Complementarias
+  "servicios transformación digital empresas",
+  "soluciones digitales integrales",
+  "agencia full service digital Argentina",
+  "servicios estrategia y desarrollo web",
 ];
+
+// ✅ META TAGS PERSONALIZADOS PARA REDES SOCIALES
+const ogTitle =
+  "Servicios de Marketing Digital | Asesoría, Desarrollo Web y Diseño";
+const ogDescription =
+  "Transformamos profesionales y empresas con servicios digitales completos: Asesoría express, Consultoría estratégica, Desarrollo web y Contenido audiovisual. Soluciones a medida con resultados medibles.";
+
+const twitterTitle = "Servicios Digitales | Panambi";
+const twitterDescription =
+  "Asesoría One Shot + Consultoría + Desarrollo Web + Diseño Audiovisual. Servicios integrados para tu transformación digital.";
+
+// Imagen OG específica para servicios
+const ogImage = "/assets/img/og-servicios.jpg"; // ajustá según tu imagen
+
+// ✅ SCHEMA ESPECÍFICO PARA SERVICIOS (Service + ItemList)
+const serviciosSchema = {
+  "@type": "ItemList",
+  name: "Servicios de Marketing Digital y Desarrollo Web",
+  description:
+    "Catálogo completo de servicios digitales profesionales: asesoría estratégica, consultoría integral, desarrollo web a medida y diseño audiovisual para profesionales y empresas",
+  url: "https://panambi.net/servicios",
+  numberOfItems: 4,
+  itemListElement: [
+    {
+      "@type": "Service",
+      position: 1,
+      name: "Asesoría Digital One Shot",
+      description:
+        "Sesión estratégica de 60 minutos con auditoría de activos digitales, diagnóstico personalizado y plan de acción inmediato. Claridad absoluta en una semana.",
+      url: "https://panambi.net/servicios/asesoriaOneShot",
+      serviceType: "Asesoría Digital Express",
+      provider: {
+        "@id": "https://panambi.net/#organization",
+      },
+      offers: {
+        "@type": "Offer",
+        price: "157000",
+        priceCurrency: "ARS",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: "100",
+          priceCurrency: "USD",
+        },
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Argentina",
+      },
+    },
+    {
+      "@type": "Service",
+      position: 2,
+      name: "Consultoría Estratégica de Negocio Digital",
+      description:
+        "Programa intensivo de 4 semanas que digitaliza, optimiza y maximiza el rendimiento de negocios de servicios profesionales. Incluye 4 sesiones estratégicas y entregables completos.",
+      url: "https://panambi.net/servicios/consultoria",
+      serviceType: "Consultoría Estratégica Integral",
+      provider: {
+        "@id": "https://panambi.net/#organization",
+      },
+      offers: {
+        "@type": "Offer",
+        price: "785000",
+        priceCurrency: "ARS",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: "500",
+          priceCurrency: "USD",
+        },
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Argentina",
+      },
+    },
+    {
+      "@type": "Service",
+      position: 3,
+      name: "Desarrollo Web Profesional a Medida",
+      description:
+        "Sitios web personalizados con diseño UX/UI profesional, optimización SEO integrada y hosting incluido. 3 planes disponibles desde web básica hasta plataformas completas.",
+      url: "https://panambi.net/servicios/desarrollo_web",
+      serviceType: "Desarrollo y Diseño Web",
+      provider: {
+        "@id": "https://panambi.net/#organization",
+      },
+      offers: {
+        "@type": "AggregateOffer",
+        lowPrice: "550000",
+        highPrice: "1500000",
+        priceCurrency: "ARS",
+        offerCount: "3",
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Argentina",
+      },
+    },
+    {
+      "@type": "Service",
+      position: 4,
+      name: "Diseño Audiovisual y Contenido Digital",
+      description:
+        "Producción de contenido visual profesional: edición de video, diseño gráfico, animaciones motion graphics y piezas para redes sociales. Potenciamos tu comunicación visual.",
+      url: "https://panambi.net/servicios/diseno_audiovisual",
+      serviceType: "Diseño Audiovisual y Producción de Contenido",
+      provider: {
+        "@id": "https://panambi.net/#organization",
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Argentina",
+      },
+    },
+  ],
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: "https://panambi.net",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Servicios",
+        item: "https://panambi.net/servicios",
+      },
+    ],
+  },
+};
+
+// ✅ SCHEMA FAQ SOBRE SERVICIOS
+const faqSchema = {
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Qué servicios digitales ofrece Panambi?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ofrecemos 4 servicios principales: (1) Asesoría Digital One Shot: sesión estratégica de 60 minutos con diagnóstico y plan de acción, (2) Consultoría Estratégica: programa de 4 semanas para transformación digital completa, (3) Desarrollo Web Profesional: sitios a medida con SEO y hosting incluido, y (4) Diseño Audiovisual: contenido visual y producción para redes sociales y campañas digitales.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuál es la diferencia entre Asesoría One Shot y Consultoría Estratégica?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La Asesoría One Shot es una sesión diagnóstica de 60 minutos ideal para obtener claridad rápida, identificar problemas y recibir un plan de acción táctico inmediato. La Consultoría Estratégica es un programa intensivo de 4 semanas donde trabajamos juntos para digitalizar tu negocio completo, construir sistemas de marketing y optimizar tu modelo comercial. La primera es para ajustes rápidos, la segunda para transformación profunda.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Los servicios son para todo tipo de empresas?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nos especializamos en profesionales de servicios y empresas B2B: abogados, contadores, corredores inmobiliarios, asesores de seguros, consultores, coaches, arquitectos y estudios profesionales. Nuestros servicios están diseñados específicamente para negocios que buscan digitalizar su captación, optimizar su presencia online y escalar sin depender únicamente del boca en boca.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Puedo contratar un solo servicio o necesito un paquete completo?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Podés contratar servicios individuales según tus necesidades. Cada servicio funciona de forma independiente y está diseñado para resolver problemas específicos. Sin embargo, muchos clientes comienzan con la Asesoría One Shot para identificar prioridades y luego avanzan con Desarrollo Web o Consultoría según los resultados del diagnóstico.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto cuestan los servicios de Panambi?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nuestros precios son transparentes: Asesoría One Shot desde $157.000 (USD 100), Consultoría Estratégica $785.000 (USD 500), Desarrollo Web desde $550.000 hasta $1.500.000 según plan y complejidad. Para Diseño Audiovisual, los precios varían según el tipo y volumen de contenido. Todos los servicios incluyen entregables concretos y garantías de calidad.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Trabajan solo en Argentina o también con clientes internacionales?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Aunque estamos basados en Argentina y nos especializamos en el mercado argentino y latinoamericano, trabajamos con clientes internacionales sin problemas. Todos nuestros servicios se brindan de forma remota mediante videollamadas y herramientas colaborativas, por lo que la ubicación geográfica no es una limitación.",
+      },
+    },
+  ],
+};
 ---
 
 <Layout
-  title="Servicios de Estrategia Digital | Asesoría, Desarrollo Web y Diseño | Panambi"
-  description="Asesoría One Shot, desarrollo web personalizado y diseño audiovisual. Estrategia digital completa para profesionales y empresas. Conocé nuestros servicios."
+  title={title}
+  description={description}
   keywords={keywords}
+  ogImage={ogImage}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  twitterTitle={twitterTitle}
+  twitterDescription={twitterDescription}
+  pageType="CollectionPage"
+  pageSchema={serviciosSchema}
 >
+  <!-- Schema FAQ adicional -->
+  <Fragment slot="additional-head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
   <Hero />
   <ContainerServiciosProyectos data={data} bgColor="bg-verde1-200/50" />
   <UltimoLLamado

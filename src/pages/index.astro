@@ -11,74 +11,260 @@ import Comentarios from "@/components/base-components/Comentarios.astro";
 import cardComoData from "@/data/como.json";
 import dataComentarios from "@/data/comentarios.json";
 
+// ✅ SEO OPTIMIZADO PARA HOME
+const title =
+  "Panambi | Agencia de Marketing Digital, Desarrollo Web y Contenido Visual en Argentina";
+
+const description =
+  "Transformamos negocios de servicios con estrategia digital, desarrollo web optimizado y contenido visual profesional. Asesoría personalizada, webs a medida con SEO y soluciones audiovisuales para profesionales en Argentina. Empezá a crecer hoy.";
+
 const keywords = [
-  // Keywords primarias (alto volumen)
-  "estrategia digital",
-  "desarrollo web",
-  "diseño web",
-  "marketing digital",
-  "asesoría digital",
-  "agencia digital",
-  "consultoría estratégica",
+  // Keywords primarias (alto volumen comercial)
+  "agencia digital Argentina",
+  "marketing digital Buenos Aires",
+  "desarrollo web profesional Argentina",
+  "agencia de estrategia digital",
+  "consultoría digital",
 
-  // Servicios específicos
+  // Servicios core (alta intención)
   "desarrollo sitios web",
-  "diseño sitios web",
+  "diseño web profesional",
   "optimización SEO",
+  "estrategia de marketing digital",
+  "consultoría estratégica digital",
+  "asesoría digital para empresas",
+
+  // Servicios complementarios
   "diseño de marca",
-  "branding digital",
-  "contenido visual",
+  "branding digital profesional",
+  "contenido visual corporativo",
   "diseño gráfico digital",
-  "edición de video",
-  "social media",
-  "content creation",
-  "producción audiovisual",
+  "edición de video profesional",
+  "producción audiovisual empresarial",
+  "gestión redes sociales",
+  "content marketing",
 
-  // Keywords de nicho profesional
+  // Por tipo de cliente (long-tail profesional)
   "marketing digital para profesionales",
-  "desarrollo web para profesionales",
-  "estrategia digital para negocios",
-  "consultoría digital para empresas",
+  "desarrollo web para abogados",
+  "estrategia digital para contadores",
+  "marketing digital para consultores",
   "branding para profesionales independientes",
+  "web para estudios de servicios",
 
-  // Long-tail efectivas
+  // Técnicas y características
   "sitios web optimizados SEO",
-  "diseño web funcional",
-  "agencia estrategia digital",
-  "consultoría transformación digital",
-  "contenido visual redes sociales",
+  "diseño web funcional y moderno",
   "diseño UX UI profesional",
   "experiencia usuario web",
   "diseño web responsive",
+  "desarrollo web a medida",
+  "arquitectura web escalable",
+
+  // Long-tail estratégicas (búsquedas conversacionales)
+  "agencia estrategia digital Buenos Aires",
+  "consultoría transformación digital Argentina",
+  "contenido visual para redes sociales",
+  "desarrollo web con SEO incluido",
+  "agencia marketing digital profesionales",
+  "diseño web para negocios de servicios",
 
   // Beneficios y resultados
-  "crecimiento digital",
-  "presencia digital",
+  "crecimiento digital empresas",
+  "aumentar presencia digital",
   "atraer clientes online",
-  "posicionamiento digital",
+  "posicionamiento digital profesional",
   "identidad visual corporativa",
-  "campañas redes sociales",
+  "campañas efectivas redes sociales",
 
-  // Locales (importantes)
-  "agencia digital Argentina",
-  "desarrollo web Buenos Aires",
-  "marketing digital Buenos Aires",
-  "diseño web Argentina",
+  // Geolocalización estratégica
+  "agencia digital Buenos Aires",
+  "desarrollo web CABA",
+  "marketing digital Argentina",
+  "diseño web Buenos Aires",
+  "consultoría digital Buenos Aires",
 
-  // Complementarias
-  "transformación digital",
-  "marketing estratégico",
+  // Términos complementarios
+  "transformación digital negocios",
+  "marketing estratégico integral",
   "consultoría integral marketing",
   "agencia creativa digital",
-  "branding y comunicación",
+  "branding y comunicación corporativa",
+  "soluciones digitales empresas",
+  "agencia full service digital",
 ];
+
+// ✅ META TAGS PERSONALIZADOS PARA REDES SOCIALES
+const ogTitle =
+  "Panambi | Estrategia Digital, Desarrollo Web y Contenido Visual";
+const ogDescription =
+  "Transformamos negocios de servicios con soluciones digitales integrales: estrategia, desarrollo web optimizado, asesoría personalizada y contenido audiovisual profesional en Argentina.";
+
+const twitterTitle = "Panambi | Agencia Digital Argentina";
+const twitterDescription =
+  "Estrategia digital + Desarrollo web + Contenido visual para profesionales y empresas que quieren crecer online.";
+
+// Imagen OG para home (ajustá según tu imagen principal)
+const ogImage = "/assets/img/og-home.jpg"; // o usa una imagen específica
+
+// ✅ SCHEMA ESPECÍFICO PARA HOME
+const homeSchema = {
+  "@type": "Organization",
+  name: "Panambi",
+  alternateName: "Panambi Digital",
+  description:
+    "Agencia de estrategia digital, desarrollo web y contenido visual especializada en profesionales y empresas de servicios en Argentina",
+  url: "https://panambi.net",
+  logo: "https://panambi.net/logos/logo_panambi.svg",
+  image: "https://panambi.net/assets/img/og-home.jpg",
+  telephone: "+54-11-3166-4971",
+  email: "info@panambi.net",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Zapiola 300",
+    addressLocality: "Chivilcoy",
+    addressRegion: "Buenos Aires",
+    postalCode: "6620",
+    addressCountry: "AR",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "-34.8969",
+    longitude: "-60.0169",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Argentina",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Servicios Digitales Panambi",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Asesoría Digital One Shot",
+          description:
+            "Sesión estratégica de 60 minutos con auditoría, diagnóstico y plan de acción",
+          url: "https://panambi.net/servicios/asesoriaOneShot",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Consultoría Estratégica Digital",
+          description:
+            "Programa de 4 semanas para digitalizar, optimizar y maximizar tu negocio",
+          url: "https://panambi.net/servicios/consultoria",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Desarrollo Web Profesional",
+          description:
+            "Sitios web a medida con diseño UX/UI, SEO y hosting incluido",
+          url: "https://panambi.net/servicios/desarrollo_web",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Diseño Audiovisual",
+          description:
+            "Contenido visual profesional para redes sociales y campañas digitales",
+          url: "https://panambi.net/servicios/diseno_audiovisual",
+        },
+      },
+    ],
+  },
+  sameAs: [
+    "https://www.instagram.com/panambi.mkt/",
+    "https://www.linkedin.com/company/panambi-ag/",
+  ],
+  knowsAbout: [
+    "Marketing Digital",
+    "Desarrollo Web",
+    "Estrategia Digital",
+    "SEO",
+    "Branding",
+    "Contenido Visual",
+    "Diseño UX/UI",
+    "Consultoría Digital",
+  ],
+  slogan:
+    "Estrategia digital, desarrollo web y contenido visual para profesionales",
+};
+
+// ✅ SCHEMA WEBSITE
+const websiteSchema = {
+  "@type": "WebSite",
+  "@id": "https://panambi.net/#website",
+  url: "https://panambi.net",
+  name: "Panambi",
+  description:
+    "Agencia de estrategia digital, desarrollo web y contenido visual",
+  publisher: {
+    "@id": "https://panambi.net/#organization",
+  },
+  inLanguage: "es-AR",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://panambi.net/buscar?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+// ✅ BREADCRUMB SCHEMA
+const breadcrumbSchema = {
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: "https://panambi.net",
+    },
+  ],
+};
 ---
 
 <Layout
-  title="Panambi | Agencia Digital Argentina - Estrategia Web y Contenido"
-  description="Panambi: estrategia digital, desarrollo web y contenido visual para potenciar tu negocio. Asesoría personalizada + webs optimizadas SEO. Empezá a crecer hoy."
+  title={title}
+  description={description}
   keywords={keywords}
+  ogImage={ogImage}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  twitterTitle={twitterTitle}
+  twitterDescription={twitterDescription}
+  pageType="WebPage"
 >
+  <!-- Schemas adicionales para Home -->
+  <Fragment slot="additional-head">
+    <!-- Schema de Organización extendido -->
+    <script type="application/ld+json" set:html={JSON.stringify(homeSchema)} />
+
+    <!-- Schema de Website -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(websiteSchema)}
+    />
+
+    <!-- Schema de Breadcrumbs -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(breadcrumbSchema)}
+    />
+  </Fragment>
+
   <Hero />
   <Servicios />
   <Conocenos />

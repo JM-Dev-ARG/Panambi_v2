@@ -5,56 +5,249 @@ import imgContacto from "@/assets/img/hero/img_equipo_hero.avif";
 import HeroConCard from "@/components/base-components/HeroConCard.astro";
 import EquipoGrid from "@/components/pages/equipo/sections/EquipoGrid.astro";
 import UltimoLLamado from "@/components/base-components/UltimoLLamado.astro";
+
+// ✅ SEO OPTIMIZADO PARA EQUIPO
+const title =
+  "Equipo Panambi | Especialistas en Marketing Digital, Desarrollo Web y Diseño UX/UI en Argentina";
+
+const description =
+  "Conocé al equipo multidisciplinario de Panambi: expertos en estrategia digital, desarrollo web, diseño UX/UI, branding y contenido audiovisual. Profesionales apasionados que transforman negocios con creatividad y tecnología en Argentina. Sumate al equipo.";
+
 const keywords = [
   // Sobre el equipo (core)
-  "equipo marketing digital",
-  "agencia digital",
-  "equipo desarrollo web",
-  "especialistas branding",
-  "expertos diseño UX UI",
+  "equipo marketing digital Argentina",
+  "equipo agencia digital Buenos Aires",
+  "equipo desarrollo web profesional",
+  "especialistas branding corporativo",
+  "expertos diseño UX UI Argentina",
+  "equipo consultoría digital",
 
-  // Servicios y expertise
-  "branding profesional",
-  "diseño UX UI",
-  "desarrollo web",
-  "desarrollo móvil",
-  "estrategia digital",
-  "marketing digital",
-  "diseño identidad marca",
+  // Servicios y expertise del equipo
+  "equipo branding profesional",
+  "especialistas diseño experiencia usuario",
+  "equipo desarrollo web a medida",
+  "expertos estrategia digital",
+  "equipo producción audiovisual",
+  "especialistas SEO y marketing",
+  "diseñadores identidad marca",
 
   // Características del equipo
   "equipo multidisciplinario digital",
   "expertos productos digitales",
-  "soluciones digitales personalizadas",
-  "servicios integrales marketing",
+  "profesionales transformación digital",
+  "equipo servicios integrales marketing",
+  "especialistas soluciones digitales personalizadas",
 
-  // Propuesta de valor
-  "experiencias digitales",
-  "consultoría estratégica",
-  "diseño comunicación digital",
-  "estrategia marca",
-  "comercio digital",
+  // Propuesta de valor y cultura
+  "equipo experiencias digitales",
+  "especialistas consultoría estratégica digital",
+  "equipo diseño comunicación digital",
+  "expertos estrategia marca",
+  "profesionales comercio digital",
+  "cultura trabajo colaborativo digital",
 
-  // Roles específicos (para búsquedas de portafolio)
-  "diseñador freelancer",
-  "community manager",
-  "editor video",
-  "desarrollador web",
+  // Roles específicos (búsquedas de portfolio/recruitment)
+  "diseñador UX UI Argentina",
+  "desarrollador web Buenos Aires",
+  "community manager profesional",
+  "editor video creativo",
+  "estratega digital senior",
+  "consultor marketing digital",
 
   // Long-tail estratégicas
-  "equipo diseño desarrollo web",
-  "agencia branding diseño web",
-  "expertos estrategia digital Argentina",
-  "soluciones digitales para marcas",
-  "diseño experiencia usuario profesional",
+  "equipo diseño y desarrollo web Argentina",
+  "agencia branding diseño web equipo",
+  "expertos estrategia digital Buenos Aires",
+  "equipo soluciones digitales para profesionales",
+  "diseño experiencia usuario equipo experto",
+  "quiénes somos agencia digital Panambi",
+
+  // Recruitment y carrera
+  "trabajar en agencia digital Argentina",
+  "sumar equipo marketing digital",
+  "empleo diseño web Buenos Aires",
+  "carrera agencia digital",
+  "oportunidades equipo desarrollo web",
+
+  // Cultura y valores
+  "equipo creativo digital Argentina",
+  "profesionales apasionados marketing",
+  "equipo innovación digital",
+  "cultura agencia digital",
+
+  // Geolocalización
+  "equipo agencia digital Buenos Aires",
+  "profesionales marketing digital Argentina",
+  "equipo desarrollo web CABA",
+  "expertos digitales Chivilcoy Buenos Aires",
+
+  // Complementarias
+  "sobre nosotros agencia Panambi",
+  "equipo full service digital",
+  "profesionales servicios digitales integrales",
+  "equipo transformación digital empresas",
 ];
+
+// ✅ META TAGS PERSONALIZADOS PARA REDES SOCIALES
+const ogTitle =
+  "Equipo Panambi | Expertos en Marketing, Desarrollo y Diseño Digital";
+const ogDescription =
+  "Equipo multidisciplinario de especialistas digitales en Argentina: estrategia, desarrollo web, UX/UI, branding y audiovisual. Conocé a los profesionales que transforman negocios.";
+
+const twitterTitle = "Equipo Panambi | Profesionales Digitales";
+const twitterDescription =
+  "Conocé al equipo: especialistas en marketing digital, desarrollo web, diseño UX/UI y branding. Apasionados por transformar negocios.";
+
+// Imagen OG del equipo
+const ogImage = imgContacto.src;
+
+// ✅ SCHEMA ESPECÍFICO PARA EQUIPO (Organization + Team)
+const equipoSchema = {
+  "@type": "Organization",
+  name: "Panambi - Equipo",
+  description:
+    "Equipo multidisciplinario de especialistas en marketing digital, desarrollo web, diseño UX/UI, branding y producción audiovisual dedicados a transformar negocios de profesionales y empresas en Argentina",
+  url: "https://panambi.net/equipo",
+  parentOrganization: {
+    "@id": "https://panambi.net/#organization",
+  },
+  knowsAbout: [
+    "Marketing Digital",
+    "Desarrollo Web",
+    "Diseño UX/UI",
+    "Branding Corporativo",
+    "Estrategia Digital",
+    "Consultoría de Negocios",
+    "SEO y Posicionamiento",
+    "Producción Audiovisual",
+    "Content Marketing",
+    "Diseño Gráfico",
+    "Community Management",
+  ],
+  memberOf: {
+    "@type": "Organization",
+    "@id": "https://panambi.net/#organization",
+  },
+  subjectOf: {
+    "@type": "WebPage",
+    url: "https://panambi.net/equipo",
+    name: "Sobre Nosotros - Equipo Panambi",
+  },
+};
+
+// ✅ SCHEMA ABOUTPAGE
+const aboutPageSchema = {
+  "@type": "AboutPage",
+  name: "Sobre Nosotros - Equipo Panambi",
+  description:
+    "Conocé al equipo multidisciplinario de Panambi: profesionales expertos en estrategia digital, desarrollo web, diseño UX/UI, branding y contenido audiovisual que transforman negocios en Argentina",
+  url: "https://panambi.net/equipo",
+  about: {
+    "@id": "https://panambi.net/#organization",
+  },
+  mainEntity: {
+    "@type": "Organization",
+    "@id": "https://panambi.net/#organization",
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: "https://panambi.net",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Equipo",
+        item: "https://panambi.net/equipo",
+      },
+    ],
+  },
+};
+
+// ✅ SCHEMA FAQ SOBRE EL EQUIPO
+const faqSchema = {
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Quiénes conforman el equipo de Panambi?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Somos un equipo multidisciplinario de especialistas digitales: estrategas de marketing digital, desarrolladores web full-stack, diseñadores UX/UI, expertos en branding, productores audiovisuales y consultores de negocio. Cada miembro aporta experiencia específica para crear soluciones digitales integrales que transforman profesionales y empresas en Argentina.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué experiencia tiene el equipo de Panambi?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nuestro equipo cuenta con años de experiencia en agencias digitales, startups tecnológicas y proyectos freelance exitosos. Hemos trabajado con profesionales independientes, estudios de servicios, pymes y empresas de diversos sectores, especializándonos en la transformación digital de negocios B2B y servicios profesionales en Argentina y Latinoamérica.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cómo trabaja el equipo de Panambi con los clientes?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Trabajamos de forma colaborativa y transparente. Cada proyecto cuenta con un equipo dedicado que incluye especialistas según las necesidades: estratega digital, desarrollador, diseñador y productor audiovisual. Nos comunicamos constantemente mediante videollamadas, herramientas colaborativas y entregas parciales para asegurar que el resultado final supere las expectativas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿El equipo trabaja de forma remota o presencial?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Trabajamos principalmente de forma remota, lo que nos permite colaborar con clientes de toda Argentina y Latinoamérica. Estamos basados en Buenos Aires y contamos con la infraestructura tecnológica para brindar servicios profesionales completamente online. Para clientes locales en Buenos Aires, también ofrecemos encuentros presenciales cuando son necesarios.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cómo puedo unirme al equipo de Panambi?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Siempre estamos buscando talento apasionado por el mundo digital. Si sos especialista en marketing digital, desarrollo web, diseño UX/UI, branding o producción audiovisual, envianos tu CV y portfolio a administracion@panambi.net. Valoramos la creatividad, el compromiso con la excelencia y las ganas de transformar negocios con soluciones digitales innovadoras.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué hace diferente al equipo de Panambi?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nuestra diferencia está en la combinación de experiencia técnica profunda con visión estratégica de negocio. No solo ejecutamos proyectos digitales: entendemos los desafíos de los profesionales de servicios y diseñamos soluciones que generan resultados medibles. Somos un equipo comprometido con el éxito de nuestros clientes, no solo con entregar proyectos.",
+      },
+    },
+  ],
+};
 ---
 
 <Layout
-  title="Equipo Panambi | Expertos en Branding, UX/UI y Desarrollo Web"
-  description="Equipo multidisciplinario experto en branding, diseño UX/UI y desarrollo web. Creamos experiencias digitales personalizadas que fusionan estética y propósito."
+  title={title}
+  description={description}
   keywords={keywords}
+  ogImage={ogImage}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  twitterTitle={twitterTitle}
+  twitterDescription={twitterDescription}
+  pageType="AboutPage"
+  pageSchema={aboutPageSchema}
 >
+  <!-- Schemas adicionales -->
+  <Fragment slot="additional-head">
+    <!-- Schema de Equipo/Organización -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(equipoSchema)}
+    />
+
+    <!-- Schema FAQ -->
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
   <HeroConCard
     imgCard={imgContacto.src}
     titulo="quienes somos"

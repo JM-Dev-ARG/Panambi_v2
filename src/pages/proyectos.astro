@@ -7,28 +7,206 @@ import Layout from "@/layouts/Layout.astro";
 
 const dataSliced = data.slice(0, 8);
 
+// ✅ SEO OPTIMIZADO PARA PROYECTOS
+const title =
+  "Proyectos de Marketing Digital y Desarrollo Web | Portfolio Panambi Argentina";
+
+const description =
+  "Descubrí nuestro portfolio de proyectos digitales exitosos: desarrollo web profesional, estrategias de marketing digital, branding corporativo y contenido audiovisual para profesionales y empresas en Argentina. Casos reales, resultados tangibles.";
+
 const keywords = [
+  // Términos principales (portfolio/proyectos)
+  "portfolio agencia digital Argentina",
+  "proyectos desarrollo web profesional",
+  "casos de éxito marketing digital",
+  "portfolio diseño web Argentina",
+  "proyectos digitales empresariales",
+
+  // Por tipo de proyecto
   "proyectos web personalizados",
   "sitios web a medida para profesionales",
-  "estrategias SEO integral",
-  "identidad de marca y diseño visual",
-  "plataforma digital funcional y atractiva",
-  "edición de contenido audiovisual",
-  "transformación digital de marcas",
-  "casos de éxito marketing digital",
-  "desarrollo web responsive",
-  "formulario dinámico para captación",
-  "posicionamiento online empresas de servicios",
-  "diseño UX/UI profesional",
-  "branding corporativo para empresas familiares",
+  "desarrollo web para abogados portfolio",
+  "proyectos web consultores",
+  "casos web servicios profesionales",
+
+  // Servicios en proyectos
+  "estrategias SEO implementadas",
+  "identidad de marca corporativa",
+  "diseño visual empresarial",
+  "plataforma digital funcional",
+  "contenido audiovisual profesional",
+  "edición video empresarial",
+
+  // Resultados y transformación
+  "transformación digital casos reales",
+  "resultados marketing digital",
+  "antes y después web profesional",
+  "mejora posicionamiento online",
+  "aumento captación clientes web",
+
+  // Técnicas implementadas
+  "desarrollo web responsive portfolio",
+  "formularios captación optimizados",
+  "posicionamiento SEO empresas servicios",
+  "diseño UX/UI profesional casos",
+  "branding corporativo empresas",
+  "optimización conversión web",
+
+  // Por industria
+  "proyectos web abogados Argentina",
+  "portfolio web contadores",
+  "casos web corredores inmobiliarios",
+  "proyectos digitales asesores seguros",
+  "portfolio web consultores",
+
+  // Long-tail estratégicas
+  "ejemplos sitios web profesionales Argentina",
+  "portfolio agencia marketing digital Buenos Aires",
+  "casos éxito transformación digital profesionales",
+  "proyectos web con resultados medibles",
+  "portfolio diseño web empresas servicios",
+
+  // Beneficios demostrados
+  "proyectos web que convierten",
+  "casos éxito captación online",
+  "portfolio web optimizado SEO",
+  "proyectos branding exitosos",
+
+  // Geolocalización
+  "portfolio agencia digital Buenos Aires",
+  "proyectos web Argentina",
+  "casos éxito marketing digital CABA",
+
+  // Complementarias
+  "trabajos realizados agencia digital",
+  "clientes satisfechos desarrollo web",
+  "experiencia agencia digital Argentina",
+  "portfolio completo servicios digitales",
 ];
+
+// ✅ META TAGS PERSONALIZADOS PARA REDES SOCIALES
+const ogTitle = "Portfolio de Proyectos Digitales | Casos Reales y Resultados";
+const ogDescription =
+  "Explorá nuestros proyectos de desarrollo web, marketing digital y branding para profesionales. Casos reales con resultados tangibles en Argentina.";
+
+const twitterTitle = "Proyectos Digitales | Panambi Portfolio";
+const twitterDescription =
+  "Portfolio completo: desarrollo web, marketing digital, branding y contenido audiovisual. Casos reales de transformación digital.";
+
+// Imagen OG específica para proyectos (si tenés una imagen de collage de proyectos)
+const ogImage = "/assets/img/og-proyectos.jpg"; // ajustá según tu imagen
+
+// ✅ SCHEMA ESPECÍFICO PARA PROYECTOS (CollectionPage + ItemList)
+const proyectosSchema = {
+  "@type": "CollectionPage",
+  name: "Portfolio de Proyectos Digitales",
+  description:
+    "Colección de proyectos exitosos de desarrollo web, marketing digital, branding y contenido audiovisual realizados por Panambi para profesionales y empresas en Argentina",
+  url: "https://panambi.net/proyectos",
+  mainEntity: {
+    "@type": "ItemList",
+    name: "Proyectos Destacados",
+    description: "Portfolio de casos de éxito en transformación digital",
+    numberOfItems: dataSliced.length,
+    itemListElement: dataSliced.map((proyecto, index) => ({
+      "@type": "CreativeWork",
+      position: index + 1,
+      name: proyecto.titulo || `Proyecto ${index + 1}`,
+      description:
+        proyecto.descripcion ||
+        proyecto.descripcion ||
+        "Proyecto de transformación digital",
+      image: proyecto.img || proyecto.img,
+      creator: {
+        "@type": "Organization",
+        "@id": "https://panambi.net/#organization",
+      },
+    })),
+  },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: "https://panambi.net",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Proyectos",
+        item: "https://panambi.net/proyectos",
+      },
+    ],
+  },
+};
+
+// ✅ SCHEMA FAQs SOBRE PROYECTOS (opcional pero recomendado)
+const faqSchema = {
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Qué tipo de proyectos digitales realiza Panambi?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Realizamos proyectos integrales de transformación digital que incluyen: desarrollo de sitios web profesionales a medida, estrategias de marketing digital personalizadas, diseño de identidad de marca y branding corporativo, y producción de contenido audiovisual para redes sociales y campañas digitales. Trabajamos principalmente con profesionales independientes, estudios de servicios y pymes en Argentina.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Muestran resultados reales de sus proyectos?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, todos los proyectos en nuestro portfolio son casos reales con resultados medibles. Mostramos métricas concretas como mejora en posicionamiento SEO, aumento de tráfico web, optimización de tasas de conversión y crecimiento en captación de clientes online para cada proyecto presentado.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Para qué tipo de empresas o profesionales trabajan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nos especializamos en profesionales de servicios y empresas B2B: abogados, contadores, corredores inmobiliarios, asesores de seguros, consultores, coaches, arquitectos y estudios profesionales que buscan digitalizar su negocio, optimizar su presencia online y captar más clientes a través de estrategias digitales efectivas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto tiempo toma completar un proyecto similar?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El tiempo varía según la complejidad: proyectos de desarrollo web básico toman entre 2-3 semanas, sitios profesionales completos entre 4-6 semanas, y proyectos integrales de transformación digital (consultoría + web + branding) pueden tomar de 6 a 8 semanas. Siempre trabajamos con cronogramas claros y entregas parciales.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Puedo ver proyectos de mi industria específica?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, en nuestro portfolio encontrarás proyectos filtrados por industria y tipo de servicio. Contamos con casos de éxito en múltiples sectores profesionales. Si querés ver proyectos específicos de tu rubro o necesitás referencias adicionales, contactanos y te compartimos casos relevantes para tu industria.",
+      },
+    },
+  ],
+};
 ---
 
 <Layout
-  title="Panambi - Proyectos"
-  description="Estrategia, diseño y tecnología para profesionales que quieren destacar. En Panambí convertimos tus proyectos digitales en experiencias que inspiran y generan impacto."
+  title={title}
+  description={description}
   keywords={keywords}
+  ogImage={ogImage}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  twitterTitle={twitterTitle}
+  twitterDescription={twitterDescription}
+  pageType="CollectionPage"
+  pageSchema={proyectosSchema}
 >
+  <!-- Schema FAQ adicional -->
+  <Fragment slot="additional-head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
   <Hero />
   <ContainerServiciosProyectos data={dataSliced} bgColor="bg-violeta1-100/50" />
   <UltimoLLamado

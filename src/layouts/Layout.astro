@@ -16,64 +16,108 @@ interface Props {
   title: string;
   description: string;
   keywords?: string[];
-  ogImage?: string; // Opcional: imagen específica por página
+  ogImage?: string;
+  // ✅ Nuevas props para SEO personalizado
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  pageSchema?: object; // Schema específico de la página
+  pageType?: string; // Tipo de página: "WebPage", "AboutPage", "ContactPage", etc.
 }
-const { title, description, keywords, ogImage } = Astro.props;
+
+const {
+  title,
+  description,
+  keywords,
+  ogImage,
+  ogTitle,
+  ogDescription,
+  twitterTitle,
+  twitterDescription,
+  pageSchema,
+  pageType = "WebPage",
+} = Astro.props;
 
 // URL canónica dinámica por página
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 // Imagen OG dinámica o por defecto
-const ogImageURL =
-  ogImage || new URL(icono_metadata.src, Astro.site).toString();
+const ogImageURL = ogImage
+  ? new URL(ogImage, Astro.site).toString()
+  : new URL(icono_metadata.src, Astro.site).toString();
 
-// Schema genérico para WebPage y Organization
+// ✅ Usar valores personalizados o por defecto
+const finalOgTitle = ogTitle || title;
+const finalOgDescription = ogDescription || description;
+const finalTwitterTitle = twitterTitle || ogTitle || title;
+const finalTwitterDescription =
+  twitterDescription || ogDescription || description;
+
+// Schema base de la organización
+const organizationSchema = {
+  "@type": "ProfessionalService",
+  "@id": `${Astro.site}#organization`,
+  name: "Panambi",
+  description:
+    "Estrategia digital, desarrollo web y contenido visual para profesionales y empresas",
+  email: "info@panambi.net",
+  url: Astro.site?.toString(),
+  logo: {
+    "@type": "ImageObject",
+    url: dataSchema.logo,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: dataSchema.contactPoint.telephone,
+    contactType: "Atención al cliente",
+    areaServed: dataSchema.contactPoint.areaServed,
+    availableLanguage: dataSchema.contactPoint.availableLanguage,
+  },
+  sameAs: dataSchema.sameAs,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: dataSchema.address.streetAddress,
+    addressLocality: dataSchema.address.addressLocality,
+    addressRegion: dataSchema.address.addressRegion,
+    postalCode: dataSchema.address.postalCode,
+    addressCountry: dataSchema.address.addressCountry,
+  },
+};
+
+// Schema de la página web
+const webPageSchema = {
+  "@type": pageType,
+  "@id": canonicalURL,
+  url: canonicalURL,
+  name: title,
+  description: description,
+  isPartOf: {
+    "@id": `${Astro.site}#website`,
+  },
+  about: {
+    "@id": `${Astro.site}#organization`,
+  },
+  inLanguage: "es-AR",
+};
+
+// ✅ Si hay schema personalizado de la página, conectarlo con la organización
+const enrichedPageSchema = pageSchema
+  ? {
+      ...pageSchema,
+      provider: {
+        "@id": `${Astro.site}#organization`,
+      },
+    }
+  : null;
+
+// Schema final combinado
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "ProfessionalService",
-      "@id": `${Astro.site}#organization`,
-      name: "Panambi",
-      description:
-        "Estrategia digital, desarrollo web y contenido visual para profesionales y empresas",
-      email: "info@panambi.net",
-      url: Astro.site?.toString(),
-      logo: {
-        "@type": "ImageObject",
-        url: dataSchema.logo,
-      },
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: dataSchema.contactPoint.telephone,
-        contactType: "Atención al cliente",
-        areaServed: dataSchema.contactPoint.areaServed,
-        availableLanguage: dataSchema.contactPoint.availableLanguage,
-      },
-      sameAs: dataSchema.sameAs,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: dataSchema.address.streetAddress,
-        addressLocality: dataSchema.address.addressLocality,
-        addressRegion: dataSchema.address.addressRegion,
-        postalCode: dataSchema.address.postalCode,
-        addressCountry: dataSchema.address.addressCountry,
-      },
-    },
-    {
-      "@type": "WebPage",
-      "@id": canonicalURL,
-      url: canonicalURL,
-      name: title,
-      description: description,
-      isPartOf: {
-        "@id": `${Astro.site}#website`,
-      },
-      about: {
-        "@id": `${Astro.site}#organization`,
-      },
-      inLanguage: "es-AR",
-    },
+    organizationSchema,
+    webPageSchema,
+    ...(enrichedPageSchema ? [enrichedPageSchema] : []),
   ],
 };
 ---
@@ -99,9 +143,17 @@ const schema = {
       )
     }
 
-    <!-- Robots y Author -->
-    <meta name="robots" content="index, follow" />
+    <!-- SEO General -->
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
     <meta name="author" content="Panambi" />
+    <meta name="language" content="Spanish" />
+
+    <!-- SEO Local -->
+    <meta name="geo.region" content="AR" />
+    <meta name="geo.placename" content="Buenos Aires" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href={favicon.src} />
@@ -110,14 +162,14 @@ const schema = {
     <!-- Client Router -->
     <ClientRouter />
 
-    <!-- Schema.org markup -->
+    <!-- Schema.org markup combinado -->
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 
-    <!-- Facebook Open Graph -->
-    <meta property="og:url" content={canonicalURL} />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={finalOgTitle} />
+    <meta property="og:description" content={finalOgDescription} />
     <meta property="og:image" content={ogImageURL} />
     <meta property="og:locale" content="es_AR" />
     <meta property="og:site_name" content="Panambi" />
@@ -125,23 +177,20 @@ const schema = {
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={canonicalURL} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title" content={finalTwitterTitle} />
+    <meta name="twitter:description" content={finalTwitterDescription} />
     <meta name="twitter:image" content={ogImageURL} />
 
-    <!-- Meta Pixel Code -->
-    <!-- End Meta Pixel Code -->
-
-    <!-- Google tag (gtag.js) -->
-    <!-- End Google tag (gtag.js) -->
-
-    <!-- Metricool tracker -->
-    <!-- End Metricool tracker -->
+    <!-- Slot para meta tags o schemas adicionales -->
+    <slot name="additional-head" />
   </head>
+
   <body>
     <NavbarWeb />
     <NavBarMovil />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
