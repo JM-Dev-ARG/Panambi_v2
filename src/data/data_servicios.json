@@ -13,7 +13,7 @@
       "Plan de acción y conversión de clientes"
     ],
     "img": "/img/asesoria.avif",
-    "href": "/servicios/asesoriaOneShot"
+    "href": "/servicios/asesoriaoneshot"
   },
   {
     "titulo": "Consultoria estratégica",
@@ -45,7 +45,7 @@
       "Desarrollo adaptable y responsive"
     ],
     "img": "/img/web2.avif",
-    "href": "/servicios/desarrollo_web"
+    "href": "/servicios/desarrolloweb"
   },
   {
     "titulo": "diseño audiovisual",

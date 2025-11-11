@@ -38,138 +38,182 @@ const dataLinks = [
 
 // ✅ SEO OPTIMIZADO
 const title =
-  "Consultoría Estratégica Digital para Profesionales | Transformá tu Negocio en 4 Semanas | Panambi Argentina";
+  "Consultoría Estratégica Digital | 4 Semanas para Transformar tu Negocio | Panambi Argentina";
 
 const description =
-  "Consultoría estratégica de marketing y negocio digital para profesionales de servicios en Argentina. Programa intensivo de 4 semanas: digitalizamos tu negocio, optimizamos tu captación y maximizamos tu rentabilidad. Para abogados, contadores, corredores, asesores y consultores que quieren escalar.";
+  "Consultoría estratégica de marketing digital para profesionales de servicios. Programa intensivo de 4 semanas: construimos tu sistema de captación, optimizamos tu presencia digital y maximizamos tu rentabilidad. Para abogados, contadores, corredores y consultores que quieren dejar de ser invisibles.";
 
 const keywords = [
   // Términos principales (alta intención de búsqueda)
   "consultoría estratégica digital Argentina",
   "consultoría de marketing para profesionales",
   "consultoría negocio digital 4 semanas",
-  "digitalización de negocios de servicios",
-  "transformación digital profesionales Argentina",
+  "transformación digital profesionales servicios",
+  "sistema de captación de clientes online",
 
   // Por industria específica (long-tail profesional)
   "consultoría digital para abogados Argentina",
   "marketing digital para contadores Buenos Aires",
   "estrategia digital corredores inmobiliarios",
   "consultoría para asesores de seguros",
-  "marketing para coaches y consultores",
-  "consultoría digital arquitectos Argentina",
+  "marketing para coaches y consultores Argentina",
+  "consultoría digital arquitectos Buenos Aires",
+
+  // Pain points y búsquedas conversacionales
+  "dejar de depender del boca en boca",
+  "cómo digitalizar mi negocio de servicios",
+  "captar clientes sin depender de referencias",
+  "negocio invisible online qué hacer",
+  "presencia digital sin resultados profesionales",
+  "sistema escalable captación clientes servicios",
 
   // Servicios específicos y entregables
-  "sistema de captación de clientes online",
   "embudo de conversión para servicios profesionales",
-  "optimización de presencia digital profesional",
   "estrategia de posicionamiento digital B2B",
   "infraestructura digital completa negocios",
   "roadmap marketing digital 90 días",
+  "optimización comercial servicios profesionales",
 
-  // Búsquedas conversacionales (long-tail)
-  "cómo digitalizar mi negocio de servicios",
+  // Búsquedas de solución
   "consultor de marketing digital Buenos Aires",
-  "transformación digital para profesionales independientes",
-  "aumentar clientes online servicios profesionales",
   "programa digitalización negocios Argentina",
-
-  // Problemas específicos que resuelve
-  "captar clientes sin boca en boca",
-  "sistema escalable captación clientes",
+  "aumentar clientes online servicios profesionales",
   "mejorar rentabilidad negocio servicios",
-  "negocio servicios no genera clientes online",
-  "presencia digital sin resultados",
+  "modelo de negocio predecible servicios",
 
   // Términos relacionados y complementarios
-  "consultoría de negocio escalable",
-  "plan de marketing 90 días profesionales",
-  "modelo de negocio predecible servicios",
-  "optimización comercial servicios profesionales",
-  "estrategia captación B2B Argentina",
-  "consultoría transformación digital LATAM",
+  "consultoría de negocio escalable Argentina",
+  "plan de marketing profesionales independientes",
+  "estrategia captación digital B2B",
+  "transformación digital LATAM profesionales",
 
   // Geográficos y locales
   "consultoría digital Buenos Aires",
-  "marketing estratégico Argentina",
-  "consultor negocio digital CABA",
+  "marketing estratégico Argentina CABA",
+  "consultor negocio digital Buenos Aires",
 ];
 
 // ✅ META TAGS PERSONALIZADOS PARA REDES SOCIALES
 const ogTitle =
-  "Consultoría Estratégica Digital | Transformá tu Negocio en 4 Semanas";
+  "Consultoría Estratégica Digital | Pasá de Invisible a Imparable en 4 Semanas";
 const ogDescription =
-  "Programa intensivo para profesionales de servicios que quieren digitalizar su negocio, optimizar captación y maximizar rentabilidad. Estrategia completa + implementación en 4 semanas.";
+  "Programa intensivo para profesionales que quieren dejar de depender del boca en boca y construir un sistema predecible de captación. Sistema completo + implementación + resultados.";
 
-const twitterTitle = "Consultoría Estratégica Digital | Panambi";
+const twitterTitle =
+  "Pasá de Invisible a Imparable | Consultoría Estratégica Digital";
 const twitterDescription =
-  "Transformá tu negocio de servicios en 4 semanas. Digitalización + optimización + maximización de resultados.";
+  "4 semanas para transformar tu negocio de servicios. Dejá de ser invisible y construí tu sistema de captación digital.";
 
 const ogImage = imgHero.src;
 
 // ✅ SCHEMA ESPECÍFICO COMPLETO Y OPTIMIZADO
 const consultoriaSchema = {
+  "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Consultoría Estratégica de Negocio Digital",
-  alternateName: "Programa de Transformación Digital para Profesionales",
+  name: "Consultoría Estratégica de Negocio Digital - Panambi",
+  alternateName:
+    "Programa de Transformación Digital para Profesionales de Servicios",
   description:
-    "Programa intensivo de 4 semanas que digitaliza, optimiza y maximiza el rendimiento de negocios de servicios profesionales en Argentina. Incluye 4 sesiones estratégicas, entregables completos y plan de implementación.",
+    "Programa intensivo de 4 semanas que transforma negocios de servicios profesionales invisibles en sistemas predecibles de captación digital. Incluye digitalización completa, optimización de captación y maximización de rentabilidad con 4 sesiones estratégicas y entregables ejecutables.",
   url: "https://panambi.net/servicios/consultoria",
   serviceType: "Consultoría Estratégica Digital",
   category: "Business Consulting",
+  provider: {
+    "@type": "Organization",
+    name: "Panambi",
+    url: "https://panambi.net",
+    logo: "https://panambi.net/logo.png",
+    sameAs: [
+      "https://www.linkedin.com/company/panambi",
+      "https://www.instagram.com/panambi.digital",
+    ],
+  },
   audience: {
     "@type": "Audience",
     audienceType:
-      "Profesionales de servicios: abogados, contadores, corredores inmobiliarios, asesores de seguros, coaches, consultores y arquitectos que buscan digitalizar y escalar su negocio",
+      "Profesionales de servicios B2B y B2C: abogados, contadores, corredores inmobiliarios, asesores de seguros, coaches, consultores, arquitectos y otros profesionales independientes que buscan digitalizar, sistematizar y escalar su captación de clientes",
   },
-  areaServed: {
-    "@type": "Country",
-    name: "Argentina",
-  },
+  areaServed: [
+    {
+      "@type": "Country",
+      name: "Argentina",
+    },
+    {
+      "@type": "City",
+      name: "Buenos Aires",
+      containedIn: "Argentina",
+    },
+  ],
   availableChannel: {
     "@type": "ServiceChannel",
     serviceUrl: "https://panambi.net/contacto",
     serviceType: "Videollamada Online",
-    availableLanguage: "Spanish",
+    availableLanguage: {
+      "@type": "Language",
+      name: "Spanish",
+      alternateName: "Español",
+    },
   },
   offers: {
     "@type": "Offer",
-    name: "Consultoría Estratégica de 4 Semanas",
+    name: "Programa de Consultoría Estratégica de 4 Semanas",
     price: "785000",
     priceCurrency: "ARS",
     priceSpecification: {
       "@type": "UnitPriceSpecification",
       price: "500",
       priceCurrency: "USD",
+      referenceQuantity: {
+        "@type": "QuantitativeValue",
+        value: "1",
+        unitText: "programa completo",
+      },
     },
     availability: "https://schema.org/InStock",
     validFrom: "2024-01-01",
     priceValidUntil: "2025-12-31",
     url: "https://panambi.net/servicios/consultoria",
+    itemCondition: "https://schema.org/NewCondition",
+    seller: {
+      "@type": "Organization",
+      name: "Panambi",
+    },
   },
   serviceOutput: [
     {
       "@type": "CreativeWork",
       name: "Documento maestro de estrategia digital",
       description:
-        "Análisis de situación actual, estrategia de posicionamiento digital, arquitectura de oferta optimizada y modelo de negocio escalable",
+        "Análisis completo de situación actual, estrategia de posicionamiento digital, arquitectura de oferta optimizada y modelo de negocio escalable para el entorno digital",
     },
     {
       "@type": "CreativeWork",
       name: "Definición de marca digital completa",
       description:
-        "Propuesta de valor, diferenciación, personalidad de marca, mensajes clave por canal y guía de comunicación",
+        "Propuesta de valor diferenciada, personalidad de marca, mensajes clave por canal, guía de comunicación y lineamientos de tono para consistencia profesional",
     },
     {
       "@type": "CreativeWork",
       name: "Motor de captación diseñado",
       description:
-        "Buyer persona detallado, embudo de conversión, estrategia de contenido por canal, calendario editorial y estructura de campañas",
+        "Buyer persona detallado, embudo de conversión optimizado, estrategia de contenido por canal, calendario editorial mensual y estructura de campañas de captación",
+    },
+    {
+      "@type": "CreativeWork",
+      name: "Plan de acción trimestral",
+      description:
+        "Roadmap de 90 días con iniciativas priorizadas por impacto, cronograma semanal, recursos necesarios y KPIs de seguimiento para ejecución autónoma",
+    },
+    {
+      "@type": "CreativeWork",
+      name: "Kit de recursos prácticos",
+      description:
+        "Plantillas de propuestas comerciales, scripts de seguimiento, calculadora de precios optimizada, templates de contenido y checklists de implementación",
     },
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Componentes del Programa de Consultoría",
+    name: "Componentes del Programa de Consultoría Estratégica",
     itemListElement: [
       {
         "@type": "Offer",
@@ -177,7 +221,7 @@ const consultoriaSchema = {
           "@type": "Service",
           name: "Digitalización de negocio",
           description:
-            "Infraestructura digital completa: posicionamiento online, canales de comunicación y presencia profesional estratégica",
+            "Construcción de infraestructura digital completa: posicionamiento online estratégico, canales de comunicación profesionales y presencia digital que genera credibilidad y atrae oportunidades",
         },
       },
       {
@@ -186,7 +230,7 @@ const consultoriaSchema = {
           "@type": "Service",
           name: "Optimización de captación",
           description:
-            "Sistema de marketing digital automatizado con embudo de conversión, contenido estratégico y canales optimizados que generan oportunidades 24/7",
+            "Diseño de sistema de marketing digital automatizado: embudo de conversión optimizado, contenido estratégico por canal y procesos que generan oportunidades de negocio 24/7 sin depender del boca en boca",
         },
       },
       {
@@ -195,16 +239,16 @@ const consultoriaSchema = {
           "@type": "Service",
           name: "Maximización de resultados",
           description:
-            "Optimización de modelo operativo, oferta comercial, estructura de precios, comunicación y procesos para aumentar rentabilidad sin trabajar más horas",
+            "Optimización integral del modelo operativo: reestructuración de oferta comercial, estrategia de precios, comunicación efectiva y procesos eficientes para aumentar rentabilidad sin incrementar horas de trabajo",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "4 sesiones estratégicas de 90 minutos",
+          name: "4 sesiones estratégicas personalizadas",
           description:
-            "Trabajo conjunto en tiempo real para resolver obstáculos y tomar decisiones estratégicas con impacto directo en el negocio",
+            "4 sesiones de 90 minutos (una por semana) en videollamada donde trabajamos juntos en tiempo real para resolver obstáculos específicos, tomar decisiones estratégicas y garantizar avances concretos con impacto directo en el negocio",
         },
       },
     ],
@@ -212,9 +256,11 @@ const consultoriaSchema = {
   termsOfService: "https://panambi.net/terminos",
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "5",
+    ratingValue: "5.0",
     bestRating: "5",
+    worstRating: "1",
     ratingCount: "1",
+    reviewCount: "1",
   },
   potentialAction: {
     "@type": "ReserveAction",
@@ -228,14 +274,15 @@ const consultoriaSchema = {
     },
     result: {
       "@type": "Reservation",
-      name: "Reserva de Consultoría Estratégica",
+      name: "Reserva de Consultoría Estratégica Digital",
       reservationStatus: "https://schema.org/ReservationConfirmed",
     },
   },
 };
 
-// ✅ SCHEMA FAQ (si tenés preguntas frecuentes en la página)
+// ✅ SCHEMA FAQ OPTIMIZADO
 const faqSchema = {
+  "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
     {
@@ -256,7 +303,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "¿Cómo es la modalidad de pago?",
+      name: "¿Cómo es la modalidad de pago de la consultoría?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Abonás el 50% al iniciar la consultoría (antes de la primera sesión) y el 50% restante al finalizar las 4 semanas (después de la última sesión y entrega de documentos finales). Aceptamos transferencia bancaria y pago en dólares o pesos según la cotización del día.",
@@ -264,7 +311,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "¿Incluye la implementación de lo planificado?",
+      name: "¿La consultoría incluye la implementación de lo planificado?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Esta consultoría se enfoca en el diseño estratégico completo y te entregamos el plan de implementación detallado. Te capacitamos para que puedas ejecutarlo vos mismo o con tu equipo. Si después necesitás apoyo técnico para ejecutar (diseño web, gestión de campañas, producción de contenido), ofrecemos servicios complementarios de implementación que podés contratar por separado.",
@@ -272,10 +319,26 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "¿Garantizan resultados específicos?",
+      name: "¿Garantizan resultados específicos con la consultoría?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "No garantizamos resultados de negocio específicos (cantidad de clientes, facturación, etc.) porque esos resultados dependen de múltiples factores fuera de nuestro control: tu implementación, tu mercado, tu contexto competitivo y tu constancia. Lo que sí garantizamos son los medios: vas a recibir una estrategia sólida, documentada y ejecutable; herramientas y recursos profesionales; un plan de acción claro y todos los entregables comprometidos. Te damos el mapa y la brújula; los resultados vienen de tu navegación constante.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Funciona para mi industria o tipo de servicio profesional?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutamente. Trabajamos con profesionales de servicios de distintas industrias: abogados, contadores, corredores inmobiliarios, asesores de seguros, coaches, consultores, arquitectos y más. La metodología es adaptable: lo que importa es que ofrezcas servicios profesionales (B2B o B2C) y que busques digitalizar y escalar tu negocio de forma predecible.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué pasa después de las 4 semanas de consultoría?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Salís con tu estrategia completa documentada, tu roadmap de 90 días y todos los templates y herramientas necesarias. Podés ejecutarlo vos mismo, con tu equipo o contratar nuestro servicio de acompañamiento mensual (no incluido). Quedás con acceso permanente a todos los documentos y materiales entregados.",
       },
     },
   ],
@@ -300,6 +363,9 @@ const faqSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </Fragment>
 
+  <h1 class="sr-only">
+    Consultoría Estratégica Digital para Profesionales de Servicios en Argentina
+  </h1>
   <HeroPaginaServicios
     idContainer="hero_consultoria_estrategica"
     titulo="CONSULTORÍA ESTRATÉGICA DE NEGOCIO DIGITAL"

@@ -1,6 +1,6 @@
 [
     {
-        "href": "servicios/asesoriaOneShot",
+        "href": "servicios/asesoriaoneshot",
         "label": "Asesoría One Shot"
     },
     {
@@ -8,7 +8,7 @@
         "label": "Consultoría Estratégica"
     },
     {
-        "href": "servicios/desarrollo_web",
+        "href": "servicios/desarrolloweb",
         "label": "Desarrollo Web"
     },
     {
