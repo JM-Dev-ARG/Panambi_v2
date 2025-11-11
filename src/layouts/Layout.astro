@@ -183,9 +183,42 @@ const schema = {
 
     <!-- Slot para meta tags o schemas adicionales -->
     <slot name="additional-head" />
+
+    <!-- Google Tag Manager -->
+
+    <script>
+      /* @ts-ignore */
+      (function (w, d, s, l, i) {
+        /* @ts-ignore */
+        w[l] = w[l] || [];
+        /* @ts-ignore */
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        /* @ts-ignore */
+        j.async = true;
+        /* @ts-ignore */
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        /* @ts-ignore */
+        f.parentNode.insertBefore(j, f);
+        /* @ts-ignore */
+      })(window, document, "script", "dataLayer", "GTM-MT6WKTKV");
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MT6WKTKV"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+
     <NavbarWeb />
     <NavBarMovil />
     <main>
