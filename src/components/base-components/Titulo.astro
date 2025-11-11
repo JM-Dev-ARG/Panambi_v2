@@ -14,7 +14,7 @@ const subtitlePalabras = subtitle?.split(" ");
 <div
   class=`flex w-full flex-col items-center justify-center gap-2 ${textNegro ?'text-negro':'text-neutral-100'} ${marginBottom ? 'mb-8' : ''}`
 >
-  <h3
+  <h2
     class="titulo1 text-center text-xl font-normal uppercase sm:text-2xl lg:text-3xl"
   >
     {
@@ -49,8 +49,8 @@ const subtitlePalabras = subtitle?.split(" ");
         </span>
       ))
     }
-  </h3>
-  <h2
+  </h2>
+  <h3
     class="titulo2 font-titulo lg:leading-14 w-full text-balance text-center text-4xl font-black uppercase leading-8 tracking-wide sm:text-5xl sm:leading-10 lg:text-6xl"
     data-texto={subtitle}
   >
@@ -86,7 +86,7 @@ const subtitlePalabras = subtitle?.split(" ");
         </span>
       ))
     }
-  </h2>
+  </h3>
 </div>
 
 <style>
