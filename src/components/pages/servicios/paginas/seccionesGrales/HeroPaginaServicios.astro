@@ -12,6 +12,7 @@ interface Props {
   textoLibreTitulo?: string;
   textoLibreSubtitulo?: string;
   origen?: string;
+  marginTop?: string;
 }
 
 const {
@@ -22,6 +23,7 @@ const {
   textoLibreTitulo,
   textoLibreSubtitulo,
   origen,
+  marginTop,
 } = Astro.props;
 ---
 
@@ -36,6 +38,7 @@ const {
     textNegro={true}
     titulo={textoLibreTitulo}
     subtitulo={textoLibreSubtitulo}
+    marginTop={marginTop}
   />
   <Imagen3D img={img} origen={origen} />
 </Container>

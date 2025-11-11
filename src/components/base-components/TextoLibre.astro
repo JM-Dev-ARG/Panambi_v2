@@ -4,13 +4,14 @@ interface Props {
   subtitulo?: string;
   marginTop?: string;
   textNegro?: boolean;
+  marginBottom?: string;
 }
 
-const { titulo, subtitulo, marginTop, textNegro } = Astro.props;
+const { titulo, subtitulo, marginTop, textNegro, marginBottom } = Astro.props;
 ---
 
 <div
-  class={`${marginTop ? marginTop : "mt-8"} w-full text-balance text-center text-lg font-light leading-4 sm:text-xl sm:leading-5 lg:w-[80%] ${marginTop} ${textNegro ? "text-negro" : "text-neutral-100"}`}
+  class={`${marginTop ? marginTop : "mt-8"} w-full text-balance text-center text-lg font-light leading-4 sm:text-xl sm:leading-5 lg:w-[80%] ${marginTop} ${textNegro ? "text-negro" : "text-neutral-100"} ${marginBottom ? marginBottom : "mb-8"}`}
 >
   <p
     class="font-titulo pb-2 text-xl font-semibold leading-6 sm:text-2xl sm:leading-7"
