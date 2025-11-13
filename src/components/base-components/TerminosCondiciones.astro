@@ -1,18 +1,21 @@
 ---
+interface Props {
+  textColor?: string;
+  fontSize?: string;
+  bgColor?: string;
+}
+const { textColor, fontSize, bgColor } = Astro.props;
 
+console.log(fontSize);
 ---
 
-<span class="bg-negro w-full">
-  <p class="z-50 text-center text-xs font-light text-gray-300">
-    <a
-      class="z-30 cursor-pointer font-medium"
-      aria-label="Link a terminos y condiciones"
-      href="/terminosycondiciones"
-      target="_blank"
-      title="Link a terminos y condiciones"
-      rel="noopener noreferrer"
-    >
-      Términos y Condiciones
-    </a>
-  </p>
-</span>
+<a
+  class={`z-50 text-center ${fontSize ?? "text-xs"} font-light ${textColor ?? "text-gray-300"} cursor-pointer font-medium w-full ${bgColor ?? "transparent"}`}
+  aria-label="Link a terminos y condiciones"
+  href="/terminosycondiciones"
+  target="_blank"
+  title="Link a terminos y condiciones"
+  rel="noopener noreferrer"
+>
+  Términos y Condiciones
+</a>

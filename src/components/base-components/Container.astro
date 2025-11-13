@@ -21,10 +21,10 @@ const { id, classNameSeccion, classNameContainer, marginTop } = Astro.props;
     <slot />
     {
       id === "footer" ? (
-        <>
+        <div class="bg-negro flex w-full flex-col items-center justify-center gap-2">
           <TerminosCondiciones />
           <Autoria />
-        </>
+        </div>
       ) : (
         ""
       )
