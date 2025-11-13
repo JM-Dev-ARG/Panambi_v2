@@ -153,7 +153,8 @@ const currentPage = Astro.url.pathname.split("/")[1];
           let carouselItemsHTML = "";
           data.forEach((item) => {
             carouselItemsHTML += `<div class="flex h-full w-[180px] flex-col items-center justify-center text-center ">
-                <img src="${item.img}" alt="${item.titulo}" title="${item.titulo}" loading="lazy" height="auto" width="auto" class="h-full  object-cover rounded-xl" />
+                <img src="${item.img}" alt="${item.titulo}" title="${item.titulo}" loading="lazy" height="200" 
+  width="180" class="h-full  object-cover rounded-xl" />
               </div>`;
           });
           carrousel.innerHTML = carouselItemsHTML;

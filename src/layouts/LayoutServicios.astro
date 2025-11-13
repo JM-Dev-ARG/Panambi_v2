@@ -227,7 +227,7 @@ const schema = {
     <!-- Slot para meta tags o schemas adicionales -->
     <slot name="additional-head" />
 
-    <script>
+    <script is:inline defer>
       /* @ts-ignore */
       (function (w, d, s, l, i) {
         /* @ts-ignore */
@@ -249,7 +249,7 @@ const schema = {
     <!-- End Google Tag Manager -->
 
     <!-- Google Analytics -->
-    <script>
+    <script is:inline defer>
       /* @ts-ignore */
       window.dataLayer = window.dataLayer || [];
       /* @ts-ignore */

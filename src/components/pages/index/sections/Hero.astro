@@ -34,7 +34,7 @@ import flecha from "@/assets/svg/arrow-right.svg";
             class="text-negro text-pretty text-4xl font-medium leading-[36px] lg:text-5xl lg:leading-[48px] xl:text-[72px] xl:leading-[65px]"
           >
             Del escritorio al clic: tu negocio, ahora es <strong
-              class="text-violeta1-400 text-5xl font-extrabold italic lg:text-6xl xl:text-[80px]"
+              class="text-violeta1-400 text-5xl font-black italic lg:text-6xl xl:text-[80px]"
               >digital</strong
             >
           </h2>
@@ -51,7 +51,17 @@ import flecha from "@/assets/svg/arrow-right.svg";
         </div>
       </div>
     </div>
-    <div class="b" data-aos="fade-up" data-aos-anchor-placement="top"></div>
+    <div class="b relative overflow-hidden" data-aos="fade-up" data-aos-anchor-placement="top">
+      <img
+        src="/img/hero_img_card_1.avif"
+        alt="Imagen decorativa hero Panambi"
+        title="Imagen decorativa hero"
+        loading="lazy"
+        width="400"
+        height="300"
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+    </div>
     <div
       class="c flex w-full items-center justify-center p-3"
       data-aos="fade-down"
@@ -87,7 +97,6 @@ import flecha from "@/assets/svg/arrow-right.svg";
           height="auto"
           title="Imagen de celular con web"
           alt="imagen de celular con web"
-          loading="lazy"
           fetchpriority="high"
           class="absolute bottom-0 right-0 h-[120%] rounded-b-3xl transition-all duration-300 lg:h-[115%] lg:group-hover:scale-[104%] 2xl:h-[125%]"
         />
@@ -162,10 +171,6 @@ import flecha from "@/assets/svg/arrow-right.svg";
     }
     .b {
       grid-area: b;
-      background-image: url("/img/hero_img_card_1.avif");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
     }
     .c {
       grid-area: c;
