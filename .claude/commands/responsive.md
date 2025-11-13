@@ -1,0 +1,1 @@
+Analiza el componente que tengo abierto y revisa que tenga clases responsive apropiadas para mobile, tablet y desktop. Sugiere mejoras si es necesario.

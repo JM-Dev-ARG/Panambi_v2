@@ -1,0 +1,1 @@
+Ejecuta npm run build y analiza si hay errores o warnings. Si hay problemas, identifícalos y sugiere soluciones.

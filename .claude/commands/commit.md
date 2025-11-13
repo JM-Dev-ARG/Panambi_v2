@@ -1,0 +1,1 @@
+Revisa los cambios con git status y git diff. Analiza todos los cambios y sugiere un mensaje de commit conciso en español que siga el estilo de los commits anteriores del proyecto. No hagas el commit, solo dame el texto.
