@@ -8,9 +8,9 @@ import flecha from "@/assets/svg/arrow-right.svg";
 <Container
   id="hero_index"
   marginTop=" 2xl:mt-[180px]"
-  classNameSeccion="h-[550px] lg:h-[650px]  pb-4 pt-8 "
+  classNameSeccion="h-[550px] xl:h-[650px]  pb-4 pt-8 "
 >
-  <div class="hero-grid">
+  <div class="hero-grid px-2">
     <div class="a relative overflow-hidden" data-aos="fade-right">
       <img
         src={logo.src}
@@ -75,10 +75,11 @@ import flecha from "@/assets/svg/arrow-right.svg";
         class="hidden h-full rotate-[135deg] object-contain md:block lg:hidden xl:block"
       />
     </div>
-    <div class="d group" data-aos="fade-left">
+    <div class="d group" data-aos="zoom-out">
       <div
         class="relative h-full w-full object-bottom"
-        data-aos="zoom-out-down"
+        data-aos="zoom-in"
+        data-aos-duration="1200"
       >
         <img
           src={celImg.src}
@@ -88,10 +89,9 @@ import flecha from "@/assets/svg/arrow-right.svg";
           alt="imagen de celular con web"
           loading="lazy"
           fetchpriority="high"
-          class="absolute bottom-0 right-0 h-[120%] rounded-b-3xl transition-all duration-300 lg:h-[110%] lg:scale-x-110 lg:group-hover:scale-[104%] xl:h-[115%] xl:scale-x-100 2xl:h-[125%]"
+          class="absolute bottom-0 right-0 h-[120%] rounded-b-3xl transition-all duration-300 lg:h-[115%] lg:group-hover:scale-[104%] 2xl:h-[125%]"
         />
       </div>
-      <!-- <div class="shadow-Panambi absolute h-full w-full rounded-3xl"></div> -->
     </div>
   </div>
 
@@ -151,11 +151,13 @@ import flecha from "@/assets/svg/arrow-right.svg";
       background-color: var(--color-verde4-200);
       display: none;
       position: relative;
+      transition-behavior: allow-discrete;
     }
 
     @media (width >= 600px) {
       .d {
         display: flex;
+        transition-behavior: allow-discrete;
       }
     }
     .b {

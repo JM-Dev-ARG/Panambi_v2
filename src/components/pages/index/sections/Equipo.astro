@@ -6,7 +6,7 @@ import TituloCards from "@/components/base-components/TituloCards.astro";
 import dataEquipo from "@/data/equipo.json";
 ---
 
-<Container id="Equipo__index">
+<Container id="Equipo__index" classNameSeccion="overflow-hidden">
   <div
     class="bg-negro border-negro flex h-[400px] w-full flex-col items-center justify-start overflow-hidden rounded-3xl border-2 pt-8 sm:h-[500px] lg:h-[600px]"
     data-aos="zoom-in"
@@ -27,8 +27,8 @@ import dataEquipo from "@/data/equipo.json";
             <div class="flex h-full w-[180px] items-center justify-center sm:w-[250px] lg:w-[320px]">
               <img
                 src={equipo.img}
-                alt={equipo.title}
-                title={`Imagen de ${equipo.title}`}
+                alt={equipo.titulo}
+                title={`Imagen de ${equipo.titulo}`}
                 width="auto"
                 height="auto"
                 loading="lazy"
