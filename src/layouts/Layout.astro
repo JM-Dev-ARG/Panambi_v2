@@ -129,6 +129,9 @@ const schema = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
 
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
     <!-- Title y Description -->
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -150,6 +153,8 @@ const schema = {
     />
     <meta name="author" content="Panambi" />
     <meta name="language" content="Spanish" />
+    <link rel="alternate" hreflang="es-ar" href="https://panambi.net/" />
+    <link rel="alternate" hreflang="x-default" href="https://panambi.net/" />
 
     <!-- SEO Local -->
     <meta name="geo.region" content="AR" />
@@ -185,7 +190,6 @@ const schema = {
     <slot name="additional-head" />
 
     <!-- Google Tag Manager -->
-
     <script is:inline defer>
       /* @ts-ignore */
       (function (w, d, s, l, i) {

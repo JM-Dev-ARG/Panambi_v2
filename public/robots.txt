@@ -4,4 +4,4 @@ Disallow: /api/
 Allow: /
 
 # Sitemap
-Sitemap: https://panambi-2025.netlify.app/sitemap.xml
+Sitemap: https://panambi.net/sitemap-index.xml
